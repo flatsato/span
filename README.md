@@ -3,10 +3,10 @@
 # 設定したこと
 
 ## 動作中
-gulp
+gulp  
 https://www.npmjs.com/package/gulp
 
-gulp-sass
+gulp-sass  
 https://www.npmjs.com/package/gulp-sass
 
 gulp-autoprefixer  
@@ -32,7 +32,7 @@ https://www.npmjs.com/package/gulp-sourcemaps
 gulp-imagemin … 画像圧縮  
 gulp-sourcemaps … sourcemapを使えるようにする  
 gulp-csscomb … CSSプロパティ並び順整理  
-gulp-ftp ftpでファイルをサーバにアップロードしてくれます。  
+gulp-ftp … ftpでファイルをサーバにアップロードしてくれます。  
 
 ## 参考サイト
 
