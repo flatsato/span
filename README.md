@@ -2,6 +2,11 @@
 
 # 設定したこと
 
+・自動でSassをコンパイル。
+・自動でベンダープレフィックスをつける。
+・上書き時に自動でブラウザを更新。
+・source mapを使い、ブラウザでscssの行番号を判別。
+
 ## 動作中
 gulp  
 https://www.npmjs.com/package/gulp
@@ -15,7 +20,7 @@ https://www.npmjs.com/package/gulp-autoprefixer
 gulp-frontnote  
 https://www.npmjs.com/package/gulp-frontnote
 
-browser-sync
+browser-sync  
 https://www.npmjs.com/package/browser-sync
 
 gulp-plumber  
@@ -29,10 +34,12 @@ https://www.npmjs.com/package/gulp-sourcemaps
 
 
 ## 今後追加
+
 gulp-imagemin … 画像圧縮  
 gulp-sourcemaps … sourcemapを使えるようにする  
 gulp-csscomb … CSSプロパティ並び順整理  
-gulp-ftp … ftpでファイルをサーバにアップロードしてくれます。  
+gulp-ftp … ftpでファイルをサーバにアップロードしてくれます。 
+CSS構造を整頓。
 
 ## 参考サイト
 
