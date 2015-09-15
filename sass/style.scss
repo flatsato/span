@@ -1,0 +1,54 @@
+/*
+#overview
+Gulp入門サンプル
+ 
+サンプルファイルです
+*/
+ 
+/*#styleguide
+サンプル見出し1
+ 
+サンプルの見出しスタイル
+hoverすると青く2倍になる
+ 
+```
+<h1>見出し1</h1>
+```
+*/
+
+/*#styleguide
+サンプル見出し2
+ 
+サンプルの見出しスタイル
+hoverすると青く2倍になる
+ 
+```
+<h2>見出し2</h2>
+```
+*/
+
+.hoge{
+background: #fff;}
+
+h1 {
+    color: red;
+    transition: 200ms ease-out transform;
+    &:hover {
+        color: green;
+        transform: translate(10px,0);
+  }
+}
+
+h2 {
+    color: green;
+    &:hover {
+        color: red;
+  }
+}
+
+.hogehoge{
+background: #000;}
+
+.hoge{
+background: #fff;
+color: #fff;}

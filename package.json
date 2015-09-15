@@ -1,0 +1,25 @@
+{
+  "name": "flat-gulp",
+  "version": "0.1.0",
+  "description": "web design FLAT デフォルト設定",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "web design FLAT sato harumi",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.9.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-frontnote": "^1.0.2",
+    "gulp-ftp": "^1.0.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.1",
+  }
+}
