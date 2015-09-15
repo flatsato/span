@@ -38,7 +38,7 @@ https://www.npmjs.com/package/gulp-sourcemaps
 gulp-imagemin … 画像圧縮  
 gulp-sourcemaps … sourcemapを使えるようにする  
 gulp-csscomb … CSSプロパティ並び順整理  
-gulp-ftp … ftpでファイルをサーバにアップロードしてくれます。 
+gulp-ftp … ftpでファイルをサーバにアップロードしてくれます。   
 CSS構造を整頓。
 
 ## 参考サイト
