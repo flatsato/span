@@ -3,26 +3,26 @@
 ## 使い方
 
 黒い画面。DLしたフォルダに移動  
-npm installで
+npm installでプラグインをインストール。
 
 ## 動作中
 gulp  
 https://www.npmjs.com/package/gulp
 
 gulp-sass  
-https://www.npmjs.com/package/gulp-sass
+https://www.npmjs.com/package/gulp-sass  
 自動でSassをコンパイル。
 
 gulp-autoprefixer  
-https://www.npmjs.com/package/gulp-autoprefixer
+https://www.npmjs.com/package/gulp-autoprefixer  
 自動でベンダープレフィックスをつける。
 
 gulp-frontnote  
-https://www.npmjs.com/package/gulp-frontnote
+https://www.npmjs.com/package/gulp-frontnote  
 スタイルガイド作成（http://frontainer.com/frontnote/）
 
 browser-sync  
-https://www.npmjs.com/package/browser-sync
+https://www.npmjs.com/package/browser-sync  
 上書き時に自動でブラウザを更新。
 
 gulp-plumber  
@@ -32,7 +32,7 @@ gulp-notify（検証中）
 https://www.npmjs.com/package/gulp-notify
 
 gulp-sourcemaps  
-https://www.npmjs.com/package/gulp-sourcemaps
+https://www.npmjs.com/package/gulp-sourcemaps  
 source mapを使い、ブラウザでscssの行番号を判別。
 
 ## 今後追加
