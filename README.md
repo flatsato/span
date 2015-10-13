@@ -19,7 +19,7 @@ https://www.npmjs.com/package/gulp-autoprefixer
 
 gulp-frontnote  
 https://www.npmjs.com/package/gulp-frontnote  
-スタイルガイド作成（http://frontainer.com/frontnote/）
+スタイルガイド作成（ http://frontainer.com/frontnote/ ）
 
 browser-sync  
 https://www.npmjs.com/package/browser-sync  
