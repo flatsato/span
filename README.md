@@ -1,11 +1,9 @@
 # temp-gulp
 
-# 設定したこと
+## 使い方
 
-- 自動でSassをコンパイル。
-- 自動でベンダープレフィックスをつける。
-- 上書き時に自動でブラウザを更新。
-- source mapを使い、ブラウザでscssの行番号を判別。
+黒い画面。DLしたフォルダに移動  
+npm installで
 
 ## 動作中
 gulp  
@@ -13,15 +11,19 @@ https://www.npmjs.com/package/gulp
 
 gulp-sass  
 https://www.npmjs.com/package/gulp-sass
+自動でSassをコンパイル。
 
 gulp-autoprefixer  
 https://www.npmjs.com/package/gulp-autoprefixer
+自動でベンダープレフィックスをつける。
 
 gulp-frontnote  
 https://www.npmjs.com/package/gulp-frontnote
+スタイルガイド作成（http://frontainer.com/frontnote/）
 
 browser-sync  
 https://www.npmjs.com/package/browser-sync
+上書き時に自動でブラウザを更新。
 
 gulp-plumber  
 https://www.npmjs.com/package/gulp-plumber
@@ -31,7 +33,7 @@ https://www.npmjs.com/package/gulp-notify
 
 gulp-sourcemaps  
 https://www.npmjs.com/package/gulp-sourcemaps
-
+source mapを使い、ブラウザでscssの行番号を判別。
 
 ## 今後追加
 
