@@ -20,6 +20,10 @@ http://git.blivesta.com/drawer/
 
 2.Lightbox  
 
+レスポンシブ対応されたLightbox系プラグイン・ライブラリ 10  
+http://www.nxworld.net/tips/10-responsive-lightbox-plugin-and-library.html  
+どれも使ったことはないですが、ブラウザ対応によって使うものを変えてもいいかもです。
+
 Boxer  
 http://kwski.net/jquery/1201/  
 使ったこと無いけど、レスポンシブ対応、スワイプ対応らしいです。   
