@@ -8,25 +8,25 @@ npm installでプラグインをインストール。
 ## 追加予定
 
 ◆javascript  
-1. SPメニュー＝ハンバーガードロワー、パターン幾つか  
+1.SPメニュー＝ハンバーガードロワー、パターン幾つか  
 
 jQuery slimMenu  
 http://adnantopal.github.io/slimmenu/  
 ハンバーガーメニュー。シンプルな実装。  
 
-2. Lightbox  
+2.Lightbox  
 
 Boxer  
 http://kwski.net/jquery/1201/  
 使ったこと無いけど、レスポンシブ対応、スワイプ対応らしいです。   
 
-3. モーダル  
+3.モーダル  
 
 Remodal v1. The modal done right.  
 http://vodkabears.github.io/remodal/   
 前に使って良かったです。モーダルはシステムで需要ありそう。   
 
-4. スライダー  
+4.スライダー  
 
 SLY  
 http://darsa.in/sly/  
