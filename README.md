@@ -12,7 +12,11 @@ npm installでプラグインをインストール。
 
 jQuery slimMenu  
 http://adnantopal.github.io/slimmenu/  
-ハンバーガーメニュー。シンプルな実装。  
+ハンバーガーメニュー。シンプルな実装。
+
+Drawer 
+http://git.blivesta.com/drawer/  
+縦横どちらのタイプも使えて便利でした。使いやすい。  
 
 2.Lightbox  
 
