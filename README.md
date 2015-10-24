@@ -10,6 +10,12 @@ npm installでプラグインをインストール。
 ◆javascript  
 1. SPメニュー＝ハンバーガードロワー、パターン幾つか  
 2. Lightbox  
+
+Boxer  
+http://kwski.net/jquery/1201/  
+使ったこと無いけど、レスポンシブ対応、スワイプ対応らしいです。   
+
+
 3. モーダル  
 4. スライダー
 
