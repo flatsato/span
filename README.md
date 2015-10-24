@@ -10,10 +10,9 @@ npm installでプラグインをインストール。
 ◆javascript  
 1. SPメニュー＝ハンバーガードロワー、パターン幾つか  
 
-jQuery slimMenu
-http://adnantopal.github.io/slimmenu/ (edi
-ハンバーガーメニュー。シンプルな実装。
-
+jQuery slimMenu  
+http://adnantopal.github.io/slimmenu/  
+ハンバーガーメニュー。シンプルな実装。  
 
 2. Lightbox  
 
