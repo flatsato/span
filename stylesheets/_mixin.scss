@@ -1,0 +1,85 @@
+@charset "utf-8";
+$color-fontMint:#22ccb2;
+$color-fontBlack:#032520;
+// @include ov;
+@mixin ov {
+    opacity: 1;
+    -moz-transition: opacity .4s ease-in-out;
+    -webkit-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+// @include ovImg;
+@mixin ovImg {
+    background: #fff;
+    opacity: 1;
+    -moz-transition: opacity .4s ease-in-out;
+    -webkit-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+//@include kadomaru(6px);
+@mixin kadomaru($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    -ms-border-radius: $radius;
+}
+
+//@include font-googleEN;
+@mixin font-googleEN {
+    font-family: 'Playfair Display', serif;
+}
+
+//@include font-JP;
+@mixin font-JP {
+    font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+}
+
+//@include PCsiteWidthMax;
+@mixin PCsiteWidthMax {
+    margin: 0 auto;
+    width: 1200px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+//@include PCsiteWidthL;
+@mixin PCsiteWidthL {
+    margin: 0 auto;
+    width: 1000px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+//@include PCsiteWidthS;
+@mixin PCsiteWidthS {
+    margin: 0 auto;
+    width: 900px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+//@include boxSizing;
+@mixin boxSizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+//SP ★
+//@include SPsiteWidth;
+@mixin SPsiteWidth {
+    @include boxSizing;
+    width: 100%;
+}

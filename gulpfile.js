@@ -23,7 +23,7 @@ var sourcemaps = require("gulp-sourcemaps"); //sourcemap
 
 //Sassのコンパイル 
 gulp.task("sass", function() {
-    gulp.src("sass/**/*scss")
+    gulp.src("stylesheets/**/*scss")
         //.pipe(sass())
      .pipe(plumber({
         errorHandler: notify.onError('Error: <%= error.message %>')  // デスクトップに通知を出すよ    

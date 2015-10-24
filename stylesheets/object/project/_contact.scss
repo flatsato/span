@@ -1,0 +1,78 @@
+@charset "utf-8";
+body.page-category-contact {
+    section.form {
+        margin: 35px 0 0;
+        p {
+            margin: 0;
+        }
+        font-size: 18px;
+        .form__lead {
+            text-align: center;
+            margin: 0 0 70px;
+            @media screen and (max-width: 768px) {
+                font-size: 13px;
+                margin: 0 0 35px;
+            }
+        }
+        .wpcf7-form {
+            margin: 80px 0 140px;
+            @media screen and (max-width: 768px) {
+                margin: 20px 0 40px;
+            }
+            .wpcf7-not-valid-tip {
+                margin: 5px 0 0;
+            }
+            .u-floatLeft {
+                width: 490px;
+                margin: 0 0 60px;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    @include boxSizing;
+                    margin: 0 0 20px;
+                }
+            }
+            .u-floatRight {
+                float: right;
+                width: 480px;
+                margin: 0 0 60px;
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    @include boxSizing;
+                    margin: 0 0 20px;
+                }
+            }
+            p.c-form-title {
+                margin: 0 0 15px;
+            }
+            .c-form-submitWrap {}
+            .wpcf7-form-control-wrap {
+                margin: 0 0 40px;
+                display: block;
+                @media screen and (max-width: 768px) {
+                    margin: 0 0 20px;
+                }
+            }
+            .wpcf7-submit {
+                position: relative;
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 100px;
+                    height: 100px;
+                    right: 15px;
+                    position: absolute;
+                    top: 50%;
+                    z-index: 100;
+                    margin: -5px 0 0;
+                    border-bottom: 3px solid #f00;
+                    border-right: 3px solid #f00;
+                    transform: rotate(-45deg);
+                }
+            }
+            .wpcf7-response-output {
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    }
+}

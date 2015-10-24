@@ -1,0 +1,59 @@
+@charset "utf-8";
+body {
+    font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+}
+
+body.home,
+body.page,
+body.error404 {
+    height: auto;
+    min-width: 1200px;
+    @media screen and (max-width: 768px) {
+        min-width: inherit;
+    }
+}
+
+a {
+    color: $color-fontBlack;
+    outline: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(95, 225, 205, 0.7);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.line {
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+}
+
+a.line::after {
+    position: absolute;
+    bottom: .3em;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #2ecc71;
+    opacity: 0;
+    transition: .3s;
+}
+
+a.line:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+
+img {
+    vertical-align: top;
+}
+
+.u-font-GoogleEN {
+    @include font-googleEN;
+}
