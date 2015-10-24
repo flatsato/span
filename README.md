@@ -18,12 +18,11 @@ http://kwski.net/jquery/1201/
 
 3. モーダル  
 Remodal v1. The modal done right.  
-http://vodkabears.github.io/remodal/  
+http://vodkabears.github.io/remodal/   
 前に使って良かったです。モーダルはシステムで需要ありそう。   
 
 
 4. スライダー
-
 SLY  
 http://darsa.in/sly/  
 不揃いな形にも対応して、実装もシンプルで、デザインのカスタマイズもしやすかったです。
