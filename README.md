@@ -14,11 +14,11 @@ npm installでプラグインをインストール。
 4. スライダー
 
 SLY  
-http://darsa.in/sly/
+http://darsa.in/sly/  
 不揃いな形にも対応して、実装もシンプルで、デザインのカスタマイズもしやすかったです。
 
-slick
-http://kenwheeler.github.io/slick/
+slick  
+http://kenwheeler.github.io/slick/  
 最近使って良い感じでした。
   
 ◆HTML  
