@@ -1,11 +1,31 @@
-# temp-gulp
+# HTMLテンプレート
 
 ## 使い方
 
 黒い画面。DLしたフォルダに移動  
 npm installでプラグインをインストール。
 
-## 動作中
+## 追加予定
+
+◆javascript
+SPメニュー＝ハンバーガードロワー、パターン幾つか
+Lightbox
+モーダル
+
+◆HTML
+FORM＝テキストボックス、ボタン（hover）、検索ボックス、エラーメッセージ
+ページング
+ヘッダー＝グロナビ、
+フッター
+サイトリンク一覧
+SNSボタン＝Twitter、Google、Facebook、はてぶ
+パンくず
+
+
+◆その他
+CSS、フォルダ設計一式
+
+## Gulp 動作中
 gulp  
 https://www.npmjs.com/package/gulp
 
@@ -35,7 +55,7 @@ gulp-sourcemaps
 https://www.npmjs.com/package/gulp-sourcemaps  
 source mapを使い、ブラウザでscssの行番号を判別。
 
-## 今後追加
+## Gulp 今後追加
 
 gulp-imagemin … 画像圧縮  
 gulp-sourcemaps … sourcemapを使えるようにする  
