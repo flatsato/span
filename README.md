@@ -18,8 +18,8 @@ FORM＝テキストボックス、ボタン（hover）、検索ボックス、�
 ヘッダー＝グロナビ、  
 フッター  
 サイトリンク一覧  
-SNSボタン＝Twitter、Google、Facebook、はてぶ
-パンくず
+SNSボタン＝Twitter、Google、Facebook、はてぶ  
+パンくず  
 
 
 ◆その他
