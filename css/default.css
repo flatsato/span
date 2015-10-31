@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+/* ===================================================================
+CSS information
+
+ file name  :  default.css
+ style info :  リセット及びbody初期設定
+ (このスタイルシートは基本的に変更しない)
+=================================================================== */
+/*--- reset */
+
+html {
+	height:100%;
+	overflow-y:scroll;
+	width:100%;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+html > body {
+	height:auto;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+object,
+embed {
+	vertical-align: top;
+}
+
+hr,
+legend {
+	display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+}
+
+img,
+abbr,
+acronym,
+fieldset {
+	border: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+	display:block;
+}
+
+/*
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+汎用class 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.floatLeft {
+	float: left;
+}
+
+.floatRight {
+	float: right;
+}
+
+.clearBoth {
+	clear: both;
+}
+
+.layoutCenter {
+	margin: 0 auto;
+}
+
+.textCenter {
+	text-align: center;
+}
+
+.textRight {
+	text-align: right;
+}
+
+.textLeft {
+	text-align: left;
+}
+
+.marginR {
+	margin-right:0px;
+}
+
+.textVartical {
+	vertical-align:middle;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+/* clearfix */
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0px;
+	visibility:hidden;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+/* no ie mac \*/
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+/* */
+
+/* 汎用
+----------------------------------------------------*/
+
+/* margin */
+.noMrg {
+	margin:0 !important;
+}
+
+.Mrg5 {
+	margin:5px !important;
+}
+
+.MrgT5 {
+	margin-top:5px !important;
+}
+
+.MrgR5 {
+	margin-right:5px !important;
+}
+
+.MrgB5 {
+	margin-bottom:5px !important;
+}
+
+.MrgL5 {
+	margin-left:5px !important;
+}
+
+.Mrg10 {
+	margin:10px !important;
+}
+
+.MrgT10 {
+	margin-top:10px !important;
+}
+
+.MrgR10 {
+	margin-right:10px !important;
+}
+
+.MrgB10 {
+	margin-bottom:10px !important;
+}
+
+.MrgL10 {
+	margin-left:10px !important;
+}
+
+.Mrg15 {
+	margin:15px !important;
+}
+
+.MrgT15 {
+	margin-top:15px !important;
+}
+
+.MrgR15 {
+	margin-right:15px !important;
+}
+
+.MrgB15 {
+	margin-bottom:15px !important;
+}
+
+.MrgL15 {
+	margin-left:15px !important;
+}
+
+.Mrg20 {
+	margin:20px !important;
+}
+
+.MrgT20 {
+	margin-top:20px !important;
+}
+
+.MrgR20 {
+	margin-right:20px !important;
+}
+
+.MrgB20 {
+	margin-bottom:20px !important;
+}
+
+.MrgL20 {
+	margin-left:20px !important;
+}
+
+/* padding */
+.noPdd {
+	padding:0 !important;
+	;
+}
+
+.pdd5 {
+	padding:5px !important;
+}
+
+.pddT5 {
+	padding-top:5px !important;
+}
+
+.pddR5 {
+	padding-right:5px !important;
+}
+
+.pddB5 {
+	padding-bottom:5px !important;
+}
+
+.pddL5 {
+	padding-left:5px !important;
+}
+
+.pdd10 {
+	padding:10px !important;
+}
+
+.pddT10 {
+	padding-top:10px !important;
+}
+
+.pddR10 {
+	padding-right:10px !important;
+}
+
+.pddB10 {
+	padding-bottom:10px !important;
+}
+
+.pddL10 {
+	padding-left:10px !important;
+}
+
+.pdd15 {
+	padding:15px !important;
+}
+
+.pddT15 {
+	padding-top:15px !important;
+}
+
+.pddR15 {
+	padding-right:15px !important;
+}
+
+.pddB15 {
+	padding-bottom:15px !important;
+}
+
+.pddL15 {
+	padding-left:15px !important;
+}
+
+.pdd20 {
+	padding:20px !important;
+}
+
+.pddT20 {
+	padding-top:20px !important;
+}
+
+.pddR20 {
+	padding-right:20px !important;
+}
+
+.pddB20 {
+	padding-bottom:20px !important;
+}
+
+.pddL20 {
+	padding-left:20px !important;
+}
