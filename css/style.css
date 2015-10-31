@@ -1,0 +1,169 @@
+/*-------------
+mixin
+-------------*/
+/* content:''; */
+/* left:0px; */
+/*
+#####################################################################
+
+common
+	
+#####################################################################
+*/
+/* line 15, style.scss */
+body {
+  background: #efe;
+  color: #000;
+  font-family: "SourceHanSans-ExtraLight";
+  font-size: small;
+  line-height: 1.4;
+  word-wrap: break-word; }
+
+/* line 27, style.scss */
+html > body {
+  height: auto;
+  min-width: 980px; }
+
+/* line 38, style.scss */
+a:hover {
+  text-decoration: none; }
+
+/* line 45, style.scss */
+#page {
+  margin: 0 auto;
+  width: 100%; }
+
+@font-face {
+  font-family: 'SourceHanSansJP-Bold';
+  src: url("../fontss/SourceHanSansJP-Bold.otf") format("opentype"), url("../fonts/SourceHanSansJP-Bold.woff") format("woff"); }
+@font-face {
+  font-family: 'SourceHanSansJP-Regular';
+  src: url("../fonts/SourceHanSansJP-Regular.otf") format("opentype"), url("../fonts/SourceHanSansJP-Regular.woff") format("woff"); }
+@font-face {
+  font-family: 'SourceHanSansJP-Light';
+  src: url("../fonts/SourceHanSansJP-Light.otf") format("opentype"), url("../fonts/SourceHanSansJP-Light.woff") format("woff"); }
+/* line 64, style.scss */
+.SourceHanSans-ExtraLight {
+  font-family: "SourceHanSans-ExtraLight"; }
+
+/* line 68, style.scss */
+.SourceHanSans-Light {
+  font-family: 'SourceHanSansJP-Light';
+  font-size: 24px; }
+
+/* line 73, style.scss */
+.SourceHanSans-Medium {
+  font-family: "SourceHanSans-Medium"; }
+
+/* line 77, style.scss */
+.SourceHanSans-Normal {
+  font-family: "SourceHanSans-Normalm"; }
+
+/* line 81, style.scss */
+.SourceHanSans-Regular {
+  font-family: 'SourceHanSansJP-Regular';
+  font-size: 24px; }
+
+/* line 86, style.scss */
+.SourceHanSans-Heavy {
+  font-family: "SourceHanSans-Heavy"; }
+
+/* line 90, style.scss */
+.SourceHanSans-Bold {
+  font-family: 'SourceHanSansJP-Bold';
+  font-size: 24px; }
+
+/*
+#####################################################################
+
+Sass
+	
+#####################################################################
+*/
+/*
+#####################################################################
+
+parts
+	
+#####################################################################
+*/
+/* line 112, style.scss */
+.btn {
+  text-align: center; }
+
+/*
+#####################################################################
+
+.globalHeader
+	
+#####################################################################
+*/
+/* line 124, style.scss */
+.globalHeader {
+  margin: 0 auto;
+  width: 980px;
+  overflow: hidden;
+  zoom: 1; }
+
+/* line 131, style.scss */
+.globalHeader .globalHead--sitelogo {
+  float: left;
+  overflow: hidden;
+  zoom: 1; }
+
+/*
+#####################################################################
+
+.globalFooter
+	
+#####################################################################
+*/
+/* line 145, style.scss */
+.globalFooter {
+  margin: 0 auto;
+  width: 980px;
+  clear: both; }
+
+/*
+#####################################################################
+
+.contents
+	
+#####################################################################
+*/
+/* line 159, style.scss */
+.contents {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  min-height: 500px; }
+
+/* line 167, style.scss */
+.contents .pageTop {
+  clear: both;
+  text-align: right; }
+
+/* line 172, style.scss */
+.contents .pageTop a {
+  padding: 0 0 0 18px; }
+
+/* Mozilla based browsers */
+/* line 177, style.scss */
+::-moz-selection {
+  background-color: #000;
+  color: #fff; }
+
+/* Works in Safari */
+/* line 183, style.scss */
+::selection {
+  background-color: #000;
+  color: #fff; }
+
+/*
+#####################################################################
+
+
+	
+#####################################################################
+*/
