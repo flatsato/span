@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-------------
 mixin
 -------------*/
@@ -10,25 +11,24 @@ common
 	
 #####################################################################
 */
-/* line 15, style.scss */
 body {
   background: #efe;
   color: #000;
-  font-family: "SourceHanSans-ExtraLight";
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+  font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-family: "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝", serif;
   font-size: small;
   line-height: 1.4;
   word-wrap: break-word; }
 
-/* line 27, style.scss */
 html > body {
   height: auto;
   min-width: 980px; }
 
-/* line 38, style.scss */
 a:hover {
   text-decoration: none; }
 
-/* line 45, style.scss */
 #page {
   margin: 0 auto;
   width: 100%; }
@@ -42,33 +42,26 @@ a:hover {
 @font-face {
   font-family: 'SourceHanSansJP-Light';
   src: url("../fonts/SourceHanSansJP-Light.otf") format("opentype"), url("../fonts/SourceHanSansJP-Light.woff") format("woff"); }
-/* line 64, style.scss */
 .SourceHanSans-ExtraLight {
   font-family: "SourceHanSans-ExtraLight"; }
 
-/* line 68, style.scss */
 .SourceHanSans-Light {
   font-family: 'SourceHanSansJP-Light';
   font-size: 24px; }
 
-/* line 73, style.scss */
 .SourceHanSans-Medium {
   font-family: "SourceHanSans-Medium"; }
 
-/* line 77, style.scss */
 .SourceHanSans-Normal {
   font-family: "SourceHanSans-Normalm"; }
 
-/* line 81, style.scss */
 .SourceHanSans-Regular {
   font-family: 'SourceHanSansJP-Regular';
   font-size: 24px; }
 
-/* line 86, style.scss */
 .SourceHanSans-Heavy {
   font-family: "SourceHanSans-Heavy"; }
 
-/* line 90, style.scss */
 .SourceHanSans-Bold {
   font-family: 'SourceHanSansJP-Bold';
   font-size: 24px; }
@@ -87,7 +80,6 @@ parts
 	
 #####################################################################
 */
-/* line 112, style.scss */
 .btn {
   text-align: center; }
 
@@ -98,14 +90,12 @@ parts
 	
 #####################################################################
 */
-/* line 124, style.scss */
 .globalHeader {
   margin: 0 auto;
   width: 980px;
   overflow: hidden;
   zoom: 1; }
 
-/* line 131, style.scss */
 .globalHeader .globalHead--sitelogo {
   float: left;
   overflow: hidden;
@@ -118,7 +108,6 @@ parts
 	
 #####################################################################
 */
-/* line 145, style.scss */
 .globalFooter {
   margin: 0 auto;
   width: 980px;
@@ -131,7 +120,6 @@ parts
 	
 #####################################################################
 */
-/* line 159, style.scss */
 .contents {
   position: relative;
   width: 980px;
@@ -139,23 +127,19 @@ parts
   background: #fff;
   min-height: 500px; }
 
-/* line 167, style.scss */
 .contents .pageTop {
   clear: both;
   text-align: right; }
 
-/* line 172, style.scss */
 .contents .pageTop a {
   padding: 0 0 0 18px; }
 
 /* Mozilla based browsers */
-/* line 177, style.scss */
 ::-moz-selection {
   background-color: #000;
   color: #fff; }
 
 /* Works in Safari */
-/* line 183, style.scss */
 ::selection {
   background-color: #000;
   color: #fff; }
@@ -163,7 +147,102 @@ parts
 /*
 #####################################################################
 
-
+form
 	
 #####################################################################
 */
+.form-wrap {
+  width: 800px;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 14px; }
+
+.form-wrap__lead {
+  font-size: 16px; }
+
+.fm__area {
+  display: table;
+  width: 800px;
+  margin-bottom: 16px; }
+
+.fm__hd {
+  display: table-cell;
+  width: 180px;
+  vertical-align: middle; }
+
+.fm__body {
+  display: table-cell;
+  width: 620px; }
+
+.lead-area {
+  margin: 20px 0; }
+
+.lead-area__txt {
+  margin-bottom: 10px; }
+
+.btn {
+  width: 100px;
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  background: #888;
+  line-height: 1.6;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: ease .25s; }
+  .btn + .btn {
+    margin-left: 10px; }
+  .btn.btn--cancel {
+    background: #444; }
+  .btn.btn--submit {
+    background: #666; }
+  .btn:hover {
+    opacity: 0.8; }
+
+.fm__text {
+  border: 1px solid #ccc;
+  padding: 4px 10px;
+  outline: none;
+  font-size: 16px;
+  background: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  transition: ease .2s; }
+  .fm__text + .fm__text {
+    margin: 0 10px; }
+  .fm__text.fm__text--readonly {
+    color: #666;
+    background: #eee; }
+  .fm__text:focus {
+    border: 1px solid #3ba791; }
+
+.fm__textarea {
+  border: 1px solid #ccc;
+  padding: 4px 10px;
+  outline: none;
+  font-size: 16px;
+  background: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  transition: ease .2s; }
+  .fm__textarea:focus {
+    border: 1px solid #3ba791; }
+
+.fm__select {
+  border: 1px solid #ccc;
+  padding: 4px 10px;
+  outline: none;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 0;
+  transition: ease .2s; }
+  .fm__select:focus {
+    border: 1px solid #3ba791; }
+
+/*# sourceMappingURL=style.css.map */

@@ -7,13 +7,14 @@
 <meta name="keywords" content=""> 
 <meta name="description" content=""> 
 <meta name="viewport" content="width=device-width; initial-scale=1.0;"> 
+<link href="css/style.css" rel="stylesheet"> 
 </head>
 <body>
 
 <div class="form-wrap">
 	
 <!--リード文-->
-	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iste iusto culpa, id, eum architecto quo dicta dolorum praesentium quod labore obcaecati? Minus molestiae odio, repellat doloribus dolores, quidem tempore.</p>
+	<p class="form-wrap__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iste iusto culpa, id, eum architecto quo dicta dolorum praesentium quod labore obcaecati? Minus molestiae odio, repellat doloribus dolores, quidem tempore.</p>
 	
 	<form action="#" id="form" class="fm" method="post">
 	
@@ -56,8 +57,10 @@
 		<!--電話-->
 		<div class="fm__area">
 			<div class="fm__hd">電話</div>
-			<div class="fm__body"><input type="tel" name="fm__item05" class="fm__text"></div>
-			<div class="fm__error">エラーメッセージ</div>
+			<div class="fm__body">
+				<input type="tel" name="fm__item05" class="fm__text">
+				<div class="fm__error">エラーメッセージ</div>
+			</div>
 		</div>
 		
 		<!--チェック項目-->
@@ -127,7 +130,7 @@
 		<!--readonly-->
 		<div class="fm__area">
 			<div class="fm__hd">readonly</div>
-			<div class="fm__body"><input type="text" name="fm__item15" class="fm__text" value="readonly" readonly="readonly"></div>
+			<div class="fm__body"><input type="text" name="fm__item15" class="fm__text fm__text--readonly" value="readonly" readonly="readonly"></div>
 		</div>
 		
 		<!--送信ボタン前文章-->
