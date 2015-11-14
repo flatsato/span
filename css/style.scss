@@ -112,7 +112,26 @@ parts
 */
 
 .btn {
+	width: 100px;
+	display: inline-block;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	background: #888;
+	line-height: 1.6;
+	border: none;
+	text-decoration: none;
 	text-align: center;
+	cursor: pointer;
+	transition: ease .25s;
+
+	& + & { margin-left: 10px;}
+
+	&.btn--cancel { background: #444;}
+	&.btn--submit { background: #666;}
+	&.btn--link { }
+
+	&:hover { opacity: 0.8;}
 }
 
 /*
@@ -207,29 +226,6 @@ form
 .lead-area__txt { margin-bottom: 10px;}
 .lead-area__item {}
 
-// ボタン
-.btn {
-	width: 100px;
-	display: inline-block;
-	padding: 10px 0;
-	font-size: 16px;
-	color: #fff;
-	background: #888;
-	line-height: 1.6;
-	border: none;
-	text-decoration: none;
-	cursor: pointer;
-	transition: ease .25s;
-	
-	& + & { margin-left: 10px;}
-	
-	&.btn--cancel { background: #444;}
-	&.btn--submit { background: #666;}
-	&.btn--link { }
-	
-	&:hover { opacity: 0.8;}
-}
-
 // form部品
 .fm__text { 
 	border: 1px solid #ccc; 
@@ -244,6 +240,9 @@ form
 	transition: ease .2s;
 	
 	& + & { margin: 0 10px;}
+	&.fm__text--s { width: 100px;}
+	&.fm__text--m { width: 200px;}
+	&.fm__text--l { width: 300px;}
 	&.fm__text--readonly { color: #666; background: #eee;}
 	
 	// focus

@@ -81,7 +81,26 @@ parts
 #####################################################################
 */
 .btn {
-  text-align: center; }
+  width: 100px;
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  background: #888;
+  line-height: 1.6;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: ease .25s; }
+  .btn + .btn {
+    margin-left: 10px; }
+  .btn.btn--cancel {
+    background: #444; }
+  .btn.btn--submit {
+    background: #666; }
+  .btn:hover {
+    opacity: 0.8; }
 
 /*
 #####################################################################
@@ -180,27 +199,6 @@ form
 .lead-area__txt {
   margin-bottom: 10px; }
 
-.btn {
-  width: 100px;
-  display: inline-block;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  background: #888;
-  line-height: 1.6;
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-  transition: ease .25s; }
-  .btn + .btn {
-    margin-left: 10px; }
-  .btn.btn--cancel {
-    background: #444; }
-  .btn.btn--submit {
-    background: #666; }
-  .btn:hover {
-    opacity: 0.8; }
-
 .fm__text {
   border: 1px solid #ccc;
   padding: 4px 10px;
@@ -214,6 +212,12 @@ form
   transition: ease .2s; }
   .fm__text + .fm__text {
     margin: 0 10px; }
+  .fm__text.fm__text--s {
+    width: 100px; }
+  .fm__text.fm__text--m {
+    width: 200px; }
+  .fm__text.fm__text--l {
+    width: 300px; }
   .fm__text.fm__text--readonly {
     color: #666;
     background: #eee; }
