@@ -1,0 +1,44 @@
+@font-face {
+	font-family: 'SourceHanSansJP-Bold';
+	src: url('../fontss/SourceHanSansJP-Bold.otf') format('opentype'),  url('../fonts/SourceHanSansJP-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'SourceHanSansJP-Regular';
+	src: url('../fonts/SourceHanSansJP-Regular.otf') format('opentype'),  url('../fonts/SourceHanSansJP-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'SourceHanSansJP-Light';
+	src: url('../fonts/SourceHanSansJP-Light.otf') format('opentype'),  url('../fonts/SourceHanSansJP-Light.woff') format('woff');
+}
+.SourceHanSans-ExtraLight {
+  font-family: "SourceHanSans-ExtraLight";
+}
+
+.SourceHanSans-Light {
+ font-family: 'SourceHanSansJP-Light';
+ font-size:24px;
+}
+
+.SourceHanSans-Medium {
+  font-family: "SourceHanSans-Medium";
+}
+
+.SourceHanSans-Normal {
+  font-family: "SourceHanSans-Normalm";
+}
+
+.SourceHanSans-Regular {
+ font-family: 'SourceHanSansJP-Regular';
+ font-size:24px;
+}
+
+.SourceHanSans-Heavy {
+  font-family: "SourceHanSans-Heavy";
+}
+
+.SourceHanSans-Bold {
+font-family: 'SourceHanSansJP-Bold';
+font-size:24px;
+}

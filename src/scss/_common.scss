@@ -1,0 +1,44 @@
+/*
+#####################################################################
+
+common
+	
+#####################################################################
+*/
+body {
+	background: #efe;
+	color: #000;
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+	font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+	font-family:'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+	font-family: "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝", serif;
+	font-size: small;
+	line-height: 1.4;
+	word-wrap: break-word;
+}
+
+html {
+}
+
+html > body {
+	height: auto;
+	min-width: 980px;
+}
+
+a:link {
+}
+
+a:visited {
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+}
+
+#page {
+	margin: 0 auto;
+	width: 100%;
+}

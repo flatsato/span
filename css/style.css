@@ -33,75 +33,6 @@ a:hover {
   margin: 0 auto;
   width: 100%; }
 
-@font-face {
-  font-family: 'SourceHanSansJP-Bold';
-  src: url("../fontss/SourceHanSansJP-Bold.otf") format("opentype"), url("../fonts/SourceHanSansJP-Bold.woff") format("woff"); }
-@font-face {
-  font-family: 'SourceHanSansJP-Regular';
-  src: url("../fonts/SourceHanSansJP-Regular.otf") format("opentype"), url("../fonts/SourceHanSansJP-Regular.woff") format("woff"); }
-@font-face {
-  font-family: 'SourceHanSansJP-Light';
-  src: url("../fonts/SourceHanSansJP-Light.otf") format("opentype"), url("../fonts/SourceHanSansJP-Light.woff") format("woff"); }
-.SourceHanSans-ExtraLight {
-  font-family: "SourceHanSans-ExtraLight"; }
-
-.SourceHanSans-Light {
-  font-family: 'SourceHanSansJP-Light';
-  font-size: 24px; }
-
-.SourceHanSans-Medium {
-  font-family: "SourceHanSans-Medium"; }
-
-.SourceHanSans-Normal {
-  font-family: "SourceHanSans-Normalm"; }
-
-.SourceHanSans-Regular {
-  font-family: 'SourceHanSansJP-Regular';
-  font-size: 24px; }
-
-.SourceHanSans-Heavy {
-  font-family: "SourceHanSans-Heavy"; }
-
-.SourceHanSans-Bold {
-  font-family: 'SourceHanSansJP-Bold';
-  font-size: 24px; }
-
-/*
-#####################################################################
-
-Sass
-	
-#####################################################################
-*/
-/*
-#####################################################################
-
-parts
-	
-#####################################################################
-*/
-.btn {
-  width: 100px;
-  display: inline-block;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  background: #888;
-  line-height: 1.6;
-  border: none;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  transition: ease .25s; }
-  .btn + .btn {
-    margin-left: 10px; }
-  .btn.btn--cancel {
-    background: #444; }
-  .btn.btn--submit {
-    background: #666; }
-  .btn:hover {
-    opacity: 0.8; }
-
 /*
 #####################################################################
 
@@ -109,16 +40,15 @@ parts
 	
 #####################################################################
 */
-.globalHeader {
+.l-globalHeader {
   margin: 0 auto;
   width: 980px;
   overflow: hidden;
   zoom: 1; }
-
-.globalHeader .globalHead--sitelogo {
-  float: left;
-  overflow: hidden;
-  zoom: 1; }
+  .l-globalHeader--sitelogo {
+    float: left;
+    overflow: hidden;
+    zoom: 1; }
 
 /*
 #####################################################################
@@ -127,7 +57,7 @@ parts
 	
 #####################################################################
 */
-.globalFooter {
+.l-globalFooter {
   margin: 0 auto;
   width: 980px;
   clear: both; }
@@ -159,17 +89,49 @@ parts
   color: #fff; }
 
 /* Works in Safari */
+::-moz-selection {
+  background-color: #000;
+  color: #fff; }
 ::selection {
   background-color: #000;
   color: #fff; }
 
-/*
-#####################################################################
+@font-face {
+  font-family: 'SourceHanSansJP-Bold';
+  src: url("../fontss/SourceHanSansJP-Bold.otf") format("opentype"), url("../fonts/SourceHanSansJP-Bold.woff") format("woff"); }
 
-form
-	
-#####################################################################
-*/
+@font-face {
+  font-family: 'SourceHanSansJP-Regular';
+  src: url("../fonts/SourceHanSansJP-Regular.otf") format("opentype"), url("../fonts/SourceHanSansJP-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: 'SourceHanSansJP-Light';
+  src: url("../fonts/SourceHanSansJP-Light.otf") format("opentype"), url("../fonts/SourceHanSansJP-Light.woff") format("woff"); }
+
+.SourceHanSans-ExtraLight {
+  font-family: "SourceHanSans-ExtraLight"; }
+
+.SourceHanSans-Light {
+  font-family: 'SourceHanSansJP-Light';
+  font-size: 24px; }
+
+.SourceHanSans-Medium {
+  font-family: "SourceHanSans-Medium"; }
+
+.SourceHanSans-Normal {
+  font-family: "SourceHanSans-Normalm"; }
+
+.SourceHanSans-Regular {
+  font-family: 'SourceHanSansJP-Regular';
+  font-size: 24px; }
+
+.SourceHanSans-Heavy {
+  font-family: "SourceHanSans-Heavy"; }
+
+.SourceHanSans-Bold {
+  font-family: 'SourceHanSansJP-Bold';
+  font-size: 24px; }
+
 .form-wrap {
   width: 800px;
   margin: 0 auto;
@@ -209,7 +171,8 @@ form
   -moz-appearance: none;
   appearance: none;
   border-radius: 0;
-  transition: ease .2s; }
+  -webkit-transition: ease .2s;
+          transition: ease .2s; }
   .fm__text + .fm__text {
     margin: 0 10px; }
   .fm__text.fm__text--s {
@@ -234,7 +197,8 @@ form
   -moz-appearance: none;
   appearance: none;
   border-radius: 0;
-  transition: ease .2s; }
+  -webkit-transition: ease .2s;
+          transition: ease .2s; }
   .fm__textarea:focus {
     border: 1px solid #3ba791; }
 
@@ -245,8 +209,32 @@ form
   font-size: 16px;
   background: #fff;
   border-radius: 0;
-  transition: ease .2s; }
+  -webkit-transition: ease .2s;
+          transition: ease .2s; }
   .fm__select:focus {
     border: 1px solid #3ba791; }
+
+.btn {
+  width: 100px;
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  background: #888;
+  line-height: 1.6;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: ease .25s;
+          transition: ease .25s; }
+  .btn + .btn {
+    margin-left: 10px; }
+  .btn.btn--cancel {
+    background: #444; }
+  .btn.btn--submit {
+    background: #666; }
+  .btn:hover {
+    opacity: 0.8; }
 
 /*# sourceMappingURL=style.css.map */
