@@ -1,0 +1,61 @@
+.form-wrap { width: 800px; margin: 0 auto; padding: 10px 0; font-size: 14px;}
+.form-wrap__lead { font-size: 16px;}
+
+.fm {}
+.fm__area { display: table; width: 800px; margin-bottom: 16px;}
+.fm__hd { display: table-cell; width: 180px; vertical-align: middle;}
+.fm__body { display: table-cell; width: 620px;}
+
+.lead-area { margin: 20px 0;}
+.lead-area__txt { margin-bottom: 10px;}
+.lead-area__item {}
+
+// form部品
+.fm__text { 
+	border: 1px solid #ccc; 
+	padding: 4px 10px; 
+	outline: none; 
+	font-size: 16px;
+	background: #fff;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0;
+	transition: ease .2s;
+	
+	& + & { margin: 0 10px;}
+	&.fm__text--s { width: 100px;}
+	&.fm__text--m { width: 200px;}
+	&.fm__text--l { width: 300px;}
+	&.fm__text--readonly { color: #666; background: #eee;}
+	
+	// focus
+	&:focus { border: 1px solid #3ba791;}
+}
+.fm__textarea { 
+	border: 1px solid #ccc; 
+	padding: 4px 10px; 
+	outline: none; 
+	font-size: 16px;
+	background: #fff;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0;
+	transition: ease .2s;
+
+	// focus
+	&:focus { border: 1px solid #3ba791;}
+}
+.fm__select {
+	border: 1px solid #ccc; 
+	padding: 4px 10px; 
+	outline: none; 
+	font-size: 16px;
+	background: #fff;
+	border-radius: 0;
+	transition: ease .2s;
+
+	// focus
+	&:focus { border: 1px solid #3ba791;}
+}

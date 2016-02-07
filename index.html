@@ -7,6 +7,8 @@
 <meta name="keywords" content=""> 
 <meta name="description" content=""> 
 <meta name="viewport" content="width=device-width; initial-scale=1.0;"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href="css/style.css" rel="stylesheet">
 <!-- SNS対応する際に使用　不必要な場合は削除
 <meta property="og:site_name" content="">
 <meta property="og:title" content=" ｜ サイト名">
@@ -17,22 +19,77 @@
 </head>
 <body>
 	
-	<div id="wrapper"> 
+	<div id="l-wrapper">
 		
 		<!-- ============= header ============= -->
-		<header id="l-globalHeader">
+		<header class="l-globalHeader">
 			<div class="inner">
-				<h1 id="sitelogo">sitelogo</h1>
+				<h1 id="l-globalHeader--sitelogo">sitelogo</h1>
+				<nav id="gnav" class="l-globalNav">
+					<ul>
+						<li id="gnav__btn--01" class="l-globalNav__btn"><a href="#header">menu</a></li>
+						<li id="gnav__btn--02" class="l-globalNav__btn"><a href="#header">menu</a></li>
+						<li id="gnav__btn--03" class="l-globalNav__btn"><a href="#header">menu</a></li>
+						<li id="gnav__btn--04" class="l-globalNav__btn"><a href="#header">menu</a></li>
+					</ul>
+				</nav>
+				<!-- /l-globalNav --> 
+				
+				<div class="serch-wrap">
+					<form action="#" id="serch-form" class="serch-fm" method="post">
+						<input type="text" class="fm__text">
+						<input type="button" value="検索" class="btn btn--serch">
+						<div class="icon-serch"></div>
+					</form>
+				</div>
+				<!-- /serch-wrap --> 
 			</div>
 		</header>
-		<!-- /============= header ============= --> 
+		<!-- /============= header ============= -->
 		
+		<div class="l-main">
+			
+			<ul class="l-bread">
+				<li class="l-bread__item"><a href="#">HOME</a></li>
+				<li class="l-bread__item"><a href="#">CATEGORY</a></li>
+				<li class="l-bread__item">PAGE</li>
+			</ul>
+			
+			<div class="l-contents">
+				
+			</div>
+			<!-- /contents --> 
+			
+		</div>
 		
-		<!-- ============= footer ============= --> 
-		<footer id="l-globalFooter"> 
-			<p><small>Copylight &copy;</small></p>
+		<!-- ============= footer ============= -->
+		<footer class="l-globalFooter">
+		  <div class="l-globalFooter__inner">
+		    <div class="l-footerNav">
+              <p class="l-footerNav__head">head01</p>
+              <ul class="l-footerNav__block">
+                  <li class="l-footerNav__btn"><a href="#header">menu</a></li>
+                  <li class="l-footerNav__btn"><a href="#header">menu</a></li>
+                  <li class="l-footerNav__btn"><a href="#header">menu</a></li>
+              </ul>
+			</div>
+			<div class="l-footerNav">
+              <p class="l-footerNav__head">head02</p>
+              <ul class="l-footerNav__block">
+                  <li class="l-footerNav__btn"><a href="#header">menu</a></li>
+                  <li class="l-footerNav__btn"><a href="#header">menu</a></li>
+                  <li class="l-footerNav__btn"><a href="#header">menu</a></li>
+              </ul>
+            </div>
+			<!-- /l-footerNav -->
+			<div class="l-footerSNSIcon">
+				<a href="#" class="l-footerSNSIcon__link item"><i class="l-footerSNSIcon__item fa fa-twitter-square fa-3x"></i></a>
+				<a href="#" class="l-footerSNSIcon__link item"><i class="l-footerSNSIcon__item fa fa-facebook-official fa-3x"></i></a>
+			</div>
+		  </div>
+		  <p class="copylight"><small>Copylight &copy;</small></p>
 		</footer>
-		<!-- /============= footer ============= --> 
+		<!-- /============= footer ============= -->
 	
 	</div>
 	

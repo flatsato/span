@@ -1,0 +1,144 @@
+$width: 980px;
+$footer-height: 180px;
+
+.l-wrapper {
+  height: 100%;
+  position: relative;
+  padding-bottom: $footer-height;
+}
+/*
+#####################################################################
+
+.globalHeader
+	
+#####################################################################
+*/
+
+.l-globalHeader {
+	margin: 0 auto;
+	width: $width;
+	overflow: hidden;
+	zoom: 1;
+    position: relative;
+//    background: #eee;
+  &--sitelogo {
+      float: left;
+      overflow: hidden;
+      zoom: 1;
+  }
+}
+
+/*
+#####################################################################
+
+.l-globalNav
+	
+#####################################################################
+*/
+.l-globalNav {
+  ul {
+    overflow: hidden;
+    padding: 0;
+    background: #e6e600;
+  }
+  &__btn {
+    display: inline-block;
+    padding: 10px 0;
+    a {
+      margin: 0;
+      padding: 10px 20px;
+      background: #00e6e6;
+    }
+  }
+}
+
+.serch-wrap {
+  position: absolute;
+  top: 14px;
+  right: 0;
+}
+
+/*
+#####################################################################
+
+.l-main
+	
+#####################################################################
+*/
+.l-main {
+  width: $width;
+  margin: 0 auto;
+}
+
+/*
+#####################################################################
+
+.l-bread
+	
+#####################################################################
+*/
+.l-bread {
+  margin: 0;
+  padding: 0;
+  &__item {
+    display: inline-block;
+    &:after {
+      content: ">";
+      padding: 0 10px;
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+}
+
+
+/*
+#####################################################################
+
+.globalFooter
+	
+#####################################################################
+*/
+
+.l-globalFooter {
+    width: 100%;
+    height: $footer-height;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #e6e600;
+  &__inner {
+    margin: 0 auto;
+	width: $width;
+    overflow: hidden;
+    position: relative;
+  }
+}
+.l-footerNav {
+  width: 100px;
+  margin-bottom: 30px;
+  float: left;
+  &__block {
+    margin: 0;
+    padding: 0 0 0 20px;
+//    list-style: none;
+  }
+}
+.l-footerSNSIcon {
+  clear: both;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  &__link {
+    color: #000;
+  }
+  item {
+    
+  }
+}
+.copylight {
+  text-align: center;
+  background: #eee;
+  padding: 10px 0;
+}
