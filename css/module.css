@@ -1,0 +1,58 @@
+.contents {
+  box-sizing: border-box;
+  padding: 40px 20px; }
+
+.c-carousel__list {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  list-style: none; }
+
+.c-carousel__item {
+  float: left;
+  width: 300px;
+  margin: 0 20px 0 0; }
+  .c-carousel__item:last-child {
+    margin: 0; }
+
+.c-carousel__nav .list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto 0;
+  text-align: center; }
+
+.c-carousel__nav .item {
+  display: inline-block; }
+  .c-carousel__nav .item a {
+    background: #ccc;
+    border-radius: 50%;
+    display: block;
+    height: 10px;
+    width: 10px; }
+    .c-carousel__nav .item a:hover {
+      background: #999; }
+  .c-carousel__nav .item.active a {
+    background: #666; }
+
+.c-paging__list {
+  padding: 0;
+  margin: 0;
+  text-align: center; }
+
+.c-paging li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 5px; }
+
+.c-paging a {
+  border: 1px solid #000;
+  padding: 5px 10px;
+  display: block;
+  text-decoration: none;
+  color: #000; }
+
+.c-paging .active a {
+  background: #000;
+  color: #fff; }
+
+/*# sourceMappingURL=module.css.map */
