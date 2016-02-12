@@ -55,4 +55,56 @@
   background: #000;
   color: #fff; }
 
+.c-horizonImageList {
+  width: 900px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+  .c-horizonImageList__item {
+    width: 450px;
+    display: table;
+    padding: 0;
+    margin: 0;
+    float: left; }
+  .c-horizonImageList__image {
+    display: table-cell;
+    vertical-align: middle; }
+  .c-horizonImageList__textBox {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px; }
+
+.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.c-horizonList__item {
+  display: inline-block; }
+  .c-horizonList__item:after {
+    content: "|";
+    margin: 0 5px; }
+  .c-horizonList__item:last-child:after {
+    display: none; }
+
+.c-descriptionList__title {
+  font-weight: bold; }
+
+.c-descriptionList__text {
+  margin: 0; }
+
+.c-descriptionHorizonList {
+  width: 600px;
+  overflow: hidden; }
+  .c-descriptionHorizonList__title {
+    width: 100px;
+    font-weight: bold;
+    float: left;
+    clear: both; }
+  .c-descriptionHorizonList__text {
+    width: 500px;
+    margin: 0;
+    padding-left: 100px; }
+
 /*# sourceMappingURL=module.css.map */
