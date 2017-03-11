@@ -1,247 +1,82 @@
 @charset "utf-8";
 
-/*-------------
-mixin
--------------*/
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc01($point-pc01) {}
+@include pc02($point-pc02) {}
+*/
 
-//PC ★
-
-
-//@include font-awesome;
-/* content:''; */
-/* left:0px; */
-@mixin 	font-awesome {
-	display:inline-block;
-	font-family: FontAwesome;
-	font-size:15px;
-	line-height:1;
-	margin:-8px 0 0;
-	position:absolute;
-	top:50%;
+$point-sp: 767px;
+$point-tb: 768px;
+$point-pc01: 980px;
+$point-pc02: 1280px;
+@mixin sp($point-sp) {
+  @media screen and (max-width: $point-sp) {
+    @content;
+  }
 }
 
-$color-blue:#689dbd;
+@mixin tb($point-tb) {
+  @media screen and (min-width: $point-tb) {
+    @content;
+  }
+}
+
+@mixin pc01($point-pc01) {
+  @media screen and (min-width: $point-pc01) {
+    @content;
+  }
+}
+
+@mixin pc02($point-pc02) {
+  @media screen and (min-width: $point-pc02) {
+    @content;
+  }
+}
+
+//@extend .clearfix;
+.clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
 // @include ov;
 @mixin ov {
-	opacity: 1;
-	-moz-transition: opacity .4s ease-in-out;
-	-webkit-transition: opacity .4s ease-in-out;
-	transition: opacity .4s ease-in-out;
-	&:hover {
-		opacity: 0.6;
-	}
+  opacity: 1;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+  &:hover {
+    opacity: 0.7;
+    img {
+      background-color: rgba(#fff, .01);
+    }
+  }
 }
-// @include ovImg;
-@mixin ovImg {
-	background:#fff;
-	opacity: 1;
-	-moz-transition: opacity .4s ease-in-out;
-	-webkit-transition: opacity .4s ease-in-out;
-	transition: opacity .4s ease-in-out;
-	&:hover {
-		opacity: 0.6;
-	}
-}
-// @include ovTextLink;
-@mixin ovTextLink {
-	a {
-		color:inherit;
-		opacity: 1;
-		-moz-transition: all .4s ease-in-out;
-		-webkit-transition: all .4s ease-in-out;
-		transition: all .4s ease-in-out;
-		&:hover {
-			color:$color-blue;
-		}
-	}
-}
+
 //@include kadomaru(6px);
 @mixin kadomaru($radius) {
-	-moz-border-radius: $radius;
-	-webkit-border-radius: $radius;
-	border-radius: $radius;
-	-ms-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  -ms-border-radius: $radius;
 }
-//@include shadowGray;
-@mixin shadowGray {
-	-webkit-box-shadow:rgba(54, 54, 54, 0.3) 0px 0px 3px 0px;
-	-moz-box-shadow:rgba(54, 54, 54, 0.3) 0px 0px 3px 0px;
-	box-shadow:rgba(54, 54, 54, 0.3) 0px 0px 3px 0px;
-}
-//@include shadowPageTitle;
-@mixin shadowPageTitle {
-	background:rgba(255, 255, 255, 0.1);
-	-webkit-box-shadow:rgba(255, 255, 255, 0.3) 0px 0px 140px 10px;
-	-moz-box-shadow:rgba(255, 255, 255, 0.3) 0px 0px 140px 10px;
-	box-shadow:rgba(255, 255, 255, 0.3) 0px 0px 140px 10px;
-}
+
 //@include font-googleEN;
 @mixin font-googleEN {
-	font-family: "Montserrat", sans-serif;
-}
-//@include siteWidth;
-@mixin siteWidth {
-	margin: 0 auto;
-	width: 860px;
+  font-family: 'Playfair Display', serif;
 }
 
-//@include detailBtnL();
-@mixin detailBtnL($value:210px) {
-	margin: 0 auto;
-	position: relative;
-	width:$value;
-	a {
-		@include ov;
-		background: $color-lightBlue;
-		border-radius: 3px;
-		color:#fff;
-		color: #ffffff !important;
-		display: block;
-		font-size:15px;
-		font-weight: bold;
-		padding:8px 0;
-		text-align: center;
-		text-decoration: none;
-		&:before {
-			@include font-awesome;
-			content:'\f105';
-			display:inline-block;
-			font-weight:bold;
-			left:20px;
-		}
-	}
-}
-
-//@include detailBtnM();
-@mixin detailBtnM($value:170px) {
-	margin: 0 auto;
-	position: relative;
-	width:$value;
-	a {
-		@include ov;
-		background: $color-lightBlue;
-		border-radius: 3px;
-		color:#fff;
-		color: #ffffff !important;
-		display: block;
-		font-size:12px;
-		font-weight: bold;
-		padding:4px 0;
-		text-align: center;
-		text-decoration: none;
-		&:before {
-			@include font-awesome;
-			content:'\f105';
-			display:inline-block;
-			font-weight:bold;
-			left:15px;
-		}
-	}
-}
-
-//@include inputBtnM();
-@mixin inputBtnM($value:170px) {
-	@include ov;
-	background: $color-lightBlue;
-	border:none;
-	border-radius: 3px;
-	color:#fff;
-	color: #ffffff !important;
-	cursor: pointer;
-	display: block;
-	font-size:12px;
-	font-weight: bold;
-	margin: 0 auto;
-	padding:4px 0;
-	position: relative;
-	text-align: center;
-	text-decoration: none;
-	width:$value;
-	&:before {
-		@include font-awesome;
-		content:'\f105';
-		display:inline-block;
-		font-weight:bold;
-		left:15px;
-
-	}
-}
-
-
-//@include pageTitle;
-@mixin pageTitle {
-	@include siteWidth;
-	margin: 10px auto 50px;
-	position: relative;
-	text-align: center;
-	span {
-		display:inline-block;
-		font-family: "Lucida Grande","Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3",Meiryo,"メイリオ",sans-serif;
-		font-size:15px;
-		left: 50%;
-		margin: 0 0 0 -50px;
-		position:absolute;
-		top:-0.7em;
-		width: 100px;
-		z-index:99;
-
-//@include font-googleEN
-
-}
-&:before {
-	@include siteWidth;
-	border-top:1px solid #000;
-	content:'';
-	display:block;
-	position:absolute;
-	top:50%;
-	z-index:2;
-}
+//@include font-JP;
+@mixin font-JP {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
 }
 
 //@include boxSizing;
-
-@mixin boxSizing{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-ms-box-sizing: border-box;
-}
-
-//SP ★
-
-//@include SPsiteWidth;
-
-@mixin SPsiteWidth{
-	@include boxSizing;
-	width:100%;
-}
-
-//@include SPpageTitle;
-@mixin SPpageTitle {
-	@include SPsiteWidth;
-	margin: 10px auto 50px;
-	position: relative;
-	text-align: center;
-	span {
-		display:inline-block;
-		font-family: "Lucida Grande","Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3",Meiryo,"メイリオ",sans-serif;
-		font-size:15px;
-		left: 50%;
-		margin: -0.2em 0 0 -50px;
-		position:absolute;
-		top:-0.7em;
-		width: 100px;
-		z-index:99;
-//@include font-googleEN
-}
-&:before {
-	@include SPsiteWidth;
-	border-top:1px solid #000;
-	content:'';
-	display:block;
-	position:absolute;
-	top:50%;
-	z-index:2;
-}
+@mixin boxSizing {
+  box-sizing: border-box;
 }

@@ -50,5 +50,17 @@ http://kenwheeler.github.io/slick/
 6. SNSボタン＝Twitter、Google、Facebook、はてぶ
 7. パンくず
 
+     table
+     form
+     404
+    カルーセル
+ページング
+     SNSボタン
+
+Twitterカード
+Facebook シェア
+GoogleMap
+YouTube埋め込み
+
 ◆その他
 CSS、フォルダ設計一式
