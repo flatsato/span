@@ -120,4 +120,4 @@ gulp.task('watch', function () {
   gulp.watch(["./src/js/**/*.js", "!./dist/js/**/*.js"], ["js"]);
 });
 
-gulp.task('default', ['html', 'auto', 'image', 'webserver', 'js', 'watch']);
+gulp.task('default', ['html', 'auto', 'image', 'webserver', 'minify-html', 'js', 'watch']);
