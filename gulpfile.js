@@ -9,6 +9,7 @@ $ = require('gulp-load-plugins')();
 //    gulp-cssmin【4】CSS圧縮
 //    gulp-uglify【5】JavaScript圧縮
 //    gulp-imagemin【6】img圧縮
+//    【7】 HTML minify
 //    gulp-sourcemaps 【8】sourcemap作成
 
 //    gulp-sass【last】Sassコンパイル
@@ -88,7 +89,7 @@ gulp.task('image', function () {
   })).pipe(gulp.dest('./dist/img/'));
 });
 
-//【7】 HTML minify
+//gulp-minify-html 【7】 HTML minify
 var minifyHTML = require('gulp-minify-html');
 
 gulp.task('minify-html', function() {
