@@ -1,30 +1,83 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>title</title>
-  @@include('head.html')
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>title</title>
+@@include('head.html')
 </head>
 
 <body>
-  <div class="l-container">
-    @@include('l-header.html')
-    @@include('l-gnav.html')
-    <div class="l-mainVisual">l-mainVisual</div>
-    <div class="l-contents">
-      <div class="l-sub">l-sub</div>
-      <main class="l-main">l-main
-      
-      https://liginc.co.jp/250164
-      gulp-htmlhint
-      browser-sync
-      
-      
-      </main>
-    </div>
-    @@include('l-footer.html')
-  </div>
-  @@include('javascript.html')
+<div class="l-container">
+@@include('l-header.html')
+@@include('l-gnav.html')
+<div class="l-mainVisual">l-mainVisual</div>
+<div class="l-contents">
+<div class="l-sub">l-sub</div>
+<main class="l-main">l-main
+
+【公開後に確認】
+- [ ] Facebook OGP
+- [ ] Twitter Card     
+
+【PC・SP共通】
+- [ ] HTMLバリデータ Dreamweaver
+- [ ] デザイン透かし
+- [ ] 実機で一通り操作してみる
+- [ ] 無駄なコード、ファイルを削除する
+
+
+【チェックツール】
+ドキュメントをバリデートする方法 （Dreamweaver CC）
+https://helpx.adobe.com/jp/dreamweaver/kb/7116.html    
+
+Search Console 
+https://www.google.com/webmasters/tools/home?hl=en&pli=1
+
+PageSpeed Insights
+https://developers.google.com/speed/pagespeed/insights/?hl=ja
+
+Twitterカード
+https://cards-dev.twitter.com/validator
+
+Facebookツール
+https://developers.facebook.com/tools/debug/
+
+リンクチェック Chrome拡張           
+Check My Links
+
+代表的な機種依存文字一覧
+http://mect-japan.com/2015/login/guide/izon.html 
+
+文字実体参照一覧
+http://rinrin.saiin.net/~aor/hms/cer
+
+HTML文字実体参照＆数値文字参照一覧
+http://www.mirai-net.jp/skill/tool/html_moji.html
+
+
+【PC】
+- [ ] PC/Mac Chrome
+- [ ] PC/Mac Firefox
+- [ ] PC/Mac Safari
+- [ ] PC/Win IE
+- [ ] PC/Win Edge
+
+【SP】 
+- [ ] iOS iPhone6
+- [ ] iOS iPhone6 Plus
+- [ ] iOS iPhone5  
+
+
+<a href="">リンクNG</a>
+
+<a href="http://www.yahoo.co.jp/">リンクOK</a> 
+
+
+</main>
+</div>
+@@include('l-footer.html')
+</div>
+@@include('javascript.html')
 </body>
 </html>
