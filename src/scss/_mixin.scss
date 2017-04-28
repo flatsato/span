@@ -1,16 +1,17 @@
 @charset "utf-8";
 
 /*
-@include sp($point-sp)
+@include sp($point-sp) {}
 @include tb($point-tb) {}
-@include pc01($point-pc01) {}
-@include pc02($point-pc02) {}
+@include pc($point-pc) {}
+@include pcWide($point-pcWide) {}
 */
 
 $point-sp: 767px;
 $point-tb: 768px;
-$point-pc01: 980px;
-$point-pc02: 1280px;
+$point-pc: 980px;
+$point-pcWide: 1280px;
+
 @mixin sp($point-sp) {
   @media screen and (max-width: $point-sp) {
     @content;
@@ -23,14 +24,14 @@ $point-pc02: 1280px;
   }
 }
 
-@mixin pc01($point-pc01) {
-  @media screen and (min-width: $point-pc01) {
+@mixin pc($point-pc) {
+  @media screen and (min-width: $point-pc) {
     @content;
   }
 }
 
-@mixin pc02($point-pc02) {
-  @media screen and (min-width: $point-pc02) {
+@mixin pcWide($point-pcWide) {
+  @media screen and (min-width: $point-pcWide) {
     @content;
   }
 }
@@ -60,10 +61,7 @@ $point-pc02: 1280px;
 
 //@include kadomaru(6px);
 @mixin kadomaru($radius) {
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
   border-radius: $radius;
-  -ms-border-radius: $radius;
 }
 
 //@include font-googleEN;

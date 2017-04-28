@@ -3,24 +3,22 @@ gulp = require('gulp');
 pngquant = require('imagemin-pngquant');
 $ = require('gulp-load-plugins')();
 
+//
 //    gulp-webserver【1】LiveReload環境構築
-//    gulp-file-include【2】HTMLファイルをインクルード
-//    gulp-autoprefixer【3】Sass、autoprefixer追加
+//    gulp-file-include【2】HTMLインクルード
+//    gulp-autoprefixer【3】autoprefixer追加
 //    gulp-cssmin【4】CSS圧縮
 //    gulp-uglify【5】JavaScript圧縮
 //    gulp-imagemin【6】img圧縮
-//    【7】 HTML minify
 //    gulp-sourcemaps 【8】sourcemap作成
 
-//    gulp-sass【last】Sassコンパイル
-//    gulp-notify エラーが出たときに通知を出す
+//    gulp
+//    gulp-sass Sassコンパイル
+//    gulp-notify エラーを通知
 //    gulp-load-plugins パッケージを読み込み
 //    gulp-plumber エラーが出たときにgulpを終了させない
-
-//追加予定
-
-//    gulp-prettify HTML整形
-
+//    gulp-rename 
+//    imagemin-pngquant png圧縮
 
 //gulp-webserver【1】LiveReload環境構築
 gulp.task('webserver', function () {
@@ -31,7 +29,7 @@ gulp.task('webserver', function () {
   }));
 });
 
-//gulp-file-include【2】HTMLファイルをインクルード
+//gulp-file-include【2】HTMLインクルード
 gulp.task('html', function () {
   return gulp.src(['./src/template/**/*.html', '!./src/template/_**/*.html']).pipe($.plumber({
     errorHandler: $.notify.onError('<%= error.message %>')
@@ -41,14 +39,12 @@ gulp.task('html', function () {
   })).pipe(gulp.dest('./dist/'));
 });
 
-//gulp-autoprefixer【3】Sass、autoprefixer追加
+//gulp-autoprefixer【3】autoprefixer追加
 var autoprefixer = require("gulp-autoprefixer");
 gulp.task("auto", function () {
-  gulp.src("./src/scss/**/*scss")
+  gulp.src("./src/css/**/*scss")
     .pipe(sass())
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'ie 10', 'android 4.0']
-    }))
+    .pipe(autoprefixer())
     .pipe(gulp.dest("./dist/css"));
 });
 
@@ -66,7 +62,7 @@ gulp.task('cssmin', function () {
     .pipe(gulp.dest('dist'));
 });
 
-//【5】JavaScript圧縮
+//gulp-uglify【5】JavaScript圧縮
 var uglify = require("gulp-uglify");
 
 gulp.task("js", function () {
@@ -80,7 +76,7 @@ gulp.task("js", function () {
     .pipe(gulp.dest("./dist/js/vendor"));
 });
 
-//【6】 画像容量圧縮
+//gulp-imagemin【6】img圧縮
 gulp.task('image', function () {
   return gulp.src('./src/img/**/*').pipe($.imagemin({
     progressive: true,
@@ -89,36 +85,25 @@ gulp.task('image', function () {
   })).pipe(gulp.dest('./dist/img/'));
 });
 
-//gulp-minify-html 【7】 HTML minify
-var minifyHTML = require('gulp-minify-html');
-
-gulp.task('minify-html', function() {
- return gulp.src('./src/template/*.html')
- .pipe(minifyHTML({ empty: true }))
- .pipe(gulp.dest('./dist/'));
-});
-
 //gulp-sourcemaps 【8】sourcemap作成
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function () {
-  return gulp.src('./src/scss/**/*.scss')
+  return gulp.src('./src/css/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('./dist/css/maps'))
     .pipe(gulp.dest('./dist/css/'));
 });
 
-
 gulp.task('watch', function () {
   gulp.watch('./src/template/**/*.html', ['html']);
-  gulp.watch('./src/template/**/*.html', ['minify-html']);
   gulp.watch('./src/img/**/*', ['image']);
-  gulp.watch('./src/scss/**/*.scss', ['sass']);
-  gulp.watch('./src/scss/**/*.scss', ['auto']);
+  gulp.watch('./src/css/**/*.scss', ['sass']);
+  gulp.watch('./src/css/**/*.scss', ['auto']);
   gulp.watch(["./src/js/**/*.js", "!./dist/js/**/*.js"], ["js"]);
 });
 
-gulp.task('default', ['html', 'auto', 'image', 'webserver', 'minify-html', 'js', 'watch']);
+gulp.task('default', ['html', 'auto', 'image', 'webserver', 'js', 'watch']);

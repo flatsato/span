@@ -1,1 +1,152 @@
-<!DOCTYPE html><html lang=ja><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>form base</title><meta name=keywords content><meta name=description content><meta name=viewport content="width=device-width; initial-scale=1.0;"><link href=css/style.css rel=stylesheet></head><body><div class=form-wrap><p class=form-wrap__lead>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iste iusto culpa, id, eum architecto quo dicta dolorum praesentium quod labore obcaecati? Minus molestiae odio, repellat doloribus dolores, quidem tempore.</p><form action=# id=form class=fm method=post><div class=fm__area><div class=fm__hd>名前<span class=req>必須</span></div><div class=fm__body><input type=text name=fm__item01 class=fm__text required><input type=text name=fm__item02 class=fm__text required><span class=example-txt>入力例：テキストが入ります</span></div></div><div class=fm__area><div class=fm__hd>フリガナ</div><div class=fm__body><input type=text name=fm__item03 class=fm__text><input type=text name=fm__item04 class=fm__text><span class=example-txt>入力例：テキストが入ります</span></div></div><div class=fm__area><div class=fm__hd>郵便番号</div><div class=fm__body><input type=text name=fm__item03 class=fm__text></div></div><div class=fm__area><div class=fm__hd>住所1</div><div class=fm__body><select name=fm__item04 class=fm__select><option value=01 selected>三毛</option><option value=02>ソマリ</option><option value=03>ベンガル</option></select></div></div><div class=fm__area><div class=fm__hd>住所2</div><div class=fm__body><input type=text name=fm__item05 class=fm__text></div></div><div class=fm__area><div class=fm__hd>電話</div><div class=fm__body><input type=tel name=fm__item05 class=fm__text><div class=fm__error>エラーメッセージ</div></div></div><div class=fm__area><div class=fm__hd>チェック項目</div><div class=fm__body><input type=checkbox name=fm__item06 value=1 id=check01 checked><label for=check01>三毛</label> <input type=checkbox name=fm__item06 value=2 id=check02><label for=check02>ソマリ</label> <input type=checkbox name=fm__item06 value=3 id=check03><label for=check03>ベンガル</label></div></div><div class=fm__area><div class=fm__hd>ラジオボタン項目</div><div class=fm__body><input type=radio name=fm__item07 value=1 id=radio01 checked><label for=radio01>三毛</label> <input type=radio name=fm__item07 value=2 id=radio02><label for=radio02>ソマリ</label> <input type=radio name=fm__item07 value=3 id=radio03><label for=radio03>ベンガル</label></div></div><div class=fm__area><div class=fm__hd>項目sizeS</div><div class=fm__body><input type=text name=fm__item08 class="fm__text fm__text--s"></div></div><div class=fm__area><div class=fm__hd>項目sizeM</div><div class=fm__body><input type=text name=fm__item09 class="fm__text fm__text--m"></div></div><div class=fm__area><div class=fm__hd>項目sizeL</div><div class=fm__body><input type=text name=fm__item10 class="fm__text fm__text--l"></div></div><div class=fm__area><div class=fm__hd>テキストエリア項目</div><div class=fm__body><textarea name=fm__item11 class=fm__textarea></textarea></div></div><div class=fm__area><div class=fm__hd>ファイル添付</div><div class=fm__body><input type=file name=fm__item12 class=fm__file></div></div><div class=fm__area><div class=fm__hd>メールアドレス</div><div class=fm__body><input type=email name=fm__item13 class=fm__text></div></div><div class=fm__area><div class=fm__hd>パスワード</div><div class=fm__body><input type=password name=fm__item14 class=fm__text></div></div><div class=fm__area><div class=fm__hd>readonly</div><div class=fm__body><input type=text name=fm__item15 class="fm__text fm__text--readonly" value=readonly readonly></div></div><div class=lead-area><div class=lead-area__txt>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam sint, excepturi rerum commodi natus odit fugiat praesentium consequatur reprehenderit doloribus minus explicabo neque accusantium ipsam sapiente nihil autem repellendus. Earum ullam, ipsam! Ipsum ducimus numquam quidem exercitationem, dolores error. Tempore.</div><input type=checkbox name=lead-area__item value=cat id=cat><label for=cat>I love cats.</label></div><div class=fm__area><input type=button value=キャンセル class="btn btn--cancel"> <input type=button value=送信 class="btn btn--submit"> <a href=# class="btn btn--link">link</a></div></form></div></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>form base</title>
+<meta name="keywords" content=""> 
+<meta name="description" content=""> 
+<meta name="viewport" content="width=device-width; initial-scale=1.0;"> 
+<link href="css/style.css" rel="stylesheet"> 
+</head>
+<body>
+
+<div class="form-wrap">
+	
+<!--リード文-->
+	<p class="form-wrap__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iste iusto culpa, id, eum architecto quo dicta dolorum praesentium quod labore obcaecati? Minus molestiae odio, repellat doloribus dolores, quidem tempore.</p>
+	
+	<form action="#" id="form" class="fm" method="post">
+	
+		<!--名前-->
+		<div class="fm__area">
+			<div class="fm__hd">名前<span class="req">必須</span></div>
+			<div class="fm__body"><input type="text" name="fm__item01" class="fm__text" required><input type="text" name="fm__item02" class="fm__text" required><span class="example-txt">入力例：テキストが入ります</span></div>
+		</div>
+		
+		<!--フリガナ-->
+		<div class="fm__area">
+			<div class="fm__hd">フリガナ</div>
+			<div class="fm__body"><input type="text" name="fm__item03" class="fm__text"><input type="text" name="fm__item04" class="fm__text"><span class="example-txt">入力例：テキストが入ります</span></div>
+		</div>
+		
+		<!--郵便番号-->
+		<div class="fm__area">
+			<div class="fm__hd">郵便番号</div>
+			<div class="fm__body"><input type="text" name="fm__item03" class="fm__text"></div>
+		</div>
+		
+		<!--住所1-->
+		<div class="fm__area">
+			<div class="fm__hd">住所1</div>
+			<div class="fm__body">
+				<select name="fm__item04" class="fm__select">
+					<option value="01" selected>三毛</option>
+					<option value="02">ソマリ</option>
+					<option value="03">ベンガル</option>
+				</select>
+			</div>
+		</div>
+		
+		<!--住所2-->
+		<div class="fm__area">
+			<div class="fm__hd">住所2</div>
+			<div class="fm__body"><input type="text" name="fm__item05" class="fm__text"></div>
+		</div>
+		
+		<!--電話-->
+		<div class="fm__area">
+			<div class="fm__hd">電話</div>
+			<div class="fm__body">
+				<input type="tel" name="fm__item05" class="fm__text">
+				<div class="fm__error">エラーメッセージ</div>
+			</div>
+		</div>
+		
+		<!--チェック項目-->
+		<div class="fm__area">
+			<div class="fm__hd">チェック項目</div>
+			<div class="fm__body">
+				<input type="checkbox" name="fm__item06" value="1" id="check01" checked="checked"><label for="check01">三毛</label>
+				<input type="checkbox" name="fm__item06" value="2" id="check02"><label for="check02">ソマリ</label>
+				<input type="checkbox" name="fm__item06" value="3" id="check03"><label for="check03">ベンガル</label>
+			</div>
+		</div>
+		
+		<!--ラジオボタン項目-->
+		<div class="fm__area">
+			<div class="fm__hd">ラジオボタン項目</div>
+			<div class="fm__body">
+				<input type="radio" name="fm__item07" value="1" id="radio01" checked="checked"><label for="radio01">三毛</label>
+				<input type="radio" name="fm__item07" value="2" id="radio02"><label for="radio02">ソマリ</label>
+				<input type="radio" name="fm__item07" value="3" id="radio03"><label for="radio03">ベンガル</label>
+			</div>
+		</div>
+		
+		<!--項目sizeS-->
+		<div class="fm__area">
+			<div class="fm__hd">項目sizeS</div>
+			<div class="fm__body"><input type="text" name="fm__item08" class="fm__text fm__text--s"></div>
+		</div>
+		
+		<!--項目sizeM-->
+		<div class="fm__area">
+			<div class="fm__hd">項目sizeM</div>
+			<div class="fm__body"><input type="text" name="fm__item09" class="fm__text fm__text--m"></div>
+		</div>
+		
+		<!--項目sizeL-->
+		<div class="fm__area">
+			<div class="fm__hd">項目sizeL</div>
+			<div class="fm__body"><input type="text" name="fm__item10" class="fm__text fm__text--l"></div>
+		</div>
+		
+		<!--テキストエリア項目-->
+		<div class="fm__area">
+			<div class="fm__hd">テキストエリア項目</div>
+			<div class="fm__body">
+				<textarea name="fm__item11" class="fm__textarea"></textarea>
+			</div>
+		</div>
+		
+		<!--ファイル添付-->
+		<div class="fm__area">
+			<div class="fm__hd">ファイル添付</div>
+			<div class="fm__body"><input type="file" name="fm__item12" class="fm__file"></div>
+		</div>
+		
+		<!--メールアドレス-->
+		<div class="fm__area">
+			<div class="fm__hd">メールアドレス</div>
+			<div class="fm__body"><input type="email" name="fm__item13" class="fm__text"></div>
+		</div>
+		
+		<!--パスワード-->
+		<div class="fm__area">
+			<div class="fm__hd">パスワード</div>
+			<div class="fm__body"><input type="password" name="fm__item14" class="fm__text"></div>
+		</div>
+		
+		<!--readonly-->
+		<div class="fm__area">
+			<div class="fm__hd">readonly</div>
+			<div class="fm__body"><input type="text" name="fm__item15" class="fm__text fm__text--readonly" value="readonly" readonly="readonly"></div>
+		</div>
+		
+		<!--送信ボタン前文章-->
+		<div class="lead-area">
+			<div class="lead-area__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam sint, excepturi rerum commodi natus odit fugiat praesentium consequatur reprehenderit doloribus minus explicabo neque accusantium ipsam sapiente nihil autem repellendus. Earum ullam, ipsam! Ipsum ducimus numquam quidem exercitationem, dolores error. Tempore.</div>
+			<input type="checkbox" name="lead-area__item" value="cat" id="cat"><label for="cat">I love cats.</label>
+		</div>
+		
+		<div class="fm__area">
+			<input type="button" value="キャンセル" class="btn btn--cancel">
+			<input type="button" value="送信" class="btn btn--submit">
+			<a href="#" class="btn btn--link">link</a>
+		</div>
+		
+	</form>
+</div>
+	
+</body>
+</html>
