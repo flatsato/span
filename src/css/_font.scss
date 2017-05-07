@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp) {}
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include pcWide($point-pcWide) {}
+*/
+
+//@include font-googleEN;
+//https://fonts.google.com/
+@mixin font-googleEN {
+  font-family: 'Playfair Display', serif;
+}
+
+//@include font-googleJP;
+//https://typekit.com/fonts?browse_mode=japanese
+@mixin font-googleJP {
+  font-family: 'Playfair Display', serif;
+}
+
+//@include font-JP;
+@mixin font-JP {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+}
+
+@mixin font-EN {
+  //  https://typekit.com/fonts/mr-eaves-xl/details/mr-eaves-xl-mod-ot-reg
+  font-family: mr-eaves-xl-modern, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  //Typekitちらつき対策
+  .wf-loading & {
+    visibility: hidden;
+  }
+  .wf-active & {
+    visibility: visible;
+  }
+}

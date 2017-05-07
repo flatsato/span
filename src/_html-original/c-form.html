@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>title</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=1280">
+
+<!-- *** Facebook *** ★忘れずに指定 -->
+<meta property="og:site_name" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http:///img/ogp.png">
+<meta property="og:locale" content="ja_JP">
+
+<!-- *** Twitter *** ★忘れずに指定 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="">
+<meta name="twitter:creator" content="">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http:///img/common/ogp.png">
+
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/vendor/ress.min.css">
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- Google Tag START -->
+<!-- Google Tag END -->
+</head>
+
+<body>
+
+<form data-abide novalidate>
+  <div data-abide-error class="alert callout" style="display: none;">
+    <p><i class="fi-alert"></i> There are some errors in your form.</p>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <label>Number Required
+        <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required pattern="number">
+        <span class="form-error">
+          Yo, you had better fill this out, it's required.
+        </span>
+      </label>
+      <p class="help-text" id="exampleHelpText">Here's how you use this input field!</p>
+    </div>
+    <div class="small-12 columns">
+      <label>Nothing Required!
+        <input type="text" placeholder="Use me, or don't" aria-describedby="exampleHelpTex" data-abide-ignore>
+      </label>
+      <p class="help-text" id="exampleHelpTex">This input is ignored by Abide using `data-abide-ignore`</p>
+    </div>
+    <div class="small-12 columns">
+      <label>Password Required
+        <input type="password" id="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText" required >
+        <span class="form-error">
+          I'm required!
+        </span>
+      </label>
+      <p class="help-text" id="exampleHelpText">Enter a password please.</p>
+    </div>
+    <div class="small-12 columns">
+      <label>Re-enter Password
+        <input type="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText2" required pattern="alpha_numeric" data-equalto="password">
+        <span class="form-error">
+          Hey, passwords are supposed to match!
+        </span>
+      </label>
+      <p class="help-text" id="exampleHelpText2">This field is using the `data-equalto="password"` attribute, causing it to match the password field above.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 columns">
+      <label>URL Pattern, not required, but throws error if it doesn't match the Regular Expression for a valid URL.
+        <input type="text" placeholder="http://foundation.zurb.com" pattern="url">
+      </label>
+    </div>
+    <div class="medium-6 columns">
+      <label>European Cars, Choose One, it can't be the blank option.
+        <select id="select" required>
+          <option value=""></option>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <fieldset class="large-6 columns">
+      <legend>Choose Your Favorite, and this is required, so you have to pick one.</legend>
+      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue" required><label for="pokemonBlue">Blue</label>
+      <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+    </fieldset>
+    <fieldset class="large-6 columns">
+      <legend>Choose Your Favorite - not required, you can leave this one blank.</legend>
+      <input type="radio" name="pockets" value="Red" id="pocketsRed"><label for="pocketsRed">Red</label>
+      <input type="radio" name="pockets" value="Blue" id="pocketsBlue"><label for="pocketsBlue">Blue</label>
+      <input type="radio" name="pockets" value="Yellow" id="pocketsYellow"><label for="pocketsYellow">Yellow</label>
+    </fieldset>
+    <fieldset class="large-6 columns">
+      <legend>Check these out</legend>
+      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+      <input id="checkbox2" type="checkbox" required><label for="checkbox2">Checkbox 2</label>
+      <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
+    </fieldset>
+  </div>
+  <div class="row">
+    <fieldset class="large-6 columns">
+      <button class="button" type="submit" value="Submit">Submit</button>
+    </fieldset>
+    <fieldset class="large-6 columns">
+      <button class="button" type="reset" value="Reset">Reset</button>
+    </fieldset>
+  </div>
+</form>
+
+<!--include START-->
+ <footer class="l-footer">
+  l-footer
+</footer>
+<!--include END-->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script><!--★IE8 support-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script><!--★IE9.10.11 support-->
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script><!--★IE9.10.11 support-->
+
+<script src="/js/vendor/jquery.matchHeight-min.js"></script>
+<script src="/js/common.js"></script>
+</body>
+</html>

@@ -43,7 +43,7 @@ http://kenwheeler.github.io/slick/
 シンプルなものを用意
 
 1. FORM＝テキストボックス、ボタン（hover）、検索ボックス、エラーメッセージ
-2. ページング
+2. c-paging＝ページング
 3. ヘッダー＝グロナビ、
 4. フッター
 5. サイトリンク一覧＝フッターの上にあるやつ
@@ -54,7 +54,7 @@ http://kenwheeler.github.io/slick/
      form
      404
     カルーセル
-ページング
+	ページング
      SNSボタン
 
 Twitterカード

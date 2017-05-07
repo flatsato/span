@@ -11,7 +11,6 @@ $point-sp: 767px;
 $point-tb: 768px;
 $point-pc: 980px;
 $point-pcWide: 1280px;
-
 @mixin sp($point-sp) {
   @media screen and (max-width: $point-sp) {
     @content;
@@ -19,19 +18,22 @@ $point-pcWide: 1280px;
 }
 
 @mixin tb($point-tb) {
-  @media screen and (min-width: $point-tb) {
+  @media print,
+  screen and (min-width: $point-tb) {
     @content;
   }
 }
 
 @mixin pc($point-pc) {
-  @media screen and (min-width: $point-pc) {
+  @media print,
+  screen and (min-width: $point-pc) {
     @content;
   }
 }
 
 @mixin pcWide($point-pcWide) {
-  @media screen and (min-width: $point-pcWide) {
+  @media print,
+  screen and (min-width: $point-pcWide) {
     @content;
   }
 }
@@ -62,16 +64,6 @@ $point-pcWide: 1280px;
 //@include kadomaru(6px);
 @mixin kadomaru($radius) {
   border-radius: $radius;
-}
-
-//@include font-googleEN;
-@mixin font-googleEN {
-  font-family: 'Playfair Display', serif;
-}
-
-//@include font-JP;
-@mixin font-JP {
-  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
 }
 
 //@include boxSizing;

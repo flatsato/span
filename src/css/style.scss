@@ -1,19 +1,21 @@
 @charset "utf-8";
 
-@import "mixin";
+
 
 /* ==========================================================================
    Foundation
    ========================================================================== */
 
-@import "foundation";
 @import "mixin";
+@import "font";
+@import "form";
+@import "foundation";
+@import "utility";
+@import "sprite";
 @import "zindex";
-
 
 /* ==========================================================================
    Layout Object
    ========================================================================== */
 
-@import "object/*";  //object配下一括読み込み
-
+@import "object/*";  
