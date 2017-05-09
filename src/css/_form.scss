@@ -115,7 +115,7 @@ legend {
       margin: 0 0 40px;
     }
   }
-  //☆リード文 START
+  //☆リード文 END
   //☆先頭エラー文 START
   &__errorWrap {
     margin: 0 0 40px;
@@ -138,7 +138,7 @@ legend {
       margin: 0 0 12px;
     }
   }
-  //☆先頭エラー文 START
+  //☆先頭エラー文 END
   &__group {
     margin: 0 0 32px;
   }
@@ -179,19 +179,10 @@ legend {
     border: 1px solid #666;
     padding: 8px 10px;
     box-sizing: border-box;
+    background: #fff;
   }
-  &__inputText {
-    width: 100%;
-    border: 1px solid #666;
-    padding: 8px 10px;
-    box-sizing: border-box;
-  }
-  &__textArea {
-    width: 100%;
-    border: 1px solid #666;
-    padding: 8px 10px;
-    box-sizing: border-box;
-  }
+  &__inputText {}
+  &__textArea {}
   &__must {
     font-size: 12px;
     color: #fff;
@@ -225,13 +216,13 @@ legend {
     background: #fff;
     height: 100px;
     overflow: hidden;
-     overflow: auto;
+    overflow: auto;
     &Inner {
-     font-size: 12px;
+      font-size: 12px;
       line-height: (24/12);
     }
   }
-  &__btnWrap{
+  &__btnWrap {
     text-align: center;
     margin: 0 0 40px;
   }
