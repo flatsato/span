@@ -6,12 +6,12 @@ bulkSass = require('gulp-sass-bulk-import');
 
 //    gulp-webserver【1】LiveReload環境構築
 //    gulp-file-include【2】HTMLインクルード
+//    gulp-htmlmin【2】HTML圧縮
 //    gulp-sass【3】sass
 //    gulp-autoprefixer【4】autoprefixer追加
 //    gulp-cssmin【5】css圧縮
 //    gulp-uglify【6】JavaScript圧縮
 //    gulp-imagemin【7】img圧縮
-//    gulp-htmlmin【8】HTML圧縮
 //    gulp-sourcemaps 【9】sourcemap作成
 //    gulp.spritesmith【10】sprite画像
 
@@ -33,14 +33,22 @@ gulp.task('webserver', function () {
   }));
 });
 
-//gulp-file-include【2】HTMLインクルード
+//gulp-file-include【2】HTMLインクルード、圧縮
+var htmlmin = require('gulp-htmlmin');
 gulp.task('html', function () {
-  return gulp.src(['./src/template/**/*.html', '!./src/template/_**/*.html']).pipe($.plumber({
+  return gulp.src(['./src/template/**/*.html', '!./src/template/_**/*.html'])
+  .pipe($.plumber({
     errorHandler: $.notify.onError('<%= error.message %>')
-  })).pipe($.fileInclude({
+  }))
+  .pipe($.fileInclude({
     prefix: '@@',
     basepath: './src/template/_include/'
-  })).pipe(gulp.dest('./src/_html-original/'));
+  }))
+  .pipe(gulp.dest('./src/_html-original/')) //HTML圧縮前ファイルを保存
+  .pipe(htmlmin({                           //HTML圧縮
+    collapseWhitespace: true
+  }))
+  .pipe(gulp.dest('./dist/'));
 });
 
 //gulp-autoprefixer【3】autoprefixer追加
@@ -94,16 +102,6 @@ gulp.task('image', function () {
   })).pipe(gulp.dest('./dist/img/'));
 });
 
-//gulp-htmlmin【8】HTML圧縮
-var htmlmin = require('gulp-htmlmin');
-gulp.task('minify', function () {
-  return gulp.src('./src/_html-original/**/*.html')
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
-    .pipe(gulp.dest('./dist/'))
-});
-
 //gulp.spritesmith【10】sprite画像
 //http://blog.e-riverstyle.com/2014/02/gulpspritesmithcss-spritegulp.html
 // Android 4.2〜対応とするため SPのspriteは無し
@@ -134,5 +132,4 @@ gulp.task('watch', function () {
   gulp.watch(["./src/js/**/*.js", "!./dist/js/**/*.js"], ["js"]);
 });
 
-gulp.task('default', ['webserver', 'html', 'sass', 'cssmin', 'js', 'image', 'minify',
-  'sprite', 'watch']);
+gulp.task('default', ['webserver', 'html', 'sass', 'cssmin', 'js', 'image', 'sprite', 'watch']);

@@ -10,18 +10,31 @@
 
 <body>
   <div class="l-container">
+    <!-- l-navbar START -->
+    @@include('l-navbar.html')
+    <!-- l-navbar END -->
+    <!-- l-header START -->
     @@include('l-header.html')
+    <!-- l-header END -->
     <div class="l-contents">
       <main class="l-main">
-           
+
+        <!-- c-breadcrumbs START -->
+        @@include('c-breadcrumbs.html')
+        <!-- c-breadcrumbs END -->
+
+        <!-- c-table START -->
+        @@include('c-table.html')
+        <!-- c-table END -->
+
         <!-- c-form START -->
         @@include('c-form.html')
         <!-- c-form END -->
 
-        <!-- c-paging START -->
-        @@include('c-paging.html')
-        <!-- c-paging END -->
-        
+        <!-- c-pagination START -->
+        @@include('c-pagination.html')
+        <!-- c-pagination END -->
+
 
       </main>
       <!-- l-sub START -->
