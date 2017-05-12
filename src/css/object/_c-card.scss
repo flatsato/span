@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include pcWide($point-pcWide) {}
+*/
+
+
+ .c-card {
+    @include sp($point-sp) {
+      padding: 0 0 45px;
+    }
+    @include tb($point-tb) {
+      width: 720px;
+      margin: 0 auto;
+    }
+    &__list {
+      @include sp($point-sp) {
+        margin: 0 0 45px;
+      }
+      @include tb($point-tb) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 0 58px;
+      }
+    }
+    &__item {
+      @include sp($point-sp) {
+        width: 100%;
+        margin: 0 0 45px;
+      }
+      @include tb($point-tb) {
+        width: 339px;
+        position: relative;
+        margin: 0 0 54px;
+      }
+    }
+    &__link {
+      display: block;
+      position: relative;
+      @include sp($point-sp) {
+        display: table;
+      }
+      &:hover {
+        .Oursolution__thumb img {
+          @include tb($point-tb) {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    &__thumb {
+      @include sp($point-sp) {
+        width: 50%;
+        margin: 0 0 17px;
+        display: table-cell;
+      }
+      @include tb($point-tb) {
+        width: 339px;
+        height: 226px;
+        overflow: hidden;
+        margin: 0 0 24px;
+      }
+      img {
+        @include sp($point-sp) {
+          width: 100%;
+          height: auto;
+        }
+        @include tb($point-tb) {
+          width: 339px;
+          height: 226px;
+          transform-origin: 50% 98%;
+          transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+      }
+    }
+    &__caption {
+      @include sp($point-sp) {
+        font-size: 13px;
+        display: table-cell;
+        width: 50%;
+        padding: 0 18px;
+        vertical-align: middle;
+        line-height: (18/12);
+        background: #5c5c5c;
+        color: #fff;
+        .SPview {
+          display: inline;
+        }
+      }
+      @include tb($point-tb) {
+        color: #fff;
+        font-size: 16px;
+        line-height: (16/13);
+        background: rgba(51, 51, 51, 0.8);
+        padding: 8px 20px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+      .textEN {
+        color: #a6a6a6;
+        @include font-EN;
+        display: block;
+        margin: 0 0 3px;
+        @include sp($point-sp) {
+          font-size: 12px;
+        }
+        @include tb($point-tb) {
+          font-size: 16px;
+        }
+      }
+    }
+    &__text {
+      @include sp($point-sp) {
+        font-size: 12px;
+        line-height: (48/24);
+        padding: 23px 19px 20px;
+      }
+      @include tb($point-tb) {
+        line-height: (24/14);
+        font-size: 14px;
+        margin: 0 6px 24px;
+      }
+    }
+    .c-moreLink {
+      @include sp($point-sp) {
+        margin: 0 19px;
+      }
+      @include tb($point-tb) {
+        margin: 0 6px;
+      }
+    }
+  }
