@@ -5,12 +5,17 @@
 @include tb($point-tb) {}
 @include pc($point-pc) {}
 @include pcWide($point-pcWide) {}
+
+@include onlyTB($only-point-tb) {}
+@include onlyPC($only-point-pc) {}
 */
 
 $point-sp: 767px;
 $point-tb: 768px;
 $point-pc: 980px;
 $point-pcWide: 1280px;
+
+//
 @mixin sp($point-sp) {
   @media screen and (max-width: $point-sp) {
     @content;
@@ -34,6 +39,18 @@ $point-pcWide: 1280px;
 @mixin pcWide($point-pcWide) {
   @media print,
   screen and (min-width: $point-pcWide) {
+    @content;
+  }
+}
+
+@mixin onlyTB($only-point-tb) {
+  @media (min-width: $point-tb) and (max-width: $point-pc) {
+    @content;
+  }
+}
+
+@mixin onlyPC($only-point-pc) {
+  @media (min-width: $point-pc) and (max-width: $point-pcWide) {
     @content;
   }
 }
