@@ -37,3 +37,118 @@
     visibility: visible;
   }
 }
+
+.c-backLink {
+  margin: 0 auto;
+  font-size: 16px;
+  @include font-EN;
+  text-align: center;
+  a {
+    padding: 0 0 0 15px;
+    position: relative;
+    display: inline-block;
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid #000;
+      border-right: 1px solid #000;
+      transform: rotate(225deg);
+      margin: -3px 0 0;
+      @include sp($point-sp) {}
+    }
+    &:hover {
+      color: #a6a6a6;
+      &:before {
+        border-top: 1px solid #a6a6a6;
+        border-right: 1px solid #a6a6a6;
+      }
+    }
+  }
+  &.arrowRight a {
+    padding: 0 15px 0 0;
+    &:before {
+      right: 0;
+      left: inherit;
+      transform: rotate(45deg);
+      @include sp($point-sp) {}
+    }
+  }
+  &.textJP {
+    letter-spacing: 0.12em;
+    @include sp($point-sp) {
+      font-size: 12px;
+    }
+    @include pc($point-pc) {
+      font-size: 14px;
+    }
+  }
+  &.textEN {
+    letter-spacing: 0.04em;
+    @include sp($point-sp) {
+      font-size: 13px;
+    }
+    @include pc($point-pc) {
+      font-size: 16px;
+    }
+  }
+}
+
+.c-moreLink {
+  a {
+    padding: 0 0 0 15px;
+    position: relative;
+    display: inline-block;
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid #000;
+      border-right: 1px solid #000;
+      transform: rotate(225deg);
+      margin: -4px 0 0;
+    }
+    &:hover {
+      color: #a6a6a6;
+      &:before {
+        border-top: 1px solid #a6a6a6;
+        border-right: 1px solid #a6a6a6;
+      }
+    }
+  }
+  &.arrowRight a {
+    padding: 0 15px 0 0;
+    &::before {
+      right: 0;
+      left: inherit;
+      transform: rotate(45deg);
+    }
+  }
+  &.textJP {
+    letter-spacing: 0.12em;
+    @include sp($point-sp) {
+      font-size: 12px;
+    }
+    @include pc($point-pc) {
+      font-size: 14px;
+    }
+  }
+  &.textEN {
+    @include font-EN;
+    letter-spacing: 0.04em;
+    @include sp($point-sp) {
+      font-size: 13px;
+    }
+    @include pc($point-pc) {
+      font-size: 16px;
+    }
+  }
+}

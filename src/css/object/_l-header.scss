@@ -59,20 +59,12 @@
       height: auto;
       vertical-align: top;
       @include sp($point-sp) {
-        width: (408px/2);
-        height: (20px/2);
+        width: (455px/4);
+        height: (128px/4);
       }
       @include tb($point-tb) {
-        width: 272px;
-        height: 13px;
-      }
-      @include pc($point-pc) {
-        width: 343px;
-        height: 17px;
-        body.topPage & {
-          width: 428px;
-          height: 21px;
-        }
+        width: (455px/4);
+        height: (128px/4);
       }
     }
   }

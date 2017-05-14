@@ -33,7 +33,7 @@
         margin: 0 0 45px;
       }
       @include tb($point-tb) {
-        width: 339px;
+        width: 340px;
         position: relative;
         margin: 0 0 54px;
       }
@@ -59,7 +59,7 @@
         display: table-cell;
       }
       @include tb($point-tb) {
-        width: 339px;
+        width: 340px;
         height: 226px;
         overflow: hidden;
         margin: 0 0 24px;
@@ -70,7 +70,7 @@
           height: auto;
         }
         @include tb($point-tb) {
-          width: 339px;
+          width: 340px;
           height: 226px;
           transform-origin: 50% 98%;
           transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);

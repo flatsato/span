@@ -7,7 +7,6 @@
 @include pcWide($point-pcWide) {}
 */
 
-
 .c-form {
   h3 {
     margin: 0 0 12px;
@@ -49,6 +48,7 @@
       margin-top: -11px;
       background-color: white;
       border-radius: 50%;
+      border: 1px solid #000;
     }
   }
   //☆ラジオボタン END
@@ -89,6 +89,7 @@
       height: 22px;
       margin-top: -11px;
       background-color: white;
+      border: 1px solid #000;
     }
   }
   //☆チェックボックス END
@@ -181,7 +182,7 @@
   }
   &__column {
     display: table;
-    width: 80%;
+    width: 100%;
     &Title {
       display: table-cell;
       vertical-align: top;
@@ -191,6 +192,11 @@
     &Body {
       display: table-cell;
       vertical-align: top;
+    }
+    &Error {
+      margin: 8px 0 0;
+      color: #EF5A24;
+      font-size: 11px;
     }
   }
   &__privacy {

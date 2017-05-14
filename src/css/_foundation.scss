@@ -11,12 +11,12 @@ html>body {
 }
 
 a {
-  outline: none;
+  color: #333;
   -webkit-touch-callout: none;
-}
-
-a:hover {
+  @include ov;
+  &:hover {
   text-decoration: none;
+}
 }
 
 a:focus,
@@ -30,8 +30,10 @@ img {
   border-style: none;
 }
 
-a {
-  @include ov;
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 br.SPbr {
