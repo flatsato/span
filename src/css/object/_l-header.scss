@@ -116,9 +116,6 @@
       @include pc($point-pc) {
         margin: 0 0 0 24px;
       }
-      &:nth-child(2) {
-        margin: 0;
-      }
       span {
         @include tb($point-tb) {
           padding: 0 0 1px;
