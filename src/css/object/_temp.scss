@@ -12,9 +12,16 @@
   margin: 0 0 24px;
 }
 
-.temp-h2 {
+.temp-h3 {
   border-left: 6px solid #333;
   padding: 0 0 0 12px;
   margin: 60px 0 6px;
   line-height: 1;
+}
+
+.temp-list{
+  margin: 32px 0 48px;
+  li{
+    margin: 0 0 1em;
+  }
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>title</title>
+  @@include('head.html')
+</head>
+
+<body>
+  <div class="l-container">
+    <!-- l-header START -->
+    @@include('l-header.html')
+    <!-- l-header END -->
+    <div class="l-contents">
+      <main class="l-main">
+        <h2 class="c-pageHeading border">HTML Parts</h2>
+
+        <!-- c-card START -->
+        @@include('c-card.html')
+        <!-- c-card END -->
+
+      </main>
+      <!-- l-sub START -->
+      @@include('l-sub.html')
+      <!-- l-sub END -->
+    </div>
+    @@include('l-footer.html')
+  </div>
+  @@include('javascript.html')
+</body>
+
+</html>

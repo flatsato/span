@@ -7,13 +7,8 @@
 @include pcWide($point-pcWide) {}
 */
 
-.l-share {
-  position: fixed;
-  bottom: 0;
-  right: 0;
+.c-share {
   background: #fff;
-  width: 88px;
-  height: 100%;
   &__list {
     display: flex;
   }

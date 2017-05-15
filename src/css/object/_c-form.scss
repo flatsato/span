@@ -134,7 +134,7 @@
     border: 1px solid #333;
     position: relative;
     width: 180px;
-    display: inline-block;
+    display: block;
     &:before {
       content: "";
       position: absolute;
@@ -156,6 +156,9 @@
       background: #fff;
       display: inline-block;
       width: 210px;
+    }
+    &--inlineBlock {
+      display: inline-block;
     }
   }
   &__inputText,
@@ -197,6 +200,7 @@
       margin: 8px 0 0;
       color: #EF5A24;
       font-size: 11px;
+      display: block;
     }
   }
   &__privacy {

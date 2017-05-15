@@ -15,6 +15,10 @@ textarea {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+textarea{
+  display: block;
+}
+
 fieldset {
   border: none;
   margin: 0;
