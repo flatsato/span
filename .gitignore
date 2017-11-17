@@ -2,5 +2,3 @@
 !.gitignore
 node_modules/
 style.css
-
-docs/
