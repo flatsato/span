@@ -54,7 +54,7 @@ gulp.task('cssmin', function () {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('/docs/'));
 });
 
 //gulp-uglify【6】JavaScript圧縮
