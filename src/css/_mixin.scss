@@ -10,14 +10,11 @@
 @include onlyPC($only-point-pc) {}
 */
 
-
 //https://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints http://foundation.zurb.com/sites/docs/media-queries.html
-
 $point-sp: 767px;
 $point-tb: 768px;
 $point-pc: 980px;
 $point-pcWide: 1280px;
-
 //
 @mixin sp($point-sp) {
   @media screen and (max-width: $point-sp) {
@@ -70,20 +67,10 @@ $point-pcWide: 1280px;
 // @include ov;
 @mixin ov {
   opacity: 1;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out;
   &:hover {
     opacity: 0.7;
-    img {
-      background-color: rgba(#fff, .01);
-    }
   }
-}
-
-//@include kadomaru(6px);
-@mixin kadomaru($radius) {
-  border-radius: $radius;
 }
 
 //@include boxSizing;

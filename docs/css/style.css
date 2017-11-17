@@ -178,8 +178,6 @@ a {
   transition: opacity .2s ease-in-out; }
   a:hover {
     opacity: 0.7; }
-    a:hover img {
-      background-color: rgba(255, 255, 255, 0.01); }
   a:hover {
     text-decoration: none; }
 
@@ -291,64 +289,6 @@ br.PCbr {
 @include pc($point-pc) {}
 @include pcWide($point-pcWide) {}
 */
-.u-textCenter {
-  text-align: left; }
-
-.u-textLeft {
-  text-align: left; }
-
-.u-textRight {
-  text-align: right; }
-
-.u-floatCenter {
-  float: left; }
-
-.u-floatLeft {
-  float: left; }
-
-.u-floatRight {
-  float: right; }
-
-/* fontSize */
-.u-fontSize10 {
-  font-size: 10px !important; }
-
-.u-fontSize11 {
-  font-size: 11px !important; }
-
-.u-fontSize12 {
-  font-size: 12px !important; }
-
-.u-fontSize13 {
-  font-size: 13px !important; }
-
-.u-fontSize14 {
-  font-size: 14px !important; }
-
-.u-fontSize15 {
-  font-size: 15px !important; }
-
-.u-fontSize16 {
-  font-size: 16px !important; }
-
-.u-fontSize17 {
-  font-size: 17px !important; }
-
-.u-fontSize18 {
-  font-size: 18px !important; }
-
-.u-fontSize19 {
-  font-size: 19px !important; }
-
-.u-fontSize20 {
-  font-size: 20px !important; }
-
-/*
-@include sp($point-sp) {}
-@include tb($point-tb) {}
-@include pc($point-pc) {}
-@include pcWide($point-pcWide) {}
-*/
 .l-header {
   z-index: 999999; }
 
@@ -358,202 +298,6 @@ br.PCbr {
 /* ==========================================================================
    Layout Object
    ========================================================================== */
-/*
-@include sp($point-sp)
-@include tb($point-tb) {}
-@include pc($point-pc) {}
-@include pcWide($point-pcWide) {}
-*/
-.c-form h3 {
-  margin: 0 0 12px; }
-
-.c-form input[type=radio] {
-  display: none;
-  margin: 0; }
-
-.c-form input[type=radio]:checked + .c-form__labelRadio:after {
-  left: 6px;
-  width: 10px;
-  height: 10px;
-  margin-top: -5px;
-  background: #000;
-  border-radius: 8px;
-  content: "";
-  position: absolute;
-  top: 50%;
-  box-sizing: border-box;
-  display: block; }
-
-.c-form__labelRadio {
-  position: relative;
-  display: inline-block;
-  margin-right: 28px;
-  line-height: 1.5px;
-  cursor: pointer;
-  padding: 0 0 0 30px; }
-  .c-form__labelRadio:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    box-sizing: border-box;
-    display: block;
-    width: 22px;
-    height: 22px;
-    margin-top: -11px;
-    background-color: white;
-    border-radius: 50%;
-    border: 1px solid #000; }
-
-.c-form input[type=checkbox] {
-  display: none;
-  margin: 0; }
-
-.c-form input[type=checkbox]:checked + .c-form__labelCheck:after {
-  left: 3px;
-  width: 16px;
-  height: 8px;
-  margin-top: -6px;
-  border-left: 3px solid #000;
-  border-bottom: 3px solid #000;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  content: "";
-  position: absolute;
-  top: 50%;
-  box-sizing: border-box;
-  display: block; }
-
-.c-form__labelCheck {
-  position: relative;
-  display: inline-block;
-  margin-right: 28px;
-  line-height: 1.5px;
-  cursor: pointer;
-  padding: 0 0 0 30px; }
-  .c-form__labelCheck:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    box-sizing: border-box;
-    display: block;
-    width: 22px;
-    height: 22px;
-    margin-top: -11px;
-    background-color: white;
-    border: 1px solid #000; }
-
-.c-form__lead {
-  font-size: 18px; }
-  .c-form__leadText {
-    margin: 0 0 40px; }
-
-.c-form__errorWrap {
-  margin: 0 0 40px; }
-  .c-form__errorWrap__title {
-    color: #EF5A24;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 0 0 12px; }
-  .c-form__errorWrap__list {
-    border: 2px solid #EF5A24;
-    padding: 20px 20px 12px;
-    border-radius: 4px;
-    list-style: none;
-    margin: 0; }
-  .c-form__errorWrap__item {
-    color: #EF5A24;
-    font-size: 16px;
-    margin: 0 0 12px; }
-
-.c-form__group {
-  margin: 0 0 32px; }
-
-.c-form__select {
-  overflow: hidden;
-  border: 1px solid #333;
-  position: relative;
-  width: 180px;
-  display: block; }
-  .c-form__select:before {
-    content: "";
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 6px 6px 0 6px;
-    border-color: #333 transparent transparent;
-    margin: -3px 0 0; }
-  .c-form__select select {
-    width: 100%;
-    padding: 0 10px;
-    border: 0;
-    height: 40px;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    background: #fff;
-    display: inline-block;
-    width: 210px; }
-  .c-form__select--inlineBlock {
-    display: inline-block; }
-
-.c-form__inputText, .c-form__textArea {
-  width: 100%;
-  border: 1px solid #666;
-  padding: 8px 10px;
-  box-sizing: border-box;
-  background: #fff; }
-
-.c-form__must {
-  font-size: 12px;
-  color: #fff;
-  background: #999;
-  line-height: 18px;
-  height: 18px;
-  padding: 0 10px;
-  display: inline-block;
-  border-radius: 9px;
-  margin: 0 0 0 8px;
-  vertical-align: middle; }
-
-.c-form__column {
-  display: table;
-  width: 100%; }
-  .c-form__columnTitle {
-    display: table-cell;
-    vertical-align: top;
-    padding: 0 18px 0 0;
-    width: 200px; }
-  .c-form__columnBody {
-    display: table-cell;
-    vertical-align: top; }
-  .c-form__columnError {
-    margin: 8px 0 0;
-    color: #EF5A24;
-    font-size: 11px;
-    display: block; }
-
-.c-form__privacy {
-  margin: 0 0 40px;
-  padding: 1em;
-  border: 1px solid #333;
-  background: #fff;
-  height: 100px;
-  overflow: hidden;
-  overflow: auto; }
-  .c-form__privacyInner {
-    font-size: 12px;
-    line-height: 2; }
-
-.c-form__btnWrap {
-  text-align: center;
-  margin: 0 0 40px; }
-
 /*
 @include sp($point-sp)
 @include tb($point-tb) {}
@@ -655,11 +399,7 @@ br.PCbr {
 @include pc($point-pc) {}
 @include pcWide($point-pcWide) {}
 */
-@media screen and (max-width: 767px) {
-  .c-card {
-    padding: 0 0 45px; } }
-
-@media print, screen and (min-width: 768px) {
+@media print, screen and (min-width: 980px) {
   .c-card {
     width: 720px;
     margin: 0 auto; } }
@@ -729,47 +469,46 @@ br.PCbr {
     transition: -webkit-transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1); } }
 
-@media screen and (max-width: 767px) {
-  .c-card__caption {
-    font-size: 13px;
-    display: table-cell;
-    width: 50%;
-    padding: 0 18px;
-    vertical-align: middle;
-    line-height: 1.5;
-    background: #5c5c5c;
-    color: #fff; }
-    .c-card__caption .SPview {
-      display: inline; } }
-
-@media print, screen and (min-width: 768px) {
-  .c-card__caption {
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.23077;
-    background: rgba(51, 51, 51, 0.8);
-    padding: 8px 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%; } }
-
-.c-card__caption .textEN {
-  color: #a6a6a6;
-  font-family: mr-eaves-xl-modern, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  display: block;
-  margin: 0 0 3px; }
-  .wf-loading .c-card__caption .textEN {
-    visibility: hidden; }
-  .wf-active .c-card__caption .textEN {
-    visibility: visible; }
+.c-card__caption {
+  color: #fff;
+  box-sizing: border-box; }
   @media screen and (max-width: 767px) {
-    .c-card__caption .textEN {
-      font-size: 12px; } }
+    .c-card__caption {
+      font-size: 13px;
+      display: table-cell;
+      width: 50%;
+      padding: 0 18px;
+      vertical-align: middle;
+      line-height: 1.5;
+      background: #5c5c5c; }
+      .c-card__caption .SPview {
+        display: inline; } }
   @media print, screen and (min-width: 768px) {
-    .c-card__caption .textEN {
-      font-size: 16px; } }
+    .c-card__caption {
+      font-size: 16px;
+      line-height: 1.23077;
+      background: rgba(51, 51, 51, 0.8);
+      padding: 8px 20px;
+      position: absolute;
+      bottom: 0;
+      width: 100%; } }
+  .c-card__caption .textEN {
+    color: #a6a6a6;
+    font-family: mr-eaves-xl-modern, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    display: block;
+    margin: 0 0 3px; }
+    .wf-loading .c-card__caption .textEN {
+      visibility: hidden; }
+    .wf-active .c-card__caption .textEN {
+      visibility: visible; }
+    @media screen and (max-width: 767px) {
+      .c-card__caption .textEN {
+        font-size: 12px; } }
+    @media print, screen and (min-width: 768px) {
+      .c-card__caption .textEN {
+        font-size: 16px; } }
 
 @media screen and (max-width: 767px) {
   .c-card__text {
