@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+.c-card {
+  &__list {}
+  &__item {}
+  &__link {}
+  &__thumb {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__cat {}
+  &__date {}
+  &__title {}
+  &__text {}
+}

@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+//https://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints http://foundation.zurb.com/sites/docs/media-queries.html
+$point-sp: 767px;
+$point-tb: 768px;
+$point-pc: 980px;
+$point-wide: 1280px;
+//
+@mixin sp($point-sp) {
+  @media screen and (max-width: $point-sp) {
+    @content;
+  }
+}
+
+@mixin tb($point-tb) {
+  @media print,
+  screen and (min-width: $point-tb) {
+    @content;
+  }
+}
+
+@mixin pc($point-pc) {
+  @media print,
+  screen and (min-width: $point-pc) {
+    @content;
+  }
+}
+
+@mixin wide($point-wide) {
+  @media print,
+  screen and (min-width: $point-wide) {
+    @content;
+  }
+}
+
+@mixin onlyTB($only-point-tb) {
+  @media (min-width: $point-tb) and (max-width: $point-pc) {
+    @content;
+  }
+}
+
+@mixin onlyPC($only-point-pc) {
+  @media (min-width: $point-pc) and (max-width: $point-wide) {
+    @content;
+  }
+}
+
+//@extend .clearfix;
+.clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// @include ov;
+@mixin ov {
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+//@include boxSizing;
+@mixin boxSizing {
+  box-sizing: border-box;
+}

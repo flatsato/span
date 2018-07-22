@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+//@include font-googleEN;
+//https://fonts.google.com/
+@mixin font-googleEN {
+  font-family: 'Playfair Display', serif;
+}
+
+//@include font-googleJP;
+//https://typekit.com/fonts?browse_mode=japanese
+@mixin font-googleJP {
+  font-family: 'Playfair Display', serif;
+}
+
+//@include font-JP;
+@mixin font-JP {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+}
+
+@mixin font-EN {
+  //  https://typekit.com/fonts/mr-eaves-xl/details/mr-eaves-xl-mod-ot-reg
+  font-family: mr-eaves-xl-modern, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  //Typekitちらつき対策
+  .wf-loading & {
+    visibility: hidden;
+  }
+  .wf-active & {
+    visibility: visible;
+  }
+}
+
+.c-backLink {
+  margin: 0 auto;
+  font-size: 16px;
+  @include font-EN;
+  text-align: center;
+  a {
+    padding: 0 0 0 15px;
+    position: relative;
+    display: inline-block;
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid #000;
+      border-right: 1px solid #000;
+      transform: rotate(225deg);
+      margin: -3px 0 0;
+      @include sp($point-sp) {}
+    }
+    &:hover {
+      color: #a6a6a6;
+      &:before {
+        border-top: 1px solid #a6a6a6;
+        border-right: 1px solid #a6a6a6;
+      }
+    }
+  }
+
+  &.textJP {
+    letter-spacing: 0.12em;
+    @include sp($point-sp) {
+      font-size: 12px;
+    }
+    @include pc($point-pc) {
+      font-size: 14px;
+    }
+  }
+  &.textEN {
+    letter-spacing: 0.04em;
+    @include sp($point-sp) {
+      font-size: 13px;
+    }
+    @include pc($point-pc) {
+      font-size: 16px;
+    }
+  }
+}
+
+.c-moreLink {
+  a {
+    padding: 0 0 0 15px;
+    position: relative;
+    display: inline-block;
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid #000;
+      border-right: 1px solid #000;
+      transform: rotate(225deg);
+      margin: -4px 0 0;
+    }
+    &:hover {
+      color: #a6a6a6;
+      &:before {
+        border-top: 1px solid #a6a6a6;
+        border-right: 1px solid #a6a6a6;
+      }
+    }
+  }
+
+  &.textJP {
+    letter-spacing: 0.12em;
+    @include sp($point-sp) {
+      font-size: 12px;
+    }
+    @include pc($point-pc) {
+      font-size: 14px;
+    }
+  }
+  &.textEN {
+    @include font-EN;
+    letter-spacing: 0.04em;
+    @include sp($point-sp) {
+      font-size: 13px;
+    }
+    @include pc($point-pc) {
+      font-size: 16px;
+    }
+  }
+}

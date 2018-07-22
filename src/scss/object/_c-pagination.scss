@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+.c-pagination {
+  &__list {
+    text-align: center;
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  &__prev,
+  &__next {
+    display: inline-block;
+    a {
+      display: block;
+      padding: 0.285em 0.8em;
+    }
+  }
+  &__item {
+    display: inline-block;
+    margin: 0 3px;
+    &.is-current {
+      a {
+        background: #000;
+        color: #fff;
+      }
+    }
+    a {
+      display: block;
+      padding: 0.285em 0.8em;
+      border: 1px solid #000;
+      font-size: 18px;
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+  &__prev {}
+  &__next {}
+  &__icon {}
+  &__text {
+    display: none;
+  }
+}

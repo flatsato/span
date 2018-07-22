@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+.c-btn {
+  padding: 0 97px 0 73px;
+  line-height: 60px;
+  height: 60px;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  background: none;
+  border-radius: 4px;
+  transition: ease .2s;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  background: #333;
+  margin: 0 20px 0 0;
+  &:last-child {
+    margin: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+//base
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 1rem 0;
+  padding: 0.85em 1em;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 0.9rem;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ccc;
+  color: #fefefe;
+  text-decoration: none;
+  //Sizing
+  &.small {
+    font-size: 0.75rem;
+  }
+  &.large {
+    font-size: 1.25rem;
+  }
+  &.expanded {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

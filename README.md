@@ -1,66 +1,58 @@
 # HTMLテンプレート
 
-## 追加予定
+temp-gulp  
+https://github.com/harumi-sato/temp-gulp  
+株式会社FLAT スターターキット
 
-◆javascript
-1.SPメニュー＝ハンバーガードロワー、パターン幾つか
+## 推奨環境
 
-jQuery slimMenu  
-http://adnantopal.github.io/slimmenu/
-ハンバーガーメニュー。シンプルな実装。  
+node.js v4.8.4
 
-Drawer  
-http://git.blivesta.com/drawer/  
-縦横どちらのタイプも使えて便利でした。使いやすい。
+## できること
 
-2.Lightbox
+### ローカルサーバー自動更新
+http://localhost:8000/  
+HTML・CSS更新されると自動でローカルがリロードされます。  
+gulp-webserver【1】LiveReload環境構築  
 
-レスポンシブ対応されたLightbox系プラグイン・ライブラリ 10
-http://www.nxworld.net/tips/10-responsive-lightbox-plugin-and-library.html
-どれも使ったことはないですが、ブラウザ対応によって使うものを変えてもいいかもです。
+### HTMLコードのままインクルード作成が可能。GulpでひとつのHTMLを生成。  　　
+gulp-file-include【2】HTMLインクルード　　
 
-Boxer
-http://kwski.net/jquery/1201/
-使ったこと無いけど、レスポンシブ対応、スワイプ対応らしいです。
+### Autoprefixer付与
+ベンダープレフィックスを自動で付与します。  
+対応バージョン IE9、モダンブラウザlast2Version、  
+gulp-autoprefixer【3】autoprefixer追加  
 
-3.モーダル
+### CSS、JavaScript、HTML自動圧縮
+軽量化された圧縮ファイルを自動で生成します。
+gulp-clean-css【4】CSS圧縮  
+gulp-uglify【5】JavaScript圧縮  
+gulp-htmlmin【7】HTML圧縮
 
-Remodal v1. The modal done right.
-http://vodkabears.github.io/remodal/
-前に使って良かったです。モーダルはシステムで需要ありそう。
+### 画像自動圧縮
+jpg、png、svgを自動で圧縮いたします。  
+gulp-imagemin【6】img圧縮
 
-4.スライダー
 
-SLY
-http://darsa.in/sly/
-不揃いな形にも対応して、実装もシンプルで、デザインのカスタマイズもしやすかったです。
+### SourceMap自動生成
+Sassの記述位置をブラウザで確認できるSourceMapを生成  
+gulp-sourcemaps 【8】sourcemap作成
 
-slick
-http://kenwheeler.github.io/slick/
-最近使って良い感じでした。
+### スプライト画像を生成
+gulp.spritesmith【9】sprite画像
 
-◆HTML
-シンプルなものを用意
+### CSS圧縮
+- gulp-clean-css
 
-1. FORM＝テキストボックス、ボタン（hover）、検索ボックス、エラーメッセージ
-2. c-paging＝ページング
-3. ヘッダー＝グロナビ、
-4. フッター
-5. サイトリンク一覧＝フッターの上にあるやつ
-6. SNSボタン＝Twitter、Google、Facebook、はてぶ
-7. パンくず
+## gulpconfig.jsonについて
+html,scss,js,imgなどgulpfile.js内のタスク単位でディレクトリの設定などをgulpconfig.jsonファイルに外部化している。
+プロジェクト毎にディレクトリが変わってカスタマイズする際はこのファイルを編集する。
 
-     table
-     form
-     404
-    カルーセル
-	ページング
-     SNSボタン
+## 各種機能のON/OFF設定について
+gulpconfig.jsonの中に"xxFlg"という項目がある。
+この項目をtrue/falseに切り替えることでON/OFFの設定が出来る。
+今の所下記機能のON/OFFが可能
 
-Twitterカード
-Facebook シェア
-GoogleMap
-YouTube埋め込み
-
-◆その他
-CSS、フォルダ設計一式
+- dest時の圧縮
+- sourcemapの出力
+- wordpress用のdest設定

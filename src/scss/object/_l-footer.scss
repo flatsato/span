@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+.l-footer {
+  position: relative;
+  left: 0;
+  top: 0;
+  text-align: center;
+  background-color: #fff;
+  border-top: 1px solid #d9d9d9;
+  width: 100%;
+  @include sp($point-sp) {}
+  @include tb($point-tb) {
+    height: 117px;
+  }
+  @include pc($point-pc) {
+    width: 100%;
+  }
+  &__copy {
+    @include sp($point-sp) {
+      font-size: 10px;
+      margin: 0 0 30px;
+      display: none;
+    }
+    @include tb($point-tb) {
+      display: none;
+    }
+  }
+  &__inner {
+    display: flex;
+    @include sp($point-sp) {
+      flex-wrap: wrap;
+      padding: 28px 0;
+      width: 100%;
+    }
+    @include tb($point-tb) {
+      height: 116px;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+    @include pc($point-pc) {
+      padding: 0 24px;
+      max-width: (1024px + 48px);
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  &__site {
+    display: flex;
+    @include sp($point-sp) {
+      flex-wrap: wrap;
+      width: 50%;
+      margin: 0 auto;
+    }
+    @include tb($point-tb) {
+      padding: 48px 0;
+      justify-content: space-between;
+    }
+    a {
+      font-size: 0;
+      display: block;
+    }
+  }
+  &__logo {
+    @include sp($point-sp) {
+      width: 100%;
+      margin: 0 0 11px;
+    }
+    @include tb($point-tb) {
+      margin: 0 40px 0 0;
+    }
+    a {
+      img {
+        @include sp($point-sp) {
+          width: (165px/2);
+        }
+      }
+    }
+  }
+  &__link {
+    padding: 3px 0;
+    @include sp($point-sp) {
+      width: 100%;
+      margin: 0 0 32px;
+    }
+    a {
+      img {
+        @include sp($point-sp) {
+          width: (281px/2);
+        }
+      }
+    }
+  }
+  &__nav {
+    @include sp($point-sp) {
+      width: 100%;
+    }
+    @include tb($point-tb) {
+      padding: 48px 0;
+    }
+    &List {
+      @include sp($point-sp) {
+        display: flex;
+        justify-content: center;
+      }
+      @include tb($point-tb) {
+        display: inline-flex;
+        margin: 0 -24px;
+      }
+    }
+    &Item {
+      position: relative;
+      @include sp($point-sp) {
+        font-size: 10px;
+        width: 50%;
+      }
+      @include tb($point-tb) {
+        font-size: 11px;
+      }
+      &:before {
+        content: '';
+        display: block;
+        background: #a2a4a6;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin: -5px 0 0;
+        @include sp($point-sp) {
+          width: 1px;
+          height: 12px;
+        }
+        @include tb($point-tb) {
+          width: 2px;
+          height: 10px;
+        }
+      }
+      a {
+        padding: 0 24px;
+        @include sp($point-sp) {
+          padding: 0;
+        }
+        @include tb($point-tb) {
+          padding: 0 24px;
+        }
+        &:hover {
+          span {
+            color: #a6a6a6;
+          }
+        }
+        span {
+          padding: 0 0 4px;
+        }
+      }
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

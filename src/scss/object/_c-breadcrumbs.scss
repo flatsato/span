@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+.c-breadcrumbs {
+  margin: 0 0 80px;
+  &__list {
+    margin: 0 0 1rem 0;
+    list-style: none;
+  }
+  li {
+    display: inline;
+    &:before {
+      position: relative;
+      top: 1px;
+      margin: 0 0.75rem;
+      opacity: 1;
+      content: "/";
+      color: #cacaca;
+    }
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+    .current {
+      font-weight: normal;
+    }
+  }
+}

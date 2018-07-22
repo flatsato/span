@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+.l-header {
+  z-index: 999999;
+
+}
+
+.l-footer {
+  z-index: 5;
+}

@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+.c-pageHeading {
+  line-height: 1.1;
+  &__jp {
+    @include font-JP;
+    font-size: 12px;
+    display: block;
+  }
+  &__en {
+    @include font-EN;
+    font-size: 20px;
+    display: block;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "rules": {
+    "no-console": "warn",
+    "camelcase": "warn",
+    "curly": "error",
+    "eqeqeq": "error",
+    "quotes": ["warn", "single"],
+    "strict": "error"
+  }
+}

@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+.temp-url {
+  font-size: 12px;
+  margin: 0 0 24px;
+}
+
+.temp-h2 {
+  border-left: 6px solid #333;
+  padding: 0 0 0 12px;
+  margin: 60px 0 6px;
+  line-height: 1;
+}
+
+.temp-list{
+  margin: 32px 0 48px;
+  li{
+    margin: 0 0 1em;
+  }
+}

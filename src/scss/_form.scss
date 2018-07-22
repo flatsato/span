@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+input[type=text],
+input[type=submit],
+input[type=email],
+textarea {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+textarea{
+  display: block;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+}
+
+legend {
+  display: none;
+}
+

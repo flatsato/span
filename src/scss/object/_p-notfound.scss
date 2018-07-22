@@ -1,0 +1,44 @@
+  @charset "utf-8";
+  //
+  //@include sp($point-sp) {}
+  //@include tb($point-tb) {}
+  //@include pc($point-pc) {}
+  //
+  //
+  .p-notfound {
+    &__inner {
+      background: #eee;
+      padding: 25px 0;
+      overflow: hidden;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: (25/18);
+      text-align: center;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: (25/14);
+      color: #9D968D;
+      text-align: center;
+      margin-top: 6px;
+    }
+    &__lead {
+      margin: 25px 0 30px;
+      font-size: 13px;
+      line-height: (24/13);
+      text-align: center;
+    }
+    &__more {
+      margin: 0 15px 25px;
+      font-size: 14px;
+      a {
+        height: 38px;
+        padding-top: 25px;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }

@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+
+/*
+@include sp($point-sp)
+@include tb($point-tb) {}
+@include pc($point-pc) {}
+@include wide($point-wide) {}
+*/
+
+.l-pagetop {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  right: 0;
+  margin: -46px 0 0;
+  @include sp($point-sp) {
+    margin: -40px 0 0;
+    width: 40px;
+    height: 40px;
+  }
+  a {
+    border: 1px solid #d9d9d9;
+    display: block;
+    background: #fff url(/img/common/icon_arrowup_black.svg) 50% 50% / 16px 20px no-repeat;
+    @include sp($point-sp) {
+      width: 40px;
+      height: 40px;
+    }
+    @include tb($point-tb) {
+      width: 46px;
+      height: 46px;
+    }
+    &:hover {
+    }
+  }
+  span {
+    display: none;
+  }
+}
