@@ -13,40 +13,40 @@ $point-tb: 768px;
 $point-pc: 980px;
 $point-wide: 1280px;
 //
-@mixin sp($point-sp) {
+@mixin sp {
   @media screen and (max-width: $point-sp) {
     @content;
   }
 }
 
-@mixin tb($point-tb) {
+@mixin tb {
   @media print,
   screen and (min-width: $point-tb) {
     @content;
   }
 }
 
-@mixin pc($point-pc) {
+@mixin pc {
   @media print,
   screen and (min-width: $point-pc) {
     @content;
   }
 }
 
-@mixin wide($point-wide) {
+@mixin wide {
   @media print,
   screen and (min-width: $point-wide) {
     @content;
   }
 }
 
-@mixin onlyTB($only-point-tb) {
+@mixin onlyTB {
   @media (min-width: $point-tb) and (max-width: $point-pc) {
     @content;
   }
 }
 
-@mixin onlyPC($only-point-pc) {
+@mixin onlyPC {
   @media (min-width: $point-pc) and (max-width: $point-wide) {
     @content;
   }
