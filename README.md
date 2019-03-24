@@ -2,6 +2,10 @@
 
 Harumi Sato
 
+- [x] Completed Task
+- [ ] Incomplete Task 1
+- [ ] Incomplete Task 2
+
 # 基本
 
 - [ ] _form.scss
