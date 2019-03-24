@@ -4,7 +4,7 @@ Harumi Sato
 
 # 基本
 
-[ ] _form.scss
+- [ ] _form.scss
 - [ ] _mixin.scss
 - [ ] _reset.scss
 - [ ] _utility.scss
