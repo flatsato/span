@@ -9,6 +9,31 @@
 @include desktop{}
 */
 
+.p-temp{
+  &__lead{
+    font-size: 16px;
+  }
+  &__code{
+    margin-top: 60px;
+    margin-bottom: 100px;
+    background: #fff;
+    padding: 60px 40px;
+    position: relative;
+    &:before{
+      content: 'DEMO';
+      position: absolute;
+      top: 0;
+      left:30px;
+      color: #fff;
+      padding: 6px 10px;
+      background: tomato;
+    }
+  }
+  &__module + .p-temp__module{
+    margin-top: 20px;
+  }
+}
+
 .temp-url {
   font-size: 12px;
   margin: 0 0 24px;

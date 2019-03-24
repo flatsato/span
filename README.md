@@ -51,10 +51,10 @@ https://v4-alpha.getbootstrap.com/components/carousel/
 - [x] _c-btn.scss
 - [ ] _c-icon.scss
 - [ ] _c-tag.scss
-- [ ] c-text.scss
+- [ ] _c-text.scss
 - [ ] _c-table
 - [ ] _c-sns
-- [ ] _c-hamburger.scss
+- [x] _c-hamburger.scss
 - [ ] _c-progress// プログレスバー
 
 ## ページパーツ

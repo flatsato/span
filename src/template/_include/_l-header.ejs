@@ -9,11 +9,17 @@ headerClass = ' -fuga';
 _%>
 <!-- l-header START -->
 <header class="l-header -close <%= headerClass%>" role="banner">
-<div class="l-header__site">
-<div class="l-header_siteLogo"><a href=""><img src="https://dummyimage.com/120x30/cccccc/686a82.gif&text=S" alt="サイトロゴ"></a></div>
-<div class="l-header__siteText">キャッチコピー</div>
+<div class="l-header__inner">
+<div class="l-header_siteLogo"><a href="">HTML TEMP</a></div>
+<div class="l-header__siteText">効率的に作るためのテンプレート</div>
+<div class="c-hamburger hamburger hamburger--squeeze js-hamburger">
+<button class="hamburger" type="button">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+</button>
 </div>
-<div class="l-header__menu"><a href=""><span class="line1"></span><span class="line2"></span><span class="line3"></span></a></div>
+</div>
 <%- include('_l-gnav') %>
 </header>
 <!-- l-header END -->

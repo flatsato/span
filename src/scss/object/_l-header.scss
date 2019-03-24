@@ -12,13 +12,14 @@
 .l-header {
   position: relative;
   width: 100%;
-  &__inner {}
-  &__site {
+  &__inner {
+    padding: 0 40px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 70px;
+  }
+  &__site {
     @include pc {
       height: 100px;
     }
@@ -26,6 +27,7 @@
       font-size: 10px;
       letter-spacing: -0.03em;
       @include pc {
+        margin-left: 20px;
         font-size: 12px;
         letter-spacing: 0.1em;
       }
@@ -37,102 +39,6 @@
       @include pc {
         width: 140px;
         margin-bottom: 12px;
-      }
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-  &__menu {
-    position: absolute;
-    top: 0;
-    right: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    @include pc {
-      top: 50%;
-      right: 30px;
-      transform: translate(0, -50%);
-    }
-    a {
-      display: flex;
-      display: block;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 56px;
-      height: 56px;
-    }
-    .line1,
-    .line2,
-    .line3 {
-      position: absolute;
-      left: 17px;
-      display: block;
-      width: 22px;
-      height: 2px;
-      pointer-events: none;
-      content: '';
-      background: #000;
-      @include pc {
-        left: 13px;
-        width: 30px;
-      }
-    }
-    .line1 {
-      top: 0;
-    }
-    .line2 {
-      top: 10px;
-    }
-    .line3 {
-      top: 20px;
-    }
-  }
-}
-
-
-.l-site {
-  &.-open {
-    .l-site__menu {
-      a {
-        .line1,
-        .line2,
-        .line3 {
-          top: 18px;
-        }
-        .line1 {
-          transform: rotate(45deg);
-        }
-        .line2 {
-          display: none;
-        }
-        .line3 {
-          transform: rotate(-45deg);
-        }
-      }
-    }
-  }
-  &.-close {
-    .l-site__menu {
-      a {
-        .line1 {
-          top: 20px;
-          @include pc {}
-        }
-        .line2 {
-          top: 27px;
-          @include pc {}
-        }
-        .line3 {
-          top: 34px;
-          @include pc {}
-        }
       }
     }
   }
