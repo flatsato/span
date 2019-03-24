@@ -3,7 +3,6 @@
 Harumi Sato
 
 # 基本
-
 - [ ] _form.scss
 - [ ] _mixin.scss
 - [ ] _reset.scss
@@ -12,27 +11,25 @@ Harumi Sato
 - [ ] _grid.scss
 - [ ] _breakpoint.scss
 - [ ] _font.scss
-- [ ] _br.scss
-- [ ] _table.scss
-- [ ] _zindex.scss
-- [ ] style.scss
+- [x] _br.scss
+- [x] _table.scss
+- [x] _zindex.scss
+style.scss
 
-##アニメーション
-
+## アニメーション
 - [ ] _easing.scss
 - [ ] _animation.scss
 
 # レイアウト
-
-- [ ] _l-breadcrumb.scss
-- [ ] _l-container.scss
-- [ ] _l-contents.scss
-- [ ] _l-main.scss
-- [ ] _l-footer.scss
-- [ ] _l-gnav.scss
-- [ ] _l-header.scss
-- [ ] _l-pagetop.scss
-- [ ] _l-sub.scss
+- [x] _l-breadcrumb.scss
+- [x] _l-container.scss
+- [x] _l-contents.scss
+- [x] _l-main.scss
+- [x] _l-footer.scss
+- [x] _l-gnav.scss
+- [x] _l-header.scss
+- [x] _l-pagetop.scss
+- [x] _l-sub.scss
 
 # プロジェクト
 
@@ -51,10 +48,8 @@ https://v4-alpha.getbootstrap.com/components/carousel/
 ```
 
 # コンポーネント
-
-- [ ] _c-btn.scss
+- [x] _c-btn.scss
 - [ ] _c-icon.scss
-- [ ] _c-label.scss
 - [ ] _c-tag.scss
 - [ ] c-text.scss
 - [ ] _c-table
