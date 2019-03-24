@@ -1,7 +1,7 @@
 module.exports = {
   "server": {
     // localhostのDocumentRootの設定
-    "root": "./dist",
+    "root": "./docs",
   },
 
   "html": {
@@ -13,7 +13,7 @@ module.exports = {
     // パーツとしてincludeするモジュールの格納先設定
     "includeRoot": "./src/template/_include/",
     // タスク完了後destするディレクトリの設定
-    "dest": "./dist/",
+    "dest": "./docs/",
     // dest時の圧縮設定
     "minFlg": false,
   },
@@ -27,7 +27,7 @@ module.exports = {
     // srcディレクトリの.ejsファイルをdestした際の拡張子の設定
     "suffix": ".html",
     // タスク完了後destするディレクトリの設定
-    "dest": "./dist/",
+    "dest": "./docs/",
     // dest時の圧縮設定
     "minFlg": false,
   },
@@ -46,7 +46,7 @@ module.exports = {
     // sourcemapのdestディレクトリを設定
     "sourceMaps": "./maps",
     // タスク完了後destするディレクトリの設定
-    "dest": "./dist/css",
+    "dest": "./docs/css",
     // dest時の圧縮設定
     "minFlg": true,
     // sourcemapの設定
@@ -67,7 +67,7 @@ module.exports = {
     // sourcemapのdestディレクトリを設定
     "sourceMaps": "./maps",
     // タスク完了後destするディレクトリの設定
-    "dest": "./dist/js",
+    "dest": "./docs/js",
     // dest時の圧縮設定
     "minFlg": false,
     // sourcemapの設定
@@ -79,7 +79,7 @@ module.exports = {
     // js(プラグイン)に関するタスクを実行する対象の設定
     "src": "./src/js/vendor/**/*.js",
     // タスク完了後destするディレクトリの設定
-    "dest": "./dist/js/vendor",
+    "dest": "./docs/js/vendor",
     // dest時の圧縮設定
     "minFlg": false,
   },
@@ -88,7 +88,7 @@ module.exports = {
     // imgに関するタスクを実行する対象の設定
     "src": "./src/img/**/*",
     // タスク完了後destするディレクトリの設定
-    "dest": "./dist/img/",
+    "dest": "./docs/img/",
     // wordpress用のdest設定
     "wpFlg": false,
   },
