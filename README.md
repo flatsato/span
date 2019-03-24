@@ -17,7 +17,7 @@ Harumi Sato
 - [ ] _zindex.scss
 - [ ] style.scss
 
-##アニメーション
+## アニメーション
 
 - [ ] _easing.scss
 - [ ] _animation.scss
