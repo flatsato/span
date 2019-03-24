@@ -1,24 +1,18 @@
 @charset "utf-8";
 
-/*
-@include sp($point-sp)
-@include tb($point-tb) {}
-@include pc($point-pc) {}
-@include wide($point-wide) {}
-*/
-
-//https://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints http://foundation.zurb.com/sites/docs/media-queries.html
 $point-sp: 767px;
 $point-tb: 768px;
 $point-pc: 980px;
 $point-wide: 1280px;
-//
+
+//@include sp{};
 @mixin sp {
   @media screen and (max-width: $point-sp) {
     @content;
   }
 }
 
+//@include tb{};
 @mixin tb {
   @media print,
   screen and (min-width: $point-tb) {
@@ -26,6 +20,7 @@ $point-wide: 1280px;
   }
 }
 
+//@include pc{};
 @mixin pc {
   @media print,
   screen and (min-width: $point-pc) {
@@ -33,6 +28,7 @@ $point-wide: 1280px;
   }
 }
 
+//@include wide{};
 @mixin wide {
   @media print,
   screen and (min-width: $point-wide) {
@@ -40,37 +36,71 @@ $point-wide: 1280px;
   }
 }
 
+//@include onlyTB{};
 @mixin onlyTB {
   @media (min-width: $point-tb) and (max-width: $point-pc) {
     @content;
   }
 }
 
+//@include onlyPC{};
 @mixin onlyPC {
   @media (min-width: $point-pc) and (max-width: $point-wide) {
     @content;
   }
 }
 
-//@extend .clearfix;
-.clearfix {
+//@include linkColor($color);
+@mixin linkColor($color) {
+  color: $color;
+  &:hover,
+  &:active,
+  &:focus {
+    color: lighten($color, 20%);
+  }
+}
+
+//@include clearfix;
+@mixin clearfix {
   &:after {
-    content: "";
     display: block;
     clear: both;
+    content: "";
   }
 }
 
 // @include ov;
 @mixin ov {
   opacity: 1;
-  transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   &:hover {
     opacity: 0.7;
+    img {
+      background-color: rgba(#fff, 0.01);
+    }
   }
 }
 
-//@include boxSizing;
-@mixin boxSizing {
-  box-sizing: border-box;
+//@include fz();
+@mixin fz($size) {
+    font-size: $size + px;
+    font-size: ($size / 10) + rem;
+}
+
+//@include lhCrop(line-height/fontsize);
+
+//.hoge{
+//  @include lhCrop(80/40) ;
+//  font-size: 40px;
+//  line-height: (80/40);
+//}
+
+@mixin lhCrop($line-height) {
+  &::before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+    content: '';
+  }
 }

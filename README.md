@@ -1,58 +1,85 @@
 # HTMLテンプレート
 
-temp-gulp  
-https://github.com/harumi-sato/temp-gulp  
-株式会社FLAT スターターキット
+Harumi Sato
 
-## 推奨環境
+# 基本
 
-node.js v4.8.4
+_form.scss
+_mixin.scss
+_reset.scss
+_utility.scss
+-[] _foundation.scss
+~~~~_grid.scss
+_breakpoint.scss
+_font.scss
+~~_br.scss~~
+~~_table.scss
+_zindex.scss~~
+style.scss
 
-## できること
+##アニメーション
 
-### ローカルサーバー自動更新
-http://localhost:8000/  
-HTML・CSS更新されると自動でローカルがリロードされます。  
-gulp-webserver【1】LiveReload環境構築  
+_easing.scss
+_animation.scss
 
-### HTMLコードのままインクルード作成が可能。GulpでひとつのHTMLを生成。  　　
-gulp-file-include【2】HTMLインクルード　　
+# レイアウト
 
-### Autoprefixer付与
-ベンダープレフィックスを自動で付与します。  
-対応バージョン IE9、モダンブラウザlast2Version、  
-gulp-autoprefixer【3】autoprefixer追加  
+~~_l-breadcrumb.scss~~
+~~_l-container.scss~~
+~~_l-contents.scss
+~~_l-main.scss~~
+~~_l-footer.scss~~
+~~_l-gnav.scss~~
+~~_l-header.scss~~
+~~_l-pagetop.scss~~
+~~_l-sub.scss~~
 
-### CSS、JavaScript、HTML自動圧縮
-軽量化された圧縮ファイルを自動で生成します。
-gulp-clean-css【4】CSS圧縮  
-gulp-uglify【5】JavaScript圧縮  
-gulp-htmlmin【7】HTML圧縮
+# プロジェクト
 
-### 画像自動圧縮
-jpg、png、svgを自動で圧縮いたします。  
-gulp-imagemin【6】img圧縮
+_p-wysiwyg.scss //投稿エリア
+_p-search.scss //検索ウィンドウ
+_p-modal //モーダル
+_p-card //カード
+_p-news //おしらせ
+_p-pagenation //ページネーション
+_p-loading //ローディング
+_p-section //セクション
 
+_p-carousel 　//
 
-### SourceMap自動生成
-Sassの記述位置をブラウザで確認できるSourceMapを生成  
-gulp-sourcemaps 【8】sourcemap作成
+```
+[https://v4-alpha.getbootstrap.com/components/carousel/](https://v4-alpha.getbootstrap.com/components/carousel/)
+```
 
-### スプライト画像を生成
-gulp.spritesmith【9】sprite画像
+# コンポーネント
 
-### CSS圧縮
-- gulp-clean-css
+~~_c-btn.scss~~
+_c-icon.scss
+_c-label.scss
+_c-tag.scss
+_c-text.scss
+_c-table
+_c-sns
+_c-hamburger.scss
+_c-progress// プログレスバー
 
-## gulpconfig.jsonについて
-html,scss,js,imgなどgulpfile.js内のタスク単位でディレクトリの設定などをgulpconfig.jsonファイルに外部化している。
-プロジェクト毎にディレクトリが変わってカスタマイズする際はこのファイルを編集する。
+## ページパーツ
+section
+Figures
 
-## 各種機能のON/OFF設定について
-gulpconfig.jsonの中に"xxFlg"という項目がある。
-この項目をtrue/falseに切り替えることでON/OFFの設定が出来る。
-今の所下記機能のON/OFFが可能
+```
+[https://v4-alpha.getbootstrap.com/content/figures/](https://v4-alpha.getbootstrap.com/content/figures/)
+```
 
-- dest時の圧縮
-- sourcemapの出力
-- wordpress用のdest設定
+## 見出し
+_c-pageHeading.scss
+_c-heading.scss
+
+## フォーム
+
+_c-textarea.scss
+_c-input.scss
+_c-select.scss
+_c-radio
+_c-select
+_c-checkbox

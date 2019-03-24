@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/*
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
+*/
+
+.p-pagination {
+  margin-top: 4rem;
+  &__list {
+    text-align: center;
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  &__prev,
+  &__next {
+    display: inline-block;
+    a {
+      display: block;
+      padding: 0.285em 0.8em;
+    }
+  }
+  &__item {
+    display: inline-block;
+    margin: 0 3px;
+    &.is-current {
+      a {
+        color: #fff;
+        background: #000;
+      }
+    }
+    a {
+      display: block;
+      padding: 0.285em 0.8em;
+      font-size: 18px;
+      border: 1px solid #000;
+      &:hover {
+        color: #fff;
+        background: #000;
+      }
+    }
+  }
+  &__prev {}
+  &__next {}
+  &__icon {}
+  &__text {
+    display: none;
+  }
+}

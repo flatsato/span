@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/*
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
+*/
+
+br.SPbr {
+  display: none;
+  @include sp {
+    display: inline;
+  }
+}
+
+br.PCbr {
+  display: inline;
+  @include sp {
+    display: none;
+  }
+}

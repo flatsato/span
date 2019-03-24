@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/*
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
+*/
+
+.c-postcat {
+  a {
+    padding: 4px 8px;
+    line-height: 1;
+    color: #fff;
+    text-decoration: none;
+    background: #9CB7BE;
+    @include fz(11);
+    @include pc {
+      @include fz(12);
+    }
+  }
+}

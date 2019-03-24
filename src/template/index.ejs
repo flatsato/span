@@ -1,0 +1,56 @@
+<% var pageId = 'hoge'; %>
+<%- include('./_include/common/_head') %>
+
+<div id="pagetop" class="l-container">
+<!-- l-header START -->
+<%- include('./_include/_l-header', {id: pageId}) %>
+<!-- l-header END -->
+
+<!-- c-kv START -->
+<%- include('./_include/_p-kv') %>
+<!-- c-kv END -->
+
+<!-- l-breadcrumb START -->
+<%- include('./_include/_l-breadcrumb') %>
+<!-- l-breadcrumb END -->
+
+<div class="l-contents">
+
+<main class="l-main">
+
+<!-- c-heading START -->
+<%- include('./_include/_c-heading') %>
+<!-- c-heading END -->
+
+<!-- c-btn START -->
+<%- include('./_include/_c-btn') %>
+<!-- c-btn END -->
+
+<!-- c-sns START -->
+<%- include('./_include/_c-sns') %>
+<!-- c-sns END -->
+
+<!-- c-table START -->
+<%- include('./_include/_c-table') %>
+<!-- c-table END -->
+
+<!-- p-card START -->
+<%- include('./_include/_p-card') %>
+<!-- p-card END -->
+
+<!-- p-section START -->
+<%- include('./_include/_p-section') %>
+<!-- p-section END -->
+
+<!-- p-pagination START -->
+<%- include('./_include/_p-pagination') %>
+<!-- p-pagination END -->
+
+</main>
+
+</div>
+
+<%- include('./_include/_l-footer') %>
+
+</div>
+<%- include('./_include/common/_foot') %>

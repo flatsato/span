@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/*
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
+*/
+
+$sp320: 320px;
+$sp :599px;
+$pc: 900px; //コンテンツ幅
+$wide: 1280px;
+$full: 1400px;
+
+//@include sp320{}
+@mixin sp320 {
+  @media (max-width: $sp320) {
+    @content;
+  }
+}
+
+//@include sp{}
+@mixin sp {
+  @media (max-width: $sp) {
+    @content;
+  }
+}
+
+//@include tb{}
+@mixin tb {
+  @media (min-width: $sp) and (max-width: $pc) {
+    @content;
+  }
+}
+
+//@include pc{}
+@mixin pc {
+  @media (min-width: $pc) {
+    @content;
+  }
+}
+
+//@include touch{}
+@mixin touch {
+  @media (max-width: $pc) {
+    @content;
+  }
+}
+
+//@include desktop{}
+@mixin desktop {
+  @media (min-width: $pc) {
+    @content;
+  }
+}

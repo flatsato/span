@@ -1,0 +1,30 @@
+<% var pageId = 'hoge'; %>
+<%- include('./_include/common/_head') %>
+
+<div id="pagetop" class="l-container">
+<!-- l-header START -->
+<%- include('./_include/_l-header', {id: pageId}) %>
+<!-- l-header END -->
+
+<!-- c-kv START -->
+<%- include('./_include/_p-kv') %>
+<!-- c-kv END -->
+
+<!-- l-breadcrumb START -->
+<%- include('./_include/_l-breadcrumb') %>
+<!-- l-breadcrumb END -->
+
+<div class="l-contents">
+
+<main class="l-main">
+<!-- p-form START -->
+<%- include('./_include/_p-form') %>
+<!-- p-form END -->
+</main>
+
+</div>
+<!-- l-footer START -->
+<%- include('./_include/_l-footer') %>
+<!-- l-footer END -->
+</div>
+<%- include('./_include/common/_foot') %>

@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/*
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
+*/
+
+.c-h1 {
+  @include fz(40);
+  margin-top: 4rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.c-h2 {
+  @include fz(32);
+  margin-top: 4rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.c-h3 {
+  @include fz(28);
+  margin-top: 4rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.c-h4 {
+  @include fz(22);
+  margin-top: 4rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.c-h5 {
+  @include fz(18);
+  margin-top: 4rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}

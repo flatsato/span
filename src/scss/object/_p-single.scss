@@ -1,10 +1,12 @@
 @charset "utf-8";
 
 /*
-@include sp($point-sp)
-@include tb($point-tb) {}
-@include pc($point-pc) {}
-@include wide($point-wide) {}
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
 */
 
 .p-single {
@@ -265,14 +267,14 @@
     border-bottom-width: 0;
     border-left-width: 0;
     border-style: solid;
-    @include pc($point-pc) {
+    @include pc {
       display: table;
       padding: 35px 30px;
       margin-top: 60px;
     }
     &Inner {
       padding-bottom: 65px;
-      @include pc($point-pc) {
+      @include pc {
         display: table-cell;
         padding: 0 25px 0 0;
       }
@@ -284,7 +286,7 @@
     }
     figure {
       margin-top: 0;
-      @include pc($point-pc) {
+      @include pc {
         display: table-cell;
         width: 200px;
       }
@@ -297,11 +299,11 @@
     background: url(/img/common/line1.svg) 0 0 repeat-x;
     padding: 25px 0;
     margin-top: 25px;
-    @include tb($point-tb) {
+    @include tb {
       margin-right: 20px;
       margin-left: 20px;
     }
-    @include pc($point-pc) {
+    @include pc {
       padding: 50px 0;
       margin-top: 35px;
       margin-right: 0;
@@ -313,10 +315,10 @@
     &Inner {
       padding: 0 20px;
       overflow: hidden;
-      @include tb($point-tb) {
+      @include tb {
         padding: 0;
       }
-      @include pc($point-pc) {
+      @include pc {
         padding: 0 20px;
       }
       &:nth-child(1) {
@@ -387,7 +389,7 @@
       width: 100%;
       padding-top: 56.25%;
       margin-top: 30px;
-      @include pc($point-pc) {
+      @include pc {
         margin-top: 40px;
       }
       .video-js,

@@ -1,15 +1,21 @@
 {
   "extends": "eslint:recommended",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  },
   "env": {
     "browser": true,
+    "es6": true,
     "jquery": true
   },
   "rules": {
-    "no-console": "warn",
-    "camelcase": "warn",
     "curly": "error",
     "eqeqeq": "error",
-    "quotes": ["warn", "single"],
-    "strict": "error"
+    "camelcase": "warn",
+    "indent": ["error", 2, { "VariableDeclarator": "first" }],
+    "one-var": ["error", "always"],
+    "one-var-declaration-per-line": ["error", "always"],
+    "quotes": ["warn", "single"]
   }
 }

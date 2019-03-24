@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/*
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
+*/
+
+
+.l-gnav {
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  overflow: hidden;
+  text-align: center;
+  background: #eee;
+  &__list {
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: 0;
+    white-space: nowrap;
+  }
+  &__item {
+    display: inline-block;
+     font-size: 14px;
+    a {
+      position: relative;
+      display: block;
+      padding: 0 10px;
+      text-align: center;
+    }
+  }
+}

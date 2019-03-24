@@ -1,0 +1,43 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recess-order",
+  ],
+  "plugins": [
+    "stylelint-scss",
+  ],
+  "rules": {
+    "at-rule-empty-line-before": ["always", {
+      except: [
+        "after-same-name",
+        "inside-block",
+      ],
+      ignore: ["after-comment"],
+    }],
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": [
+        "extend",
+        "at-root",
+        "debug",
+        "warn",
+        "error",
+        "if",
+        "else",
+        "for",
+        "each",
+        "while",
+        "mixin",
+        "include",
+        "function",
+        "return",
+      ]
+    }],
+    "no-descending-specificity": null,
+    "rule-empty-line-before": ["always-multi-line", {
+      except: ["inside-block"],
+      ignore: ["after-comment"],
+    }],
+    "scss/dollar-variable-colon-space-after": "always-single-line",
+  },
+  "ignoreFiles": "src/scss/vendor/**",
+}

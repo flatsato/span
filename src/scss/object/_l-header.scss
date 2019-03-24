@@ -1,290 +1,138 @@
 @charset "utf-8";
 
 /*
-@include sp($point-sp)
-@include tb($point-tb) {}
-@include pc($point-pc) {}
-@include wide($point-wide) {}
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
 */
 
 .l-header {
-  position: fixed;
-  left: 0;
-  top: 0;
+  position: relative;
   width: 100%;
-  @include tb($point-tb) {
-    background: rgba(#fff, 0.9);
-  }
-  &__inner {
-    @include sp($point-sp) {
-      width: 100%;
+  &__inner {}
+  &__site {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    @include pc {
+      height: 100px;
     }
-    @include tb($point-tb) {
-      height: 66px;
-      display: flex;
-      justify-content: space-between;
-      align-content: center;
-      padding: 0 18px;
-      margin: 0 auto;
-      body.topPage & {
-        height: 77px;
+    &Text {
+      font-size: 10px;
+      letter-spacing: -0.03em;
+      @include pc {
+        font-size: 12px;
+        letter-spacing: 0.1em;
       }
     }
-    @include pc($point-pc) {
-      padding: 0 24px;
-      max-width: 1280px;
-      width: 100%;
-    }
-  }
-  &__logo {
-    @include sp($point-sp) {
-      padding: 14px 0;
-      margin: 0 50px;
-    }
-    a {
-      font-size: 0;
-      display: block;
-      @include sp($point-sp) {
-        padding: 8px 0;
-        text-align: center;
+    &Logo {
+      width: 80px;
+      margin-bottom: 6px;
+      @include ov;
+      @include pc {
+        width: 140px;
+        margin-bottom: 12px;
       }
-      @include tb($point-tb) {
-        padding: 24px 0;
-        body.topPage & {
-          padding: 28px 0;
-        }
-      }
-    }
-    img {
-      height: auto;
-      vertical-align: top;
-      @include sp($point-sp) {
-        width: (455px/4);
-        height: (128px/4);
-      }
-      @include tb($point-tb) {
-        width: (455px/4);
-        height: (128px/4);
+      img {
+        width: 100%;
+        height: auto;
       }
     }
   }
-  &__nav {
-    @include sp($point-sp) {
-      position: fixed;
-      top: 0;
-      padding: 40px 0 50px;
-      background: rgba(#333, 0.9);
-      width: 100%;
-      height: 100vh;
-      visibility: hidden;
-      -webkit-transform: scale(0.95);
-      transform: scale(0.95);
-      opacity: 0;
-      &.transition {
-        -webkit-transition: visibility 0.3s linear, -webkit-transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1), opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
-        transition: visibility 0.3s linear, transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1), opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
-      }
-    }
-    @include tb($point-tb) {
-      vertical-align: middle;
-      position: inherit;
-      top: inherit;
-      padding: 0;
-      background: none;
-      width: inherit;
-    }
-    &List {
-      @include sp($point-sp) {
-        display: none; //☆
-      }
-      @include tb($point-tb) {
-        display: inline-flex;
-        float: right;
-      }
-    }
-    &Item {
-      @include font-EN;
-      letter-spacing: 0.05em;
-      @include sp($point-sp) {
-        font-size: 18px;
-        text-align: center;
-      }
-      @include tb($point-tb) {
-        font-size: 14px;
-        margin: 0 0 0 12px;
-      }
-      @include pc($point-pc) {
-        margin: 0 0 0 24px;
-      }
-      span {
-        @include tb($point-tb) {
-          padding: 0 0 1px;
-        }
-      }
-      a {
-        @include font-EN;
-        @include sp($point-sp) {
-          color: #fff;
-          padding: 14px 0 13px;
-          display: block;
-        }
-        @include tb($point-tb) {
-          padding: 0 0 2px;
-          line-height: 66px;
-          body.topPage & {
-            line-height: 77px;
-          }
-        }
-        &:hover {
-          @include tb($point-tb) {
-            color: #a6a6a6;
-          }
-        }
-        span {
-          @include tb($point-tb) {
-            padding: 0 0 4px;
-          }
-        }
-      }
-      //@include is-active;
-      @mixin is-active {
-        @include sp($point-sp) {
-          padding: 0;
-          border-bottom: 1px solid #fff;
-        }
-        @include tb($point-tb) {
-          padding: 0;
-          border-bottom: 1px solid #000;
-        }
-      }
-      .topPage &.top span {
-        @include is-active;
-      }
-      .conceptPage &.concept span {
-        @include is-active;
-      }
-      .solutionDetailPage &.our_solution span,
-      .solutionPage &.our_solution span {
-        @include is-active;
-      }
-      .projectsDetailPage &.projects span,
-      .projectsPage &.projects span {
-        @include is-active;
-      }
-      .companyPage &.company span {
-        @include is-active;
-      }
-      .newsDetailPage &.news span,
-      .newsPage &.news span {
-        @include is-active;
-      }
-      .contactPage &.contact span {
-        @include is-active;
-      }
-    }
-  }
-  &__btn {
-    width: (14px+12px);
-    height: (11px+12px);
-    display: block;
+  &__menu {
     position: absolute;
-    right: (15px-6px);
-    top: (22px-6px);
-    span {
-      display: none;
-    }
-    @include sp($point-sp) {}
-    @include tb($point-tb) {
-      display: none;
+    top: 0;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    @include pc {
+      top: 50%;
+      right: 30px;
+      transform: translate(0, -50%);
     }
     a {
+      display: flex;
       display: block;
-      width: 14px;
-      height: 11px;
-      margin: 6px;
-      border-top: 1px solid #333;
-      border-bottom: 1px solid #333;
-      position: relative;
-      &:before {
-        content: '';
-        width: 14px;
-        height: 1px;
-        background: #333;
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 4px;
-      }
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
     }
-  }
-  &__close {
-    width: 24px;
-    height: 24px;
-    display: block;
-    margin: (96px/2-12) auto 0;
-    position: relative;
-    @include sp($point-sp) {
-      display: none; //☆
-    }
-    span {
-      display: none;
-    }
-    &:before,
-    &:after {
-      content: '';
-      width: 1px;
-      height: 18px;
-      background: #fff;
-      display: block;
+    .line1,
+    .line2,
+    .line3 {
       position: absolute;
-      top: 2px;
-      left: 11px;
-    }
-    &:before {
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-    &:after {
-      -ms-transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-    }
-    @include sp($point-sp) {}
-    @include tb($point-tb) {
-      display: none;
-    }
-    a {
+      left: 17px;
       display: block;
-      width: 24px;
-      height: 24px;
-    }
-  }
-  &__sp {
-    @include sp($point-sp) {
-      display: block;
-      background: rgba(#fff, 0.9);
-      height: 54px;
-      width: 100%;
-    }
-  }
-  &.is-open {
-    .l-header__nav {
-      @include sp($point-sp) {
-        pointer-events: auto;
-        visibility: visible;
-        opacity: 1;
-        transform: scale(1);
+      width: 22px;
+      height: 2px;
+      pointer-events: none;
+      content: '';
+      background: #000;
+      @include pc {
+        left: 13px;
+        width: 30px;
       }
     }
-    .l-header__navList {
-      @include sp($point-sp) {
-        display: block;
+    .line1 {
+      top: 0;
+    }
+    .line2 {
+      top: 10px;
+    }
+    .line3 {
+      top: 20px;
+    }
+  }
+}
+
+
+.l-site {
+  &.-open {
+    .l-site__menu {
+      a {
+        .line1,
+        .line2,
+        .line3 {
+          top: 18px;
+        }
+        .line1 {
+          transform: rotate(45deg);
+        }
+        .line2 {
+          display: none;
+        }
+        .line3 {
+          transform: rotate(-45deg);
+        }
       }
     }
-    .l-header__close {
-      @include sp($point-sp) {
-        display: block;
+  }
+  &.-close {
+    .l-site__menu {
+      a {
+        .line1 {
+          top: 20px;
+          @include pc {}
+        }
+        .line2 {
+          top: 27px;
+          @include pc {}
+        }
+        .line3 {
+          top: 34px;
+          @include pc {}
+        }
       }
     }
   }

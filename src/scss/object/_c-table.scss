@@ -1,32 +1,37 @@
-  @charset "utf-8";
-  /*
-@include sp($point-sp)
-@include tb($point-tb) {}
-@include pc($point-pc) {}
-@include wide($point-wide) {}
+@charset "utf-8";
+
+/*
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
 */
-  
-  .c-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-bottom: 2px solid #333;
-    border-right: 2px solid #333;
-    caption {}
-    thead {
-      th {
-        border-top: 2px solid #333;
-        border-left: 2px solid #333;
-      }
-    }
-    tbody {
-      th,
-      td {
-        vertical-align: top;
-        border-top: 2px solid #333;
-        border-left: 2px solid #333;
-        padding: 8px;
-      }
-      th {}
-      td {}
+
+.c-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  caption {}
+  th,
+  td {
+    padding: 8px;
+    vertical-align: top;
+    border-top: 2px solid #333;
+    border-left: 2px solid #333;
+  }
+  thead {
+    th {
+      color: #fff;
+      background: #000;
     }
   }
+  tbody {
+    th,
+    td {}
+    th {}
+    td {}
+  }
+}

@@ -1,0 +1,19 @@
+<%_
+if (typeof id === 'undefined') { var id = ''; }
+var headerClass = '';
+if (id === 'hoge') {
+headerClass = ' -hoge';
+} else if(id === 'fuga') {
+headerClass = ' -fuga';
+}
+_%>
+<!-- l-header START -->
+<header class="l-header -close <%= headerClass%>" role="banner">
+<div class="l-header__site">
+<div class="l-header_siteLogo"><a href=""><img src="https://dummyimage.com/120x30/cccccc/686a82.gif&text=S" alt="サイトロゴ"></a></div>
+<div class="l-header__siteText">キャッチコピー</div>
+</div>
+<div class="l-header__menu"><a href=""><span class="line1"></span><span class="line2"></span><span class="line3"></span></a></div>
+<%- include('_l-gnav') %>
+</header>
+<!-- l-header END -->
