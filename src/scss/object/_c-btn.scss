@@ -1,27 +1,155 @@
 @charset "utf-8";
 
 /*
-@include sp320{}
 @include sp{}
 @include tb{}
 @include pc{}
-@include touch{}
-@include desktop{}
+@include wide{}
+@include spOnly{}
+@include tbOnly{}
+@include pcOnly{}
 */
 
+//HTML
+//<div class="c-btnWrap -center">
+//<div class="c-btn -white -w460"><a href="" class="">ボタン</a></div>
+//<div class="c-btn -black -wFull"><button>ボタン</button></div>
+//<div class="c-btn -red -wFull"><input type="submit" value="ボタン"></div> 
+//</div>
+//形 
 .c-btn {
-  height: 40px;
-  font-size: fz(14);
-  color: #fff;
-  background: gray;
-  min-width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &__group {
+  a,
+  button,
+  input {
+    width: 100%;
+    height: 35px;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    border-radius: 35px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
     display: flex;
-    &.-center{
-      justify-content: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    @include font-noto_sans;
+  }
+}
+
+//色
+.c-btn {
+  &.-white {
+    a,
+    button,
+    input {
+      background: #fff;
+      border: 2px solid #000;
+      color: #000;
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
     }
+  }
+  &.-black {
+    a,
+    button,
+    input {
+      background: #000;
+      border: 2px solid #000;
+      color: #fff;
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
+  }
+  &.-red {
+    a,
+    button,
+    input {
+      color: #e60012;
+      border: 2px solid #e2bfd4;
+      &:hover {
+        background: #e60012;
+        border: 2px solid #e60012;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+//横幅
+.c-btn {
+  &.-w235 {
+   width: 235px;
+    a,
+    button,
+    input {
+      width: 100%;
+
+    }
+  }
+  &.-w460 {
+    width: 100%;
+    @include pc {
+      width: 460px;
+    }
+    a,
+    button,
+    input {
+      width: 100%;
+    }
+  }
+}
+
+//縦幅
+.c-btn {
+  &.-h45 {
+    a,
+    button,
+    input {
+      border-radius: 45px;
+      height: 45px;
+      @include pc {
+        letter-spacing: 0.18em;
+      }
+    }
+  }
+}
+
+//囲み 右寄せ 中央寄せ 左寄せ
+.c-btnWrap {
+  display: flex;
+  &.-center {
+    justify-content: center;
+  }
+}
+
+//個別
+.c-btn {
+  &.-amazon {
+    a,
+    button,
+    input {
+      background: #fff;
+      border: 2px solid #ff9900;
+      position: relative;
+      &:hover {
+        background: #ffe3b9;
+        color: #000;
+      }
+      img {
+        width: 94px;
+        height: auto;
+        position: absolute;
+        margin-top: 4px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
   }
 }

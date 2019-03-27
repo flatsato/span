@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/*
+@include sp{}
+@include tb{}
+@include pc{}
+@include wide{}
+@include spOnly{}
+@include tbOnly{}
+@include pcOnly{}
+*/
+
+.c-radio {
+  &.pretty .state label:after,
+  &.pretty .state label:before {
+    width: calc(1em + 4px);
+    height: calc(1em + 4px);
+    top: calc((0% - (100% - 1em)) - 24%);
+  }
+  &.pretty.p-default .state label:after {
+    transform: scale(0.5);
+  }
+  &.pretty .state label:before {
+    border-color: #dddddd;
+    background: #fff !important;
+  }
+  &.pretty.p-default input:checked ~ .state label:after {
+    background-color: #e60012 !important;
+  }
+}

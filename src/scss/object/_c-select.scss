@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/*
+@include sp{}
+@include tb{}
+@include pc{}
+@include wide{}
+@include spOnly{}
+@include tbOnly{}
+@include pcOnly{}
+*/
+
+//HTML
+//<div class="c-btnWrap -center">
+//<div class="c-btn -white -w460"><a href="" class="">ボタン</a></div>
+//<div class="c-btn -black -wFull"><button>ボタン</button></div>
+//<div class="c-btn -red -wFull"><input type="submit" value="ボタン"></div> 
+//</div>
+.c-select1 {
+  position: relative;
+  width: 100%;
+  &:before {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    display: block;
+    width: 10px;
+    height: 6px;
+    content: '';
+    background: url(/img/common/icon_arrow03.svg) no-repeat;
+    background-size: 100% auto;
+    transform: translateY(-50%);
+    z-index: 5;
+    pointer-events: none;
+  }
+  select {
+    min-width: 140px;
+    width: 100%;
+    padding: 0 15px;
+    @include font-noto_sans_mideum;
+    font-size: 12px;
+    line-height: 36px;
+    height: 36px;
+    border: 1px solid #000;
+    border-radius: 18px;
+    background: #fff;
+  }
+}
+
+.c-select2 {
+  position: relative;
+  width: 100%;
+  &:before {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: -3px;
+    pointer-events: none;
+    content: '';
+    border-color: #000 transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+  }
+  select {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 0;
+  }
+
+}
