@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/*
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
+*/
+
+.c-archive1 {
+  display: block;
+  &__link {
+    background: #fff;
+    display: block;
+    text-decoration: none;
+    display: flex;
+    margin-top: 10px;
+  }
+  &__figure {
+    width: 150px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__meta {
+    display: flex;
+    @include fz(6);
+    margin-top: 5px;
+  }
+  &__cat {
+    a {
+      text-decoration: none;
+    }
+  }
+  &__body{
+    padding: 10px;
+  }
+  &__date {
+    margin-left: 20px;
+  }
+  &__title {
+    @include fz(12);
+  }
+    &__text {
+    @include fz(8);
+      margin-top: 5px;
+  }
+  &__action{
+    padding: 0 20px 20px;
+  }
+}

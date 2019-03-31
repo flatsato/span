@@ -10,21 +10,23 @@
 */
 
 .c-pageHeading {
-  line-height: 1.1;
-  margin-bottom: 140px;
+  margin-bottom: 40px;
   &__title{
-    font-size: 22px;
+  display: flex;
+    align-items:baseline;
   }
   &__lead{
-    font-size: 16px;
+    @include fz(10);
     margin-top: 1em;
+    line-height: (22/14);
   }
   &__jp {
-    font-size: 12px;
-    display: block;
+    @include fz(20);
+    line-height: (36/20);
+    @include lhCrop(line-height/fontsize);
   }
   &__en {
-    font-size: 20px;
-    display: block;
+    @include fz(10);
+    margin-left: 15px;
   }
 }

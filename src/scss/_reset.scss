@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  font-size: 14px;
   color: #333;
   @include font-JP_sans;
 }
@@ -150,6 +151,7 @@ video {
 
 img {
   border-style: none;
+  vertical-align: top;
 }
 
 blockquote,

@@ -26,9 +26,7 @@
     display: block;
     width: 10px;
     height: 6px;
-    content: '';
-    background: url(/img/common/icon_arrow03.svg) no-repeat;
-    background-size: 100% auto;
+    content: '▼';
     transform: translateY(-50%);
     z-index: 5;
     pointer-events: none;
@@ -37,7 +35,6 @@
     min-width: 140px;
     width: 100%;
     padding: 0 15px;
-    @include font-noto_sans_mideum;
     font-size: 12px;
     line-height: 36px;
     height: 36px;
@@ -71,5 +68,4 @@
     background-color: #fff;
     border-radius: 0;
   }
-
 }

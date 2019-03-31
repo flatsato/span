@@ -16,6 +16,7 @@
 //<div class="c-btn -black -wFull"><button>ボタン</button></div>
 //<div class="c-btn -red -wFull"><input type="submit" value="ボタン"></div> 
 //</div>
+
 //形 
 .c-btn {
   a,
@@ -32,7 +33,6 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    @include font-noto_sans;
   }
 }
 
@@ -61,19 +61,6 @@
       &:hover {
         background: #fff;
         color: #000;
-      }
-    }
-  }
-  &.-red {
-    a,
-    button,
-    input {
-      color: #e60012;
-      border: 2px solid #e2bfd4;
-      &:hover {
-        background: #e60012;
-        border: 2px solid #e60012;
-        color: #fff;
       }
     }
   }
@@ -150,6 +137,5 @@
         transform: translate(-50%, -50%);
       }
     }
-
   }
 }

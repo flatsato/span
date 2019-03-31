@@ -11,43 +11,4 @@
 
 .p-card {
   display: block;
-  &__list {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid #000;
-  }
-  &__item {
-    padding: 20px 0;
-    border-bottom: 1px solid #000;
-  }
-  &__link {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__thumb {
-    flex-basis: 180px;
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-  &__body {
-    width: calc(100% - 200px);
-    padding-left: 20px;
-  }
-  &__meta {
-    display: flex;
-  }
-  &__cat {
-    a {
-      text-decoration: none;
-    }
-  }
-  &__date {
-    margin-left: 20px;
-  }
-  &__title {
-    text-decoration: underline;
-    @include fz(24);
-  }
 }

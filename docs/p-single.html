@@ -9,6 +9,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
 
 <!-- *** common *** ★忘れずに指定 -->
 <meta property="og:image" content="http:///img/head/og.png">
@@ -48,7 +49,7 @@
 <!-- l-header START -->
 <header class="l-header -close  -hoge" role="banner">
 <div class="l-header__inner">
-<div class="l-header_siteLogo"><a href="">HTML TEMP</a></div>
+<div class="l-header_siteLogo"><a href="/">HTML TEMP</a></div>
 <div class="l-header__siteText">効率的に作るためのテンプレート</div>
 <div class="c-hamburger hamburger hamburger--squeeze js-hamburger">
 <button class="hamburger" type="button">
@@ -85,60 +86,28 @@
 
 <main class="l-main">
 
-<div class="p-single">
-<div class="Kv">
-<img src="/img/dummy/single_kv.jpg" alt="">
-</div>
-<div class="p-single__inner">
+<!--p-single-->
+<article class="p-single">
 <div class="p-single__meta">
-<div class="p-single__cat"><object><a href="">カテゴリ名</a></object></div>
-<time class="p-single__date">2020.01.01</time>
+<div class="p-single__author">Author : 投稿者名</div>
+<div class="p-single__cat"><a href="">Category：カテゴリ名</a></div>
+<time class="p-single__date">Date：2020.01.01</time>
 </div>
 <h1 class="p-single__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
-<div class="p-single__author">Author : 投稿者名</div>
+
 <div class="p-single__lead">リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。</div>
 
 <div class="p-single__entry">
-<h2>table</h2>
-<table>
-<thead>
-<tr>
-<th>項目名が入ります。</th>
-<th>項目名が入ります。</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>見出しが入ります。</th>
-<td>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</td>
-</tr>
-<tr>
-<th>見出しが入ります。</th>
-<td>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</td>
-</tr>
-<tr>
-<th>見出しが入ります。</th>
-<td>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</td>
-</tr>
-<tr>
-<th>見出しが入ります。</th>
-<td>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</td>
-</tr>
-</tbody>
-</table>
+
 <h2>段落／文字種類</h2>
 これはテスト投稿ですこれは<strong>太字strong</strong>これは<em>色付き文字em</em>ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿です<a href="http://link">リンクURL</a>これはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿です これはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿です
-<h2>ギャラリー 横4列／横3列／横2列／横1列</h2>
-<h3>横4列</h3>
-[gallery columns="4" link="none" size="large" ids="263,265,264,258,257,256,251,250"]
-<h3>横3列</h3>
-[gallery columns="3" link="none" size="large" ids="263,265,264,258,257,256"]
-<h3>横2列</h3>
-[gallery link="none" columns="2" size="large" ids="265,264,263,258"]
-<h3>横1列</h3>
-[gallery columns="1" link="none" size="large" ids="264,263"]
+
 <h2>写真＋キャプション</h2>
-[caption id="attachment_180" align="alignnone" width="600"]<img class="size-full wp-image-180" src="https://dummyimage.com/600x400/cccccc/686a82.gif" alt="" width="600" height="400">テキストが入ります。テキストが入ります。[/caption]
+<figure class="figure">
+<img class="size-full" src="https://dummyimage.com/600x400/cccccc/686a82.gif" alt="" width="600" height="400">
+<figcaption>キャプション</figcaption>
+</figure>
+
 <h2>ulリスト／olリスト</h2>
 <ul>
 <li>リストのテキストが入ります。リストのテキストが入ります。リストのテキストが入ります。リストのテキストが入ります。リストのテキストが入ります。</li>
@@ -150,104 +119,21 @@
 <li><b>リストの太字テキストが入ります。</b><a>http://hoge.com http://hoge.com</a>リストのテキストが入ります。リストのテキストが入ります。</li>
 <li><b>リストの太字テキストが入ります。</b><a>http://hoge.com http://hoge.com</a>リストのテキストが入ります。リストのテキストが入ります。</li>
 </ol>
-<ul>
-<li>リストのテキストが入ります。リストのテキストが入ります。リストのテキストが入ります。</li>
-<li><a>内部リンク</a></li>
-<li><a target="_blank" rel="noopener">外部リンク</a></li>
-</ul>
-<h2 id="mokuji_ID_1">引用</h2>
-本文がここに入ります。サンプルテキストもここに入り、sampletextもここに入ります。本文がここに入りま す。サンプルテキストもここに入り、sampletextもここに入ります。 本文がここに入ります。サンプルテキストもここに入り、sampletextもここに入ります。本文がここに入ります。 サンプルテキストもここに入り、sampletextもここに入ります。本文がここに入ります。サンプルテキストもここに入り、sampletextもここに入ります。
-<blockquote>引用文がここに入ります。サンプルテキストもここに入り、sampletextもここに入ります。引用文がここに入ります。サンプルテキストもここに入り、sampletextもここに入ります
-<a>出展 http://--------</a></blockquote>
-<h2>囲み</h2>
-<code>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</code>
-<h2>画像／left／center／right／指定なし</h2>
-<h3>画像／left</h3>
-<img class="alignleft size-thumbnail" src="https://dummyimage.com/200x150/cccccc/686a82.gif" alt="" width="150" height="150">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。 テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-<h3>画像／center</h3>
-<img class="aligncenter size-thumbnail" src="https://dummyimage.com/200x150/cccccc/686a82.gif" alt="" width="150" height="150"> テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。 テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-<h3>画像／right</h3>
-<img class="alignright size-thumbnail" src="https://dummyimage.com/200x150/cccccc/686a82.gif" alt="" width="150" height="150">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。 テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-<h2>まとめ</h2>
-<div class="p-single__summary">
-<div class="p-single__summaryInner">
-<h3>まとめの見出しが入ります。まとめの見出しが入ります。</h3>
-テスト投稿ですテスト投稿ですテスト投稿ですテスト投稿ですテスト投稿ですテスト投稿ですテスト投稿ですテスト投稿です
 
-</div>
-</div>
-<div class="p-single__summary">
-<div class="p-single__summaryInner">
-<h3>まとめの見出しが入ります。まとめの見出しが入ります。</h3>
-テスト投稿ですテスト投稿ですテスト投稿ですテスト投稿ですテスト投稿ですテスト投稿ですテスト投稿ですテスト投稿です
-
-</div>
-<figure><img src="/img/dummy/single_thumb01.jpg" alt="">
-<figcaption>キャプションが入ります。キャプションが入ります。キャプションが入ります。</figcaption>
-</figure>
-</div>
-
-<!--nextpage-->
-
-2ページ目 はテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテ
-
-<!--nextpage-->
-<p id="mokuji_ID_2">3ページ目</p>
-<div class="p-single__entryInner">
-<p>私も生涯始めてこの発展心というののために思いでた。やはりほかに講演通りはとやかくこの戦争ですないまでへしけれどもいならからも焦燥待っんまして、それほどとは許さですですますた。他で考えるな【100文字】</p>
-
-<p>私も生涯始めてこの発展心というののために思いでた。やはりほかに講演通りはとやかくこの戦争ですないまでへしけれどもいならからも焦燥待っんまして、それほどとは許さですですますた。他で考えるな【100文字】</p>
-
-<p>私も生涯始めてこの発展心というののために思いでた。やはりほかに講演通りはとやかくこの戦争ですないまでへしけれどもいならからも焦燥待っんまして、それほどとは許さですですますた。他で考えるな【100文字】</p>
-
-<hr>
-
-<p>私も生涯始めてこの発展心というののために思いでた。やはりほかに講演通りはとやかくこの戦争ですないまでへしけれどもいならからも焦燥待っんまして、それほどとは許さですですますた。他で考えるな【100文字】</p>
-
-<p>私も生涯始めてこの発展心というののために思いでた。やはりほかに講演通りはとやかくこの戦争ですないまでへしけれどもいならからも焦燥待っんまして、それほどとは許さですですますた。他で考えるな【100文字】</p>
-
-<p>私も生涯始めてこの発展心というののために思いでた。やはりほかに講演通りはとやかくこの戦争ですないまでへしけれどもいならからも焦燥待っんまして、それほどとは許さですですますた。他で考えるな【100文字】</p>
-
-<hr>
-
-<p>私も生涯始めてこの発展心というののために思いでた。やはりほかに講演通りはとやかくこの戦争ですないまでへしけれどもいならからも焦燥待っんまして、それほどとは許さですですますた。他で考えるな【100文字】</p>
-
-<p>私も生涯始めてこの発展心というののために思いでた。やはりほかに講演通りはとやかくこの戦争ですないまでへしけれどもいならからも焦燥待っんまして、それほどとは許さですですますた。他で考えるな【100文字】</p>
-
-<p>私も生涯始めてこの発展心というののために思いでた。やはりほかに講演通りはとやかくこの戦争ですないまでへしけれどもいならからも焦燥待っんまして、それほどとは許さですですますた。他で考えるな【100文字】</p>
-</div>
-</div>
-
-<div class="p-single__nav">
-<div class="p-single__navTitle">
-<a class="p-single__navLink" href="">
-<div class="p-single__navSub">Next Page</div>
-<div class="p-single__navText">次のページの記事タイトルが入ります</div>
-</a>
-</div>
-<ul class="p-single__navList">
-<li class="p-single__navItem -prev -no"><a href="">前のページ</a></li>
-<li class="p-single__navItem -next"><a href="">次のページ</a></li>
-</ul>
-</div>
-
-<div class="p-single__ad">
-<a href=""><img src="/img/dummy/ad.png" alt=""></a>
-</div>
-
+<h2>SNS</h2>
 <ul class="p-single__sns">
 <li class="p-single__snsItem -twitter">
-<a href=""><img src="/img/icon/sns_twitter.svg" alt="Twitter"><span class="p-single__snsText">Tweet</span></a>
+<a href="">Twitter<span class="p-single__snsText">Tweet</span></a>
 </li>
 <li class="p-single__snsItem -facebook">
-<a href=""><img src="/img/icon/sns_facebook.svg" alt="Facebook"><span class="p-single__snsText">Share</span></a>
+<a href="">Facebook<span class="p-single__snsText">Share</span></a>
 </li>
 <li class="p-single__snsItem -line">
-<a href=""><img src="/img/icon/sns_line.svg" alt="LINE"><span class="p-single__snsText">送る</span></a>
+<a href="">LINE<span class="p-single__snsText">送る</span></a>
 </li>
 </ul>
 </div>
-</div>
+</article>
 
 </main>
 

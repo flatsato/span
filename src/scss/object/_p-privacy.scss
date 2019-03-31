@@ -14,15 +14,21 @@
   &__title {
     @include fz(20);
   }
+  &__h2 {
+    @include fz(18);
+    margin-top: 2em;
+  }
+  &__h3 {
+    @include fz(14);
+    margin-top: 2em;
+  }
   &__text {
-    margin-top: 2rem;
+    margin-top: 1rem;
     line-height: 1.8;
     p + p {
       margin-top: 2rem;
     }
   }
-  &__section {}
-  &__note {}
   &__list {
     margin-top: 4rem;
     &.-ul {}
@@ -30,5 +36,13 @@
   }
   &__item {
     margin-top: 1rem;
+  }
+  &__note {
+    color: #999;
+    font-size: 12px;
+  }
+  &__section {
+    margin-top: 40px;
+    &Inner {}
   }
 }
