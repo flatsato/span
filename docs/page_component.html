@@ -33,7 +33,7 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
 <link rel="stylesheet" href="css/vendor/ress.min.css">
 <link rel="stylesheet" href="css/vendor/hamburgers/hamburgers.min.css" >
@@ -62,9 +62,11 @@
 <!-- l-gnav START -->
 <nav class="l-gnav" role="navigation">
 <ul class="l-gnav__list">
-<li class="l-gnav__item -cat1"><a href="index.html">Project</a></li>
-<li class="l-gnav__item -cat2"><a href="p-single.html">Component</a></li>
-<li class="l-gnav__item -cat3"><a href="p-form.html">Form</a></li>
+<li class="l-gnav__item -cat1"><a href="">MENU</a></li>
+<li class="l-gnav__item -cat2"><a href="">MENU</a></li>
+<li class="l-gnav__item -cat3"><a href="">MENU</a></li>
+<li class="l-gnav__item -cat4"><a href="">MENU</a></li>
+<li class="l-gnav__item -cat5"><a href="">MENU</a></li>
 </ul>
 </nav>
 <!-- l-gnav END -->
@@ -101,11 +103,68 @@ min-widthを指定 -w200などヘルパークラスで幅を指定する。</p>
 <p>c-btnWrapグループ化 -center -between -left -right</p>
 
 <div class="p-temp__code">
-<div class="c-btnWrap -center">
-<a class="c-btn" role="button">btn</a>
-<input type="submit" class="c-btn" value="btn">
-<button class="c-btn" role="button">btn</button>
+<h2 class="c-h2">ノーマル</h2>
+<div class="c-btnWrap">
+<a class="c-btn" role="button">a btn</a>
+<input type="submit" class="c-btn" value="input btn">
+<button class="c-btn" type="submit" role="button">button btn</button>
 </div>
+
+<h2 class="c-h2">ノーマル c-btnWrap -center</h2>
+<div class="c-btnWrap -center">
+<a class="c-btn" role="button">a btn</a>
+<input type="submit" class="c-btn" value="input btn">
+<button class="c-btn" type="submit" role="button">button btn</button>
+</div>
+
+<h2 class="c-h2">ノーマル c-btnWrap -right</h2>
+<div class="c-btnWrap -right">
+<a class="c-btn" role="button">a btn</a>
+<input type="submit" class="c-btn" value="input btn">
+<button class="c-btn" type="submit" role="button">button btn</button>
+</div>
+
+<h2 class="c-h2">ノーマル c-btnWrap -left</h2>
+<div class="c-btnWrap -center">
+<a class="c-btn" role="button">a btn</a>
+<input type="submit" class="c-btn" value="input btn">
+<button class="c-btn" type="submit" role="button">button btn</button>
+</div>
+
+<h2 class="c-h2">疑似要素:ボタンの左右</h2>
+<div class="c-btnWrap -center">
+<span class="c-btn -pseudo -left"><a href="">a btn</a></span>
+<span class="c-btn -pseudo -right"><a href="">a btn</a></span>
+<span class="c-btn -pseudo -left"><button type="submit" role="button">button btn</button></span>
+<span class="c-btn -pseudo -right"><button type="submit" role="button">button btn</button></span>
+</div>
+
+<h2 class="c-h2">疑似要素:テキストの左右</h2>
+<div class="c-btnWrap -center">
+<span class="c-btn -pseudo_inline -left"><a href="">btn</a></span>
+<span class="c-btn -pseudo_inline -right"><a href="">btn</a></span>
+<span class="c-btn -pseudo_inline -left"><button type="submit" role="button">button btn</button></span>
+<span class="c-btn -pseudo_inline -right"><button type="submit" role="button">button btn</button></span>
+</div>
+
+<h2 class="c-h2">疑似要素:ボタンの左右 矢印</h2>
+<div class="c-btnWrap -center">
+<span class="c-btn -arrow -left"><a href="">btn</a></span>
+<span class="c-btn -arrow -right"><button type="submit" role="button">btn</button></span>
+</div>
+
+<h2 class="c-h2">With Font Awesome icons ボタンの左右</h2>
+<div class="c-btnWrap -center">
+<span class="c-btn -awesome -left"><a href=""><i class="fas fa-angle-left"></i>btn</a></span>
+<span class="c-btn -awesome -right"><button role="button">btn<i class="fas fa-angle-right"></i></button></span>
+</div>
+
+<h2 class="c-h2">With Font Awesome icons テキストの左右</h2>
+<div class="c-btnWrap -center">
+<span class="c-btn -awesome_inline -left"><a href=""><i class="fas fa-angle-left"></i>btn</a></span>
+<span class="c-btn -awesome_inline -right"><button role="button">btn<i class="fas fa-angle-right"></i></button></span>
+</div>
+
 </div>
 
 </section>
@@ -186,6 +245,20 @@ min-widthを指定 -w200などヘルパークラスで幅を指定する。</p>
 
 </div>
 
+<!-- l-footlink START -->
+<aside class="l-footlink">
+<div class="l-footlink__inner">
+ <ul class="l-footlink__list">
+   <li class="l-footlink__item"><a href="/temp_module.html">temp_module</a></li>
+   <li class="l-footlink__item"><a href="/temp_base.html">temp_base</a></li>
+   <li class="l-footlink__item"><a href="/page_normal.html">page_normal</a></li>
+   <li class="l-footlink__item"><a href="/page_component.html">page_component</a></li>
+ </ul>
+</div>
+</aside>
+
+<!-- l-footlink END -->
+
 <!-- l-footer START -->
 <footer class="l-footer" role="contentinfo">
 <div class="l-pagetop"><a href="#pagetop"><span>このページの先頭へ</span></a></div>
@@ -196,10 +269,14 @@ min-widthを指定 -w200などヘルパークラスで幅を指定する。</p>
 <ul class="l-footer__navList">
 <li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
 <li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
+<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
+<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
+<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
 </ul>
 </nav>
 </footer>
 <!-- l-footer END -->
+
 
 </div>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>

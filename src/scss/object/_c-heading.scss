@@ -10,24 +10,27 @@
 */
 
 .c-h1 {
-  @include fz(30);
-  margin-top: 4rem;
+  @include fz(24);
+  margin-top: 2rem;
+  margin-bottom: .5rem;
   &:first-child {
     margin-top: 0;
   }
 }
 
 .c-h2 {
-  @include fz(26);
-  margin-top: 4rem;
+  @include fz(18);
+  margin-top: 2rem;
+  margin-bottom: .5rem;
   &:first-child {
     margin-top: 0;
   }
 }
 
 .c-h3 {
-  @include fz(22);
-  margin-top: 4rem;
+  @include fz(14);
+  margin-top: 2rem;
+  margin-bottom: .5rem;
   &:first-child {
     margin-top: 0;
   }
@@ -35,7 +38,8 @@
 
 .c-h4 {
   @include fz(22);
-  margin-top: 4rem;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
   &:first-child {
     margin-top: 0;
   }
@@ -43,7 +47,8 @@
 
 .c-h5 {
   @include fz(18);
-  margin-top: 4rem;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
   &:first-child {
     margin-top: 0;
   }

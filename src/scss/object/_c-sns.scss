@@ -10,22 +10,22 @@
 */
 
 .c-sns {
-   display: flex;
-  background: #fff;
+  width: 100%;
+  background: #eee;
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #ddd;
+  }
   &__item {
-    margin: 20px 0 0;
     text-align: center;
-    &.facebook {
-      margin: 22px 0 0;
+    display: block;
+    & + & {
+      margin-left: 8px;
     }
-    &.line {
-      margin: 22px 0 0;
-    }
-    &.twitter {
-      margin: 24px 2px 0 0;
-    }
-    &.add {
-      margin: 20px 0 0 2px;
+    i {
+      font-size: 30px;
     }
   }
 }

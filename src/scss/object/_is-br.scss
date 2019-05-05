@@ -9,14 +9,14 @@
 @include desktop{}
 */
 
-br.SPbr {
+br.is-SPbr {
   display: none;
   @include sp {
     display: inline;
   }
 }
 
-br.PCbr {
+br.is-PCbr {
   display: inline;
   @include sp {
     display: none;

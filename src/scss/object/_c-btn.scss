@@ -16,23 +16,155 @@
 //<div class="c-btn -black -wFull"><button>ボタン</button></div>
 //<div class="c-btn -red -wFull"><input type="submit" value="ボタン"></div> 
 //</div>
-
 //形 
-.c-btn {
-  a,
-  button,
-  input {
-    width: 100%;
-    height: 35px;
+a,
+button,
+input {
+  .c-btn &,
+  &.c-btn {
+    padding: 10px 50px;
+    background: #fff;
     font-size: 13px;
     letter-spacing: 0.16em;
-    border-radius: 35px;
     transition: 0.3s ease-in-out;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    border: 1px solid #999;
+    & + & {
+      margin-left: 10px;
+    }
+  }
+  .-left & {
+    &:before {
+      left: 8px;
+    }
+  }
+  .-right & {
+    &:before {
+      right: 8px;
+    }
+  }
+}
+
+.c-btn {
+  & + & {
+    margin-left: 10px;
+  }
+  &.-pseudo {
+    position: relative;
+    a,
+    button,
+    input {
+      position: relative;
+      &:before {
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        content: '';
+        background: #000;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &.-left {
+        padding-left: 30px;
+        &:before {
+          left: 10px;
+        }
+      }
+      &.-right {
+        padding-right: 30px;
+        &:before {
+          right: 10px;
+        }
+      }
+    }
+  }
+  &.-pseudo_inline {
+    display: flex;
+    justify-content: center;
+    &.-left {
+      a:before,
+      input:before,
+      button:before {
+        margin-right: 6px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        content: '';
+        background: #000;
+      }
+    }
+    &.-right {
+      a:after,
+      input:after,
+      button:after {
+        margin-left: 6px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        content: '';
+        background: #000;
+      }
+    }
+  }
+  &.-arrow {
+    position: relative;
+    &:before {
+      position: absolute;
+      display: block;
+      width: 10px;
+      height: 10px;
+      content: '';
+      border: 2px #000 solid;
+      border-top: 0;
+      border-left: 0;
+      top: 50%;
+    }
+    &.-left:before {
+      transform: rotate(135deg) translateY(50%);
+      left: 15px;
+      margin-top: -2px;
+    }
+    &.-right:before {
+      transform: rotate(-45deg) translateY(50%);
+      margin-top: -10px;
+      right: 15px;
+    }
+  }
+  &.-right,
+  &.-left {
+    position: relative;
+  }
+  &.-awesome {
+    position: relative;
+    i {
+      position: absolute;
+      font-size: 20px;
+    }
+    &.-left i {
+      margin-right: 5px;
+      left: 10px;
+    }
+    &.-right i {
+      margin-left: 5px;
+      right: 10px;
+    }
+
+  }
+  &.-awesome_inline {
+    i {
+      font-size: 20px;
+    }
+    &.-left i {
+      margin-right: 5px;
+    }
+    &.-right i {
+      margin-left: 5px;
+    }
   }
 }
 
@@ -70,7 +202,7 @@
 //横幅
 .c-btn {
   &.-w235 {
-   width: 235px;
+    width: 235px;
     a,
     button,
     input {
@@ -109,8 +241,14 @@
 //囲み 右寄せ 中央寄せ 左寄せ
 .c-btnWrap {
   display: flex;
-  &.-center {
+  &.-left {
+    justify-content:flex-start;
+  }
+    &.-center {
     justify-content: center;
+  }
+    &.-right {
+    justify-content:flex-end;
   }
 }
 

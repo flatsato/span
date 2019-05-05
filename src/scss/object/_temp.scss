@@ -9,28 +9,41 @@
 @include desktop{}
 */
 
-.p-temp{
-  margin-bottom: 80px;
-  &__title{
+.p-temp {
+  &__section {
+    padding-top: 20px;
+  }
+  &__title {
+    margin-top: 1em;
+    font-size: 24px;
+    color: #EE9C6A;
+    border-bottom: 2px solid #EE9C6A;
+  }
+  &__titleS {
+    margin-top: 1em;
     font-size: 20px;
+    border-bottom: 2px solid #000;
   }
-  &__lead{
+  &__text {
+    margin-top: 20px;
+    margin-bottom: 50px;
     font-size: 16px;
+    line-height: 1.7;
   }
-  &__code{
+  &__code {
     margin-top: 60px;
     margin-bottom: 100px;
     background: #fff;
-    padding: 60px 40px;
+    padding: 20px;
     position: relative;
-    &:before{
-      content: 'DEMO';
-      position: absolute;
-      top: 0;
-      left:30px;
-      color: #fff;
-      padding: 6px 10px;
-      background: tomato;
-    }
+//    &:before {
+//      content: 'CODE';
+//      position: absolute;
+//      top: 0;
+//      left: 30px;
+//      color: #fff;
+//      padding: 6px 10px;
+//      background: tomato;
+//    }
   }
 }

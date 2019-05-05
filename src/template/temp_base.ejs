@@ -1,0 +1,199 @@
+<% var pageId = 'hoge'; %>
+<%- include('./_include/common/_head') %>
+
+<div id="pagetop" class="l-container">
+<!-- l-header START -->
+<%- include('./_include/_l-header', {id: pageId}) %>
+<!-- l-header END -->
+
+<!-- l-breadcrumb START -->
+<%- include('./_include/_l-breadcrumb') %>
+<!-- l-breadcrumb END -->
+
+<div class="l-contents">
+
+<main class="l-main">
+
+<div class="c-pageHeading">
+<h1 class="c-h1">Base</h1>
+<p class="c-pageHeading__lead">リード文が入ります。リード文が入ります。</p>
+</div>
+
+<section id="sec-head" class="p-temp__section">
+
+<h2 class="p-temp__title">head</h2>
+
+<div class="p-temp__text">
+<p>headに記述するコードです。</p>
+</div>
+
+<div class="p-temp__demo">
+ここにHTML
+</div>
+
+<div class="p-temp__code">
+<p data-height="265" data-theme-id="0" data-slug-hash="bmjZoM" data-default-tab="html" data-user="harumi-sato" data-pen-title="head common" class="codepen">See the Pen <a href="https://codepen.io/harumi-sato/pen/bmjZoM/">head common</a> by harumi-sato (<a href="https://codepen.io/harumi-sato">@harumi-sato</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+</section>
+
+<section id="sec-breakPoint" class="p-temp__section">
+
+<h2 class="p-temp__title">Break Point</h2>
+<div class="p-temp__text">
+<p>レイアウト用のブレークポイント。 <a href="https://bulma.io/documentation/overview/responsiveness/">Responsiveness</a> | Bulma を基準にした数値です。</p>
+</div>
+
+<table class="c-table" role="table" aria-label="汎用class">
+<caption>汎用class</caption>
+<thead>
+<tr>
+<th width="300">class</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>common</td>
+<td>共通指定</td>
+</tr>
+<tr>
+<td>@include sp320{}</td>
+<td>320〜360px</td>
+</tr>
+<tr>
+<td>@include sp{}</td>
+<td>361〜700px</td>
+</tr>
+<tr>
+<td>@include tb{}</td>
+<td>701〜1000px</td>
+</tr>
+<tr>
+<td>@include pc{}</td>
+<td>1001〜1280px</td>
+</tr>
+<tr>
+<td>@include wide{}</td>
+<td>1280px〜</td>
+</tr>
+<tr>
+<td>@include spOnly{}</td>
+<td>〜768px</td>
+</tr>
+<tr>
+<td>@include tbOnly{}</td>
+<td>769px〜1023px</td>
+</tr>
+<tr>
+<td>@include touch{}</td>
+<td>〜1023px</td>
+</tr>
+<tr>
+<td>@include desktop{}</td>
+<td>1024px〜</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Interaction Point</h3>
+
+<div class="text">
+<p>タッチデバイス（SP/TB）、desktop（PC〜）のCSS指定を記述します。hoverやアニメーションの制御用。</p>
+</div>
+
+<table class="c-table" role="table" aria-label="インタラクション指定">
+<caption>インタラクション指定</caption>
+<thead>
+<tr>
+<th width="300">class</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@include touch{}</td>
+<td>〜1023px</td>
+</tr>
+<tr>
+<td>@include desktop{}</td>
+<td>1024px〜</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+
+<section id="sec-zindex" class="p-temp__section">
+
+<h2 class="p-temp__title">z-index</h2>
+
+<div class="p-temp__text">
+<p>サイトのblockのz-indexを誰でも見渡せるよう1ファイルに記載する。block内のz-indexは個別のSassファイルに記載する。<br> inline＝2〜9、block内＝10〜99、block＝100〜999、layout＝1000〜9999
+</p>
+</div>
+
+<div class="p-temp__code">
+<p data-height="271" data-theme-id="0" data-slug-hash="ePjLqE" data-default-tab="css" data-user="harumi-sato" data-pen-title="z-index" class="codepen">See the Pen <a href="https://codepen.io/harumi-sato/pen/ePjLqE/">z-index</a> by harumi-sato (<a href="https://codepen.io/harumi-sato">@harumi-sato</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+</section>
+
+
+
+</main>
+
+<aside class="l-sub">
+<section class="l-sub__section">
+<h2 class="l-sub__title">Base</h2>
+<ul class="l-sub__list">
+<li class="l-sub__item"><a href="">mixin</a></li>
+<li class="l-sub__item"><a href="#sec-head">head</a></li>
+<li class="l-sub__item"><a href="#sec-breakPoint">breakPoint</a></li>
+<li class="l-sub__item"><a href="">font</a></li>
+<li class="l-sub__item"><a href="#sec-zindex">z-index</a></li>
+<li class="l-sub__item"><a href="">__helper_grid</a></li>
+<li class="l-sub__item"><a href="">__helper_br</a></li>
+<li class="l-sub__item"><a href="">__helper_grid</a></li>
+<li class="l-sub__item"><a href="">__helper_margin</a></li>
+<li class="l-sub__item"><a href="">__helper_padding</a></li>
+<li class="l-sub__item"><a href="">__reset</a></li>
+</ul>
+</section>
+<section class="l-sub__section">
+<h2 class="l-sub__title">Layout</h2>
+<ul class="l-sub__list">
+<li class="l-sub__item"><a href="">container</a></li>
+<li class="l-sub__item"><a href="">contents</a></li>
+<li class="l-sub__item"><a href="">footer</a></li>
+<li class="l-sub__item"><a href="">gnav</a></li>
+<li class="l-sub__item"><a href="">header</a></li>
+<li class="l-sub__item"><a href="">main</a></li>
+<li class="l-sub__item"><a href="">sub</a></li>
+<li class="l-sub__item"><a href="">__parts_footlink</a></li>
+<li class="l-sub__item"><a href="">__parts_breadcrumb</a></li>
+<li class="l-sub__item"><a href="">__parts_pagetop</a></li>
+</ul>
+</section>
+<section class="l-sub__section">
+<h2 class="l-sub__title">Base</h2>
+<ul class="l-sub__list">
+<li class="l-sub__item"><a href="">メニュー</a></li>
+<li class="l-sub__item"><a href="">メニュー</a></li>
+<li class="l-sub__item"><a href="">メニュー</a></li>
+<li class="l-sub__item"><a href="">メニュー</a></li>
+<li class="l-sub__item"><a href="">メニュー</a></li>
+<li class="l-sub__item"><a href="">メニュー</a></li>
+<li class="l-sub__item"><a href="">メニュー</a></li>
+</ul>
+</section>
+</aside>
+
+</div>
+
+<%- include('./_include/_l-footer') %>
+
+</div>
+<%- include('./_include/common/_foot') %>
