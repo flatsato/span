@@ -30,7 +30,7 @@ style.scss
 - [x] _l-container.scss
 - [x] _l-contents.scss
 - [x] _l-footer.scss
-- [ ] _l-footlink.scss
+- [x] _l-footlink.scss
 - [x] _l-gnav.scss
 - [x] _l-header.scss
 - [x] _l-main.scss
