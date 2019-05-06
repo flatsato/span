@@ -9,9 +9,7 @@
 @include desktop{}
 */
 
-html {
-
-}
+html {}
 
 body {
   font-size: 14px;
@@ -20,7 +18,9 @@ body {
 }
 
 html > body {
-  min-width: 980px;
+  @include pc {
+    min-width: 980px;
+  }
 }
 
 * {
@@ -189,7 +189,7 @@ textarea {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-textarea{
+textarea {
   display: block;
 }
 
@@ -203,6 +203,7 @@ legend {
 }
 
 /*table*/
+
 table {
   border-spacing: 0;
   border-collapse: collapse;
@@ -227,4 +228,3 @@ table {
     td {}
   }
 }
-
