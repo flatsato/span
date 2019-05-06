@@ -68,7 +68,7 @@ style.scss
 - [ ] _c-text.scss
 - [ ] _c-table
 - [ ] _c-sns
-- [x] _c-hamburger.scss
+- [ ] _c-hamburger.scss
 - [ ] _c-section
 - [ ] _c-progress
 - [ ] _c-sns.scss
@@ -78,7 +78,6 @@ style.scss
 - [ ] _c-textarea.scss 2019/05予定
 - [ ] _c-select.scss 2019/05予定
 - [ ] _c-input.scss 2019/05予定
-- [ ] _c-textarea.scss 2019/05予定
 - [ ] _c-radio.scss 
 - [ ] _c-checkbox.scss 
 - [ ] _c-file.scss
