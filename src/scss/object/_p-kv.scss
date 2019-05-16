@@ -47,11 +47,11 @@
     transform: translate(-50%, -50%);
     @include pc {}
     .jp {
-      font-size: 24px;
+      @include fz(24);
     }
     .en {
       margin-top: 10px;
-      font-size: 16px;
+      @include fz(16);
     }
     span {
       display: block
@@ -84,7 +84,7 @@
     position: absolute;
     top: 130px;
     width: 100%;
-    font-size: 16px;
+    @include fz(16);
     line-height: 2;
     line-height: 1.6;
     color: #fff;

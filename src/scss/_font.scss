@@ -50,7 +50,7 @@ font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, 
 }
 
 //@include fz();
-@mixin fz($size) {
-    font-size: $size + px;
-    font-size: ($size / 10) + rem;
+@mixin fz($size, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) + rem;
 }

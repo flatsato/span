@@ -39,7 +39,7 @@
   }
   &__note {
     color: #999;
-    font-size: 12px;
+    @include fz(12);
   }
   &__section {
     margin-top: 40px;

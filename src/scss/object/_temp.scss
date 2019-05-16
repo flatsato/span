@@ -15,19 +15,19 @@
   }
   &__title {
     margin-top: 1em;
-    font-size: 24px;
+    @include fz(24);
     color: #EE9C6A;
     border-bottom: 2px solid #EE9C6A;
   }
   &__titleS {
     margin-top: 1em;
-    font-size: 20px;
+    @include fz(20);
     border-bottom: 2px solid #000;
   }
   &__text {
     margin-top: 20px;
     margin-bottom: 50px;
-    font-size: 16px;
+    @include fz(16);
     line-height: 1.7;
   }
   &__code {
@@ -49,7 +49,7 @@
 }
 
 .demo_title{
-  font-size: 14px;
+  @include fz(14);
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 15px;

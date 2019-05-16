@@ -21,12 +21,11 @@
   &__list {
     overflow-x: auto;
     overflow-y: hidden;
-    font-size: 0;
     white-space: nowrap;
   }
   &__item {
     display: inline-block;
-     font-size: 14px;
+    @include fz(14);
     a {
       position: relative;
       display: block;

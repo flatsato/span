@@ -81,12 +81,6 @@ $point-wide: 1280px;
   }
 }
 
-//@include fz();
-@mixin fz($size) {
-    font-size: $size + px;
-    font-size: ($size / 10) + rem;
-}
-
 //@include lhCrop(line-height/fontsize);
 
 //.hoge{

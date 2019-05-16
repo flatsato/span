@@ -13,7 +13,7 @@
   a {
     min-width: 100px;
     height: 40px;
-    font-size: fz(14);
+    @include fz(14);
     color: #fff;
     background: yellowgreen;
     display: flex;

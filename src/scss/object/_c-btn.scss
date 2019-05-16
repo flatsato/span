@@ -24,7 +24,7 @@ input {
   &.c-btn {
     padding: 10px 50px;
     background: #fff;
-    font-size: 13px;
+    @include fz(13);
     letter-spacing: 0.16em;
     transition: 0.3s ease-in-out;
     cursor: pointer;
@@ -143,7 +143,7 @@ input {
     position: relative;
     i {
       position: absolute;
-      font-size: 20px;
+      @include fz(20);
     }
     &.-left i {
       margin-right: 5px;
@@ -157,7 +157,7 @@ input {
   }
   &.-icon_inline {
     i {
-      font-size: 20px;
+      @include fz(20);
     }
     &.-left i {
       margin-right: 5px;

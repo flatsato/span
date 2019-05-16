@@ -16,12 +16,12 @@
     overflow: hidden;
   }
   &__title {
-    font-size: 18px;
+    @include fz(18);
     line-height: (25/18);
     text-align: center;
   }
   &__text {
-    font-size: 14px;
+    @include fz(14);
     line-height: (25/14);
     color: #9D968D;
     text-align: center;
@@ -29,13 +29,13 @@
   }
   &__lead {
     margin: 25px 0 30px;
-    font-size: 13px;
+    @include fz(13);
     line-height: (24/13);
     text-align: center;
   }
   &__more {
     margin: 0 15px 25px;
-    font-size: 14px;
+    @include fz(14);
     a {
       height: 38px;
       padding-top: 25px;

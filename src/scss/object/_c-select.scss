@@ -35,7 +35,7 @@
     min-width: 140px;
     width: 100%;
     padding: 0 15px;
-    font-size: 12px;
+    @include fz(12);
     line-height: 36px;
     height: 36px;
     border: 1px solid #000;
@@ -64,7 +64,7 @@
   select {
     width: 100%;
     padding: 6px 10px;
-    font-size: 14px;
+    @include fz(14);
     background-color: #fff;
     border-radius: 0;
   }

@@ -15,18 +15,18 @@
   display: flex;
     align-items:baseline;
   }
-  &__lead{
-    @include fz(10);
-    margin-top: 1em;
-    line-height: (22/14);
-  }
+
   &__jp {
     @include fz(20);
     line-height: (36/20);
     @include lhCrop(line-height/fontsize);
   }
   &__en {
-    @include fz(10);
+    @include fz(12);
     margin-left: 15px;
+  }
+  &__lead{
+    @include fz(16);
+    margin-top: 2em;
   }
 }

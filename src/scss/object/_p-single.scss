@@ -17,23 +17,23 @@
     }
   }
   &__cat {
-    font-size: 13px;
+    @include fz(13);
     position: relative;
   }
   &__date {
     color: #9D968D;
-    font-size: 13px;
+    @include fz(13);
   }
   &__title {
-    font-size: 30px;
+    @include fz(30);
     margin-top: 20px;
   }
   &__author {
     color: #9D968D;
-    font-size: 12px;
+    @include fz(12);
   }
   &__lead {
-    font-size: 15px;
+    @include fz(15);
     line-height: (30/15);
     margin-top: 15px;
   }
@@ -44,7 +44,7 @@
       width: 85px;
       height: 50px;
       border-radius: 5px;
-      font-size: 13px;
+      @include fz(13);
       margin-left: 7px;
       @include ov;
       &:nth-child {
@@ -86,10 +86,10 @@
       }
     }
     &Text {
-      font-size: 13px;
+      @include fz(13);
       line-height: 1;
       .-line & {
-        font-size: 11px;
+        @include fz(11);
       }
     }
   }

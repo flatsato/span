@@ -24,11 +24,11 @@
       height: 100px;
     }
     &Text {
-      font-size: 10px;
+      @include fz(10);
       letter-spacing: -0.03em;
       @include pc {
         margin-left: 20px;
-        font-size: 12px;
+        @include fz(12);
         letter-spacing: 0.1em;
       }
     }
