@@ -1,55 +1,5 @@
 @charset "utf-8";
 
-$point-sp: 767px;
-$point-tb: 768px;
-$point-pc: 980px;
-$point-wide: 1280px;
-
-//@include sp{};
-@mixin sp {
-  @media screen and (max-width: $point-sp) {
-    @content;
-  }
-}
-
-//@include tb{};
-@mixin tb {
-  @media print,
-  screen and (min-width: $point-tb) {
-    @content;
-  }
-}
-
-//@include pc{};
-@mixin pc {
-  @media print,
-  screen and (min-width: $point-pc) {
-    @content;
-  }
-}
-
-//@include wide{};
-@mixin wide {
-  @media print,
-  screen and (min-width: $point-wide) {
-    @content;
-  }
-}
-
-//@include onlyTB{};
-@mixin onlyTB {
-  @media (min-width: $point-tb) and (max-width: $point-pc) {
-    @content;
-  }
-}
-
-//@include onlyPC{};
-@mixin onlyPC {
-  @media (min-width: $point-pc) and (max-width: $point-wide) {
-    @content;
-  }
-}
-
 //@include linkColor($color);
 @mixin linkColor($color) {
   color: $color;

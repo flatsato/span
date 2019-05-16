@@ -43,6 +43,15 @@ $full: 1400px;
   }
 }
 
+//@include wide{};
+@mixin wide {
+  @media print,
+  screen and (min-width: $wide) {
+    @content;
+  }
+}
+
+
 //@include touch{}
 @mixin touch {
   @media (max-width: $pc) {
@@ -53,6 +62,20 @@ $full: 1400px;
 //@include desktop{}
 @mixin desktop {
   @media (min-width: $pc) {
+    @content;
+  }
+}
+
+//@include onlyTB{};
+@mixin onlyTB {
+  @media (min-width: $tb) and (max-width: $pc) {
+    @content;
+  }
+}
+
+//@include onlyPC{};
+@mixin onlyPC {
+  @media (min-width: $pc) and (max-width: $wide) {
     @content;
   }
 }

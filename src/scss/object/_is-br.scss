@@ -9,16 +9,16 @@
 @include desktop{}
 */
 
-br.is-SPbr {
-  display: none;
-  @include sp {
-    display: inline;
+br.c-brSP {
+  display: inline;
+  @include pc {
+    display: none;
   }
 }
 
-br.is-PCbr {
-  display: inline;
-  @include sp {
-    display: none;
+br.c-brPC {
+  display: none;
+  @include pc {
+    display: inline;
   }
 }
