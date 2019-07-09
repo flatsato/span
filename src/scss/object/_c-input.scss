@@ -18,17 +18,11 @@
   input[type="date"],
   input[type="time"],
   input[type="password"],
-  input[type="email"],
-  textarea {
-    background-color: #fff;
-    padding: 6px 10px;
-    @include fz(14);
-    width: 100%;
+  input[type="email"] {
+    @extend .ex-input;
     border-radius: 0;
-    -webkit-appearance: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  input::placeholder {
-    color: #ccc;
+    &::placeholder {
+      color: #ccc;
+    }
   }
 }

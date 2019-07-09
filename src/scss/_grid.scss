@@ -28,6 +28,7 @@ $pc_gap: 10px;
 
 .__grid {
   display: flex;
+  flex-wrap: wrap;
   &._sp_column {
     @include sp {
       flex-direction: column;

@@ -1,13 +1,86 @@
-<% var pageId = 'hoge'; %>
-<%- include('./_include/common/_head') %>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>title</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<!-- *** common *** ★忘れずに指定 -->
+<meta property="og:image" content="http:///img/head/og.png">
+<meta property="og:locale" content="ja_JP">
+
+<!-- *** Facebook *** ★忘れずに指定 -->
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+
+<!-- *** Twitter *** ★忘れずに指定 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="">
+
+<!-- *** favicon *** -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+<link rel="stylesheet" href="css/vendor/ress.min.css">
+<link rel="stylesheet" href="css/vendor/hamburgers/hamburgers.min.css" >
+<link rel="stylesheet" href="css/style.min.css">
+
+<!-- Google Tag START -->
+<!-- Google Tag END -->
+</head>
+<body>
 
 <div id="pagetop" class="l-container">
+
 <!-- l-header START -->
-<%- include('./_include/_l-header', {id: pageId}) %>
+<header class="l-header -close  -hoge" role="banner">
+<div class="l-header__inner">
+<div class="l-header_siteLogo"><a href="/">HTML TEMP</a></div>
+<div class="l-header__siteText">効率的に作るためのテンプレート</div>
+<div class="c-hamburger hamburger hamburger--squeeze js-hamburger">
+<button class="hamburger" type="button">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+</button>
+</div>
+</div>
+<!-- l-gnav START -->
+<nav class="l-gnav" role="navigation">
+<ul class="l-gnav__list">
+<li class="l-gnav__item -cat1"><a href="">MENU</a></li>
+<li class="l-gnav__item -cat2"><a href="">MENU</a></li>
+<li class="l-gnav__item -cat3"><a href="">MENU</a></li>
+<li class="l-gnav__item -cat4"><a href="">MENU</a></li>
+<li class="l-gnav__item -cat5"><a href="">MENU</a></li>
+</ul>
+</nav>
+<!-- l-gnav END -->
+</header>
 <!-- l-header END -->
 
 <!-- l-breadcrumb START -->
-<%- include('./_include/_l-breadcrumb') %>
+<nav class="l-breadcrumb" role="navigation" aria-label="現在のページ">
+<ul class="l-breadcrumb__list">
+<li class="l-breadcrumb__item"><a href="/">Home</a></li>
+<li class="l-breadcrumb__item"><a href="#">Category</a></li>
+<li class="l-breadcrumb__item" aria-current="page"><strong>Current Page</strong></li>
+</ul>
+</nav>
 <!-- l-breadcrumb END -->
 
 <div class="l-contents">
@@ -66,8 +139,43 @@
 </main>
 
 </div>
-<!-- l-footer START -->
-<%- include('./_include/_l-footer') %>
-<!-- l-footer END -->
+
+<!-- l-footlink START -->
+<aside class="l-footlink">
+<div class="l-footlink__inner">
+<ul class="l-footlink__list">
+<li class="l-footlink__item"><a href="">menu</a></li>
+<li class="l-footlink__item"><a href="">menu</a></li>
+<li class="l-footlink__item"><a href="">menu</a></li>
+<li class="l-footlink__item"><a href="">menu</a></li>
+<li class="l-footlink__item"><a href="">menu</a></li>
+</ul>
 </div>
-<%- include('./_include/common/_foot') %>
+</aside>
+<!-- l-footlink END -->
+
+<!-- l-footer START -->
+<footer class="l-footer" role="contentinfo">
+<div class="l-pagetop"><a href="#pagetop"><span>このページの先頭へ</span></a></div>
+<div class="l-footer__inner">
+<small class="l-footer__copy">&copy; company name</small>
+</div>
+<nav class="l-footer__nav">
+<ul class="l-footer__navList">
+<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
+<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
+<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
+<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
+<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
+</ul>
+</nav>
+</footer>
+<!-- l-footer END -->
+
+</div>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/2cf9b15906.js"></script>
+<script src="js/vendor/humberger.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

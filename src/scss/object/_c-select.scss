@@ -16,56 +16,32 @@
 //<div class="c-btn -black -wFull"><button>ボタン</button></div>
 //<div class="c-btn -red -wFull"><input type="submit" value="ボタン"></div> 
 //</div>
-.c-select1 {
-  position: relative;
-  width: 100%;
-  &:before {
-    position: absolute;
-    top: 50%;
-    right: 15px;
+.c-select {
+     position: relative;
     display: block;
-    width: 10px;
-    height: 6px;
-    content: '▼';
-    transform: translateY(-50%);
-    z-index: 5;
-    pointer-events: none;
-  }
-  select {
-    min-width: 140px;
-    width: 100%;
-    padding: 0 15px;
-    @include fz(12);
-    line-height: 36px;
-    height: 36px;
-    border: 1px solid #000;
-    border-radius: 18px;
-    background: #fff;
-  }
-}
-
-.c-select2 {
-  position: relative;
-  width: 100%;
-  &:before {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    display: block;
-    width: 0;
-    height: 0;
-    margin-top: -3px;
-    pointer-events: none;
-    content: '';
-    border-color: #000 transparent transparent transparent;
-    border-style: solid;
-    border-width: 7px 5px 0 5px;
-  }
-  select {
-    width: 100%;
-    padding: 6px 10px;
-    @include fz(14);
-    background-color: #fff;
-    border-radius: 0;
-  }
+    width: 180px;
+    overflow: hidden;
+    border: 1px solid #333;
+    &:before {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 0;
+      height: 0;
+      margin: -3px 0 0;
+      content: "";
+      border-color: #333 transparent transparent;
+      border-style: solid;
+      border-width: 6px 6px 0 6px;
+    }
+    select {
+      display: inline-block;
+      width: 100%;
+      width: 210px;
+      height: 40px;
+      padding: 0 10px;
+      background: #fff;
+      border: 0;
+      appearance: none;
+    }
 }

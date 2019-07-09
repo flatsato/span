@@ -31,8 +31,13 @@
   }
   &__list {
     margin-top: 4rem;
-    &.-ul {}
-    &.-ol {}
+    padding-left: 1em;
+    &.-ul {
+      list-style: disc;
+    }
+    &.-ol {
+      list-style: decimal;
+    }
   }
   &__item {
     margin-top: 1rem;

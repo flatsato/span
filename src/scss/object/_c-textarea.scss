@@ -10,18 +10,12 @@
 @include pcOnly{}
 */
 
+//基本はc-inputで指定
+
 .c-textarea {
-  width: 100%;
   textarea {
-    background-color: #fff;
-    padding: 6px 10px;
-    @include fz(14);
+    @extend .ex-input; 
     width: 100%;
-    border-radius: 0;
-    -webkit-appearance: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  textarea::placeholder {
-    color: #ccc;
+    min-height: 80px;
   }
 }

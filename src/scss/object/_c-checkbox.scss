@@ -10,23 +10,24 @@
 @include pcOnly{}
 */
 
-.c-radio {
-  input[type=radio] {
+.c-checkbox{
+  input[type=checkbox] {
     display: none;
     margin: 0;
   }
-  input[type=radio]:checked + .c-radio__label:after {
+  input[type=checkbox]:checked + .c-checkbox__label:after {
     position: absolute;
     top: 50%;
-    left: 6px;
+    left: 3px;
     box-sizing: border-box;
     display: block;
-    width: 10px;
-    height: 10px;
-    margin-top: -5px;
+    width: 16px;
+    height: 8px;
+    margin-top: -6px;
     content: "";
-    background: #000;
-    border-radius: 8px;
+    border-bottom: 3px solid #000;
+    border-left: 3px solid #000;
+    transform: rotate(-45deg);
   }
   &__label {
     position: relative;
@@ -47,7 +48,6 @@
       content: "";
       background-color: white;
       border: 1px solid #000;
-      border-radius: 50%;
     }
-  } 
+  }
 }

@@ -1,17 +1,13 @@
 <% var pageId = 'hoge'; %>
-<%- include('./_include/common/_head') %>
+<%- include('/_include/common/_head') %>
 
 <div id="pagetop" class="l-container">
 <!-- l-header START -->
-<%- include('./_include/_l-header', {id: pageId}) %>
+<%- include('/_include/_l-header', {id: pageId}) %>
 <!-- l-header END -->
 
-<!-- p-kv START -->
-<%- include('./_include/_p-kv') %>
-<!-- p-kv END -->
-
 <!-- l-breadcrumb START -->
-<%- include('./_include/_l-breadcrumb') %>
+<%- include('/_include/_l-breadcrumb') %>
 <!-- l-breadcrumb END -->
 
 <div class="l-contents">
@@ -26,12 +22,15 @@
 <h2 class="c-h2">H2見出し</h2>
 <p>ここにコンテンツ</p>
 
-
 </main>
 
+<aside class="l-sub">
+  ここにサブ
+</aside>
+
 </div>
 
-<%- include('./_include/_l-footer') %>
+<%- include('/_include/_l-footer') %>
 
 </div>
-<%- include('./_include/common/_foot') %>
+<%- include('/_include/common/_foot') %>

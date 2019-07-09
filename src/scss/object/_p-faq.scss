@@ -11,18 +11,21 @@
 */
 
 .p-faq {
-  &__section{}
-  &__dl{}
-  &__dt{
-    &:before{
+  &__section {}
+  &__dl {}
+  &__dt {
+    margin-top: 40px;
+    &:before {
       content: 'Q.';
       @include fz(20);
+      display: block;
     }
     font-weight: bold;
-     @include fz(12);
+    @include fz(20);
   }
-  &__dd{
-        &:before{
+  &__dd {
+     margin-top: 10px;
+    &:before {
       content: 'A.';
       @include fz(20);
     }
