@@ -32,14 +32,54 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 
-<script defer src="https://use.fontawesome.com/releases/v5.9.0/js/v4-shims.js"></script>
-<script src="https://kit.fontawesome.com/62ff083e24.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
 <link rel="stylesheet" href="css/vendor/ress.min.css">
 <link rel="stylesheet" href="css/vendor/hamburgers/hamburgers.min.css" >
 <link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/check.min.css">
 
 <!-- Google Tag START -->
 <!-- Google Tag END -->
 </head>
 <body>
+
+<div id="pagetop" class="l-container">
+
+<%- include('./_include/_l-header', {id: pageId}) %>
+
+<%- include('./_include/_l-breadcrumb') %>
+
+<div class="l-contents">
+
+<main class="l-main">
+
+<div class="c-pageHeading">
+<h1 class="c-pageHeading__title">
+<span class="c-pageHeading__jp">フォーム</span>
+<span class="c-pageHeading__en">form</span>
+</h1>
+</div>
+
+<h2>img altチェック</h2>
+
+
+<article class="c-archive">
+<figure class="c-archive__figure">
+<img src="http://placehold.it/300x200">
+</figure>
+</article>
+
+<article class="c-archive">
+<figure class="c-archive__figure">
+<img src="http://placehold.it/300x200">
+</figure>
+</article>
+
+
+</main>
+
+</div>
+<%- include('./_include/_l-footer') %>
+</div>
+<%- include('./_include/common/_foot') %>

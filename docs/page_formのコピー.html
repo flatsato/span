@@ -45,7 +45,7 @@
 <body>
 
 <div id="pagetop" class="l-container">
-<!-- l-header START -->
+
 <!-- l-header START -->
 <header class="l-header -close  -hoge" role="banner">
 <div class="l-header__inner">
@@ -72,7 +72,6 @@
 <!-- l-gnav END -->
 </header>
 <!-- l-header END -->
-<!-- l-header END -->
 
 <!-- l-breadcrumb START -->
 <nav class="l-breadcrumb" role="navigation" aria-label="現在のページ">
@@ -97,37 +96,45 @@
 </div>
 
 <!-- p-form START -->
-<form class="c-form">
-<section class="c-form__lead">
-<p class="c-form__leadText">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+<form class="p-form">
+<section class="p-form__lead">
+<p class="p-form__leadText">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 
 </section>
 <h3>input Text</h3>
-<div class="c-form__group">
-<dl class="c-form__column">
-<dt class="c-form__columnTitle"><label for="hoge_inputText" class="c-form__label">dummy title<span class="c-form__must">必須</span></label></dt>
-<dd class="c-form__columnBody"><input type="text" id="hoge_inputText" class="c-form__inputText" placeholder="テキストが入ります。">
-<span class="c-form__columnError">エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。</span>
+<div class="p-form__group">
+<dl class="p-form__column">
+<dt class="p-form__columnTitle"><label for="hoge_inputText" class="p-form__label">dummy title<span class="p-form__must">必須</span></label></dt>
+<dd class="p-form__columnBody">
+<div class="c-input">
+<input type="text" id="hoge_inputText"placeholder="テキストが入ります。">
+</div>
+<span class="p-form__columnError">エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。</span>
 </dd>
 </dl>
 </div>
 
 <h3>Text Areas</h3>
-<div class="c-form__group">
-<dl class="c-form__column">
-<dt class="c-form__columnTitle"> <label for="hoge_textarea" class="c-form__label">dummy title<span class="c-form__must">必須</span></label></dt>
-<dd class="c-form__columnBody"> <textarea id="hoge_textArea" class="c-form__textArea" placeholder="テキストが入ります。"></textarea>
-<span class="c-form__columnError">エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。</span>
+<div class="p-form__group">
+<dl class="p-form__column">
+<dt class="p-form__columnTitle"> <label for="hoge_textarea" class="p-form__label">dummy title<span class="p-form__must">必須</span></label></dt>
+<dd class="p-form__columnBody">
+<div class="c-textarea">
+<textarea id="hoge_textArea" class="c-textarea" placeholder="テキストが入ります。"></textarea>
+</div>
+
+
+<span class="p-form__columnError">エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。</span>
 </dd>
 </dl>
 </div>
 
 <h3>Select Menus</h3>
-<div class="c-form__group">
-<dl class="c-form__column">
-<dt class="c-form__columnTitle"><label for="hoge_select" class="c-form__label">dummy title<span class="c-form__must">必須</span></label></dt>
-<dd class="c-form__columnBody">
-<div class="c-form__select">
+<div class="p-form__group">
+<dl class="p-form__column">
+<dt class="p-form__columnTitle"><label for="hoge_select" class="p-form__label">dummy title<span class="p-form__must">必須</span></label></dt>
+<dd class="p-form__columnBody">
+<div class="c-select">
 <select id="hoge_select">
 <option value="husker">Husker</option>
 <option value="starbuck">Starbuck</option>
@@ -135,36 +142,48 @@
 <option value="apollo">Apollo</option>
 </select>
 </div>
-<span class="c-form__columnError">エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。</span>
+<span class="p-form__columnError">エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。</span>
 </dd>
 </dl>
 </div>
 
-<h3>Checkboxes and radios</h3>
+<h3>Checkbox</h3>
+<div class="p-form__group">
+<dl class="p-form__column">
+<dt class="p-form__columnTitle"><label for="hoge_select" class="p-form__label">dummy title<span class="p-form__must">必須</span></label></dt>
+<dd class="p-form__columnBody">
+<fieldset class="large-6 columns c-checkbox">
+<legend>Check these out</legend>
+<input id="checkbox1" type="checkbox"><label for="checkbox1" class="c-checkbox__label">Checkbox 1</label>
+<input id="checkbox2" type="checkbox"><label for="checkbox2" class="c-checkbox__label">Checkbox 2</label>
+<input id="checkbox3" type="checkbox"><label for="checkbox3" class="c-checkbox__label">Checkbox 3</label>
+</fieldset>
+<span class="p-form__columnError">エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。</span>
+</dd>
+</dl>
+</div>
 
-<div class="c-form__group">
-<fieldset class="large-6 columns">
+<h3>Radio</h3>
+<div class="p-form__group">
+<dl class="p-form__column">
+<dt class="p-form__columnTitle"><label for="hoge_select" class="p-form__label">dummy title<span class="p-form__must">必須</span></label></dt>
+<dd class="p-form__columnBody">
+<fieldset class="large-6 columns c-radio">
 <legend>Choose Your Favorite</legend>
 <input type="radio" name="pokemon" value="Red" id="pokemonRed" required>
-<label for="pokemonRed" class="c-form__labelRadio">Red</label>
+<label for="pokemonRed" class="c-radio__label">Red</label>
 <input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
-<label for="pokemonBlue" class="c-form__labelRadio">Blue</label>
+<label for="pokemonBlue" class="c-radio__label">Blue</label>
 <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow">
-<label for="pokemonYellow" class="c-form__labelRadio">Yellow</label>
+<label for="pokemonYellow" class="c-radio__label">Yellow</label>
 </fieldset>
+<span class="p-form__columnError">エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。</span>
+</dd>
+</dl>
 </div>
 
-<div class="c-form__group">
-<fieldset class="large-6 columns">
-<legend>Check these out</legend>
-<input id="checkbox1" type="checkbox"><label for="checkbox1" class="c-form__labelCheck">Checkbox 1</label>
-<input id="checkbox2" type="checkbox"><label for="checkbox2" class="c-form__labelCheck">Checkbox 2</label>
-<input id="checkbox3" type="checkbox"><label for="checkbox3" class="c-form__labelCheck">Checkbox 3</label>
-</fieldset>
-</div>
-
-<div class="c-form__privacy">
-<div class="c-form__privacyInner"> プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。</div>
+<div class="p-form__privacy">
+<div class="p-form__privacyInner"> プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。</div>
 
 </div>
 
@@ -178,15 +197,15 @@
 </main>
 
 </div>
-<!-- l-footer START -->
 <!-- l-footlink START -->
 <aside class="l-footlink">
 <div class="l-footlink__inner">
 <ul class="l-footlink__list">
-<li class="l-footlink__item"><a href="/temp_module.html">temp_module</a></li>
-<li class="l-footlink__item"><a href="/temp_base.html">temp_base</a></li>
-<li class="l-footlink__item"><a href="/page_normal.html">page_normal</a></li>
-<li class="l-footlink__item"><a href="/page_component.html">page_component</a></li>
+<li class="l-footlink__item"><a href="">menu</a></li>
+<li class="l-footlink__item"><a href="">menu</a></li>
+<li class="l-footlink__item"><a href="">menu</a></li>
+<li class="l-footlink__item"><a href="">menu</a></li>
+<li class="l-footlink__item"><a href="">menu</a></li>
 </ul>
 </div>
 </aside>
@@ -208,7 +227,6 @@
 </ul>
 </nav>
 </footer>
-<!-- l-footer END -->
 <!-- l-footer END -->
 </div>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>

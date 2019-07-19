@@ -12,7 +12,7 @@
 .p-single {
   &__meta {
     display: flex;
-    > *{
+    > * {
       margin-right: 20px;
     }
   }
@@ -57,30 +57,23 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding-bottom: 5px;
-        justify-content: space-between;
+        justify-content: center;
+        text-decoration: none;
       }
       &.-twitter {
         background: #1B95E0;
-        padding-top: 10px;
-        img {
-          width: 15px;
+                img{
+          width: 22px;
           height: auto;
         }
       }
       &.-facebook {
         background: #4267B2;
-        padding-top: 10px;
-        img {
-          width: 8px;
-          height: auto;
-        }
       }
       &.-line {
         background: #00B900;
-        padding-top: 5px;
-        img {
-          width: 20px;
+        img{
+          width: 24px;
           height: auto;
         }
       }
@@ -88,13 +81,14 @@
     &Text {
       @include fz(13);
       line-height: 1;
+      margin-top: 3px;
       .-line & {
         @include fz(11);
       }
     }
   }
   &__entry {
-    h2{
+    h2 {
       border-left: 5px solid #666;
       margin-bottom: 20px;
       margin-top: 40px;

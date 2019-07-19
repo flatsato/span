@@ -9,11 +9,11 @@
 @include desktop{}
 */
 
-$sp320: 320px;
-$sp :599px;
-$pc: 900px; //コンテンツ幅
-$wide: 1280px;
-$full: 1400px;
+$sp320: 320px;//固定
+$sp :599px;//固定
+$pc: 980px; //コンテンツ幅
+$wide: 1280px;//デザイン幅
+$full: 1400px;//Max幅
 
 //@include sp320{}
 @mixin sp320 {

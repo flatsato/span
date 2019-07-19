@@ -1,4 +1,4 @@
-
+<% var pageId = 'hoge'; %>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -47,42 +47,9 @@
 
 <div id="pagetop" class="l-container">
 
-<!-- l-header START -->
-<header class="l-header -close  -hoge" role="banner">
-<div class="l-header__inner">
-<div class="l-header_siteLogo"><a href="/">HTML TEMP</a></div>
-<div class="l-header__siteText">効率的に作るためのテンプレート</div>
-<div class="c-hamburger hamburger hamburger--squeeze js-hamburger">
-<button class="hamburger" type="button">
-<span class="hamburger-box">
-<span class="hamburger-inner"></span>
-</span>
-</button>
-</div>
-</div>
-<!-- l-gnav START -->
-<nav class="l-gnav" role="navigation">
-<ul class="l-gnav__list">
-<li class="l-gnav__item -cat1"><a href="">MENU</a></li>
-<li class="l-gnav__item -cat2"><a href="">MENU</a></li>
-<li class="l-gnav__item -cat3"><a href="">MENU</a></li>
-<li class="l-gnav__item -cat4"><a href="">MENU</a></li>
-<li class="l-gnav__item -cat5"><a href="">MENU</a></li>
-</ul>
-</nav>
-<!-- l-gnav END -->
-</header>
-<!-- l-header END -->
+<%- include('./_include/_l-header', {id: pageId}) %>
 
-<!-- l-breadcrumb START -->
-<nav class="l-breadcrumb" role="navigation" aria-label="現在のページ">
-<ul class="l-breadcrumb__list">
-<li class="l-breadcrumb__item"><a href="/">Home</a></li>
-<li class="l-breadcrumb__item"><a href="#">Category</a></li>
-<li class="l-breadcrumb__item" aria-current="page"><strong>Current Page</strong></li>
-</ul>
-</nav>
-<!-- l-breadcrumb END -->
+<%- include('./_include/_l-breadcrumb') %>
 
 <div class="l-contents">
 
@@ -133,41 +100,6 @@
 </main>
 
 </div>
-<!-- l-footlink START -->
-<nav class="l-footlink" role="navigation">
-<div class="l-footlink__inner">
-<ul class="l-footlink__list">
-<li class="l-footlink__item"><a href="">menu</a></li>
-<li class="l-footlink__item"><a href="">menu</a></li>
-<li class="l-footlink__item"><a href="">menu</a></li>
-<li class="l-footlink__item"><a href="">menu</a></li>
-<li class="l-footlink__item"><a href="">menu</a></li>
-</ul>
+<%- include('./_include/_l-footer') %>
 </div>
-</nav>
-<!-- l-footlink END -->
-
-<!-- l-footer START -->
-<footer class="l-footer" role="contentinfo">
-<div class="l-pagetop"><a href="#pagetop"><span>このページの先頭へ</span></a></div>
-<div class="l-footer__inner">
-<small class="l-footer__copy">&copy; company name</small>
-</div>
-<nav class="l-footer__nav">
-<ul class="l-footer__navList">
-<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
-<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
-<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
-<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
-<li class="l-footer__navItem"><a href=""><span>リンク</span></a></li>
-</ul>
-</nav>
-</footer>
-<!-- l-footer END -->
-</div>
-<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-<script src="https://use.fontawesome.com/2cf9b15906.js"></script>
-<script src="js/vendor/humberger.js"></script>
-<script src="js/common.js"></script>
-</body>
-</html>
+<%- include('./_include/common/_foot') %>
