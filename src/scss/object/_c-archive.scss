@@ -16,7 +16,6 @@
     display: block;
     text-decoration: none;
     display: flex;
-    margin-top: 10px;
   }
   &__figure {
     width: 150px;
@@ -35,7 +34,8 @@
       text-decoration: none;
     }
   }
-  &__body{
+  &__body {
+    flex: 1;
     padding: 10px;
   }
   &__date {
@@ -44,11 +44,11 @@
   &__title {
     @include fz(12);
   }
-    &__text {
+  &__text {
     @include fz(8);
-      margin-top: 5px;
+    margin-top: 5px;
   }
-  &__action{
+  &__action {
     padding: 0 20px 20px;
   }
 }

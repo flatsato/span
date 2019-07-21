@@ -41,7 +41,7 @@ module.exports = {
     // https://github.com/postcss/autoprefixer#options
     "autoprefixer": {
       // グリッドレイアウトをIEに対応する設定 (false|"autoplace"|"no-autoplace")
-      "grid": autoplace,
+      "grid": "autoplace",
     },
     // sourcemapのdestディレクトリを設定
     "sourceMaps": "./maps",
