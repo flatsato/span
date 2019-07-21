@@ -19,8 +19,9 @@
   input[type="time"],
   input[type="password"],
   input[type="email"] {
-    @extend .ex-input;
     border-radius: 0;
+    padding: 5px;
+    border: 1px solid #000;
     &::placeholder {
       color: #ccc;
     }

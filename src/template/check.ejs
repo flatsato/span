@@ -47,13 +47,29 @@
 
 <div id="pagetop" class="l-container">
 
-<%- include('./_include/_l-header', {id: pageId}) %>
+<%- include('./_include/_l-header') %>
 
-<%- include('./_include/_l-breadcrumb') %>
+<!-- l-breadcrumb START -->
+<%- include('./_include/_l-breadcrumb', {
+  breadcrumb: [
+    {
+      name: 'Home',
+      url: '/'
+    },
+    {
+      name: 'catName',
+      url: '/'
+    },
+    {
+      name: 'pageName'
+    }
+  ]
+}) %>
+<!-- l-breadcrumb END -->
 
 <div class="l-contents">
 
-<main class="l-main">
+<main class="l-main" role="main">
 
 <div class="c-pageHeading">
 <h1 class="c-pageHeading__title">

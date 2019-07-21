@@ -8,30 +8,31 @@
 @include touch{}
 @include desktop{}
 */
+
 .l-sub {
   width: 280px;
   padding: 20px;
   margin-left: 20px;
   background: #efefef;
-  &__section{
-    
-  }
-  &__title{
+  &__section {}
+  &__title {
     @include fz(16);
   }
-  &__list{
+  &__list {
     margin-top: 5px;
     margin-left: 10px;
   }
-  &__item{
-    a{
+  &__item {
+    a {
       text-decoration: none;
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
     }
   }
-  .l-sub__section + .l-sub__section{
-    margin-top: 30px;
+  &__section {
+    & + & {
+      margin-top: 30px;
+    }
   }
 }

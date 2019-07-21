@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/*
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
+*/
+
+@charset "utf-8";
+
+$point-sp: 680px;
+$point-pc: 980px;
+$point-wide: 1200px;
+
+// @include ov;
+@mixin ov {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 0.7;
+    img {
+      background-color: rgba(#fff, 0.01);
+    }
+  }
+}
+
+
+
+//.using{
+//  @include ov_zoomimg;
+//  width:400px;
+//  overflow: hidden;
+//  img{
+//    width:100%;
+//    height:auto;
+//  }
+//}
+
+//hover 画像拡大アニメ
+// @include ov_zoomimg;
+@mixin ov_zoomimg {
+  @include pc {
+    transition: transition 0.2s;
+    overflow: hidden;
+  }
+  &:hover {
+    img {
+      @include pc {
+        transform: scale(1.05);
+        transition: all 0.9s ease-in-out;
+      }
+    }
+  }
+}
+

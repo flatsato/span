@@ -48,7 +48,7 @@
 <div id="pagetop" class="l-container">
 
 <!-- l-header START -->
-<header class="l-header -close  -hoge" role="banner">
+<header class="l-header -close" role="banner">
 <div class="l-header__inner">
 <div class="l-header_siteLogo"><a href="/">HTML TEMP</a></div>
 <div class="l-header__siteText">効率的に作るためのテンプレート</div>
@@ -75,18 +75,32 @@
 <!-- l-header END -->
 
 <!-- l-breadcrumb START -->
+
+
+
+
 <nav class="l-breadcrumb" role="navigation" aria-label="現在のページ">
 <ul class="l-breadcrumb__list">
+
+
 <li class="l-breadcrumb__item"><a href="/">Home</a></li>
-<li class="l-breadcrumb__item"><a href="#">Category</a></li>
-<li class="l-breadcrumb__item" aria-current="page"><strong>Current Page</strong></li>
+
+
+
+<li class="l-breadcrumb__item"><a href="/">catName</a></li>
+
+
+
+<li class="l-breadcrumb__item -current" aria-current="page"><strong>pageName</strong></li>
+
+
 </ul>
 </nav>
 <!-- l-breadcrumb END -->
 
 <div class="l-contents">
 
-<main class="l-main">
+<main class="l-main" role="main">
 
 <div class="c-pageHeading">
 <h1 class="c-pageHeading__title">
@@ -164,10 +178,14 @@
 </nav>
 </footer>
 <!-- l-footer END -->
+
 </div>
-<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>
+  if (!window.jQuery) document.write('<script src="/js/vendor/jquery-3.4.1.min.js"><\/script>')
+</script>
 <script src="https://use.fontawesome.com/2cf9b15906.js"></script>
-<script src="js/vendor/humberger.js"></script>
+<script src="/js/vendor/ofi.min.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>

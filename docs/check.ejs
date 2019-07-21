@@ -1,3 +1,4 @@
+<% var pageId = 'hoge'; %>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -48,11 +49,27 @@
 
 <%- include('./_include/_l-header', {id: pageId}) %>
 
-<%- include('./_include/_l-breadcrumb') %>
+<!-- l-breadcrumb START -->
+<%- include('./_include/_l-breadcrumb', {
+  breadcrumb: [
+    {
+      name: 'Home',
+      url: '/'
+    },
+    {
+      name: 'catName',
+      url: '/'
+    },
+    {
+      name: 'pageName'
+    }
+  ]
+}) %>
+<!-- l-breadcrumb END -->
 
 <div class="l-contents">
 
-<main class="l-main">
+<main class="l-main" role="main">
 
 <div class="c-pageHeading">
 <h1 class="c-pageHeading__title">
@@ -61,8 +78,13 @@
 </h1>
 </div>
 
-<h2>img altチェック</h2>
+<h2 class="check">img altチェック</h2>
 
+<article class="c-archive">
+<figure class="c-archive__figure">
+<img src="http://placehold.it/300x200">
+</figure>
+</article>
 
 <article class="c-archive">
 <figure class="c-archive__figure">
@@ -70,11 +92,25 @@
 </figure>
 </article>
 
-<article class="c-archive">
-<figure class="c-archive__figure">
-<img src="http://placehold.it/300x200">
-</figure>
-</article>
+<h2 class="check">aタグチェック</h2>
+
+<a href="" target="_blank">リンク target blank指定なし</a>
+
+
+<h2 class="check">FORMチェック</h2>
+
+<h3>input Text</h3>
+<div class="p-form__group">
+<dl class="p-form__column">
+<dt class="p-form__columnTitle"><label class="p-form__label">dummy title<span class="p-form__must">必須</span></label></dt>
+<dd class="p-form__columnBody">
+<div class="c-input">
+<input type="text" placeholder="テキストが入ります。">
+</div>
+<span class="p-form__columnError">エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。</span>
+</dd>
+</dl>
+</div>
 
 
 </main>

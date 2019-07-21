@@ -24,14 +24,7 @@ $full: 1400px;//Max幅
 
 //@include sp{}
 @mixin sp {
-  @media (max-width: $sp) {
-    @content;
-  }
-}
-
-//@include tb{}
-@mixin tb {
-  @media (min-width: $sp) and (max-width: $pc) {
+  @media (max-width: $sp - 1px) {
     @content;
   }
 }
@@ -69,13 +62,6 @@ $full: 1400px;//Max幅
 //@include onlyTB{};
 @mixin onlyTB {
   @media (min-width: $tb) and (max-width: $pc) {
-    @content;
-  }
-}
-
-//@include onlyPC{};
-@mixin onlyPC {
-  @media (min-width: $pc) and (max-width: $wide) {
     @content;
   }
 }

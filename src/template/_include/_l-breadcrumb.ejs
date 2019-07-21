@@ -1,9 +1,33 @@
-<!-- l-breadcrumb START -->
+<% if (typeof breadcrumb === 'undefined') {breadcrumb = [{name: 'Home',url: '/'},{name: 'Category',url: '#'},{name: 'Current Page'}]} %>
+
+<% /*
+# example
+
+include('./_include/_l-breadcrumb', {
+  breadcrumb: [
+    {
+      name: 'Home',
+      url: '/'
+    },
+    {
+      name: '八海山のこだわり',
+      url: '#'
+    },
+    {
+      name: '魚沼の酒造りMOVIE'
+    }
+  ]
+})
+*/ %>
+
 <nav class="l-breadcrumb" role="navigation" aria-label="現在のページ">
 <ul class="l-breadcrumb__list">
-<li class="l-breadcrumb__item"><a href="/">Home</a></li>
-<li class="l-breadcrumb__item"><a href="#">Category</a></li>
-<li class="l-breadcrumb__item" aria-current="page"><strong>Current Page</strong></li>
+<% breadcrumb.forEach(function(item, i) { %>
+<% if(i != breadcrumb.length - 1) { %>
+<li class="l-breadcrumb__item"><a href="<%= item.url %>"><%= item.name %></a></li>
+<% } else { %>
+<li class="l-breadcrumb__item -current" aria-current="page"><strong><%= item.name %></strong></li>
+<% } %>
+<% }) %>
 </ul>
 </nav>
-<!-- l-breadcrumb END -->

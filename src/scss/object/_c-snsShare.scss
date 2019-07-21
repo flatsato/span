@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/*
+@include sp320{}
+@include sp{}
+@include tb{}
+@include pc{}
+@include touch{}
+@include desktop{}
+*/
+
+.c-snsShare {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    width: 85px;
+    height: 50px;
+    border-radius: 5px;
+    @include fz(13);
+    margin-left: 7px;
+    @include ov;
+    &:nth-child {
+      margin-left: 0;
+    }
+    a {
+      display: block;
+      height: 100%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      text-decoration: none;
+    }
+    &.-twitter {
+      background: #1B95E0;
+      img {
+        width: 22px;
+        height: auto;
+      }
+    }
+    &.-facebook {
+      background: #4267B2;
+      img {
+        width: 12px;
+        height: auto;
+      }
+    }
+    &.-line {
+      background: #00B900;
+      img {
+        width: 24px;
+        height: auto;
+      }
+    }
+  }
+  &__text {
+    @include fz(13);
+    line-height: 1;
+    margin-top: 3px;
+    .-line & {
+      @include fz(11);
+    }
+  }
+}
