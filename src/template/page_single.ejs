@@ -7,19 +7,19 @@
 
 <!-- l-breadcrumb START -->
 <%- include('./_include/_l-breadcrumb', {
-  breadcrumb: [
-    {
-      name: 'Home',
-      url: '/'
-    },
-    {
-      name: 'catName',
-      url: '/'
-    },
-    {
-      name: 'pageName'
-    }
-  ]
+breadcrumb: [
+{
+name: 'Home',
+url: '/'
+},
+{
+name: 'catName',
+url: '/'
+},
+{
+name: 'pageName'
+}
+]
 }) %>
 <!-- l-breadcrumb END -->
 
@@ -39,6 +39,9 @@
 <div class="p-single__lead">リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。</div>
 
 <div class="p-single__entry">
+
+<h2 style="color:red;">.p-single__entry内を使い回し</h2>
+
 
 <h2>段落／文字種類</h2>
 これはテスト投稿ですこれは<strong>太字strong</strong>これは<em>色付き文字em</em>ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿です<a href="http://link">リンクURL</a>これはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿です これはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿です
@@ -61,7 +64,208 @@
 <li><b>リストの太字テキストが入ります。</b><a>http://hoge.com http://hoge.com</a>リストのテキストが入ります。リストのテキストが入ります。</li>
 </ol>
 
-<h2>SNS</h2>
+
+<h2>table</h2>
+<table>
+<tbody>
+<tr>
+<th>項目</th>
+<th>項目</th>
+</tr>
+<tr>
+<td>7：00</td>
+<td>出発</td>
+</tr>
+<tr>
+<td>7：30～8：30</td>
+<td>着付け、ヘアセット、メイク（女の子）</td>
+</tr>
+<tr>
+<td>8：30～10：00</td>
+<td>写真撮影、写真選び</td>
+</tr>
+<tr>
+<td>11：00～12：30</td>
+<td>神社でお参り、ご祈祷、記念撮影</td>
+</tr>
+<tr>
+<td>13：00～15：00</td>
+<td>食事会</td>
+</tr>
+<tr>
+<td>15：30～16：30</td>
+<td>衣装返却（レンタルの場合）</td>
+</tr>
+<tr>
+<td>17：00</td>
+<td>帰宅</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="mokuji_ID_3">段落／文字種類</h2>
+<p>
+これはテスト投稿ですこれは<strong>太字strong</strong>これは<em>色付き文字em</em>ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿です<a href="http://link">リンクURL</a>これはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿です</p>
+
+<p>これはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿ですこれはテスト投稿です</p>
+
+<h2>ギャラリー 横4列／横3列／横2列／横1列</h2>
+
+<h3>横4列</h3>
+<div id="gallery-4" class="gallery gallery-columns-4 gallery-size-large">
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<a href=""><img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw"></a>
+
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="1000" height="670" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="1000" height="670" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="1000" height="670" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+</div>
+
+<h3>横3列</h3>
+<div id="gallery-3" class="gallery gallery-columns-3 gallery-size-large">
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="1000" height="670" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="1000" height="670" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+</div>
+
+<h3>横2列</h3>
+<div id="gallery-2" class="gallery gallery-columns-2 gallery-size-large">
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="1000" height="670" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="1000" height="670" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+</div>
+
+<h3>横1列</h3>
+<div id="gallery-1" class="gallery gallery-columns-1 gallery-size-large">
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="600" height="400" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+<figure class="gallery-item">
+<div class="gallery-icon landscape">
+<img width="1000" height="670" src="http://placehold.it/600x400" class="attachment-large size-large" alt="" sizes="100vw">
+</div>
+</figure>
+</div>
+
+<h2>ul／olリスト</h2>
+<ul>
+<li>リストのテキストが入ります。リストのテキストが入ります。リストのテキストが入ります。リストのテキストが入ります。リストのテキストが入ります。</li>
+<li><b>リストの太字テキストが入ります。</b><a>http://hoge.com http://hoge.com</a>リストのテキストが入ります。リストのテキストが入ります。</li>
+<li><b>リストの太字テキストが入ります。</b><a>http://hoge.com http://hoge.com</a>リストのテキストが入ります。リストのテキストが入ります。</li>
+</ul>
+
+<ol>
+<li>リストのテキストが入ります。リストのテキストが入ります。リストのテキストが入ります。リストのテキストが入ります。リストのテキストが入ります。</li>
+<li><b>リストの太字テキストが入ります。</b><a>http://hoge.com http://hoge.com</a>リストのテキストが入ります。リストのテキストが入ります。</li>
+<li><b>リストの太字テキストが入ります。</b><a>http://hoge.com http://hoge.com</a>リストのテキストが入ります。リストのテキストが入ります。</li>
+</ol>
+
+<h2>引用</h2>
+<p>
+本文がここに入ります。サンプルテキストもここに入り、sampletextもここに入ります。本文がここに入りま す。サンプルテキストもここに入り、sampletextもここに入ります。 本文がここに入ります。</p>
+
+<blockquote>
+<p>引用文がここに入ります。サンプルテキストもここに入り、sampletextもここに入ります。引用文がここに入ります。サンプルテキストもここに入り、sampletextもここに入ります</p>
+<p><a>出展 http://--------</a></p>
+</blockquote>
+
+<h2>画像／left／center／right／指定なし</h2>
+
+<h3>画像／left</h3>
+
+<img src="http://placehold.it/600x400" alt="" width="150" height="150" class="alignleft size-thumbnail wp-image-238" /> テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。 テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+
+<h3>画像／center</h3>
+
+<img src="http://placehold.it/600x400" alt="" width="150" height="150" class="aligncenter size-thumbnail wp-image-238" /> テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。 テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+
+<h3>画像／right</h3>
+
+<img src="http://placehold.it/600x400" alt="" width="150" height="150" class="alignright size-thumbnail wp-image-238" /> テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。 テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+
+</div>
+
 <div class="c-snsShare">
 <ul class="c-snsShare__list">
 <li class="c-snsShare__item -twitter">
@@ -76,8 +280,9 @@
 </ul>
 </div>
 
-</div>
 </article>
+
+
 
 </main>
 
