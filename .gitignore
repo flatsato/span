@@ -3,10 +3,14 @@
 !gulpfile.js
 !package.json
 
+# JetBrains IDE
+.idea/
+*.iml
+# Visual Studio Code
+.vscode/
+
 /node_modules/
 /dist/
-
-.idea/
 
 /wp/.htaccess
 /wp/*.html

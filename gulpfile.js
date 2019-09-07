@@ -1,13 +1,22 @@
-const
-  gulp = require('gulp'),
-  stylelint = require('stylelint'),
-  autoprefixer = require('autoprefixer'),
-  cssMqpacker = require('css-mqpacker'),
-  browserSync = require('browser-sync').create(),
-  Cfg = require('./gulp.config.js');
-  // gulp-load-pluginsで"gulp-"で始まる名称のパッケージのrequireを省略
-  $ = require('gulp-load-plugins')();
-const rollupEach = require('gulp-rollup-each');
+const Cfg = require('./gulp.config.js');
+const gulp = require('gulp');
+const stylelint = require('stylelint');
+const autoprefixer = require('autoprefixer');
+const browserSync = require('browser-sync').create();
+const gulpIf = require('gulp-if');
+const gulpNotify = require('gulp-notify');
+const gulpPlumber = require('gulp-plumber');
+const gulpRename = require('gulp-rename');
+const gulpFileInclude = require('gulp-file-include');
+const gulpHtmlmin = require('gulp-htmlmin');
+const gulpEjs = require('gulp-ejs');
+const gulpSass = require('gulp-sass');
+const gulpSassGlob = require('gulp-sass-glob');
+const gulpPostcss = require('gulp-postcss');
+const gulpCleanCss = require('gulp-clean-css');
+const gulpStylelint = require('gulp-stylelint');
+const gulpEslint = require('gulp-eslint');
+const gulpRollupEach = require('gulp-rollup-each');
 const { eslint: _eslint } = require('rollup-plugin-eslint');
 const eslint = function eslint(options = {}) {
   const plugin = _eslint(options);
@@ -18,14 +27,14 @@ const eslint = function eslint(options = {}) {
       try {
         plugin.transform.call(this, code, id);
       }
-      catch(error) {
+      catch (error) {
         isError = true;
       }
       return null;
     },
     buildEnd() {
       if (isError) {
-        $.notify('Warnings or errors were found').write(new Error());
+        gulpNotify('Warnings or errors were found').write(new Error());
         // throw new Error('Warnings or errors were found');
       }
     },
@@ -34,150 +43,141 @@ const eslint = function eslint(options = {}) {
 const nodeResolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 const babel = require('rollup-plugin-babel');
-const { uglify } = require('rollup-plugin-uglify');
+const { terser } = require('rollup-plugin-terser');
+const gulpImagemin = require('gulp-imagemin');
+
+function watchFilter(glob) {
+  return Array.isArray(glob) ? glob.filter(element => !element.startsWith('!')) : glob;
+}
+
 
 // 無加工複製
-gulp.task('duplicate', ()=> {
-  return gulp.src(['src/duplicate/**/*', 'src/duplicate/**/.*', '!src/duplicate/.gitkeep'], { since: gulp.lastRun('duplicate') })
-  .pipe(gulp.dest('./dist/'));
+gulp.task('duplicate:sub1', () => {
+  return gulp.src(Cfg.duplicate.src, { since: gulp.lastRun('duplicate:sub1') })
+    .pipe(gulp.dest(Cfg.duplicate.dest));
 });
+gulp.task('duplicate:sub2', () => {
+  return gulp.src(Cfg.duplicate.wpSrc, { since: gulp.lastRun('duplicate:sub2') })
+    .pipe(gulpIf(Cfg.duplicate.wpFlg,
+      gulp.dest('./src/wp/')
+    ));
+});
+gulp.task('duplicate', gulp.parallel('duplicate:sub1', 'duplicate:sub2'));
 
 
 // HTML用タスク
-gulp.task('html', ()=> {
+gulp.task('html', () => {
   // gulp.srcでタスク対象ディレクトリ指定
   // "!./src/template/_**/*.html"の指定で(include用のパーツ群はディレクトリごと除外)
   return gulp.src(Cfg.html.src)
-  // plumberでエラー発生時gulpが停止するのを防ぐ
-  // notifyでエラー内容をデスクトップ通知
-  .pipe($.plumber({
-    errorHandler: $.notify.onError('<%= error.message %>')
-  }))
-  // fileIncludeでHTMLファイルをincludeで読み込める用に設定
-  .pipe($.fileInclude({
-    prefix: '@@',
-    basepath: Cfg.html.includeRoot
-  }))
-  .pipe($.if(Cfg.html.minFlg,
-    $.htmlmin({collapseWhitespace: true})
-  ))
-  // タスク実行後に吐き出すディレクトリを指定
-  .pipe(gulp.dest(Cfg.html.dest))
-  .pipe(browserSync.reload({ stream: true }))
-});
+    // plumberでエラー発生時gulpが停止するのを防ぐ
+    // notifyでエラー内容をデスクトップ通知
+    .pipe(gulpPlumber({
+      errorHandler: gulpNotify.onError('<%= error.message %>')
+    }))
+    // fileIncludeでHTMLファイルをincludeで読み込める用に設定
+    .pipe(gulpFileInclude({
+      prefix: '@@',
+      basepath: Cfg.html.includeRoot
+    }))
+    .pipe(gulpIf(Cfg.html.minFlg,
+      gulpHtmlmin({ collapseWhitespace: true })
+    ))
+    // タスク実行後に吐き出すディレクトリを指定
+    .pipe(gulp.dest(Cfg.html.dest))
+    .pipe(browserSync.reload({ stream: true }));
+  });
 
 // EJS用タスク
-gulp.task('ejs', ()=> {
+gulp.task('ejs', () => {
   return gulp.src(Cfg.ejs.src)
-  .pipe($.plumber({
-    errorHandler: $.notify.onError('<%= error.message %>')
-  }))
-  .pipe($.eslint({
-    useEslintrc: false,
-    plugins: ['ejs-js'],
-  }))
-  .pipe($.eslint.format())
-  .pipe($.eslint.failOnError())
-  .pipe($.ejs(
-    {},
-    {},
-    // dest時のファイルの拡張子を設定
-    {ext: Cfg.ejs.suffix}
-  ))
-  .pipe($.if(Cfg.ejs.minFlg,
-    $.htmlmin({collapseWhitespace: true})
-  ))
-  // ベースネームの最後に.phpがある場合は拡張子を変更
-  .pipe($.rename((path) => {
-    const basename = path.basename.match(/^(.*)+(\.php)$/);
-    if (basename !== null) {
-      path.basename = basename[1];
-      path.extname = basename[2];
-    }
-  }))
-  .pipe(gulp.dest(Cfg.ejs.dest))
-  .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulpPlumber({
+      errorHandler: gulpNotify.onError('<%= error.message %>')
+    }))
+    .pipe(gulpEslint({
+      useEslintrc: false,
+      plugins: ['ejs-js'],
+    }))
+    .pipe(gulpEslint.format())
+    .pipe(gulpEslint.failOnError())
+    .pipe(gulpEjs())
+    .pipe(gulpRename({ extname: Cfg.ejs.suffix }))
+    .pipe(gulpIf(Cfg.ejs.minFlg,
+      gulpHtmlmin({ collapseWhitespace: true })
+    ))
+    // ベースネームの最後に.phpがある場合は拡張子を変更
+    .pipe(gulpRename((path) => {
+      const basename = path.basename.match(/^(.*)+(\.php)$/);
+      if (basename !== null) {
+        path.basename = basename[1];
+        path.extname = basename[2];
+      }
+    }))
+    .pipe(gulp.dest(Cfg.ejs.dest))
+    .pipe(browserSync.reload({ stream: true }));
 });
 
 
 // SCSS用タスク
-gulp.task('sass', ()=> {
-  return gulp.src(Cfg.scss.src, {sourcemaps: Cfg.scss.mapFlg})
-  .pipe($.plumber({
-    errorHandler: $.notify.onError('<%= error.message %>')
-  }))
-  // sassGlobで"object"をディレクトリごとscss内でimport出来るように設定
-  .pipe($.sassGlob())
-  // sassコンパイル
-  // オプションで吐き出す形式を設定
-  .pipe($.sass({outputStyle: Cfg.scss.outputStyle}))
-  .pipe($.postcss([
-    // prefixを自動付与
-    autoprefixer(Cfg.scss.autoprefixer),
-    // メディアクエリ最適化
-    cssMqpacker(),
-    // プロパティの並び順変更
-    stylelint({
-      config: {
-        "extends": "stylelint-config-recess-order",
-        "ignoreFiles": "src/scss/vendor/**",
-      },
-      fix: true,
-    })
-  ]))
-  // css圧縮
-  //cleanCss内のオプションで圧縮時の設定を追加
-  .pipe($.if(Cfg.scss.minFlg,
-    $.cleanCss({
-      compatibility: {
-        properties: {
-          zeroUnits: false,
-        }
-      }
-    })
-  ))
-  .pipe($.if(Cfg.scss.minFlg,
-    // 圧縮後のファイルに.minのサフィックス付与
-    $.rename({
-      suffix: '.min'
-    })
-  ))
-  .pipe(gulp.dest(Cfg.scss.dest, { sourcemaps: Cfg.scss.mapFlg ? Cfg.scss.sourceMaps : false}))
-  .pipe(browserSync.reload({ stream: true }))
-  .pipe($.if(Cfg.scss.wpFlg,
-    gulp.dest("./src/wp/css/")
-  ))
-});
-
-// SASSLINT用タスク
-gulp.task('sasslint', ()=> {
-  return gulp.src([Cfg.scss.src, "!./src/scss/vendor/**"])
-  .pipe($.stylelint({
-    failAfterError: false,
-    reporters: [
-      {formatter: 'string', console: true}
-    ],
-  }))
-});
-gulp.task('sasslint-fix', ()=> {
-  return gulp.src([Cfg.scss.src, "!./src/scss/vendor/**"])
-  .pipe($.stylelint({
-    fix: true,
-    failAfterError: false,
-    reporters: [
-      {formatter: 'string', console: true}
-    ],
-  }))
-  .pipe(gulp.dest('./src/scss/'));
-});
-
-// JavaScript(開発ディレクトリ)
-gulp.task('js:works', ()=> {
-  return gulp.src(Cfg.js_works.entry, { sourcemaps: Cfg.js_works.mapFlg })
-    .pipe($.plumber({
-      errorHandler: $.notify.onError("<%= error.message %>"),
+gulp.task('sass', () => {
+  return gulp.src(Cfg.scss.src, { sourcemaps: Cfg.scss.mapFlg })
+    .pipe(gulpPlumber({
+      errorHandler: gulpNotify.onError('<%= error.message %>')
     }))
-    .pipe(rollupEach({
+    // リント
+    .pipe(gulpStylelint({
+      reporters: [
+        { formatter: 'string', console: true }
+      ],
+    }))
+    // sassGlobで"object"をディレクトリごとscss内でimport出来るように設定
+    .pipe(gulpSassGlob())
+    // sassコンパイル
+    // オプションで吐き出す形式を設定
+    .pipe(gulpSass({ outputStyle: Cfg.scss.outputStyle }))
+    .pipe(gulpPostcss([
+      // prefixを自動付与
+      autoprefixer(Cfg.scss.autoprefixer),
+      // プロパティの並び順変更
+      stylelint({
+        config: {
+          'extends': 'stylelint-config-recess-order',
+        },
+        fix: true,
+      })
+    ]))
+    // css圧縮
+    //cleanCss内のオプションで圧縮時の設定を追加
+    .pipe(gulpIf(Cfg.scss.minFlg,
+      gulpCleanCss({
+        compatibility: {
+          properties: {
+            zeroUnits: false,
+          }
+        }
+      })
+    ))
+    .pipe(gulpIf(Cfg.scss.minFlg,
+      // 圧縮後のファイルに.minのサフィックス付与
+      gulpRename({
+        suffix: '.min',
+      })
+    ))
+    .pipe(gulp.dest(Cfg.scss.dest, { sourcemaps: Cfg.scss.mapFlg ? Cfg.scss.sourceMaps : false }))
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulpIf(Cfg.scss.wpFlg,
+      gulp.dest('./src/wp/css/')
+    ));
+});
+
+
+// JavaScript用タスク
+gulp.task('js', () => {
+  return gulp.src(Cfg.js.entry, { sourcemaps: Cfg.js.mapFlg })
+    .pipe(gulpPlumber({
+      errorHandler: gulpNotify.onError('<%= error.message %>'),
+    }))
+    .pipe(gulpRollupEach({
       plugins: [
         eslint({
           throwOnError: true,
@@ -188,100 +188,119 @@ gulp.task('js:works', ()=> {
         babel({
           runtimeHelpers: true,
         }),
-        Cfg.js_works.minFlg ? uglify() : {},
+        Cfg.js.minFlg & terser({
+          output: {
+            comments: /^\**!|@preserve|@license|@cc_on/,
+          },
+        }),
       ],
     }, {
       output: {
         format: 'iife',
       }
     }))
-    .pipe($.if(Cfg.js_works.minFlg,
-      $.rename({
+    .pipe(gulpIf(Cfg.js.minFlg,
+      gulpRename({
         suffix: '.min'
       })
     ))
-    .pipe(gulp.dest(Cfg.js_works.dest, { sourcemaps: Cfg.js_works.mapFlg ? Cfg.js_works.sourceMaps : false}))
+    .pipe(gulp.dest(Cfg.js.dest, { sourcemaps: Cfg.js.mapFlg ? Cfg.js.sourceMaps : false }))
     .pipe(browserSync.reload({ stream: true }))
-    .pipe($.if(Cfg.js_works.wpFlg,
-      gulp.dest("./src/wp/js/")
-    ))
+    .pipe(gulpIf(Cfg.js.wpFlg,
+      gulp.dest('./src/wp/js/')
+    ));
 });
-
-
-// JavaScript(プラグイン)
-const
-  saveLicense = require('uglify-save-license');
-
-gulp.task('js:vendor', ()=> {
-  return gulp.src(Cfg.js_vendor.src, { since: gulp.lastRun('js:vendor') })
-  .pipe($.plumber({
-    errorHandler: $.notify.onError('<%= error.message %>')
-  }))
-  .pipe($.if(Cfg.js_vendor.minFlg,
-    // saveLicenseで圧縮時に各種プラグインのライセンス記載部分を残す
-    $.uglify({
-      output: {
-        comments: saveLicense
-      }
-    })
-  ))
-  .pipe(gulp.dest(Cfg.js_vendor.dest))
-  .pipe(browserSync.reload({ stream: true }))
-});
-
-
-// js:worksとjs:vendorを並行処理
-gulp.task('js', gulp.parallel('js:works', 'js:vendor'));
 
 
 // images用タスク
-gulp.task('image', ()=> {
+gulp.task('image', () => {
   return gulp.src(Cfg.img.src, { since: gulp.lastRun('image') })
-  .pipe($.plumber({
-    errorHandler: $.notify.onError('<%= error.message %>')
-  }))
-  .pipe($.imagemin([
-      // gif圧縮
-      $.imagemin.gifsicle({
-        optimizationLevel: 3,
-      }),
-      // jpg圧縮
-      $.imagemin.jpegtran({
-        progressive: true,
-      }),
-      // png圧縮
-      $.imagemin.optipng(),
-      // svg圧縮
-      $.imagemin.svgo({
-        plugins: [
-          {
-            removeViewBox: false,
-          }
-        ]
-      })
-    ]))
-  .pipe(gulp.dest(Cfg.img.dest))
-  .pipe(browserSync.reload({ stream: true }))
-  .pipe($.if(Cfg.img.wpFlg,
-    gulp.dest("./src/wp/img/")
-  ))
+    .pipe(gulpPlumber({
+      errorHandler: gulpNotify.onError('<%= error.message %>')
+    }))
+    .pipe(gulpImagemin([
+        // gif圧縮
+        gulpImagemin.gifsicle({
+          optimizationLevel: 3,
+        }),
+        // jpg圧縮
+        gulpImagemin.jpegtran({
+          progressive: true,
+        }),
+        // png圧縮
+        gulpImagemin.optipng(),
+        // svg圧縮
+        gulpImagemin.svgo({
+          plugins: [
+            {
+              removeViewBox: false,
+            }
+          ]
+        })
+      ]))
+    .pipe(gulp.dest(Cfg.img.dest))
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulpIf(Cfg.img.wpFlg,
+      gulp.dest('./src/wp/img/')
+    ));
 });
 
 
-gulp.task('watch', ()=> {
+// Sass自動修正
+gulp.task('format:sass', () => {
+  return gulp.src(Cfg.scss.srcFormat, { base: './' })
+    .pipe(gulpPlumber({
+      errorHandler: gulpNotify.onError('<%= error.message %>')
+    }))
+    // プロパティの並び順変更
+    .pipe(gulpStylelint({
+      config: {
+        'extends': 'stylelint-config-recess-order',
+      },
+      fix: true,
+      reporters: [
+        { formatter: 'string', console: true }
+      ],
+    }))
+    // リント
+    .pipe(gulpStylelint({
+      fix: true,
+      reporters: [
+        { formatter: 'string', console: true }
+      ],
+    }))
+    .pipe(gulp.dest('./'));
+});
+
+
+// JavaScript自動修正
+gulp.task('format:js', () => {
+  return gulp.src(Cfg.js.src, { base: './' })
+    .pipe(gulpPlumber({
+      errorHandler: gulpNotify.onError('<%= error.message %>')
+    }))
+    .pipe(gulpEslint({
+      fix: true,
+    }))
+    .pipe(gulpEslint.format())
+    .pipe(gulpEslint.failAfterError())
+    .pipe(gulp.dest('./'));
+});
+
+
+gulp.task('watch', () => {
   // 開発サーバー立ち上げ
   browserSync.init({
     server: {
       baseDir: Cfg.server.root,
     },
   });
-  gulp.watch(['src/duplicate/**/*', 'src/duplicate/**/.*', '!src/duplicate/.gitkeep'], gulp.parallel('duplicate'));
-  gulp.watch('src/template/**/*.html', gulp.parallel('html'));
-  gulp.watch('src/template/**/*.ejs', gulp.parallel('ejs'));
-  gulp.watch('src/scss/**/*.scss', gulp.parallel('sass'));
-  gulp.watch('src/img/**/*', gulp.parallel('image'));
-  gulp.watch(Cfg.js_works.src, gulp.parallel('js:works'));
-  gulp.watch('src/js/vendor/*.js', gulp.parallel('js:vendor'));
+  gulp.watch(watchFilter(Cfg.duplicate.src), gulp.parallel('duplicate'));
+  gulp.watch(watchFilter(Cfg.html.src), gulp.parallel('html'));
+  gulp.watch(watchFilter(Cfg.ejs.src), gulp.parallel('ejs'));
+  gulp.watch(watchFilter(Cfg.scss.src), gulp.parallel('sass'));
+  gulp.watch(watchFilter(Cfg.img.src), gulp.parallel('image'));
+  gulp.watch(watchFilter(Cfg.js.src), gulp.parallel('js'));
 });
 
-gulp.task('default', gulp.parallel('duplicate', 'html', 'ejs', 'sass', 'js', 'image','watch'));
+gulp.task('default', gulp.parallel('duplicate', 'html', 'ejs', 'sass', 'js', 'image', 'watch'));

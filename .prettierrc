@@ -1,0 +1,17 @@
+{
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "printWidth": 1024
+      }
+    },
+    {
+      "files": "*.js",
+      "options": {
+        "trailingComma": "all",
+        "singleQuote": true
+      }
+    }
+  ]
+}

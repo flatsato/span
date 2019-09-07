@@ -1,10 +1,11 @@
 {
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-recess-order",
+    "stylelint-prettier/recommended",
   ],
   "plugins": [
     "stylelint-scss",
+    "stylelint-prettier",
   ],
   "rules": {
     "at-rule-empty-line-before": ["always", {
@@ -32,12 +33,14 @@
         "return",
       ]
     }],
+    "declaration-empty-line-before": "never",
     "no-descending-specificity": null,
     "rule-empty-line-before": ["always-multi-line", {
       except: ["inside-block"],
       ignore: ["after-comment"],
     }],
     "scss/dollar-variable-colon-space-after": "always-single-line",
+    "scss/operator-no-unspaced": true,
+    "prettier/prettier": true,
   },
-  "ignoreFiles": "src/scss/vendor/**",
 }

@@ -5,11 +5,16 @@
       {
         "modules": false,
         "useBuiltIns": "usage",
-        "corejs": 2,
+        "corejs": 3,
       }
     ]
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime",
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3,
+      }
+    ]
   ],
 }
