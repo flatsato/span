@@ -39,6 +39,7 @@
       display: block;
       padding: 0.285em 0.8em;
       @include fz(18);
+
       border: 1px solid #000;
       &:hover {
         color: #fff;

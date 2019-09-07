@@ -68,7 +68,6 @@ $padding-max: 40;
       padding-left: #{$i * 5}px;
     }
   }
-
   .-pc-padding_top_#{$i * 5} {
     @include pc {
       padding-top: #{$i * 5}px;

@@ -16,10 +16,12 @@
   }
   &__h2 {
     @include fz(18);
+
     margin-top: 2em;
   }
   &__h3 {
     @include fz(14);
+
     margin-top: 2em;
   }
   &__text {
@@ -30,8 +32,8 @@
     }
   }
   &__list {
-    margin-top: 4rem;
     padding-left: 1em;
+    margin-top: 4rem;
     &.-ul {
       list-style: disc;
     }

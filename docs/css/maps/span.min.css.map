@@ -1,1 +1,1 @@
-{"version":3,"sources":["span.scss"],"names":[],"mappings":"AAEA,KACE,QAAA,EAAA","file":"span.min.css","sourcesContent":["@charset \"utf-8\";\n\nbody{\n  padding:0 20px;\n}"]}
+{"version":3,"sources":["span.scss"],"names":[],"mappings":"AAEA,KACE,QAAA,EAAA","file":"span.min.css","sourcesContent":["@charset \"utf-8\";\n\nbody {\n  padding: 0 20px;\n}\n"]}

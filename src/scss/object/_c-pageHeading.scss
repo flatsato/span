@@ -11,22 +11,24 @@
 
 .c-pageHeading {
   margin-bottom: 40px;
-  &__title{
-  display: flex;
-    align-items:baseline;
+  &__title {
+    display: flex;
+    align-items: baseline;
   }
-
   &__jp {
     @include fz(20);
+
     line-height: (36/20);
     @include lhCrop(line-height/fontsize);
   }
   &__en {
     @include fz(12);
+
     margin-left: 15px;
   }
-  &__lead{
+  &__lead {
     @include fz(16);
+
     margin-top: 1em;
   }
 }

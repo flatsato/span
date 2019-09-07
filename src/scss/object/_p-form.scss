@@ -10,13 +10,12 @@
 */
 
 input:focus {
-    border:solid 1px #EEA34A;
+  border: solid 1px #eea34a;
 }
 
 input,
-textarea
-{
-	box-sizing:content-box;
+textarea {
+  box-sizing: content-box;
 }
 
 input[type=date],
@@ -44,13 +43,13 @@ input[type=week]
 .p-form {
   //@extend .ex-input; 
   .ex-input {
-    background-color: #fff;
-    padding: 6px 10px;
-    @include fz(14);
-    width: 100%;
-    border: none;
-  }
 
+    width: 100%;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: none;
+    @include fz(14);
+  }
   h3 {
     margin: 0 0 12px;
   } //☆リード文 START
@@ -66,20 +65,22 @@ input[type=week]
     &__title {
       margin: 0 0 12px;
       @include fz(16);
+
       font-weight: bold;
-      color: #EF5A24;
+      color: #ef5a24;
     }
     &__list {
       padding: 20px 20px 12px;
       margin: 0;
       list-style: none;
-      border: 2px solid #EF5A24;
+      border: 2px solid #ef5a24;
       border-radius: 4px;
     }
     &__item {
       margin: 0 0 12px;
       @include fz(16);
-      color: #EF5A24;
+
+      color: #ef5a24;
     }
   } //☆先頭エラー文 END
   &__group {
@@ -93,6 +94,7 @@ input[type=week]
     padding: 0 10px;
     margin: 0 0 0 8px;
     @include fz(12);
+
     line-height: 18px;
     color: #fff;
     vertical-align: middle;
@@ -116,7 +118,8 @@ input[type=week]
       display: block;
       margin: 8px 0 0;
       @include fz(11);
-      color: #EF5A24;
+
+      color: #ef5a24;
     }
   }
   &__privacy {
@@ -129,6 +132,7 @@ input[type=week]
     border: 1px solid #333;
     &Inner {
       @include fz(12);
+
       line-height: (24/12);
     }
   }

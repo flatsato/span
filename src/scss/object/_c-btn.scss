@@ -22,28 +22,29 @@ button,
 input {
   .c-btn &,
   &.c-btn {
-    padding: 10px 50px;
-    background: #fff;
-    @include fz(13);
-    letter-spacing: 0.16em;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
     text-decoration: none;
+
+    letter-spacing: 0.16em;
+    cursor: pointer;
+    background: #fff;
     border: 1px solid #999;
+    transition: 0.3s ease-in-out;
+    @include fz(13);
     & + & {
       margin-left: 10px;
     }
   }
   .-left & {
-    &:before {
+    &::before {
       left: 8px;
     }
   }
   .-right & {
-    &:before {
+    &::before {
       right: 8px;
     }
   }
@@ -59,25 +60,25 @@ input {
     button,
     input {
       position: relative;
-      &:before {
+      &::before {
         position: absolute;
+        top: 50%;
         display: block;
         width: 10px;
         height: 10px;
         content: '';
         background: #000;
-        top: 50%;
         transform: translateY(-50%);
       }
       &.-left {
         padding-left: 30px;
-        &:before {
+        &::before {
           left: 10px;
         }
       }
       &.-right {
         padding-right: 30px;
-        &:before {
+        &::before {
           right: 10px;
         }
       }
@@ -87,25 +88,25 @@ input {
     display: flex;
     justify-content: center;
     &.-left {
-      a:before,
-      input:before,
-      button:before {
-        margin-right: 6px;
+      a::before,
+      input::before,
+      button::before {
         display: block;
         width: 10px;
         height: 10px;
+        margin-right: 6px;
         content: '';
         background: #000;
       }
     }
     &.-right {
-      a:after,
-      input:after,
-      button:after {
-        margin-left: 6px;
+      a::after,
+      input::after,
+      button::after {
         display: block;
         width: 10px;
         height: 10px;
+        margin-left: 6px;
         content: '';
         background: #000;
       }
@@ -113,8 +114,9 @@ input {
   }
   &.-arrow {
     position: relative;
-    &:before {
+    &::before {
       position: absolute;
+      top: 50%;
       display: block;
       width: 10px;
       height: 10px;
@@ -122,17 +124,16 @@ input {
       border: 2px #000 solid;
       border-top: 0;
       border-left: 0;
-      top: 50%;
     }
-    &.-left:before {
-      transform: rotate(135deg) translateY(50%);
+    &.-left::before {
       left: 15px;
       margin-top: -2px;
+      transform: rotate(135deg) translateY(50%);
     }
-    &.-right:before {
-      transform: rotate(-45deg) translateY(50%);
-      margin-top: -10px;
+    &.-right::before {
       right: 15px;
+      margin-top: -10px;
+      transform: rotate(-45deg) translateY(50%);
     }
   }
   &.-right,
@@ -146,14 +147,13 @@ input {
       @include fz(20);
     }
     &.-left i {
-      margin-right: 5px;
       left: 10px;
+      margin-right: 5px;
     }
     &.-right i {
-      margin-left: 5px;
       right: 10px;
+      margin-left: 5px;
     }
-
   }
   &.-icon_inline {
     i {
@@ -174,12 +174,12 @@ input {
     a,
     button,
     input {
+      color: #000;
       background: #fff;
       border: 2px solid #000;
-      color: #000;
       &:hover {
-        background: #000;
         color: #fff;
+        background: #000;
       }
     }
   }
@@ -187,12 +187,12 @@ input {
     a,
     button,
     input {
+      color: #fff;
       background: #000;
       border: 2px solid #000;
-      color: #fff;
       &:hover {
-        background: #fff;
         color: #000;
+        background: #fff;
       }
     }
   }
@@ -207,7 +207,6 @@ input {
     button,
     input {
       width: 100%;
-
     }
   }
   &.-w460 {
@@ -229,8 +228,8 @@ input {
     a,
     button,
     input {
-      border-radius: 45px;
       height: 45px;
+      border-radius: 45px;
       @include pc {
         letter-spacing: 0.18em;
       }
@@ -242,13 +241,13 @@ input {
 .c-btnWrap {
   display: flex;
   &.-left {
-    justify-content:flex-start;
+    justify-content: flex-start;
   }
-    &.-center {
+  &.-center {
     justify-content: center;
   }
-    &.-right {
-    justify-content:flex-end;
+  &.-right {
+    justify-content: flex-end;
   }
 }
 
@@ -258,20 +257,20 @@ input {
     a,
     button,
     input {
-      background: #fff;
-      border: 2px solid #ff9900;
       position: relative;
+      background: #fff;
+      border: 2px solid #f90;
       &:hover {
-        background: #ffe3b9;
         color: #000;
+        background: #ffe3b9;
       }
       img {
-        width: 94px;
-        height: auto;
         position: absolute;
-        margin-top: 4px;
         top: 50%;
         left: 50%;
+        width: 94px;
+        height: auto;
+        margin-top: 4px;
         transform: translate(-50%, -50%);
       }
     }

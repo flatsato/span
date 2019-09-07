@@ -12,9 +12,9 @@
 .c-card {
   display: block;
   &__link {
-    border: 1px solid #666;
     display: block;
     text-decoration: none;
+    border: 1px solid #666;
   }
   &__figure {
     img {
@@ -30,7 +30,7 @@
       text-decoration: none;
     }
   }
-  &__body{
+  &__body {
     padding: 20px;
   }
   &__date {
@@ -39,7 +39,7 @@
   &__title {
     @include fz(16);
   }
-  &__action{
+  &__action {
     padding: 0 20px 20px;
   }
 }

@@ -15,7 +15,7 @@
     display: none;
     margin: 0;
   }
-  input[type=radio]:checked + .c-radio__label:after {
+  input[type=radio]:checked + .c-radio__label::after {
     position: absolute;
     top: 50%;
     left: 6px;
@@ -35,7 +35,7 @@
     margin-right: 28px;
     line-height: 1.5px;
     cursor: pointer;
-    &:before {
+    &::before {
       position: absolute;
       top: 50%;
       left: 0;
@@ -49,5 +49,5 @@
       border: 1px solid #000;
       border-radius: 50%;
     }
-  } 
+  }
 }

@@ -14,7 +14,8 @@
 
 .c-textarea {
   textarea {
-    @extend .ex-input; 
+    @extend .ex-input;
+
     width: 100%;
     min-height: 80px;
   }

@@ -12,26 +12,26 @@
 $zindex-guide: 999999;
 
 @mixin dev-alert($attr:null, $content:"問題があります") {
-  outline: red 2px solid;
   position: relative;
-  margin-top: 3em;
   display: inline-block;
+  margin-top: 3em;
+  outline: red 2px solid;
   &::after {
-    content: $content;
-    display: block;
     position: absolute;
     top: -2em;
     left: -2px;
-    background: red;
-    color: white;
-    font-size: 10px;
-    padding: .2em .5em;
     z-index: $zindex-guide;
+    display: block;
+    padding: 0.2em 0.5em;
+    font-size: 10px;
+    color: white;
     white-space: nowrap;
+    content: $content;
+    background: red;
   }
 }
 
-h2.check{
+h2.check {
   margin-top: 50px;
   margin-bottom: 20px;
   font-size: 20px;
@@ -100,6 +100,7 @@ img[alt=""] {
 
 img:not([alt]) {
   @include dev-alert(alt, "【注意】alt属性が無い");
+
   border: 5px solid skyblue;
 }
 
@@ -111,6 +112,7 @@ a[target="_blank"] {
   color: #f00;
   &:not([rel="noopener noreferrer"]) {
     @include dev-alert(required, "【注意】relが無い");
+
     color: #f00;
   }
 }
@@ -155,5 +157,6 @@ input[required] {
 //divタグの中身が空
 div:empty {
   @include dev-alert(empty, "【注意】divタグの中身が空");
+
   min-height: 1em;
 }

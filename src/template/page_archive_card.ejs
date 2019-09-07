@@ -1,32 +1,26 @@
 <% var pageId = 'hoge'; %>
 <%- include('./_include/common/_head') %>
-
 <div id="pagetop" class="l-container">
-
 <%- include('./_include/_l-header') %>
-
 <!-- l-breadcrumb START -->
 <%- include('./_include/_l-breadcrumb', {
-  breadcrumb: [
-    {
-      name: 'Home',
-      url: '/'
-    },
-    {
-      name: 'catName',
-      url: '/'
-    },
-    {
-      name: 'pageName'
-    }
-  ]
+breadcrumb: [
+{
+name: 'Home',
+url: '/'
+},
+{
+name: 'catName',
+url: '/'
+},
+{
+name: 'pageName'
+}
+]
 }) %>
 <!-- l-breadcrumb END -->
-
 <div class="l-contents">
-
 <main class="l-main" role="main">
-
 <div class="c-pageHeading">
 <h1 class="c-pageHeading__title">
 <span class="c-pageHeading__jp">一覧/カード</span>
@@ -34,101 +28,63 @@
 </h1>
 <p class="c-pageHeading__lead">リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。</p>
 </div>
-
-
 <!-- p-cards START -->
-
 <h2>横2列</h2>
-
 <section class="p-cards">
-
 <article class="p-cards__item c-card">
 <a class="c-card__link" href="">
-<figure class="c-card__figure">
-<img src="http://placehold.it/300x200">
-
-</figure>
+<figure class="c-card__figure"><img alt="" src="http://placehold.it/300x200"></figure>
 <div class="c-card__body">
 <h2 class="c-card__title">タイトルが入ります。</h2>
 <p class="c-card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 </div>
-<div class="c-card__action">
-action
-</div>
+<div class="c-card__action">action</div>
 </a>
 </article>
-
 <article class="p-cards__item c-card">
 <a class="c-card__link" href="">
-<figure class="c-card__figure">
-<img src="http://placehold.it/300x200">
-
-</figure>
+<figure class="c-card__figure"><img alt="" src="http://placehold.it/300x200"></figure>
 <div class="c-card__body">
 <h2 class="c-card__title">タイトルが入ります。</h2>
 <p class="c-card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 </div>
-<div class="c-card__action">
-action
-</div>
+<div class="c-card__action">action</div>
 </a>
 </article>
-
 <article class="p-cards__item c-card">
 <a class="c-card__link" href="">
-<figure class="c-card__figure">
-<img src="http://placehold.it/300x200">
-
-</figure>
+<figure class="c-card__figure"><img alt="" src="http://placehold.it/300x200"></figure>
 <div class="c-card__body">
 <h2 class="c-card__title">タイトルが入ります。</h2>
 <p class="c-card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 </div>
-<div class="c-card__action">
-action
-</div>
+<div class="c-card__action">action</div>
 </a>
 </article>
-
 <article class="p-cards__item c-card">
 <a class="c-card__link" href="">
-<figure class="c-card__figure">
-<img src="http://placehold.it/300x200">
-
-</figure>
+<figure class="c-card__figure"><img src="http://placehold.it/300x200"></figure>
 <div class="c-card__body">
 <h2 class="c-card__title">タイトルが入ります。</h2>
 <p class="c-card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 </div>
-<div class="c-card__action">
-action
-</div>
+<div class="c-card__action">action</div>
 </a>
 </article>
-
 <article class="p-cards__item c-card">
 <a class="c-card__link" href="">
-<figure class="c-card__figure">
-<img src="http://placehold.it/300x200">
-
-</figure>
+<figure class="c-card__figure"><img alt="" src="http://placehold.it/300x200"></figure>
 <div class="c-card__body">
 <h2 class="c-card__title">タイトルが入ります。</h2>
 <p class="c-card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 </div>
-<div class="c-card__action">
-action
-</div>
+<div class="c-card__action">action</div>
 </a>
 </article>
-
 </section>
 <!-- p-card END -->
-
 <%- include('./_include/_p-pagination') %>
-
 </main>
-
 </div>
 <%- include('./_include/_l-footer') %>
 </div>

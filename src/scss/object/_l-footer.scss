@@ -9,10 +9,10 @@
 @include desktop{}
 */
 .l-footer {
-  padding: 50px 0;
-  background: #eee;
-  margin-top: 40px;
   position: relative;
+  padding: 50px 0;
+  margin-top: 40px;
+  background: #eee;
   &__copy {
     @include fz(11);
   }

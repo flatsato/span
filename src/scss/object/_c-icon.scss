@@ -12,21 +12,21 @@
 //矢印
 //三角
 .c-icon {
-  background: #f00;
   position: relative;
+  display: flex;
+  align-items: center; //**バツ**//
+  justify-content: center;
   width: 18px;
   height: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center; //**バツ**//
+  background: #f00;
   &.-cross {
     &::before,
     &::after {
       position: absolute;
-      content: '';
       display: block;
       width: 2px;
       height: 14px;
+      content: '';
       background: #000;
     }
     &::before {
@@ -35,30 +35,30 @@
     &::after {
       transform: rotate(-45deg);
     }
-  } 
+  }
   //**三角**//
   &.-arrow1 {
     &::before {
       position: absolute;
-      content: '';
+      display: block;
       width: 0;
       height: 0;
-      display: block;
+      content: '';
+      border-color: #000 transparent transparent transparent;
       border-style: solid;
       border-width: 10px 6px 0 6px;
-      border-color: #000000 transparent transparent transparent;
     }
   }
   &.-arrow2 {
     &::before {
       position: absolute;
-      content: '';
       display: block;
       width: 10px;
       height: 10px;
+      content: '';
       border: 2px #000 solid;
+      border-top: 0;
       border-left: 0;
-      border-top: 0
     }
     &::before {
       transform: rotate(45deg);
@@ -66,5 +66,5 @@
     &::after {
       transform: rotate(-45deg);
     }
-  } 
+  }
 }

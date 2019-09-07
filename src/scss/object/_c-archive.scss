@@ -12,10 +12,10 @@
 .c-archive {
   display: block;
   &__link {
-    background: #fff;
     display: block;
-    text-decoration: none;
     display: flex;
+    text-decoration: none;
+    background: #fff;
   }
   &__figure {
     width: 150px;
@@ -27,6 +27,7 @@
   &__meta {
     display: flex;
     @include fz(6);
+
     margin-top: 5px;
   }
   &__cat {
@@ -46,6 +47,7 @@
   }
   &__text {
     @include fz(8);
+
     margin-top: 5px;
   }
   &__action {

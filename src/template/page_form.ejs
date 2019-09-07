@@ -1,32 +1,26 @@
 <% var pageId = 'hoge'; %>
 <%- include('./_include/common/_head') %>
-
 <div id="pagetop" class="l-container">
-
 <%- include('./_include/_l-header') %>
-
 <!-- l-breadcrumb START -->
 <%- include('./_include/_l-breadcrumb', {
-  breadcrumb: [
-    {
-      name: 'Home',
-      url: '/'
-    },
-    {
-      name: 'catName',
-      url: '/'
-    },
-    {
-      name: 'pageName'
-    }
-  ]
+breadcrumb: [
+{
+name: 'Home',
+url: '/'
+},
+{
+name: 'catName',
+url: '/'
+},
+{
+name: 'pageName'
+}
+]
 }) %>
 <!-- l-breadcrumb END -->
-
 <div class="l-contents">
-
 <main class="l-main" role="main">
-
 <div class="c-pageHeading">
 <h1 class="c-pageHeading__title">
 <span class="c-pageHeading__jp">フォーム</span>
@@ -34,12 +28,10 @@
 </h1>
 <p class="c-pageHeading__lead">リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。</p>
 </div>
-
 <!-- p-form START -->
 <form class="p-form" role="form" aria-label="">
 <section class="p-form__lead">
 <p class="p-form__leadText">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-
 </section>
 <h3>input Text</h3>
 <div class="p-form__group">
@@ -53,7 +45,6 @@
 </dd>
 </dl>
 </div>
-
 <h3>Text Areas</h3>
 <div class="p-form__group">
 <dl class="p-form__column">
@@ -62,13 +53,10 @@
 <div class="c-textarea">
 <textarea id="hoge_textarea" class="c-textarea" placeholder="テキストが入ります。"></textarea>
 </div>
-
-
 <span class="p-form__columnError" role="alert">エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。エラー文が入ります。</span>
 </dd>
 </dl>
 </div>
-
 <h3>Select Menus</h3>
 <div class="p-form__group">
 <dl class="p-form__column">
@@ -86,7 +74,6 @@
 </dd>
 </dl>
 </div>
-
 <h3>Checkbox</h3>
 <div class="p-form__group">
 <dl class="p-form__column">
@@ -102,7 +89,6 @@
 </dd>
 </dl>
 </div>
-
 <h3>Radio</h3>
 <div class="p-form__group">
 <dl class="p-form__column">
@@ -121,20 +107,16 @@
 </dd>
 </dl>
 </div>
-
 <div class="p-form__privacy">
 <div class="p-form__privacyInner"> プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。 プライバシーポリシーが入ります。</div>
 </div>
-
 <div class="c-btnWrap -center">
 <span class="c-btn -icon_inline -left"><a href="">戻る</a></span>
 <span class="c-btn -icon_inline -right"><button role="button">送信する</button></span>
 </div>
-
 </form>
 <!-- p-form END -->
 </main>
-
 </div>
 <%- include('./_include/_l-footer') %>
 </div>

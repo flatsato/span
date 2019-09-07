@@ -1,32 +1,26 @@
 <% var pageId = 'hoge'; %>
 <%- include('./_include/common/_head') %>
-
 <div id="pagetop" class="l-container">
-
 <%- include('./_include/_l-header') %>
-
 <!-- l-breadcrumb START -->
 <%- include('./_include/_l-breadcrumb', {
-  breadcrumb: [
-    {
-      name: 'Home',
-      url: '/'
-    },
-    {
-      name: 'catName',
-      url: '/'
-    },
-    {
-      name: 'pageName'
-    }
-  ]
+breadcrumb: [
+{
+name: 'Home',
+url: '/'
+},
+{
+name: 'catName',
+url: '/'
+},
+{
+name: 'pageName'
+}
+]
 }) %>
 <!-- l-breadcrumb END -->
-
 <div class="l-contents">
-
 <main class="l-main" role="main">
-
 <div class="c-pageHeading">
 <h1 class="c-pageHeading__title">
 <span class="c-pageHeading__jp">プライバシーポリシー</span>
@@ -34,53 +28,42 @@
 </h1>
 <p class="c-pageHeading__lead">リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。</p>
 </div>
-
 <!-- p-privacy START -->
 <div class="p-privacy">
-
 <section class="p-privacy__section">
 <h2 class="p-privacy__h2">タイトルが入ります。</h2>
 <div class="p-privacy__text">
 <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 </div>
-
 <ul class="p-privacy__list -ul">
 <li class="p-privacy__item">順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。</li>
 <li class="p-privacy__item">順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。</li>
 <li class="p-privacy__item">順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。順不同リストが入ります。</li>
 </ul>
-
 <ol class="p-privacy__list -ol">
 <li class="p-privacy__item">番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。</li>
 <li class="p-privacy__item">番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。</li>
 <li class="p-privacy__item">番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。番号リストが入ります。</li>
 </ol>
 </section>
-
 <section class="p-privacy__section">
 <h2 class="p-privacy__h2">タイトルが入ります。</h2>
 <div class="p-privacy__text">
 <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 </div>
-
 <h3 class="p-privacy__h3">タイトルが入ります。</h3>
 <div class="p-privacy__text">
 <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 </div>
 <div class="p-privacy__note">
-  <p>注釈が入ります。</p>注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。
+<p>注釈が入ります。</p>注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。注釈が入ります。
 </div>
 </section>
-
 </div>
 <!-- p-privacy END -->
-
 </main>
-
 </div>
-
 <%- include('./_include/_l-footer') %>
-
 </div>
 <%- include('./_include/common/_foot') %>

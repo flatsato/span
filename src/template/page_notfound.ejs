@@ -1,30 +1,25 @@
 <% var pageId = 'hoge'; %>
 <%- include('./_include/common/_head') %>
-
 <div id="pagetop" class="l-container">
-
 <%- include('./_include/_l-header') %>
-
 <!-- l-breadcrumb START -->
 <%- include('./_include/_l-breadcrumb', {
-  breadcrumb: [
-    {
-      name: 'Home',
-      url: '/'
-    },
-    {
-      name: 'catName',
-      url: '/'
-    },
-    {
-      name: 'pageName'
-    }
-  ]
+breadcrumb: [
+{
+name: 'Home',
+url: '/'
+},
+{
+name: 'catName',
+url: '/'
+},
+{
+name: 'pageName'
+}
+]
 }) %>
 <!-- l-breadcrumb END -->
-
 <div class="l-contents">
-
 <main class="l-main" role="main">
 <!-- p-notfound START -->
 <div class="p-notfound">
@@ -41,9 +36,7 @@
 </div>
 <!-- p-notfound END -->
 </main>
-
 </div>
 <%- include('./_include/_l-footer') %>
-
 </div>
 <%- include('./_include/common/_foot') %>

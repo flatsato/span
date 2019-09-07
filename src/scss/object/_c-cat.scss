@@ -11,15 +11,15 @@
 
 .c-cat {
   a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-width: 100px;
     height: 40px;
     font-size: fz(14);
     color: #fff;
-    background: tomato;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
+    background: tomato;
   }
   &s {
     display: flex;

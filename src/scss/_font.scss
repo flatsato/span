@@ -25,28 +25,28 @@
 }
 
 //@include font-JP_sans;
-@mixin font-JP_sans{
-font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, sans-serif;
+@mixin font-JP_sans {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, sans-serif;
 }
 
 //@include font-JP_serif;
 @mixin font-JP_serif {
-font-family: "游明朝体","Yu Mincho",YuMincho,"ヒラギノ明朝 ProN W3","HiraMinProN-W3", serif;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", serif;
 }
 
 //@include font-EN_sans;
 @mixin font-EN_sans {
-font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, sans-serif;
 }
 
 //@include font-EN_serif;
 @mixin font-EN_serif {
-font-family: "游明朝体","Yu Mincho",YuMincho,"ヒラギノ明朝 ProN W3","HiraMinProN-W3", serif;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", serif;
 }
 
 //@include font-code;
 @mixin font-code {
-font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Meiryo, monospace, serif;
 }
 
 //@include fz();

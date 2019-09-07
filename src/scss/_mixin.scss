@@ -12,14 +12,14 @@
 
 //@include clearfix;
 @mixin clearfix {
-  &:after {
+  &::after {
     display: block;
     clear: both;
     content: "";
   }
 }
 
-/*============================================*/
+/* ============================================ */
 
 //.using{
 //  @include lhCrop(80/40) ;
@@ -39,7 +39,7 @@
   }
 }
 
-/*============================================*/
+/* ============================================ */
 
 //.using{
 //  @include widtnPercent(400, 1280);
@@ -52,7 +52,7 @@
   width: floor((( $pxWidth / $parentPxWidth) * 10000%)/ 100);
 }
 
-/*============================================*/
+/* ============================================ */
 
 //.using {
 //  @include fzPercentSP(px);
@@ -73,14 +73,14 @@
   font-size: (($pxWidth / 1200/*PCデザイン横幅*/) * 10000vw)/ 100;
 }
 
-/*============================================*/
+/* ============================================ */
 
 //object-fit
 //HTMLにclass追加 img class="object-fit-img"
 // @include object-fit;
 @mixin object-fit {
   object-fit: cover;
-  font-family: 'object-fit: cover;'
+  font-family: 'object-fit: cover;';
 }
 
-/*============================================*/
+/* ============================================ */

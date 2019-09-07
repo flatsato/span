@@ -68,7 +68,6 @@ $margin-max: 40;
       margin-left: #{$i}px;
     }
   }
-
   ._pc_margin_top#{$i} {
     @include pc {
       margin-top: #{$i}px;

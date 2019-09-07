@@ -10,11 +10,11 @@
 */
 
 .p-localNav {
-  &__list{
+  &__list {
     display: flex;
   }
-  &__item{
-    & + &{
+  &__item {
+    & + & {
       margin-left: 20px;
     }
   }

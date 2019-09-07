@@ -11,8 +11,9 @@
 
 .c-h1 {
   @include fz(24);
+
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   &:first-child {
     margin-top: 0;
   }
@@ -20,8 +21,9 @@
 
 .c-h2 {
   @include fz(18);
+
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   &:first-child {
     margin-top: 0;
   }
@@ -29,8 +31,9 @@
 
 .c-h3 {
   @include fz(14);
+
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   &:first-child {
     margin-top: 0;
   }
@@ -38,8 +41,9 @@
 
 .c-h4 {
   @include fz(22);
+
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   &:first-child {
     margin-top: 0;
   }
@@ -47,8 +51,9 @@
 
 .c-h5 {
   @include fz(18);
+
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   &:first-child {
     margin-top: 0;
   }

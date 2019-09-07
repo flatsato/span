@@ -15,17 +15,19 @@
   &__dl {}
   &__dt {
     margin-top: 40px;
-    &:before {
+    &::before {
+
+      display: block;
       content: 'Q.';
       @include fz(20);
-      display: block;
     }
+
     font-weight: bold;
     @include fz(20);
   }
   &__dd {
-     margin-top: 10px;
-    &:before {
+    margin-top: 10px;
+    &::before {
       content: 'A.';
       @include fz(20);
     }

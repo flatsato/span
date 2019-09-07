@@ -13,11 +13,11 @@
   position: relative;
   width: 100%;
   &__inner {
-    padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     height: 70px;
+    padding: 0 40px;
   }
   &__site {
     @include pc {
@@ -25,10 +25,12 @@
     }
     &Text {
       @include fz(10);
+
       letter-spacing: -0.03em;
       @include pc {
         margin-left: 20px;
         @include fz(12);
+
         letter-spacing: 0.1em;
       }
     }

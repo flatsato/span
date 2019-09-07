@@ -11,14 +11,14 @@
 
 .l-footlink {
   width: 1000px;
+  padding: 40px 40px;
   margin: 40px auto 0;
   background: #f0f0f0;
-  padding: 40px 40px;
-  &__list{
+  &__list {
     display: flex;
   }
-  &__item{
-    & + &{
+  &__item {
+    & + & {
       margin-left: 20px;
     }
   }
