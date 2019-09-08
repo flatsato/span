@@ -9,8 +9,6 @@
 @include desktop{}
 */
 
-@charset "utf-8";
-
 $point-sp: 680px;
 $point-pc: 980px;
 $point-wide: 1200px;
@@ -27,8 +25,6 @@ $point-wide: 1200px;
   }
 }
 
-
-
 //.using{
 //  @include ov_zoomimg;
 //  width:400px;
@@ -40,8 +36,8 @@ $point-wide: 1200px;
 //}
 
 //hover 画像拡大アニメ
-// @include ov_zoomimg;
-@mixin ov_zoomimg {
+// @include ov_zoomImg{}
+@mixin ov_zoomImg {
   @include pc {
     overflow: hidden;
     transition: transition 0.2s;
@@ -55,4 +51,3 @@ $point-wide: 1200px;
     }
   }
 }
-

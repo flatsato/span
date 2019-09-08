@@ -9,19 +9,9 @@
 @include desktop{}
 */
 
-html {}
-
 body {
   @include fz(16);
-
   color: #333;
-  @include font-JP_sans;
-}
-
-html > body {
-  @include pc {
-    min-width: 980px;
-  }
 }
 
 * {
@@ -212,7 +202,8 @@ legend {
 table {
   border-spacing: 0;
   border-collapse: collapse;
-  caption {}
+  caption {
+  }
   th,
   td {
   }
@@ -222,8 +213,11 @@ table {
   }
   tbody {
     th,
-    td {}
-    th {}
-    td {}
+    td {
+    }
+    th {
+    }
+    td {
+    }
   }
 }
