@@ -1,19 +1,10 @@
 @charset "utf-8";
 
-/*
-@include sp320{}
-@include sp{}
-@include tb{}
-@include pc{}
-@include touch{}
-@include desktop{}
-*/
-
 .p-kv {
   position: relative;
   height: 240px;
   overflow: hidden;
-  @include pc {
+  @include breakpoint_desktop {
     height: 420px;
   }
   &__inner {
@@ -24,7 +15,7 @@
     height: 200px;
     margin: -100px 0 0;
     overflow: visible;
-    @include pc {
+    @include breakpoint_desktop {
       height: 420px;
       margin: -210px 0 0;
     }
@@ -45,7 +36,7 @@
     color: #fff;
     text-align: center;
     transform: translate(-50%, -50%);
-    @include pc {}
+    @include breakpoint_desktop {}
     .jp {
       @include fz(24);
     }
@@ -65,7 +56,7 @@
     width: 100%;
     height: inherit;
     margin: 0;
-    @include pc {
+    @include breakpoint_desktop {
       min-width: 900px;
       min-width: inherit;
       height: 420px;
@@ -91,7 +82,7 @@
     color: #fff;
     text-align: center;
     letter-spacing: 0.05em;
-    @include pc {
+    @include breakpoint_desktop {
       top: 63%;
     }
     p {

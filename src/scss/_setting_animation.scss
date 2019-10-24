@@ -1,14 +1,5 @@
 @charset "utf-8";
 
-/*
-@include sp320{}
-@include sp{}
-@include tb{}
-@include pc{}
-@include touch{}
-@include desktop{}
-*/
-
 $point-sp: 680px;
 $point-pc: 980px;
 $point-wide: 1200px;
@@ -38,13 +29,13 @@ $point-wide: 1200px;
 //hover 画像拡大アニメ
 // @include ov_zoomImg{}
 @mixin ov_zoomImg {
-  @include pc {
+  @include breakpoint_desktop {
     overflow: hidden;
     transition: transition 0.2s;
   }
   &:hover {
     img {
-      @include pc {
+      @include breakpoint_desktop {
         transition: all 0.9s ease-in-out;
         transform: scale(1.05);
       }

@@ -1,15 +1,5 @@
 @charset "utf-8";
 
-/*
-@include sp{}
-@include tb{}
-@include pc{}
-@include wide{}
-@include spOnly{}
-@include tbOnly{}
-@include pcOnly{}
-*/
-
 //5〜200pxまで5px刻みで生成
 //
 //.is-margin_top_5 {
@@ -49,42 +39,42 @@ $margin-max: 40;
 
 @for $i from $margin-min through $margin-max {
   ._sp_is_margin_top#{$i} {
-    @include sp {
+    @include breakpoint_mobile {
       margin-top: #{$i}px;
     }
   }
   ._sp_margin_right#{$i} {
-    @include sp {
+    @include breakpoint_mobile {
       margin-right: #{$i}px;
     }
   }
   ._sp_margin_bottom#{$i} {
-    @include sp {
+    @include breakpoint_mobile {
       margin-bottom: #{$i}px;
     }
   }
   ._sp_margin_left#{$i} {
-    @include sp {
+    @include breakpoint_mobile {
       margin-left: #{$i}px;
     }
   }
   ._pc_margin_top#{$i} {
-    @include pc {
+    @include breakpoint_desktop {
       margin-top: #{$i}px;
     }
   }
   ._pc_margin_right#{$i} {
-    @include pc {
+    @include breakpoint_desktop {
       margin-right: #{$i}px;
     }
   }
   ._pc_margin_bottom#{$i} {
-    @include pc {
+    @include breakpoint_desktop {
       margin-bottom: #{$i}px;
     }
   }
   ._pc_margin_left#{$i} {
-    @include pc {
+    @include breakpoint_desktop {
       margin-left: #{$i}px;
     }
   }

@@ -1,15 +1,5 @@
 @charset "utf-8";
 
-/*
-@include sp{}
-@include tb{}
-@include pc{}
-@include wide{}
-@include spOnly{}
-@include tbOnly{}
-@include pcOnly{}
-*/
-
 //HTML
 //<div class="c-btnWrap -center">
 //<div class="c-btn -white -w460"><a href="" class="">ボタン</a></div>
@@ -211,7 +201,7 @@ input {
   }
   &.-w460 {
     width: 100%;
-    @include pc {
+    @include breakpoint_desktop {
       width: 460px;
     }
     a,
@@ -230,7 +220,7 @@ input {
     input {
       height: 45px;
       border-radius: 45px;
-      @include pc {
+      @include breakpoint_desktop {
         letter-spacing: 0.18em;
       }
     }

@@ -1,14 +1,5 @@
 @charset "utf-8";
 
-/*
-@include sp320{}
-@include sp{}
-@include tb{}
-@include pc{}
-@include touch{}
-@include desktop{}
-*/
-
 .p-single {
   &__meta {
     display: flex;
@@ -97,7 +88,7 @@
       text-align: center;
     }
     iframe {
-      @include sp() {
+      @include breakpoint_mobile() {
         width: calc(100vw - 40px);
         height: calc(100vw - 40px);
       }

@@ -56,7 +56,7 @@
 
 //.using {
 //  @include fzPercentSP(px);
-//  @include pc {
+//  @include breakpoint_desktop {
 //    @include fzPercentSP(px);
 //  }
 //}
@@ -69,12 +69,12 @@
 
 //font-size可変 PC /*PCデザイン横幅*/
 //// @include fzPercentPC(px);
-//@mixin fzPercentPC($pxWidth) {
-//  font-size: (($pxWidth / 1200) * 10000vw) / 100;
-//}
-//
+@mixin fzPercentPC($pxWidth) {
+  font-size: (($pxWidth / 1200) * 10000vw) / 100;
+}
+
 ///* ============================================ */
-//
+
 ////object-fit
 ////HTMLにclass追加 img class="object-fit-img"
 //// @include object-fit;
@@ -86,8 +86,8 @@
 /* ============================================ */
 
 // visually-hidden:
-// 視覚的にコンテンツを非表示にしたい場合や、スクリーンリーダーや
-// 検索エンジンからアクセスできるようにしたい場合に使う
+// アクセシビリティ対策 非表示テキスト
+// レイアウトが崩れる場合 使用しない
 @mixin visually-hidden {
   position: absolute;
   width: 1px;

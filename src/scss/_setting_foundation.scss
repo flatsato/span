@@ -1,14 +1,5 @@
 @charset "utf-8";
 
-/*
-@include sp320{}
-@include sp{}
-@include tb{}
-@include pc{}
-@include touch{}
-@include desktop{}
-*/
-
 body {
   @include fz(16);
   color: $color_darkgray;
@@ -25,7 +16,6 @@ body {
 }
 
 /* FORM */
-
 input[type="text"] {
   font-weight: normal;
 }
@@ -60,7 +50,6 @@ input[type="text"],
 textarea {
   border: 1px solid #aaa;
   outline: none;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 

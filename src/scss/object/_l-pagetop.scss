@@ -1,21 +1,12 @@
 @charset "utf-8";
 
-/*
-@include sp320{}
-@include sp{}
-@include tb{}
-@include pc{}
-@include touch{}
-@include desktop{}
-*/
-
 .l-pagetop {
   position: absolute;
   right: 0;
   width: 46px;
   height: 46px;
   margin: -46px 0 0;
-  @include sp {
+  @include breakpoint_mobile {
     width: 40px;
     height: 40px;
     margin: -40px 0 0;
