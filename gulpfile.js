@@ -14,7 +14,6 @@ const gulpSass = require('gulp-sass');
 const gulpSassGlob = require('gulp-sass-glob');
 const gulpPostcss = require('gulp-postcss');
 const gulpCleanCss = require('gulp-clean-css');
-const gulpStylelint = require('gulp-stylelint');
 const gulpEslint = require('gulp-eslint');
 const gulpRollupEach = require('gulp-rollup-each');
 const { eslint: _eslint } = require('rollup-plugin-eslint');
@@ -45,6 +44,9 @@ const commonjs = require('rollup-plugin-commonjs');
 const babel = require('rollup-plugin-babel');
 const { terser } = require('rollup-plugin-terser');
 const gulpImagemin = require('gulp-imagemin');
+const imageminJpegtran = require('imagemin-jpegtran');
+const postcssScss = require('postcss-scss');
+const postcssReporter = require('postcss-reporter');
 
 function watchFilter(glob) {
   return Array.isArray(glob) ? glob.filter(element => !element.startsWith('!')) : glob;
@@ -125,10 +127,11 @@ gulp.task('sass', () => {
       errorHandler: gulpNotify.onError('<%= error.message %>')
     }))
     // リント
-    .pipe(gulpStylelint({
-      reporters: [
-        { formatter: 'string', console: true }
-      ],
+    .pipe(gulpPostcss([
+      stylelint(),
+      postcssReporter({ clearReportedMessages: true })
+    ], {
+      syntax: postcssScss,
     }))
     // sassGlobで"object"をディレクトリごとscss内でimport出来るように設定
     .pipe(gulpSassGlob())
@@ -142,9 +145,12 @@ gulp.task('sass', () => {
       stylelint({
         config: {
           'extends': 'stylelint-config-recess-order',
+          'quiet': true,
+          'defaultSeverity': 'warning'
         },
         fix: true,
-      })
+      }),
+      postcssReporter({ clearReportedMessages: true })
     ]))
     // css圧縮
     //cleanCss内のオプションで圧縮時の設定を追加
@@ -188,16 +194,14 @@ gulp.task('js', () => {
         babel({
           runtimeHelpers: true,
         }),
-        Cfg.js.minFlg & terser({
+        Cfg.js.minFlg && terser({
           output: {
             comments: /^\**!|@preserve|@license|@cc_on/,
           },
         }),
       ],
     }, {
-      output: {
-        format: 'iife',
-      }
+      format: 'iife',
     }))
     .pipe(gulpIf(Cfg.js.minFlg,
       gulpRename({
@@ -224,7 +228,7 @@ gulp.task('image', () => {
           optimizationLevel: 3,
         }),
         // jpg圧縮
-        gulpImagemin.jpegtran({
+        imageminJpegtran({
           progressive: true,
         }),
         // png圧縮
@@ -253,21 +257,25 @@ gulp.task('format:sass', () => {
       errorHandler: gulpNotify.onError('<%= error.message %>')
     }))
     // プロパティの並び順変更
-    .pipe(gulpStylelint({
-      config: {
-        'extends': 'stylelint-config-recess-order',
-      },
-      fix: true,
-      reporters: [
-        { formatter: 'string', console: true }
-      ],
+    .pipe(gulpPostcss([
+      stylelint({
+        config: {
+          'extends': 'stylelint-config-recess-order',
+        },
+        fix: true,
+      }),
+      postcssReporter({ clearReportedMessages: true })
+    ], {
+      syntax: postcssScss,
     }))
     // リント
-    .pipe(gulpStylelint({
-      fix: true,
-      reporters: [
-        { formatter: 'string', console: true }
-      ],
+    .pipe(gulpPostcss([
+      stylelint({
+        fix: true,
+      }),
+      postcssReporter({ clearReportedMessages: true })
+    ], {
+      syntax: postcssScss,
     }))
     .pipe(gulp.dest('./'));
 });

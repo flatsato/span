@@ -39,42 +39,42 @@ $padding-max: 40;
 
 @for $i from $padding-min through $padding-max {
   .-sp-padding_top_#{$i * 5} {
-    @include breakpoint_mobile {
+    @include mobile {
       padding-top: #{$i * 5}px;
     }
   }
   .-sp-padding_right_#{$i * 5} {
-    @include breakpoint_mobile {
+    @include mobile {
       padding-right: #{$i * 5}px;
     }
   }
   .-sp-padding_bottom_#{$i * 5} {
-    @include breakpoint_mobile {
+    @include mobile {
       padding-bottom: #{$i * 5}px;
     }
   }
   .-sp-padding_left_#{$i * 5} {
-    @include breakpoint_mobile {
+    @include mobile {
       padding-left: #{$i * 5}px;
     }
   }
   .-pc-padding_top_#{$i * 5} {
-    @include breakpoint_desktop {
+    @include desktop {
       padding-top: #{$i * 5}px;
     }
   }
   .-pc-padding_right_#{$i * 5} {
-    @include breakpoint_desktop {
+    @include desktop {
       padding-right: #{$i * 5}px;
     }
   }
   .-pc-padding_bottom_#{$i * 5} {
-    @include breakpoint_desktop {
+    @include desktop {
       padding-bottom: #{$i * 5}px;
     }
   }
   .-pc-padding_left_#{$i * 5} {
-    @include breakpoint_desktop {
+    @include desktop {
       padding-left: #{$i * 5}px;
     }
   }

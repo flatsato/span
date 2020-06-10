@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 .c-radio {
-  input[type=radio] {
+  input[type="radio"] {
     display: none;
     margin: 0;
   }
-  input[type=radio]:checked + .c-radio__label::after {
+  input[type="radio"]:checked + .c-radio__label::after {
     position: absolute;
     top: 50%;
     left: 6px;

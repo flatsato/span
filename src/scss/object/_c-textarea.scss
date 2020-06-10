@@ -1,11 +1,7 @@
 @charset "utf-8";
 
-//基本はc-inputで指定
-
 .c-textarea {
   textarea {
-    @extend .ex-input;
-
     width: 100%;
     min-height: 80px;
   }

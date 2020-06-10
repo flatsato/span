@@ -4,7 +4,7 @@
   position: relative;
   height: 240px;
   overflow: hidden;
-  @include breakpoint_desktop {
+  @include desktop {
     height: 420px;
   }
   &__inner {
@@ -15,7 +15,7 @@
     height: 200px;
     margin: -100px 0 0;
     overflow: visible;
-    @include breakpoint_desktop {
+    @include desktop {
       height: 420px;
       margin: -210px 0 0;
     }
@@ -23,7 +23,6 @@
   &__title {
     position: absolute;
     top: 50%;
-    left: 50%;
     left: 50%;
     box-sizing: border-box;
     display: flex;
@@ -36,7 +35,6 @@
     color: #fff;
     text-align: center;
     transform: translate(-50%, -50%);
-    @include breakpoint_desktop {}
     .jp {
       @include fz(24);
     }
@@ -56,7 +54,7 @@
     width: 100%;
     height: inherit;
     margin: 0;
-    @include breakpoint_desktop {
+    @include desktop {
       min-width: 900px;
       min-width: inherit;
       height: 420px;
@@ -76,13 +74,12 @@
     top: 130px;
     width: 100%;
     @include fz(16);
-
     line-height: 2;
     line-height: 1.6;
     color: #fff;
     text-align: center;
     letter-spacing: 0.05em;
-    @include breakpoint_desktop {
+    @include desktop {
       top: 63%;
     }
     p {

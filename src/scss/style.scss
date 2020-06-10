@@ -4,15 +4,14 @@
 Foundation
 ========================================================================== */
 
-@import "_setting__mixin";
-@import "_setting_animation";
-@import "_setting_breakpoint";
-@import "_setting_color";
-@import "_setting_font";
-@import "_setting_foundation";
-@import "_setting_function";
-@import "_setting_reset";
-@import "_setting_zindex";
+@import "mixin";
+@import "animation";
+@import "breakpoint";
+@import "font";
+@import "function";
+@import "reset";
+@import "helper";
+@import "zindex";
 
 /* ==========================================================================
 Layout Object

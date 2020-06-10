@@ -97,6 +97,6 @@ module.exports = {
     // タスク完了後destするディレクトリの設定
     "dest": "./dist/img/",
     // wordpress用のdest設定
-    "wpFlg": true,
+    "wpFlg": false,
   },
 };

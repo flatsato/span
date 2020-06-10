@@ -31,11 +31,33 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-
 <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
-<link rel="stylesheet" href="css/vendor/ress.min.css">
-<link rel="stylesheet" href="css/style.min.css">
-
+<link rel="stylesheet" href="/css/vendor/ress.min.css">
+<link rel="stylesheet" href="/css/style.min.css">
+<!-- 構造化パンくず START-->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://example.com/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Category",
+            "item": "https://example.com/category/"
+        },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Current Page",
+            "item": "https://example.com/category/page/"
+        }]
+    }
+</script>
+<!-- 構造化パンくず END-->
 <!-- Google Tag START -->
 <!-- Google Tag END -->
 </head>

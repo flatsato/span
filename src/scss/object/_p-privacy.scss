@@ -7,12 +7,10 @@
   }
   &__h2 {
     @include fz(18);
-
     margin-top: 2em;
   }
   &__h3 {
     @include fz(14);
-
     margin-top: 2em;
   }
   &__text {
@@ -41,6 +39,8 @@
   }
   &__section {
     margin-top: 40px;
-    &Inner {}
+    &Inner {
+      //style
+    }
   }
 }

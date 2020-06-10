@@ -1,4 +1,3 @@
-<% var pageId = 'hoge'; %>
 <%- include('./_include/common/_head') %>
 <div id="pagetop" class="l-container">
 <%- include('./_include/_l-header') %>
@@ -20,7 +19,7 @@ name: 'pageName'
 }) %>
 <!-- l-breadcrumb END -->
 <div class="l-contents">
-<main class="l-main" role="main">
+<main class="l-main">
 <div class="c-pageHeading">
 <h1 class="c-h1">Component</h1>
 <p class="c-pageHeading__lead">リード文が入ります。リード文が入ります。</p>
@@ -28,10 +27,10 @@ name: 'pageName'
 <section class="p-temp">
 <h2 class="c-h2">c-btn</h2>
 <p>aタグ／inputタグ／button／どんなタグでも同じとなる。<br>
-min-widthを指定 -w200などヘルパークラスで幅を指定する。</p>
+min-widthを指定 _w200などヘルパークラスで幅を指定する。</p>
 <h3 class="c-h3">Helper</h3>
-<p>c-btn 縦幅／-h35、横幅／-w200、色／-color_red、パターン／-btn1 −btn2</p>
-<p>c-btnWrapグループ化 -center -between -left -right</p>
+<p>c-btn 縦幅／_h35、横幅／_w200、色／_color_red、パターン／_btn1 _btn2</p>
+<p>c-btnWrapグループ化 _center _between _left _right</p>
 <div class="p-temp__code">
 <%- include('./_include/_c-btn') %>
 </div>
@@ -78,7 +77,7 @@ min-widthを指定 -w200などヘルパークラスで幅を指定する。</p>
 </div>
 <div class="p-temp__code">
 <div class="p-temp__module">
-<div class="c-cat__group -center">
+<div class="c-cat__group _center">
 <span class="c-cat"><a href="">カテゴリ1</a></span>
 <span class="c-cat"><a href="">カテゴリ2</a></span>
 <span class="c-cat"><a href="">カテゴリ3</a></span>
@@ -92,7 +91,7 @@ min-widthを指定 -w200などヘルパークラスで幅を指定する。</p>
 <h2 class="c-h2">H2見出し</h2>
 <p>ここにコンテンツ</p>
 <div class="p-temp__code">
-<div class="c-btnWrap -center">
+<div class="c-btnWrap _center">
 <a class="c-btn" role="button">btn</a>
 <input type="submit" class="c-btn" value="btn">
 <button class="c-btn" role="button">btn</button>

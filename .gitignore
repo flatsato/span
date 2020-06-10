@@ -1,7 +1,6 @@
 .DS_Store
-!.gitignore
-!gulpfile.js
-!package.json
+Thumbs.db
+yarn.lock
 
 # JetBrains IDE
 .idea/

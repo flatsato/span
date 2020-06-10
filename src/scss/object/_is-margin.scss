@@ -39,42 +39,42 @@ $margin-max: 40;
 
 @for $i from $margin-min through $margin-max {
   ._sp_is_margin_top#{$i} {
-    @include breakpoint_mobile {
+    @include mobile {
       margin-top: #{$i}px;
     }
   }
   ._sp_margin_right#{$i} {
-    @include breakpoint_mobile {
+    @include mobile {
       margin-right: #{$i}px;
     }
   }
   ._sp_margin_bottom#{$i} {
-    @include breakpoint_mobile {
+    @include mobile {
       margin-bottom: #{$i}px;
     }
   }
   ._sp_margin_left#{$i} {
-    @include breakpoint_mobile {
+    @include mobile {
       margin-left: #{$i}px;
     }
   }
   ._pc_margin_top#{$i} {
-    @include breakpoint_desktop {
+    @include desktop {
       margin-top: #{$i}px;
     }
   }
   ._pc_margin_right#{$i} {
-    @include breakpoint_desktop {
+    @include desktop {
       margin-right: #{$i}px;
     }
   }
   ._pc_margin_bottom#{$i} {
-    @include breakpoint_desktop {
+    @include desktop {
       margin-bottom: #{$i}px;
     }
   }
   ._pc_margin_left#{$i} {
-    @include breakpoint_desktop {
+    @include desktop {
       margin-left: #{$i}px;
     }
   }

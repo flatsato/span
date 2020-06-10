@@ -7,21 +7,18 @@
   &__title {
     margin-top: 1em;
     @include fz(24);
-
     color: #ee9c6a;
     border-bottom: 2px solid #ee9c6a;
   }
   &__titleS {
     margin-top: 1em;
     @include fz(20);
-
     border-bottom: 2px solid #000;
   }
   &__text {
     margin-top: 20px;
     margin-bottom: 50px;
     @include fz(16);
-
     line-height: 1.7;
   }
   &__code {
@@ -46,7 +43,6 @@
   @include fz(14);
   margin-top: 40px;
   margin-bottom: 15px;
-
   font-weight: bold;
 }
 

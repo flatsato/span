@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+// @include ov;
+@mixin ov {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 0.7;
+    img {
+      background-color: rgba(#fff, 0.01);
+    }
+  }
+}
+
+//.using{
+//  @include ov_zoomimg;
+//  width:400px;
+//  overflow: hidden;
+//  img{
+//    width:100%;
+//    height:auto;
+//  }
+//}
+
+//hover 画像拡大
+// @include ov_zoomimg;
+@mixin ov_zoomimg {
+  @include desktop {
+    overflow: hidden;
+    transition: transition 0.2s;
+  }
+  &:hover {
+    img {
+      @include desktop {
+        transition: all 0.9s ease-in-out;
+        transform: scale(1.05);
+      }
+    }
+  }
+}

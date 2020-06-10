@@ -11,17 +11,15 @@
     padding: 0 40px;
   }
   &__site {
-    @include breakpoint_desktop {
+    @include desktop {
       height: 100px;
     }
     &Text {
       @include fz(10);
-
       letter-spacing: -0.03em;
-      @include breakpoint_desktop {
+      @include desktop {
         margin-left: 20px;
         @include fz(12);
-
         letter-spacing: 0.1em;
       }
     }
@@ -29,7 +27,7 @@
       width: 80px;
       margin-bottom: 6px;
       @include ov;
-      @include breakpoint_desktop {
+      @include desktop {
         width: 140px;
         margin-bottom: 12px;
       }

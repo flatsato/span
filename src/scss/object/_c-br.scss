@@ -2,14 +2,14 @@
 
 br.c-brSP {
   display: inline;
-  @include breakpoint_desktop {
+  @include desktop {
     display: none;
   }
 }
 
 br.c-brPC {
   display: none;
-  @include breakpoint_desktop {
+  @include desktop {
     display: inline;
   }
 }

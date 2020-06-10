@@ -6,7 +6,7 @@
   width: 46px;
   height: 46px;
   margin: -46px 0 0;
-  @include breakpoint_mobile {
+  @include mobile {
     width: 40px;
     height: 40px;
     margin: -40px 0 0;

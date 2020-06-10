@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 .c-checkbox {
-  input[type=checkbox] {
+  input[type="checkbox"] {
     display: none;
     margin: 0;
   }
-  input[type=checkbox]:checked + .c-checkbox__label::after {
+  input[type="checkbox"]:checked + .c-checkbox__label::after {
     position: absolute;
     top: 50%;
     left: 3px;

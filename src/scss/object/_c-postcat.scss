@@ -8,7 +8,7 @@
     text-decoration: none;
     background: #9cb7be;
     @include fz(11);
-    @include breakpoint_desktop {
+    @include desktop {
       @include fz(12);
     }
   }

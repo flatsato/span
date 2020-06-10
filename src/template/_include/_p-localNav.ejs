@@ -1,6 +1,4 @@
 <% /*
-# example
-
 include('./_include/_p-localNav', {
   items: [
     {
@@ -16,13 +14,12 @@ include('./_include/_p-localNav', {
   modifier: '-catName'
 })
 */ %>
-
 <% if (typeof items === 'undefined') {items = []} -%>
 <% if (typeof modifier === 'undefined') {modifier = ''} -%>
-<nav class="p-localNav<% if (modifier) { %> <%= modifier %><%} -%>" role="navigation">
+<nav class="p-localNav<% if (modifier) { %> <%= modifier %><%} -%>">
 <ul class="p-localNav__list -wrap">
 <% items.forEach(function(item, i) { %>
-<li class="p-localNav__item -cat<%= i + 1 %> -parent<% if(item.current) { %> -current<%} %>">
+<li class="p-localNav__item -cat<%= i + 1 %> -parent<% if(item.current) { %> _current<%} %>">
 <a href="<%= item.url %>"><span><%= item.name %></span></a>
 </li>
 <% }) %>

@@ -4,9 +4,9 @@
 //<div class="c-btnWrap -center">
 //<div class="c-btn -white -w460"><a href="" class="">ボタン</a></div>
 //<div class="c-btn -black -wFull"><button>ボタン</button></div>
-//<div class="c-btn -red -wFull"><input type="submit" value="ボタン"></div> 
+//<div class="c-btn -red -wFull"><input type="submit" value="ボタン"></div>
 //</div>
-//形 
+//形
 a,
 button,
 input {
@@ -17,7 +17,6 @@ input {
     justify-content: center;
     padding: 10px 50px;
     text-decoration: none;
-
     letter-spacing: 0.16em;
     cursor: pointer;
     background: #fff;
@@ -28,12 +27,12 @@ input {
       margin-left: 10px;
     }
   }
-  .-left & {
+  ._left & {
     &::before {
       left: 8px;
     }
   }
-  .-right & {
+  ._right & {
     &::before {
       right: 8px;
     }
@@ -44,7 +43,7 @@ input {
   & + & {
     margin-left: 10px;
   }
-  &.-pseudo {
+  &._pseudo {
     position: relative;
     a,
     button,
@@ -56,17 +55,17 @@ input {
         display: block;
         width: 10px;
         height: 10px;
-        content: '';
+        content: "";
         background: #000;
         transform: translateY(-50%);
       }
-      &.-left {
+      &._left {
         padding-left: 30px;
         &::before {
           left: 10px;
         }
       }
-      &.-right {
+      &._right {
         padding-right: 30px;
         &::before {
           right: 10px;
@@ -74,10 +73,10 @@ input {
       }
     }
   }
-  &.-pseudo_inline {
+  &._pseudo_inline {
     display: flex;
     justify-content: center;
-    &.-left {
+    &._left {
       a::before,
       input::before,
       button::before {
@@ -85,11 +84,11 @@ input {
         width: 10px;
         height: 10px;
         margin-right: 6px;
-        content: '';
+        content: "";
         background: #000;
       }
     }
-    &.-right {
+    &._right {
       a::after,
       input::after,
       button::after {
@@ -97,12 +96,12 @@ input {
         width: 10px;
         height: 10px;
         margin-left: 6px;
-        content: '';
+        content: "";
         background: #000;
       }
     }
   }
-  &.-arrow {
+  &._arrow {
     position: relative;
     &::before {
       position: absolute;
@@ -110,37 +109,37 @@ input {
       display: block;
       width: 10px;
       height: 10px;
-      content: '';
+      content: "";
       border: 2px #000 solid;
       border-top: 0;
       border-left: 0;
     }
-    &.-left::before {
+    &._left::before {
       left: 15px;
       margin-top: -2px;
       transform: rotate(135deg) translateY(50%);
     }
-    &.-right::before {
+    &._right::before {
       right: 15px;
       margin-top: -10px;
       transform: rotate(-45deg) translateY(50%);
     }
   }
-  &.-right,
-  &.-left {
+  &._right,
+  &._left {
     position: relative;
   }
-  &.-icon {
+  &._icon {
     position: relative;
     i {
       position: absolute;
       @include fz(20);
     }
-    &.-left i {
+    &._left i {
       left: 10px;
       margin-right: 5px;
     }
-    &.-right i {
+    &._right i {
       right: 10px;
       margin-left: 5px;
     }
@@ -149,18 +148,19 @@ input {
     i {
       @include fz(20);
     }
-    &.-left i {
+    &._left i {
       margin-right: 5px;
     }
-    &.-right i {
+    &._right i {
       margin-left: 5px;
     }
   }
 }
 
+/* stylelint-disable */
 //色
 .c-btn {
-  &.-white {
+  &._white {
     a,
     button,
     input {
@@ -173,7 +173,7 @@ input {
       }
     }
   }
-  &.-black {
+  &._black {
     a,
     button,
     input {
@@ -188,10 +188,9 @@ input {
   }
 }
 
-
 //横幅
 .c-btn {
-  &.-w235 {
+  &._w235 {
     width: 235px;
     a,
     button,
@@ -199,9 +198,9 @@ input {
       width: 100%;
     }
   }
-  &.-w460 {
+  &._w460 {
     width: 100%;
-    @include breakpoint_desktop {
+    @include desktop {
       width: 460px;
     }
     a,
@@ -214,13 +213,13 @@ input {
 
 //縦幅
 .c-btn {
-  &.-h45 {
+  &._h45 {
     a,
     button,
     input {
       height: 45px;
       border-radius: 45px;
-      @include breakpoint_desktop {
+      @include desktop {
         letter-spacing: 0.18em;
       }
     }
@@ -230,20 +229,20 @@ input {
 //囲み 右寄せ 中央寄せ 左寄せ
 .c-btnWrap {
   display: flex;
-  &.-left {
+  &._left {
     justify-content: flex-start;
   }
-  &.-center {
+  &._center {
     justify-content: center;
   }
-  &.-right {
+  &._right {
     justify-content: flex-end;
   }
 }
 
 //個別
 .c-btn {
-  &.-amazon {
+  &._amazon {
     a,
     button,
     input {
@@ -266,3 +265,4 @@ input {
     }
   }
 }
+/* stylelint-enable */

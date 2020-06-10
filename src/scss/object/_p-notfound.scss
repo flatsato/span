@@ -8,23 +8,20 @@
   }
   &__title {
     @include fz(18);
-
-    line-height: (25/18);
+    line-height: (25 / 18);
     text-align: center;
   }
   &__text {
     @include fz(14);
     margin-top: 6px;
-
-    line-height: (25/14);
+    line-height: (25 / 14);
     color: #9d968d;
     text-align: center;
   }
   &__lead {
     margin: 25px 0 30px;
     @include fz(13);
-
-    line-height: (24/13);
+    line-height: (24 / 13);
     text-align: center;
   }
   &__more {
