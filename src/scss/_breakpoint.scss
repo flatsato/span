@@ -1,26 +1,12 @@
-@charset "utf-8";
-
-//@include touch{}
-@mixin touch {
-  @media (max-width: $desktop - 1px) {
-    @content;
-  }
-}
 //@include mobile{}
 @mixin mobile {
-  @media (max-width: $sp320) {
-    @content;
-  }
-}
-//@include mobile{}
-@mixin mobile {
-  @media (min-width: $sp320 + 1px) and (max-width: $mobile - 1px) {
+  @media (max-width: $mobile - 1px) {
     @content;
   }
 }
 //@include tablet{}
 @mixin tablet {
-  @media (min-width: $mobile) and (max-width: $desktop - 1px) {
+  @media (min-width: $mobile) {
     @content;
   }
 }
@@ -33,6 +19,12 @@
 //@include wide{}
 @mixin wide {
   @media (min-width: $wide) {
+    @content;
+  }
+}
+//@include ordinalWidth{}
+@mixin ordinalWidth($ordinalWidth) {
+  @media (min-width: $ordinalWidth + px) {
     @content;
   }
 }

@@ -1,0 +1,129 @@
+input:focus {
+  border: solid 1px #eea34a;
+}
+
+input,
+textarea {
+  box-sizing: content-box;
+}
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  //style
+}
+
+//リセットCSSを追加
+//
+//Super Form Reset.css
+//https://gist.github.com/anthonyshort/552543
+
+.c_form {
+  //@extend .ex-input;
+  .ex-input {
+    width: 100%;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: none;
+    @include fz(14);
+  }
+  h3 {
+    margin: 0 0 12px;
+  }
+  //☆リード文 START
+  .c_form__lead {
+    @include fz(18);
+    .c_form__leadText {
+      margin: 0 0 40px;
+    }
+  }
+  //☆リード文 END
+  //☆先頭エラー文 START
+  .c_form__errorWrap {
+    margin: 0 0 40px;
+  }
+  .c_form__errorWrap__title {
+    margin: 0 0 12px;
+    @include fz(16);
+    font-weight: bold;
+    color: #ef5a24;
+  }
+  .c_form__errorWrap__list {
+    padding: 20px 20px 12px;
+    margin: 0;
+    list-style: none;
+    border: 2px solid #ef5a24;
+    border-radius: 4px;
+  }
+  .c_form__errorWrap__item {
+    margin: 0 0 12px;
+    @include fz(16);
+    color: #ef5a24;
+  }
+  //☆先頭エラー文 END
+  .c_form__group {
+    margin: 0 0 32px;
+  }
+  .c_form__label {
+    //style
+  }
+  .c_form__must {
+    display: inline-block;
+    height: 18px;
+    padding: 0 10px;
+    margin: 0 0 0 8px;
+    @include fz(12);
+    line-height: 18px;
+    color: #fff;
+    vertical-align: middle;
+    background: #999;
+    border-radius: 9px;
+  }
+  .c_form__column {
+    display: table;
+    width: 100%;
+    .c_form__columnTitle {
+      display: table-cell;
+      width: 200px;
+      padding: 0 18px 0 0;
+      vertical-align: top;
+    }
+    .c_form__columnBody {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .c_form__columnError {
+      display: block;
+      margin: 8px 0 0;
+      @include fz(11);
+      color: #ef5a24;
+    }
+  }
+  .c_form__privacy {
+    height: 100px;
+    padding: 1em;
+    margin: 0 0 40px;
+    overflow: auto;
+    background: #fff;
+    border: 1px solid #333;
+    .c_form__privacyInner {
+      @include fz(12);
+      line-height: (24 / 12);
+    }
+  }
+  .c_form__btnWrap {
+    margin: 0 0 40px;
+    text-align: center;
+  }
+}

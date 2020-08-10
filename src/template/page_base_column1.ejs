@@ -1,9 +1,9 @@
 
 <%- include('./_include/common/_head') %>
-<div id="pagetop" class="l-container">
-<%- include('./_include/_l-header') %>
-<!-- l-breadcrumb START -->
-<%- include('./_include/_l-breadcrumb', {
+<div id="pagetop" class="l_container">
+<%- include('./_include/_l_header') %>
+<!-- l_breadcrumb START -->
+<%- include('./_include/_l_breadcrumb', {
 breadcrumb: [
 {
 name: 'Home',
@@ -18,15 +18,15 @@ name: 'pageName'
 }
 ]
 }) %>
-<!-- l-breadcrumb END -->
-<div class="l-contents">
-<main class="l-main">
-<div class="c-pageHeading">
-<h1 class="c-h1">ページタイトル</h1>
-<p class="c-pageHeading__lead">リード文が入ります。リード文が入ります。</p>
+<!-- l_breadcrumb END -->
+<div class="l_contents">
+<main class="l_main">
+<div class="c_pageHeading">
+<h1 class="c_heading01">ページタイトル</h1>
+<p class="c_pageHeading__lead">リード文が入ります。リード文が入ります。</p>
 </div>
-<!-- p-localNav START -->
-<%- include('./_include/_p-localNav', {
+<!-- c_localNav START -->
+<%- include('./_include/_c_localNav', {
 items: [
 {
 name: 'titleName1-1',
@@ -51,11 +51,11 @@ url: '#'
 }
 ]
 }) %>
-<!-- p-localNav END -->
-<h2 class="c-h2">H2見出し</h2>
+<!-- c_localNav END -->
+<h2 class="c_heading02">H2見出し</h2>
 <p>ここにコンテンツ</p>
 </main>
 </div>
-<%- include('./_include/_l-footer') %>
+<%- include('./_include/_l_footer') %>
 </div>
 <%- include('./_include/common/_foot') %>

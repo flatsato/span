@@ -1,0 +1,26 @@
+.l_sub {
+  width: 280px;
+  padding: 20px;
+  margin-left: 20px;
+  background: #efefef;
+  .l_sub__title {
+    @include fz(16);
+  }
+  .l_sub__list {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  .l_sub__item {
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .l_sub__section {
+    & + & {
+      margin-top: 30px;
+    }
+  }
+}

@@ -16,6 +16,7 @@ const gulpPostcss = require('gulp-postcss');
 const gulpCleanCss = require('gulp-clean-css');
 const gulpEslint = require('gulp-eslint');
 const gulpRollupEach = require('gulp-rollup-each');
+const rollup = require('rollup');
 const { eslint: _eslint } = require('rollup-plugin-eslint');
 const eslint = function eslint(options = {}) {
   const plugin = _eslint(options);
@@ -39,9 +40,9 @@ const eslint = function eslint(options = {}) {
     },
   };
 };
-const nodeResolve = require('rollup-plugin-node-resolve');
-const commonjs = require('rollup-plugin-commonjs');
-const babel = require('rollup-plugin-babel');
+const { nodeResolve } = require('@rollup/plugin-node-resolve');
+const commonjs = require('@rollup/plugin-commonjs');
+const { babel } = require('@rollup/plugin-babel');
 const { terser } = require('rollup-plugin-terser');
 const gulpImagemin = require('gulp-imagemin');
 const imageminJpegtran = require('imagemin-jpegtran');
@@ -192,7 +193,8 @@ gulp.task('js', () => {
         nodeResolve(),
         commonjs(),
         babel({
-          runtimeHelpers: true,
+          babelHelpers: 'runtime',
+          skipPreflightCheck: true,
         }),
         Cfg.js.minFlg && terser({
           output: {
@@ -202,7 +204,7 @@ gulp.task('js', () => {
       ],
     }, {
       format: 'iife',
-    }))
+    }, rollup))
     .pipe(gulpIf(Cfg.js.minFlg,
       gulpRename({
         suffix: '.min'

@@ -1,0 +1,27 @@
+.p-single {
+  .p-single__meta {
+    display: flex;
+  }
+  .p-single__cat {
+    @include fz(13);
+    position: relative;
+  }
+  .p-single__date {
+    color: #9d968d;
+    @include fz(13);
+  }
+  .p-single__title {
+    @include fz(30);
+    margin-top: 20px;
+  }
+  .p-single__author {
+    color: #9d968d;
+    @include fz(12);
+  }
+  .p-single__lead {
+    @include fz(15);
+    margin-top: 15px;
+    line-height: (30 / 15);
+  }
+  .p-single__entry {}
+}

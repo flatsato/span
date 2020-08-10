@@ -1,9 +1,3 @@
-@charset "utf-8";
-
-html {
-  //style
-}
-
 body {
   @include fz(16);
   color: #333;
@@ -138,6 +132,7 @@ video {
 img {
   vertical-align: top;
   border-style: none;
+  aspect-ratio: attr(width) / attr(height);
 }
 
 blockquote,

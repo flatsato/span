@@ -1,0 +1,27 @@
+<% /*
+include('./_include/_c_localNav', {
+  items: [
+    {
+      name: 'titleName',
+      url: '#'
+    },
+    {
+      name: 'titleName',
+      url: '#',
+      current: true
+    },
+  ],
+  modifier: '-catName'
+})
+*/ %>
+<% if (typeof items === 'undefined') {items = []} -%>
+<% if (typeof modifier === 'undefined') {modifier = ''} -%>
+<nav class="c_localNav<% if (modifier) { %> <%= modifier %><%} -%>">
+<ul class="c_localNav__list -wrap">
+<% items.forEach(function(item, i) { %>
+<li class="c_localNav__item -cat<%= i + 1 %> -parent<% if(item.current) { %> _current<%} %>">
+<a href="<%= item.url %>"><span><%= item.name %></span></a>
+</li>
+<% }) %>
+</ul>
+</nav>

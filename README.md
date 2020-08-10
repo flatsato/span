@@ -13,7 +13,7 @@
 
 ## 環境
 
-Node.js v12.18.0
+Node.js v12.18.3
 
 バージョン管理にnvm(Node Version Manager)を利用している環境では、`nvm use`コマンドの実行で指定のバージョンに切り替わります。
 
@@ -21,13 +21,13 @@ Node.js v12.18.0
 nvm use
 ```
 
-下記メッセージが表示された場合は、`nvm install 12.18.0`でインストールしてください。
+下記メッセージが表示された場合は、`nvm install 12.18.3`でインストールしてください。
 
 ```
-Found '/パス省略/.nvmrc' with version <12.18.0>
-N/A: version "12.18.0 -> N/A" is not yet installed.
+Found '/パス省略/.nvmrc' with version <12.18.3>
+N/A: version "12.18.3 -> N/A" is not yet installed.
 
-You need to run "nvm install 12.18.0" to install it before using it.
+You need to run "nvm install 12.18.3" to install it before using it.
 ```
 
 ## インストール

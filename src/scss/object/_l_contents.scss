@@ -1,0 +1,10 @@
+.l_contents {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  .c_kv + & {
+    margin-top: 40px;
+  }
+}

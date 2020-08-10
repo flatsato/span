@@ -1,0 +1,12 @@
+.l_footlink {
+  width: 1000px;
+  padding: 40px 40px;
+  margin: 40px auto 0;
+  background: #f0f0f0;
+  .l_footlink__list {
+    display: flex;
+  }
+  .l_footlink__item + .l_footlink__item{
+    margin-left: 20px;
+  }
+}

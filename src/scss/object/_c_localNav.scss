@@ -1,0 +1,10 @@
+.c_localNav {
+  .c_localNav__list {
+    display: flex;
+  }
+  .c_localNav__item {
+    & + & {
+      margin-left: 20px;
+    }
+  }
+}

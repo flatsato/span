@@ -1,0 +1,34 @@
+.c_card {
+  display: block;
+  .c_card__link {
+    display: block;
+    text-decoration: none;
+    border: 1px solid #666;
+  }
+  .c_card__figure {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .c_card__meta {
+    display: flex;
+  }
+  .c_card__cat {
+    a {
+      text-decoration: none;
+    }
+  }
+  .c_card__body {
+    padding: 20px;
+  }
+  .c_card__date {
+    margin-left: 20px;
+  }
+  .c_card__title {
+    @include fz(16);
+  }
+  .c_card__action {
+    padding: 0 20px 20px;
+  }
+}

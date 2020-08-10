@@ -1,0 +1,14 @@
+br {
+  &.e_brSP {
+    display: inline;
+    @include desktop {
+      display: none;
+    }
+  }
+  &.e_brPC {
+    display: none;
+    @include desktop {
+      display: inline;
+    }
+  }
+}
