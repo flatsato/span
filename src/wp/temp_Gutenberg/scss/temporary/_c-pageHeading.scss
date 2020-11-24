@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.c-pageHeading {
+  margin-bottom: 40px;
+  .c-pageHeading__title {
+    display: flex;
+    align-items: baseline;
+  }
+  .c-pageHeading__jp {
+    @include fz(20);
+    line-height: (36 / 20);
+    @include lhCrop(line-height/fontsize);
+  }
+  .c-pageHeading__en {
+    @include fz(12);
+    margin-left: 15px;
+  }
+  .c-pageHeading__lead {
+    @include fz(16);
+    margin-top: 1em;
+  }
+}

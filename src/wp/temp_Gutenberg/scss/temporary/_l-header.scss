@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.l-header {
+  position: relative;
+  width: 100%;
+  .l-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70px;
+    padding: 0 40px;
+  }
+  .l-header__site {
+    @include desktop {
+      height: 100px;
+    }
+    .l-header__siteText {
+      @include fz(10);
+      letter-spacing: -0.03em;
+      @include desktop {
+        margin-left: 20px;
+        @include fz(12);
+        letter-spacing: 0.1em;
+      }
+    }
+    .l-header__siteLogo {
+      width: 80px;
+      margin-bottom: 6px;
+      @include ov;
+      @include desktop {
+        width: 140px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

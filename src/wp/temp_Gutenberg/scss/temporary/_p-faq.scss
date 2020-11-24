@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.p-faq {
+  .p-faq__dt {
+    margin-top: 40px;
+    &::before {
+      display: block;
+      content: "Q.";
+      @include fz(20);
+    }
+    font-weight: bold;
+    @include fz(20);
+  }
+  .p-faq__dd {
+    margin-top: 10px;
+    &::before {
+      content: "A.";
+      @include fz(20);
+    }
+  }
+}

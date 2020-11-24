@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+//HTML
+//<div class="c-btnWrap -center">
+//<div class="c-btn -white -w460"><a href="" class="">ボタン</a></div>
+//<div class="c-btn -black -wFull"><button>ボタン</button></div>
+//<div class="c-btn -red -wFull"><input type="submit" value="ボタン"></div>
+//</div>
+.c-select {
+  position: relative;
+  display: block;
+  width: 180px;
+  overflow: hidden;
+  border: 1px solid #333;
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    margin: -3px 0 0;
+    content: "";
+    border-color: #333 transparent transparent;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+  }
+  select {
+    display: inline-block;
+    width: 100%;
+    width: 210px;
+    height: 40px;
+    padding: 0 10px;
+    background: #fff;
+    border: 0;
+    appearance: none;
+  }
+}
