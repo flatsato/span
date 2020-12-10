@@ -294,55 +294,6 @@ font-size:14px;
 }
 ```
 
-### ブレイクポイントは変数で管理する
->理由 一箇所で管理して、数値の揺れを防ぐため。
-
-```
-変数 _mixin.scss
-https://github.com/harumi-sato/temp-gulp
-
-//
-//@include sps($point-sps) {}
-//@include sp($point-sp) {}
-//@include tbOnly($point-tbOnly) {}
-//@include tb($point-tb) {}
-//@include pc($point-pc) {}
-//
-
-$point-sps: 480px;
-$point-sp: 767px;
-$point-tb: 768px;
-$point-pc: 992px;
-
-@mixin sp($point-sps) {
-@media screen and (max-width: $point-sps) { @content; }
-}
-
-@mixin sp($point-sp) {
-@media screen and (max-width: $point-sp) { @content; }
-}
-
-@mixin tb($point-tb) {
-@media screen and (min-width: $point-tb) { @content; }
-}
-
-@mixin tbOnly($point-tbOnly) {
-@media screen and (min-width: $point-tb) and (max-width: 991) { @content; }
-}
-
-@mixin pc($point-pc) {
-@media screen and (min-width: $point-pc) { @content; }
-}
-```
-
-（参考サイト）
-Media Queriesの効率的な書き方
-http://qiita.com/kyaido/items/828906ffa7198e99d0b7
-  
-Foundation for Sites 6 Docs | Media Queries
-http://foundation.zurb.com/sites/docs/media-queries.html
-Media Queriesの値を参照
-
 ## その他
 
 - class名は中学生程度の平易な英単語を使う。
