@@ -33,47 +33,53 @@ input[type="week"] {
   //@extend .ex-input;
   .ex-input {
     width: 100%;
-    padding: 6px 10px;
+    padding-top: 6px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    padding-left: 10px;
     background-color: #fff;
     border: none;
     @include fz(14);
   }
   h3 {
-    margin: 0 0 12px;
+    margin-bottom: 12px;
   }
   //☆リード文 START
   .c_form__lead {
     @include fz(18);
     .c_form__leadText {
-      margin: 0 0 40px;
+      margin-bottom: 40px;
     }
   }
   //☆リード文 END
   //☆先頭エラー文 START
   .c_form__errorWrap {
-    margin: 0 0 40px;
+    margin-bottom: 40px;
   }
   .c_form__errorWrap__title {
-    margin: 0 0 12px;
+    margin-bottom: 12px;
     @include fz(16);
     font-weight: bold;
     color: #ef5a24;
   }
   .c_form__errorWrap__list {
-    padding: 20px 20px 12px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 12px;
+    padding-left: 20px;
     margin: 0;
     list-style: none;
     border: 2px solid #ef5a24;
     border-radius: 4px;
   }
   .c_form__errorWrap__item {
-    margin: 0 0 12px;
+    margin-bottom: 12px;
     @include fz(16);
     color: #ef5a24;
   }
   //☆先頭エラー文 END
   .c_form__group {
-    margin: 0 0 32px;
+    margin-bottom: 32px;
   }
   .c_form__label {
     //style
@@ -81,8 +87,9 @@ input[type="week"] {
   .c_form__must {
     display: inline-block;
     height: 18px;
-    padding: 0 10px;
-    margin: 0 0 0 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-left: 8px;
     @include fz(12);
     line-height: 18px;
     color: #fff;

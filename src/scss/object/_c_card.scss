@@ -1,9 +1,9 @@
 .c_card {
   display: block;
+  border: 1px solid #666;
   .c_card__link {
     display: block;
     text-decoration: none;
-    border: 1px solid #666;
   }
   .c_card__figure {
     img {
@@ -21,6 +21,10 @@
   }
   .c_card__body {
     padding: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
   }
   .c_card__date {
     margin-left: 20px;
@@ -29,6 +33,8 @@
     @include fz(16);
   }
   .c_card__action {
-    padding: 0 20px 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
   }
 }

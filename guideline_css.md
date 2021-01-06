@@ -1,21 +1,20 @@
 # ガイドライン CSS
 
-## 設計
+## ①設計
 
 案件内容・規模により設計手法を選択する。 
-FLATではFLOCSSをベースにBEMとSMACSSをアレンジして取り入れる。
+FLATではFLOCSSをベースにBEMとSMACSSをアレンジして取り入れる。OOCSSは使用しない。
+
 >理由：世間に認知された手法を使うことで説明・ドキュメント作成の手間を省く
 
-**FLOCSS**
-（参考サイト）
+### FLOCSS
 https://github.com/hiloki/flocss
 
-**SMACSS**
-（参考サイト）SMACSSによるCSSの設計 | CodeGrid
-https://app.codegrid.net/entry/smacss-1
-https://app.codegrid.net/entry/smacss-2
+### SMACSS
 
-OOCSSは使用しない。
+（参考サイト）SMACSSによるCSSの設計 | CodeGrid  
+https://app.codegrid.net/entry/smacss-1  
+https://app.codegrid.net/entry/smacss-2
 
 ### リセット
 
@@ -27,12 +26,13 @@ Normalize.cssをベースにしたリセットCSS
 CSSリセットはこれで決まり！モダンブラウザによる相違を吸収するようカスタマイズされたスタイルシート -ress | コリス
 http://coliss.com/articles/build-websites/operation/css/modern-css-reset-ress.html
 
-## id/class
+## ②id/class
 
 ### レイアウト目的でidを使用しない。
+
 >理由：ページ内で一度しか使えないidをレイアウト目的で使用しない。
 
-id使用の例外
+###id使用の例外
 - ページ内リンク。
 - JavaScriptのフックにidを利用する。その場合、js-接頭詞を付与する。
 
@@ -48,7 +48,8 @@ id使用の例外
 </ul>
 ```
 
-## ネーミング
+
+## ③ネーミング
 
 ### 追加・運用されるサイトの命名規則はBEMを使用する。
 
@@ -71,10 +72,10 @@ __は1階層まで。エレメントはキャメルケースでつなげる。
 
 ```
 ◎OK
-.block__element1 {} .block__element2 {} 
+.block__elementXXX {} .block__elementYYY {} 
 
 ×NG
-.block__element1__element2 {}
+.block__elementXXX__elementYYY {}
 ```
 
 ### 状態とバリエーションを区別しない
@@ -93,13 +94,14 @@ http://5log.jp/blog/css_375/
 
 ### blockで大文字を使用しない
 
-## ショートハンド
+## ④ショートハンド
+
+ショートハンドは基本的に使用しない。
+ただし border-radiusはOK。
 
 ### back-ground
 
-3つまで＝ショートハンドを使用せず、個別に記述する。
-4つ＝ショートハンドを使用する。
-> 理由：ショートハンドを明示的に指定する。レスポンシブ・アニメーションの指定がしやすいよう分割して記載する。
+ショートハンドを使用せず、個別に記述する。
 
 ```
 ◎OK
@@ -118,12 +120,16 @@ CSS ショートハンド・プロパティの問題点 · terkel.jp
 http://terkel.jp/archives/2012/06/problem-with-css-shorthand-propaties/
 
 ### margin/padding
+
 3つまで＝ショートハンドを使用せず、個別に記述する。
 4つ＝ショートハンドを使用する。
-例外＝中央寄せはショートハンドの使用可。
 
 ```
 ◎OK
+margin-right: auto;
+margin-left: auto;
+
+✕NG 
 margin: 0 auto;
 ```
 
@@ -134,7 +140,7 @@ margin-top:10px;
 ×NG
 margin:10px 0 0 0;
 ```
-## Media Queries
+## ⑤メディアクエリ
 
 ### 1ヶ所にまとめず、各プロパティに記述する。
 
@@ -227,10 +233,18 @@ Foundation for Sites 6 Docs | Media Queries
 http://foundation.zurb.com/sites/docs/media-queries.html
 Media Queriesの値を参照
 
-## ベンダープレフィックス
+## ⑥ベンダープレフィックス
 ベンダープレフィックスは個別に指定せずautoprefixerで指定する。
 手動で指定しないこと。
 >理由：ブラウザの指定を検証を手動で行わず、自動で行う。
+
+## ⑦リセットCSS
+
+## ⑧変数
+
+## ⑨mixin
+
+## ⑩コメント
 
 ## その他
 

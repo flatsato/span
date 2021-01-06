@@ -27,61 +27,20 @@ name: 'pageName'
 </h1>
 <p class="c_pageHeading__lead">リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。リード文が入ります。</p>
 </div>
-<!-- c_cards START -->
-<h2>横2列</h2>
 <section class="c_cards">
-<article class="c_cards__item c_card">
-<a class="c_card__link" href="">
-<figure class="c_card__figure"><img alt="" src="http://placehold.it/300x200" width="" height=""></figure>
-<div class="c_card__body">
-<h2 class="c_card__title">タイトルが入ります。</h2>
-<p class="c_card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-</div>
-<div class="c_card__action">action</div>
-</a>
-</article>
-<article class="c_cards__item c_card">
-<a class="c_card__link" href="">
-<figure class="c_card__figure"><img alt="" src="http://placehold.it/300x200" width="" height=""></figure>
-<div class="c_card__body">
-<h2 class="c_card__title">タイトルが入ります。</h2>
-<p class="c_card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-</div>
-<div class="c_card__action">action</div>
-</a>
-</article>
-<article class="c_cards__item c_card">
-<a class="c_card__link" href="">
-<figure class="c_card__figure"><img alt="" src="http://placehold.it/300x200" width="" height=""></figure>
-<div class="c_card__body">
-<h2 class="c_card__title">タイトルが入ります。</h2>
-<p class="c_card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-</div>
-<div class="c_card__action">action</div>
-</a>
-</article>
-<article class="c_cards__item c_card">
-<a class="c_card__link" href="">
-<figure class="c_card__figure"><img alt="" src="http://placehold.it/300x200" width="" height=""></figure>
-<div class="c_card__body">
-<h2 class="c_card__title">タイトルが入ります。</h2>
-<p class="c_card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-</div>
-<div class="c_card__action">action</div>
-</a>
-</article>
-<article class="c_cards__item c_card">
-<a class="c_card__link" href="">
-<figure class="c_card__figure"><img alt="" src="http://placehold.it/300x200" width="" height=""></figure>
-<div class="c_card__body">
-<h2 class="c_card__title">タイトルが入ります。</h2>
-<p class="c_card__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-</div>
-<div class="c_card__action">action</div>
-</a>
-</article>
+<!-- card START -->
+<%- include('./_include/_c_card', {
+list: [
+{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
+{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
+{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
+{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
+{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
+{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
+]
+}) %>
+<!-- card END -->
 </section>
-<!-- c_card END -->
 </main>
 </div>
 <%- include('./_include/_l_footer') %>

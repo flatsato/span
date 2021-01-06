@@ -1,11 +1,6 @@
 # コーディングガイドライン
+- <a href="guideline_index.md">コーディングガイドラインもくじ</a>
 
-- <a href="guideline_basic.md">基本方針</a>
-- <a href="guideline_html.md">ガイドライン HTML</a>
-- <a href="guideline_css.md">ガイドライン CSS</a>
-- <a href="guideline_basic.md">ガイドライン JavaScript</a>
-
-- <a href="guideline_flow.md">はじめての方へ コーディングの進め方</a>
 
 # タスクランナー
 

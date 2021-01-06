@@ -3,6 +3,11 @@
 HTML5を使用する。
 モジュールの構造についてはtemplate内のHTMLを参照、案件に応じてアレンジは自由とする。
 
+## ファイル
+
+WordPress＝php
+それ以外＝ejs
+
 ## head
 
 ### favicon、Facebook OGP、Twitter表示確認

@@ -1,0 +1,27 @@
+<%
+if (typeof list === 'undefined') {
+var list = [
+{
+imagePath: '',
+imageWidth: '',
+imageheight: '',
+title: '',
+text: ''
+}
+];
+}
+%>
+<!-- c_cards__item START -->
+<% list.forEach((item) => { %>
+<article class="c_cards__item c_card">
+    <a class="c_card__link" href="">
+        <figure class="c_card__figure"><img src="<%- item.imagePath %>" width="" height="" decoding="async" alt=""></figure>
+        <div class="c_card__body">
+            <h2 class="c_card__title"><%- item.title %></h2>
+            <p class="c_card__text"><%- item.text %></p>
+        </div>
+        <div class="c_card__action">More</div>
+    </a>
+</article>
+<% })%>
+<!-- c_cards__item END -->
