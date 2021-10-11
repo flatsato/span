@@ -1,0 +1,14 @@
+br {
+  &.e_brSP {
+    display: inline;
+    @include global.desktop {
+      display: none;
+    }
+  }
+  &.e_brPC {
+    display: none;
+    @include global.desktop {
+      display: inline;
+    }
+  }
+}

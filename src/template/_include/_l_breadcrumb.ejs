@@ -1,22 +1,23 @@
 <% if (typeof breadcrumb === 'undefined') {breadcrumb = [{name: 'Home',url: '/'},{name: 'Category',url: '#'},{name: 'Current Page'}]} %>
 <% /*
 include('./_include/_l_breadcrumb', {
-  breadcrumb: [
-    {
-      name: 'Home',
-      url: '/'
-    },
-    {
-      name: 'Category',
-      url: '#'
-    },
-    {
-      name: 'Current Page'
-    }
-  ]
+breadcrumb: [
+{
+name: 'Home',
+url: '/'
+},
+{
+name: 'Category',
+url: '#'
+},
+{
+name: 'Current Page'
+}
+]
 })
 */ %>
 <div class="l_breadcrumb" aria-label="現在のページ">
+<div class="l_breadcrumb__inner">
 <ul class="l_breadcrumb__list">
 <% breadcrumb.forEach(function(item, i) { %>
 <% if(i != breadcrumb.length - 1) { %>
@@ -26,4 +27,5 @@ include('./_include/_l_breadcrumb', {
 <% } %>
 <% }) %>
 </ul>
+</div>
 </div>

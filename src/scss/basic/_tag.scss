@@ -1,0 +1,19 @@
+@use "../global";
+
+.e_tags {
+  .e_tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    height: 40px;
+    color: #fff;
+    text-decoration: none;
+    background: yellowgreen;
+    border-radius: 40px;
+    @include global.fz(14);
+    & + & {
+      margin-left: 5px;
+    }
+  }
+}

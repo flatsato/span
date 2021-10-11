@@ -1,0 +1,27 @@
+@use "function";
+
+//@include global.mobile{}
+@mixin mobile {
+  @media (max-width: function.$mobile - 1px) {
+    @content;
+  }
+}
+//@include global.tablet{}
+@mixin tablet {
+  @media (min-width: function.$mobile) {
+    @content;
+  }
+}
+//@include global.desktop{}
+@mixin desktop {
+  @media (min-width: function.$desktop) {
+    @content;
+  }
+}
+//@include global.wide{}
+@mixin wide {
+  @media (min-width: function.$wide) {
+    @content;
+  }
+}
+

@@ -9,8 +9,9 @@
     {
       "files": "*.js",
       "options": {
-        "trailingComma": "all",
-        "singleQuote": true
+        "printWidth": 100,
+        "singleQuote": true,
+        "trailingComma": "all"
       }
     }
   ]

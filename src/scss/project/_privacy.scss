@@ -1,0 +1,43 @@
+@use "../global";
+
+.p_privacy {
+  margin-top: 5rem;
+  .p_privacy__title {
+    @include global.fz(20);
+  }
+  .p_privacy__h2 {
+    @include global.fz(18);
+    margin-top: 2em;
+  }
+  .p_privacy__h3 {
+    @include global.fz(14);
+    margin-top: 2em;
+  }
+  .p_privacy__text {
+    margin-top: 1rem;
+    @include global.line-h(18, 10);
+    p + p {
+      margin-top: 2rem;
+    }
+  }
+  .p_privacy__list {
+    padding-left: 1em;
+    margin-top: 4rem;
+    &.-ul {
+      list-style: disc;
+    }
+    &.-ol {
+      list-style: decimal;
+    }
+  }
+  .p_privacy__item {
+    margin-top: 1rem;
+  }
+  .p_privacy__note {
+    color: #999;
+    @include global.fz(12);
+  }
+  .p_privacy__section {
+    margin-top: 40px;
+  }
+}

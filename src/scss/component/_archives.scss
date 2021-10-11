@@ -1,0 +1,7 @@
+@use "../global";
+
+.c_archives {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}

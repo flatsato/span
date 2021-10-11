@@ -1,0 +1,29 @@
+// @include global.ho;
+@mixin ov {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 0.7;
+    img {
+      background-color: rgba(#fff, 0.01);
+    }
+  }
+}
+
+//hover 画像拡大
+// @include global.hover_opacity_zoomimg;
+@mixin ov_zoomimg {
+  @include global.desktop {
+    overflow: hidden;
+  }
+  img {
+    transition: transform 0.4s ease-in-out;
+  }
+  &:hover {
+    img {
+      @include global.desktop {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

@@ -1,26 +1,18 @@
-<% /*
-include('./_include/_c_table', {
-  items: [
-    {
-      name: 'titleName',
-      url: '#'
-    },
-    {
-      name: 'titleName',
-      url: '#',
-      current: true
-    },
-  ],
-  modifier: '-catName'
-})
-*/ %>
-<% if (typeof items === 'undefined') {items = []} -%>
-<% if (typeof modifier === 'undefined') {modifier = ''} -%>
-<table class="c_localNav<% if (modifier) { %> <%= modifier %><%} -%>">
-  <% items.forEach(function(item, i) { %>
-  <tr class="c_localNav__item">
-    <th><%= item.th %></th>
-    <td><%= item.td1 %></td>
+<table class="c_table">
+  <thead>
+  <tr>
+    <th>タイトルが入ります</th>
+    <th>タイトルが入ります</th>
   </tr>
-  <% }) %>
+  </thead>
+  <tbody>
+  <tr>
+    <th>thの内容が入ります</th>
+    <td>tdの内容が入ります</td>
+  </tr>
+  <tr>
+    <th>thの内容が入ります</th>
+    <td>tdの内容が入ります</td>
+  </tr>
+  </tbody>
 </table>

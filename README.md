@@ -1,6 +1,10 @@
 # コーディングガイドライン
-- <a href="guideline_index.md">コーディングガイドラインもくじ</a>
 
+- <a href="guideline_directory.md">ディレクトリ構成</a>
+- <a href="guideline_frontend.md">ガイドライン フロントエンド実装ルール</a>
+- <a href="guideline_git.md">ガイドライン Git</a>
+- <a href="guideline_html.md">ガイドライン HTML</a>
+- <a href="guideline_css.md">ガイドライン CSS</a>
 
 # タスクランナー
 
@@ -8,7 +12,7 @@
 
 ## 環境
 
-Node.js v12.18.3
+Node.js v14.17.4
 
 バージョン管理にnvm(Node Version Manager)を利用している環境では、`nvm use`コマンドの実行で指定のバージョンに切り替わります。
 
@@ -16,13 +20,13 @@ Node.js v12.18.3
 nvm use
 ```
 
-下記メッセージが表示された場合は、`nvm install 12.18.3`でインストールしてください。
+下記メッセージが表示された場合は、`nvm install 14.17.4`でインストールしてください。
 
 ```
-Found '/パス省略/.nvmrc' with version <12.18.3>
-N/A: version "12.18.3 -> N/A" is not yet installed.
+Found '/パス省略/.nvmrc' with version <14.17.4>
+N/A: version "14.17.4 -> N/A" is not yet installed.
 
-You need to run "nvm install 12.18.3" to install it before using it.
+You need to run "nvm install 14.17.4" to install it before using it.
 ```
 
 ## インストール
@@ -33,13 +37,35 @@ npm ci
 
 このコマンドは、`node_modules`ディレクトリを自動で削除し、パッケージのバージョンが環境によって差のないように安全にインストールを行います。`npm install`ではなくこちらのコマンドを使用してください。
 
+## コマンド
+
+### 開発
+
+```
+npm run dev
+```
+
+### ビルド
+
+```
+npm run build
+```
+
+### CSS リント＆コード整形
+
+```
+npm run format:css
+```
+
+### JavaScript リント＆コード整形
+
+```
+npm run format:js
+```
+
 ## タスクランナー仕様
 
-### HTML（`html`&`ejs`タスク）
-
-#### ファイルインクルード（`html`タスク）
-
-[gulp-file-include](https://github.com/haoxins/gulp-file-include)
+### HTML（`ejs`タスク）
 
 #### テンプレートエンジン（`ejs`タスク）
 
@@ -57,17 +83,11 @@ npm ci
 
 #### ファイル圧縮
 
-[clean-css](https://github.com/jakubpawlowicz/clean-css)
+[CSSO](https://github.com/css/csso)
 
 #### リント & スタイルガイド
 
-[stylelint](hhttps://stylelint.io/) & [Prettier](https://prettier.io/)
-
-下記コマンドで自動修正（エラー部分は除く）
-
-```
-npx gulp format:sass
-```
+[stylelint](https://stylelint.io/) & [Prettier](https://prettier.io/)
 
 ### JavaScript（`js`タスク）
 
@@ -88,12 +108,6 @@ npx gulp format:sass
 [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
 
 [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)の`eslint-config-airbnb-base`を使用。
-
-下記コマンドで自動修正（エラー部分は除く）
-
-```
-npx gulp format:js
-```
 
 ### 画像（`image`タスク）
 

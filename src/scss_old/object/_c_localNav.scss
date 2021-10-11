@@ -1,0 +1,13 @@
+.c_localNav {
+  .c_localNav__list {
+    display: flex;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .c_localNav__item {
+    & + & {
+      margin-left: 20px;
+    }
+  }
+}

@@ -4,7 +4,7 @@ var list = [
 {
 imagePath: '',
 imageWidth: '',
-imageheight: '',
+imageHeight: '',
 title: '',
 text: ''
 }
@@ -15,7 +15,7 @@ text: ''
 <% list.forEach((item) => { %>
 <article class="c_cards__item c_card">
     <a class="c_card__link" href="">
-        <figure class="c_card__figure"><img src="<%- item.imagePath %>" width="" height="" decoding="async" alt=""></figure>
+        <figure class="c_card__figure"><img src="<%- item.imagePath %>" width="<%- item.imageWidth %>" height="<%- item.imageHeight %>" decoding="async" alt=""></figure>
         <div class="c_card__body">
             <h2 class="c_card__title"><%- item.title %></h2>
             <p class="c_card__text"><%- item.text %></p>

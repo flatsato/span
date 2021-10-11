@@ -21,10 +21,6 @@ name: 'pageName'
 <!-- l_breadcrumb END -->
 <div class="l_contents">
 <main class="l_main">
-<div class="c_pageHeading">
-<h1 class="c_heading01">ページタイトル</h1>
-<p class="c_pageHeading__lead">リード文が入ります。リード文が入ります。</p>
-</div>
 <!-- c_localNav START -->
 <%- include('./_include/_c_localNav', {
 items: [
@@ -52,8 +48,14 @@ url: '#'
 ]
 }) %>
 <!-- c_localNav END -->
-<h2 class="c_heading02">H2見出し</h2>
-<p>ここにコンテンツ</p>
+<div class="c_pageHeading">
+<h1 class="c_heading01">ページタイトル</h1>
+<p class="c_pageHeading__lead">リード文が入ります。リード文が入ります。</p>
+</div>
+<section class="c-section">
+<h2 class="c_heading02">table</h2>
+<%- include('./_include/_c_table') %>
+</section>
 </main>
 </div>
 <%- include('./_include/_l_footer') %>

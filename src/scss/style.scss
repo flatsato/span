@@ -1,20 +1,70 @@
-/* ==========================================================================
-Foundation
-========================================================================== */
-
-@import "mixin";
-@import "animation";
-@import "breakpoint";
-@import "font";
-@import "function";
-@import "reset";
-@import "zindex";
+@charset "utf-8";
 
 /* ==========================================================================
-Layout Object
+  basic
 ========================================================================== */
 
-@import "object/*";
+@use "basic/btn";
+@use "basic/checkbox";
+@use "basic/icon";
+@use "basic/input";
+@use "basic/radio";
+@use "basic/select";
+@use "basic/tag";
+@use "basic/textarea";
 
-// コーディング完了次第、temporaryフォルダとともに削除
-@import "temporary/*";
+/* ==========================================================================
+  component
+========================================================================== */
+
+@use "component/archives";
+@use "component/archive";
+@use "component/card";
+@use "component/cards";
+@use "component/form";
+@use "component/heading";
+@use "component/kv";
+@use "component/localNav";
+@use "component/pageHeading";
+@use "component/pageTitle";
+@use "component/pagination";
+@use "component/snsShare";
+@use "component/table";
+
+/* ==========================================================================
+  foundation
+========================================================================== */
+
+@use "foundation";
+
+/* ==========================================================================
+  layout
+========================================================================== */
+
+@use "layout/breadcrumb";
+@use "layout/container";
+@use "layout/contents";
+@use "layout/footer";
+@use "layout/footlink";
+@use "layout/gnav";
+@use "layout/header";
+@use "layout/main";
+@use "layout/pagetop";
+@use "layout/sub";
+
+/* ==========================================================================
+  project
+========================================================================== */
+
+@use "project/faq";
+@use "project/notfound";
+@use "project/privacy";
+@use "project/single";
+
+/* ==========================================================================
+  utility
+========================================================================== */
+
+@use "utility/br";
+@use "utility/margin";
+@use "utility/padding";

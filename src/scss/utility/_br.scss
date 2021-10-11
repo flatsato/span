@@ -1,0 +1,16 @@
+@use "../global";
+
+br {
+  &.u_brSP {
+    display: inline;
+    @include global.desktop {
+      display: none;
+    }
+  }
+  &.u_brPC {
+    display: none;
+    @include global.desktop {
+      display: inline;
+    }
+  }
+}

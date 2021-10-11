@@ -1,0 +1,44 @@
+.c_heading01 {
+  @include global.fz(24);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.c_heading02 {
+  @include global.fz(18);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.c_heading03 {
+  @include global.fz(14);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.c_heading04 {
+  @include global.fz(22);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.c_heading05 {
+  @include global.fz(18);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}

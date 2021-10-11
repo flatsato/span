@@ -1,0 +1,57 @@
+@use "../global";
+
+.c_snsShare {
+  .c_snsShare__list {
+    display: flex;
+    justify-content: center;
+  }
+  .c_snsShare__item {
+    width: 85px;
+    height: 50px;
+    margin-left: 7px;
+    border-radius: 5px;
+    @include global.fz(13);
+    @include global.hover_opacity;
+    &:nth-child {
+      margin-left: 0;
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #fff;
+      text-decoration: none;
+    }
+    &._twitter {
+      background: #1b95e0;
+      img {
+        width: 22px;
+        height: auto;
+      }
+    }
+    &._facebook {
+      background: #4267b2;
+      img {
+        width: 12px;
+        height: auto;
+      }
+    }
+    &._line {
+      background: #00b900;
+      img {
+        width: 24px;
+        height: auto;
+      }
+    }
+  }
+  .c_snsShare__text {
+    @include global.fz(13);
+    margin-top: 3px;
+    line-height: 1;
+    .-line & {
+      @include global.fz(11);
+    }
+  }
+}

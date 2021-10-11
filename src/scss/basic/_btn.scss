@@ -1,0 +1,267 @@
+@use "../global";
+
+//HTML
+//<div class="e_btnWrap -center">
+//<div class="e_btn -white -w460"><a href="" class="">ボタン</a></div>
+//<div class="e_btn -black -wFull"><button>ボタン</button></div>
+//<div class="e_btn -red -wFull"><input type="submit" value="ボタン"></div>
+//</div>
+//形
+a,
+button,
+input {
+  .b_btn &,
+  &.b_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    text-decoration: none;
+    letter-spacing: 0.16em;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #999;
+    transition: 0.3s ease-in-out;
+    @include global.fz(13);
+    & + & {
+      margin-left: 10px;
+    }
+  }
+  ._left & {
+    &::before {
+      left: 8px;
+    }
+  }
+  ._right & {
+    &::before {
+      right: 8px;
+    }
+  }
+}
+
+.b_btn {
+  & + & {
+    margin-left: 10px;
+  }
+  &._pseudo {
+    position: relative;
+    a,
+    button,
+    input {
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 10px;
+        height: 10px;
+        content: "";
+        background: #000;
+        transform: translateY(-50%);
+      }
+      &._left {
+        padding-left: 30px;
+        &::before {
+          left: 10px;
+        }
+      }
+      &._right {
+        padding-right: 30px;
+        &::before {
+          right: 10px;
+        }
+      }
+    }
+  }
+  &._pseudo_inline {
+    display: flex;
+    justify-content: center;
+    &._left {
+      a::before,
+      input::before,
+      button::before {
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin-right: 6px;
+        content: "";
+        background: #000;
+      }
+    }
+    &._right {
+      a::after,
+      input::after,
+      button::after {
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin-left: 6px;
+        content: "";
+        background: #000;
+      }
+    }
+  }
+  &._arrow {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 10px;
+      height: 10px;
+      content: "";
+      border: 2px #000 solid;
+      border-top: 0;
+      border-left: 0;
+    }
+    &._left::before {
+      left: 15px;
+      margin-top: -2px;
+      transform: rotate(135deg) translateY(50%);
+    }
+    &._right::before {
+      right: 15px;
+      margin-top: -10px;
+      transform: rotate(-45deg) translateY(50%);
+    }
+  }
+  &._right,
+  &._left {
+    position: relative;
+  }
+  &._icon {
+    position: relative;
+    i {
+      position: absolute;
+      @include global.fz(20);
+    }
+    &._left i {
+      left: 10px;
+      margin-right: 5px;
+    }
+    &._right i {
+      right: 10px;
+      margin-left: 5px;
+    }
+  }
+  &.-icon_inline {
+    i {
+      @include global.fz(20);
+    }
+    &._left i {
+      margin-right: 5px;
+    }
+    &._right i {
+      margin-left: 5px;
+    }
+  }
+}
+
+/* stylelint-disable */
+//色
+.b_btn {
+  &._white {
+    a,
+    button,
+    input {
+      color: #000;
+      background: #fff;
+      border: 2px solid #000;
+      &:hover {
+        color: #fff;
+        background: #000;
+      }
+    }
+  }
+  &._black {
+    a,
+    button,
+    input {
+      color: #fff;
+      background: #000;
+      border: 2px solid #000;
+      &:hover {
+        color: #000;
+        background: #fff;
+      }
+    }
+  }
+}
+
+//横幅
+.b_btn {
+  &._w235 {
+    width: 235px;
+    a,
+    button,
+    input {
+      width: 100%;
+    }
+  }
+  &._w460 {
+    width: 100%;
+    @include global.desktop {
+      width: 460px;
+    }
+    a,
+    button,
+    input {
+      width: 100%;
+    }
+  }
+}
+
+//縦幅
+.e_btn {
+  &._h45 {
+    a,
+    button,
+    input {
+      height: 45px;
+      border-radius: 45px;
+      @include global.desktop {
+        letter-spacing: 0.18em;
+      }
+    }
+  }
+}
+
+//囲み 右寄せ 中央寄せ 左寄せ
+.b_btnWrap {
+  display: flex;
+  &._left {
+    justify-content: flex-start;
+  }
+  &._center {
+    justify-content: center;
+  }
+  &._right {
+    justify-content: flex-end;
+  }
+}
+
+//個別
+.b_btn {
+  &._amazon {
+    a,
+    button,
+    input {
+      position: relative;
+      background: #fff;
+      border: 2px solid #f90;
+      &:hover {
+        color: #000;
+        background: #ffe3b9;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 94px;
+        height: auto;
+        margin-top: 4px;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@use "../global";
+
+.DartSass {
+    @include global.fz(15);
+    @include global.line-h(30, 15);
+}

@@ -1,3 +1,10 @@
+const mode = (() => {
+  if (process.env.NODE_ENV === undefined) {
+    process.env.NODE_ENV = "development";
+  }
+  return process.env.NODE_ENV;
+})();
+
 module.exports = {
   "server": {
     // localhostのDocumentRootの設定
@@ -17,26 +24,9 @@ module.exports = {
     "wpFlg": false,
   },
 
-  "html": {
-    // htmlに関するタスクを実行する対象の設定
-    "src": [
-      "./src/template/**/*.{html,php}",
-      "!./src/template/_include/**",
-    ],
-    // パーツとしてincludeするモジュールの格納先設定
-    "includeRoot": "./src/template/_include/",
-    // タスク完了後destするディレクトリの設定
-    "dest": "./dist/",
-    // dest時の圧縮設定
-    "minFlg": false,
-  },
-
   "ejs": {
     // ejsに関するタスクを実行する対象の設定
-    "src": [
-      "./src/template/**/*.ejs",
-      "!./src/template/_include/**",
-    ],
+    "src": "./src/template/**/*.ejs",
     // srcディレクトリの.ejsファイルをdestした際の拡張子の設定
     "suffix": ".html",
     // タスク完了後destするディレクトリの設定
@@ -68,7 +58,7 @@ module.exports = {
     // dest時の圧縮設定
     "minFlg": true,
     // sourcemapの設定
-    "mapFlg": true,
+    "mapFlg": mode !== "production",
     // wordpress用のdest設定
     "wpFlg": false,
   },
@@ -86,7 +76,7 @@ module.exports = {
     // dest時の圧縮設定
     "minFlg": false,
     // sourcemapの設定
-    "mapFlg": true,
+    "mapFlg": mode !== "production",
     // wordpress用のdest設定
     "wpFlg": false,
   },
@@ -99,4 +89,8 @@ module.exports = {
     // wordpress用のdest設定
     "wpFlg": false,
   },
+
+  "remove": [
+    "./dist",
+  ],
 };

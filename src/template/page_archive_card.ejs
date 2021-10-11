@@ -29,16 +29,18 @@ name: 'pageName'
 </div>
 <section class="c_cards">
 <!-- card START -->
-<%- include('./_include/_c_card', {
-list: [
-{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
-{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
-{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
-{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
-{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
-{ imagePath: 'http://placehold.it/300x200', imageWidth: '300', imageHeight: '200', title: 'タイトルがはいります。', text: 'テキストがはいります。テキストがはいります。' },
-]
-}) %>
+<article class="c_cards__item c_card">
+<a class="c_card__link" href="">
+<picture class="c_card__img">
+<img src="http://placehold.it/300x200" width="300" height="200" decoding="async" alt="">
+</picture>
+<div class="c_card__body">
+<h2 class="c_card__title"><%- item.title %></h2>
+<p class="c_card__text"><%- item.text %></p>
+</div>
+<div class="c_card__action">More</div>
+</a>
+</article>
 <!-- card END -->
 </section>
 </main>
