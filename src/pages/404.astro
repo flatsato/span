@@ -1,0 +1,42 @@
+---
+/**
+ * 404 Not Found
+ * 静的ホスティングの 404 フォールバック。
+ */
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+---
+
+<BaseLayout title="ページが見つかりません" noindex bodyClass="notfoundPage">
+  <section class="notfound container">
+    <p class="notfound__code">404</p>
+    <h1 class="notfound__title">ページが見つかりませんでした</h1>
+    <p class="notfound__text">
+      お探しのページは移動または削除された可能性があります。URL をご確認ください。
+    </p>
+    <Button href="/" size="lg">トップへ戻る</Button>
+  </section>
+
+  <style>
+    .notfound {
+      display: grid;
+      gap: var(--space-md);
+      place-items: center;
+      min-height: 60vh;
+      padding-block: var(--space-section);
+      text-align: center;
+    }
+
+    .notfound__code {
+      font-size: var(--text-3xl);
+      font-weight: var(--weight-bold);
+      line-height: 1;
+      color: var(--color-primary);
+    }
+
+    .notfound__text {
+      max-width: 40ch;
+      color: var(--color-text-muted);
+    }
+  </style>
+</BaseLayout>

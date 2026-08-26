@@ -1,0 +1,102 @@
+/**
+ * モダンリセット
+ * box-sizing 統一・既定マージン除去・メディア要素のブロック化など、
+ * 現代ブラウザ前提の最小リセット。IE 向けハックは持たない。
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+body {
+  min-height: 100svh;
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 見出し・段落は折り返しを最適化 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  line-height: var(--leading-tight);
+}
+
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+}
+
+/* メディア要素 */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* フォーム要素はフォントを継承 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* ボタンの最小限リセット */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* リンク既定 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* リスト初期化（ナビ等で使うため） */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+/* スクロール内リンクのオフセット & スムーズスクロール */
+:target {
+  scroll-margin-top: var(--header-height);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* フォーカスリング（キーボード操作時のみ） */
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}

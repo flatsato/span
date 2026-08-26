@@ -1,0 +1,97 @@
+---
+/**
+ * サンプル：お問い合わせフォーム
+ * native フォーム要素 + forms.css のグローバルクラスで構築。
+ * label と id の対応、必須表示、fieldset/legend、autofocus を網羅。
+ */
+import PageLayout from "@layouts/PageLayout.astro";
+import Button from "@components/Button.astro";
+---
+
+<PageLayout
+  title="お問い合わせ"
+  eyebrow="Contact"
+  lead="下記フォームよりお気軽にお問い合わせください。"
+  breadcrumb={[{ label: "お問い合わせ" }]}
+  bodyClass="formPage"
+>
+  <form class="contactForm" action="#" method="post">
+    <div class="field">
+      <label class="field__label" for="name">
+        お名前<span class="field__required">必須</span>
+      </label>
+      <input
+        class="formControl"
+        type="text"
+        id="name"
+        name="name"
+        autocomplete="name"
+        required
+        autofocus
+      />
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="email">
+        メールアドレス<span class="field__required">必須</span>
+      </label>
+      <input
+        class="formControl"
+        type="email"
+        id="email"
+        name="email"
+        autocomplete="email"
+        required
+      />
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="category">お問い合わせ種別</label>
+      <select class="formControl" id="category" name="category">
+        <option value="">選択してください</option>
+        <option value="estimate">お見積もり</option>
+        <option value="service">サービスについて</option>
+        <option value="other">その他</option>
+      </select>
+    </div>
+
+    <fieldset class="field">
+      <legend>ご希望の連絡方法</legend>
+      <div class="choiceGroup">
+        <label class="choice"
+          ><input type="radio" name="contactMethod" value="email" checked />メール</label
+        >
+        <label class="choice"><input type="radio" name="contactMethod" value="phone" />電話</label>
+      </div>
+    </fieldset>
+
+    <div class="field">
+      <label class="field__label" for="message">
+        お問い合わせ内容<span class="field__required">必須</span>
+      </label>
+      <textarea class="formControl" id="message" name="message" required></textarea>
+    </div>
+
+    <div class="field">
+      <label class="choice">
+        <input type="checkbox" name="agree" value="1" required />
+        <a href="/samples/privacy/">プライバシーポリシー</a>に同意する
+      </label>
+    </div>
+
+    <div class="contactForm__actions">
+      <Button type="submit" size="lg">送信する</Button>
+    </div>
+  </form>
+
+  <style>
+    .contactForm {
+      max-width: var(--width-narrow);
+    }
+
+    .contactForm__actions {
+      margin-block-start: var(--space-xl);
+      text-align: center;
+    }
+  </style>
+</PageLayout>

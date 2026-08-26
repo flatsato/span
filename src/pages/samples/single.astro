@@ -1,0 +1,87 @@
+---
+/**
+ * サンプル：記事詳細（single）
+ * 記事メタ（カテゴリ・日付）+ 本文 prose + 前後ナビ。
+ */
+import PageLayout from "@layouts/PageLayout.astro";
+import Button from "@components/Button.astro";
+---
+
+<PageLayout
+  title="記事タイトルがここに入ります"
+  breadcrumb={[{ label: "お知らせ", href: "/news/" }, { label: "記事タイトル" }]}
+  bodyClass="singlePage"
+>
+  <article class="article">
+    <div class="article__meta">
+      <span class="article__category">お知らせ</span>
+      <time datetime="2026-06-01">2026.06.01</time>
+    </div>
+
+    <div class="article__body prose flow">
+      <p>記事本文のリード。冒頭の概要をここに記述します。</p>
+      <h2>中見出し（h2）</h2>
+      <p>
+        本文の段落です。<a href="/">テキストリンク</a>や<strong>強調</strong
+        >などの基本要素を含みます。
+      </p>
+      <h3>小見出し（h3）</h3>
+      <ul>
+        <li>リスト項目 1</li>
+        <li>リスト項目 2</li>
+      </ul>
+      <blockquote>引用文のサンプルです。</blockquote>
+    </div>
+
+    <nav class="article__nav" aria-label="記事ナビゲーション">
+      <Button href="/news/" variant="outline">← 一覧へ戻る</Button>
+    </nav>
+  </article>
+
+  <style>
+    .article {
+      max-width: var(--width-narrow);
+      margin-inline: auto;
+    }
+
+    .article__meta {
+      display: flex;
+      gap: var(--space-sm);
+      align-items: center;
+      margin-block-end: var(--space-lg);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+
+    .article__category {
+      padding: 0.1em 0.6em;
+      color: var(--color-primary);
+      background-color: var(--color-brand-50);
+      border-radius: var(--radius-full);
+    }
+
+    .article__body {
+      --flow-space: var(--space-md);
+    }
+
+    .article__body :global(h2) {
+      margin-block-start: var(--space-xl);
+      padding-block-end: var(--space-2xs);
+      border-block-end: 1px solid var(--color-border);
+    }
+
+    .article__body :global(h3) {
+      margin-block-start: var(--space-lg);
+    }
+
+    .article__body :global(ul) {
+      padding-inline-start: 1.5em;
+      list-style: disc;
+    }
+
+    .article__nav {
+      margin-block-start: var(--space-2xl);
+      text-align: center;
+    }
+  </style>
+</PageLayout>

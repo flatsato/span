@@ -1,0 +1,57 @@
+/**
+ * カラートークン
+ * primitive（原色パレット）→ semantic（用途別）の2層構成。
+ * コンポーネントからは semantic（--color-text 等）を参照する。
+ */
+:root {
+  /* ---- primitive ---- */
+  --color-white: #fff;
+  --color-black: #15191e;
+
+  --color-gray-50: #f7f8fa;
+  --color-gray-100: #eef0f3;
+  --color-gray-200: #dfe3e8;
+  --color-gray-300: #c5ccd4;
+  --color-gray-400: #9aa4b0;
+  --color-gray-500: #6b7682;
+  --color-gray-600: #4c555f;
+  --color-gray-700: #353c44;
+  --color-gray-800: #232931;
+  --color-gray-900: #15191e;
+
+  /* ブランドカラー（案件ごとに変更） */
+  --color-brand-50: #eaf2ff;
+  --color-brand-100: #d2e3ff;
+  --color-brand-400: #4f8cff;
+  --color-brand-500: #1f6dff;
+  --color-brand-600: #1556d6;
+  --color-brand-700: #1043a8;
+
+  /* 状態色 */
+  --color-success: #2e8b57;
+  --color-warning: #d9892b;
+  --color-danger: #d64545;
+  --color-info: #2b7fd9;
+
+  /* ---- semantic ---- */
+  --color-text: var(--color-gray-800);
+  --color-text-muted: var(--color-gray-500);
+  --color-text-invert: var(--color-white);
+  --color-heading: var(--color-gray-900);
+
+  --color-bg: var(--color-white);
+  --color-bg-subtle: var(--color-gray-50);
+  --color-bg-muted: var(--color-gray-100);
+
+  --color-border: var(--color-gray-200);
+  --color-border-strong: var(--color-gray-300);
+
+  --color-primary: var(--color-brand-500);
+  --color-primary-hover: var(--color-brand-600);
+  --color-primary-active: var(--color-brand-700);
+
+  --color-link: var(--color-brand-600);
+  --color-link-hover: var(--color-brand-500);
+
+  --color-focus-ring: var(--color-brand-400);
+}

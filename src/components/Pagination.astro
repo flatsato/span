@@ -1,0 +1,119 @@
+---
+/**
+ * ページネーション
+ * current（現在ページ）と total（総ページ数）から番号リンクを生成。
+ * hrefFor で各ページの URL を組み立てる（既定は ?page=N）。
+ */
+interface Props {
+  current: number;
+  total: number;
+  hrefFor?: (page: number) => string;
+}
+
+const { current, total, hrefFor = (p: number) => `?page=${p}` } = Astro.props;
+
+// 表示する番号（前後2件 + 先頭末尾、省略は "…"）
+const range: (number | "…")[] = [];
+for (let p = 1; p <= total; p++) {
+  if (p === 1 || p === total || (p >= current - 1 && p <= current + 1)) {
+    range.push(p);
+  } else if (range.at(-1) !== "…") {
+    range.push("…");
+  }
+}
+---
+
+{
+  total > 1 && (
+    <nav class="pagination" aria-label="ページ送り">
+      <ul class="pagination__list" role="list">
+        <li>
+          <a
+            class="pagination__link -prev"
+            href={current > 1 ? hrefFor(current - 1) : undefined}
+            aria-disabled={current === 1 ? "true" : undefined}
+          >
+            前へ
+          </a>
+        </li>
+        {range.map((p) =>
+          p === "…" ? (
+            <li class="pagination__ellipsis" aria-hidden="true">
+              …
+            </li>
+          ) : (
+            <li>
+              <a
+                class="pagination__link"
+                href={hrefFor(p)}
+                aria-current={p === current ? "page" : undefined}
+              >
+                {p}
+              </a>
+            </li>
+          ),
+        )}
+        <li>
+          <a
+            class="pagination__link -next"
+            href={current < total ? hrefFor(current + 1) : undefined}
+            aria-disabled={current === total ? "true" : undefined}
+          >
+            次へ
+          </a>
+        </li>
+      </ul>
+    </nav>
+  )
+}
+
+<style>
+  .pagination {
+    margin-block-start: var(--space-xl);
+  }
+
+  .pagination__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pagination__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding-inline: var(--space-xs);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    text-decoration: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .pagination__link:hover {
+    border-color: var(--color-primary);
+  }
+
+  .pagination__link[aria-current="page"] {
+    color: var(--color-text-invert);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .pagination__link[aria-disabled="true"] {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  .pagination__ellipsis {
+    padding-inline: var(--space-2xs);
+    color: var(--color-text-muted);
+  }
+</style>

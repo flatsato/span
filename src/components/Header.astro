@@ -1,0 +1,118 @@
+---
+/**
+ * サイトヘッダー
+ * ロゴ + グローバルナビ。SP ではドロワー（ハンバーガー）開閉。
+ * 開閉は最小限のインライン JS（チェックボックスでも可だが ARIA 対応のため button）。
+ */
+import Gnav from "@components/Gnav.astro";
+import { site } from "@/config/site";
+---
+
+<header class="header">
+  <div class="header__inner container -wide">
+    <a class="header__logo" href="/">{site.name}</a>
+
+    <button
+      class="header__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="globalNav"
+      data-drawer-toggle
+    >
+      <span class="header__toggleBar" aria-hidden="true"></span>
+      <span class="visually-hidden">メニューを開閉</span>
+    </button>
+
+    <Gnav id="globalNav" />
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: var(--z-header);
+    background-color: var(--color-bg);
+    border-block-end: 1px solid var(--color-border);
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--header-height);
+  }
+
+  .header__logo {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+    color: var(--color-heading);
+    text-decoration: none;
+    letter-spacing: var(--tracking-tight);
+  }
+
+  /* ハンバーガー */
+  .header__toggle {
+    position: relative;
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .header__toggleBar,
+  .header__toggleBar::before,
+  .header__toggleBar::after {
+    position: absolute;
+    inset-inline: 0.5rem;
+    height: 2px;
+    background-color: var(--color-heading);
+    transition:
+      transform 0.25s ease,
+      opacity 0.2s ease;
+    content: "";
+  }
+
+  .header__toggleBar {
+    inset-block-start: 50%;
+  }
+
+  .header__toggleBar::before {
+    inset-block-start: -7px;
+  }
+
+  .header__toggleBar::after {
+    inset-block-start: 7px;
+  }
+
+  /* 開いている状態（×印） */
+  .header__toggle[aria-expanded="true"] .header__toggleBar {
+    background-color: transparent;
+  }
+
+  .header__toggle[aria-expanded="true"] .header__toggleBar::before {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .header__toggle[aria-expanded="true"] .header__toggleBar::after {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* SP のみハンバーガー表示 */
+  @media (width < 1024px) {
+    .header__toggle {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>("[data-drawer-toggle]");
+  const nav = document.getElementById("globalNav");
+
+  toggle?.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!open));
+    nav?.toggleAttribute("data-open", !open);
+    document.body.style.overflow = !open ? "hidden" : "";
+  });
+</script>

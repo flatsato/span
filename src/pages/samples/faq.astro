@@ -1,0 +1,111 @@
+---
+/**
+ * サンプル：FAQ
+ * native の <details>/<summary> でアコーディオン。JS 不要・アクセシブル。
+ */
+import PageLayout from "@layouts/PageLayout.astro";
+
+const faqs = [
+  {
+    q: "対応している制作の範囲を教えてください。",
+    a: "要件定義・設計・デザイン・実装・公開後の運用まで一貫して対応します。",
+  },
+  {
+    q: "既存サイトのリニューアルは可能ですか？",
+    a: "可能です。現状分析のうえ、移行方針をご提案します。",
+  },
+  {
+    q: "CMS には対応していますか？",
+    a: "WordPress やヘッドレス CMS など、案件に応じて最適な構成を選定します。",
+  },
+];
+---
+
+<PageLayout
+  title="よくあるご質問"
+  eyebrow="FAQ"
+  lead="お問い合わせの多いご質問をまとめました。"
+  breadcrumb={[{ label: "サンプル", href: "/" }, { label: "FAQ" }]}
+  bodyClass="faqPage"
+>
+  <div class="faq">
+    {
+      faqs.map((item) => (
+        <details class="faq__item">
+          <summary class="faq__q">
+            <span class="faq__mark" aria-hidden="true">
+              Q
+            </span>
+            {item.q}
+          </summary>
+          <div class="faq__a">
+            <span class="faq__mark -a" aria-hidden="true">
+              A
+            </span>
+            <p>{item.a}</p>
+          </div>
+        </details>
+      ))
+    }
+  </div>
+
+  <style>
+    .faq {
+      max-width: var(--width-narrow);
+    }
+
+    .faq__item {
+      border-block-end: 1px solid var(--color-border);
+    }
+
+    .faq__q {
+      display: flex;
+      gap: var(--space-sm);
+      align-items: center;
+      padding-block: var(--space-md);
+      font-weight: var(--weight-medium);
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq__q::-webkit-details-marker {
+      display: none;
+    }
+
+    /* 開閉アイコン（＋ / −） */
+    .faq__q::after {
+      margin-inline-start: auto;
+      font-size: var(--text-lg);
+      color: var(--color-primary);
+      content: "＋";
+      transition: transform 0.2s ease;
+    }
+
+    .faq__item[open] .faq__q::after {
+      content: "−";
+    }
+
+    .faq__mark {
+      display: grid;
+      place-items: center;
+      width: 1.75rem;
+      height: 1.75rem;
+      font-size: var(--text-sm);
+      font-weight: var(--weight-bold);
+      color: var(--color-text-invert);
+      background-color: var(--color-primary);
+      border-radius: var(--radius-full);
+    }
+
+    .faq__mark.-a {
+      background-color: var(--color-gray-400);
+    }
+
+    .faq__a {
+      display: flex;
+      gap: var(--space-sm);
+      padding-block-end: var(--space-md);
+      color: var(--color-text-muted);
+    }
+  </style>
+</PageLayout>

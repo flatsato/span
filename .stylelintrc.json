@@ -1,0 +1,34 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "overrides": [
+    {
+      "files": ["**/*.astro"],
+      "customSyntax": "postcss-html"
+    }
+  ],
+  "rules": {
+    "selector-class-pattern": [
+      "^-?[a-z][a-zA-Z0-9]*(__[a-z][a-zA-Z0-9]*)?(-[a-zA-Z0-9]+)?$",
+      {
+        "message": "クラス名は camelCase BEM（block__element）+ 先頭ハイフンの modifier（.-large 等）で記述してください"
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global"] }],
+    "import-notation": "string",
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreKeywords": ["optimizeLegibility", "optimizeSpeed"],
+        "ignoreProperties": ["font-family"]
+      }
+    ],
+    "alpha-value-notation": null,
+    "rule-empty-line-before": null,
+    "custom-property-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "comment-empty-line-before": null,
+    "no-descending-specificity": null,
+    "property-no-vendor-prefix": null,
+    "media-feature-range-notation": "context"
+  }
+}

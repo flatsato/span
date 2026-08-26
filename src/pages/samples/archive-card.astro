@@ -1,0 +1,45 @@
+---
+/**
+ * サンプル：一覧（カードレイアウト）
+ * Card コンポーネントのグリッド + ページネーション。
+ */
+import PageLayout from "@layouts/PageLayout.astro";
+import Card from "@components/Card.astro";
+import Pagination from "@components/Pagination.astro";
+
+const items = Array.from({ length: 6 }, (_, i) => ({
+  title: `記事タイトルのサンプル ${i + 1}`,
+  href: `/news/${i + 1}/`,
+  category: i % 2 === 0 ? "お知らせ" : "サービス",
+  date: "2026-06-01",
+  dateLabel: "2026.06.01",
+  excerpt: "抜粋テキストがここに入ります。一覧での概要表示に使います。",
+}));
+---
+
+<PageLayout
+  title="お知らせ（カード）"
+  eyebrow="News"
+  breadcrumb={[{ label: "お知らせ" }]}
+  bodyClass="archivePage"
+>
+  <ul class="cardGrid" role="list">
+    {
+      items.map((item) => (
+        <li>
+          <Card {...item} />
+        </li>
+      ))
+    }
+  </ul>
+
+  <Pagination current={1} total={5} hrefFor={(p) => `/samples/archive-card/?page=${p}`} />
+
+  <style>
+    .cardGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+      gap: var(--space-lg);
+    }
+  </style>
+</PageLayout>

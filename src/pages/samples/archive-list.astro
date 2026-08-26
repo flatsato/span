@@ -1,0 +1,100 @@
+---
+/**
+ * サンプル：一覧（リストレイアウト）
+ * 日付 + カテゴリ + タイトルの行リスト。お知らせ向け。
+ */
+import PageLayout from "@layouts/PageLayout.astro";
+import Pagination from "@components/Pagination.astro";
+
+const items = Array.from({ length: 8 }, (_, i) => ({
+  title: `お知らせのタイトルサンプル ${i + 1}`,
+  href: `/news/${i + 1}/`,
+  category: i % 3 === 0 ? "重要" : "お知らせ",
+  date: "2026-06-01",
+  dateLabel: "2026.06.01",
+}));
+---
+
+<PageLayout
+  title="お知らせ（リスト）"
+  eyebrow="News"
+  breadcrumb={[{ label: "お知らせ" }]}
+  bodyClass="archivePage"
+>
+  <ul class="newsList" role="list">
+    {
+      items.map((item) => (
+        <li class="newsList__item">
+          <a class="newsList__link" href={item.href}>
+            <time class="newsList__date" datetime={item.date}>
+              {item.dateLabel}
+            </time>
+            <span class:list={["newsList__category", item.category === "重要" && "-important"]}>
+              {item.category}
+            </span>
+            <span class="newsList__title">{item.title}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <Pagination current={1} total={5} hrefFor={(p) => `/samples/archive-list/?page=${p}`} />
+
+  <style>
+    .newsList {
+      border-block-start: 1px solid var(--color-border);
+    }
+
+    .newsList__item {
+      border-block-end: 1px solid var(--color-border);
+    }
+
+    .newsList__link {
+      display: grid;
+      grid-template-columns: auto auto 1fr;
+      gap: var(--space-sm) var(--space-md);
+      align-items: center;
+      padding-block: var(--space-md);
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .newsList__link:hover {
+      color: var(--color-primary);
+    }
+
+    .newsList__date {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+
+    .newsList__category {
+      padding: 0.1em 0.7em;
+      font-size: var(--text-xs);
+      color: var(--color-text-invert);
+      background-color: var(--color-gray-500);
+      border-radius: var(--radius-full);
+    }
+
+    .newsList__category.-important {
+      background-color: var(--color-danger);
+    }
+
+    .newsList__title {
+      font-weight: var(--weight-medium);
+    }
+
+    /* SP は日付・カテゴリを上段、タイトルを下段に */
+    @media (width < 640px) {
+      .newsList__link {
+        grid-template-columns: auto 1fr;
+      }
+
+      .newsList__title {
+        grid-column: 1 / -1;
+      }
+    }
+  </style>
+</PageLayout>

@@ -1,0 +1,21 @@
+/**
+ * グローバルスタイル エントリポイント
+ * BaseLayout から1度だけ読み込む。
+ *
+ * カスケードレイヤーで詠順を固定する。後ろのレイヤーほど強い。
+ *   reset      … ブラウザ差の吸収（最弱）
+ *   base       … 素の HTML 要素のベーススタイル
+ *   layout     … ページ骨格（header / footer / container など）
+ *   components … 再利用部品（Astro の scoped style もここ相当の役割）
+ *   utilities  … 単機能の上書きクラス（最強）
+ *
+ * トークン（:root のカスタムプロパティ）はレイヤー外。値の定義のみで
+ * セレクタ競合を起こさないため、どのレイヤーからも参照できる。
+ */
+@layer reset, base, layout, components, utilities;
+
+@import "./tokens/index.css";
+@import "./reset.css" layer(reset);
+@import "./base.css" layer(base);
+@import "./forms.css" layer(components);
+@import "./utilities.css" layer(utilities);

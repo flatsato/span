@@ -1,0 +1,47 @@
+---
+/**
+ * サンプル：ベース 2 カラム
+ * 本文 + サイドバー（LocalNav）。aside スロットに内容を入れると 2 カラムになる。
+ */
+import PageLayout from "@layouts/PageLayout.astro";
+import LocalNav from "@components/LocalNav.astro";
+
+const sideItems = [
+  { label: "会社概要", href: "/about/" },
+  { label: "代表挨拶", href: "/about/message/" },
+  { label: "沿革", href: "/about/history/" },
+  { label: "アクセス", href: "/about/access/" },
+];
+---
+
+<PageLayout
+  title="ベース 2カラム"
+  eyebrow="Sample"
+  lead="本文とサイドバーを並べる 2 カラムレイアウトのサンプルです。"
+  breadcrumb={[{ label: "サンプル", href: "/" }, { label: "ベース 2カラム" }]}
+  bodyClass="basePage"
+>
+  <div class="prose flow">
+    <h2>見出し h2</h2>
+    <p>
+      左が本文、右がサイドバーです。PC では横並び、モバイルでは縦積みに切り替わります（1024px
+      境界）。
+    </p>
+    <h3>見出し h3</h3>
+    <p>サイドバーにはローカルナビや関連リンク、バナーなどを配置します。</p>
+  </div>
+
+  <Fragment slot="aside">
+    <LocalNav title="会社案内" items={sideItems} />
+  </Fragment>
+</PageLayout>
+
+<style>
+  .prose {
+    --flow-space: var(--space-md);
+  }
+
+  .prose :global(h2) {
+    margin-block-start: var(--space-xl);
+  }
+</style>

@@ -1,0 +1,82 @@
+---
+/**
+ * サイトフッター
+ * フッターナビ + コピーライト。
+ */
+import { site, footerNav } from "@/config/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer__inner container -wide">
+    <p class="footer__brand">{site.name}</p>
+
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <ul class="footer__list" role="list">
+        {
+          footerNav.map((item) => (
+            <li>
+              <a
+                class="footer__link"
+                href={item.href}
+                {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <p class="footer__copyright">
+      <small>&copy; {year} {site.name}</small>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    margin-block-start: var(--space-section);
+    padding-block: var(--space-xl);
+    color: var(--color-text-invert);
+    background-color: var(--color-gray-900);
+  }
+
+  .footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md) var(--space-xl);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer__brand {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold);
+  }
+
+  .footer__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .footer__link {
+    font-size: var(--text-sm);
+    color: var(--color-gray-300);
+    text-decoration: none;
+  }
+
+  .footer__link:hover {
+    color: var(--color-text-invert);
+    text-decoration: underline;
+  }
+
+  .footer__copyright {
+    width: 100%;
+    color: var(--color-gray-400);
+    text-align: center;
+  }
+</style>

@@ -1,0 +1,98 @@
+---
+/**
+ * ベースレイアウト
+ * 全ページの土台。<head>（メタ/OGP）と header / main / footer 骨格を提供する。
+ */
+import "@styles/global.css";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import { site } from "@/config/site";
+
+interface Props {
+  /** ページ固有タイトル。空ならサイト名のみ */
+  title?: string;
+  description?: string;
+  /** OGP 画像パス（未指定はサイト既定） */
+  ogImage?: string;
+  /** noindex を出すか */
+  noindex?: boolean;
+  /** <body> に付与するページ識別クラス（例: aboutPage） */
+  bodyClass?: string;
+}
+
+const {
+  title,
+  description = site.description,
+  ogImage = site.ogImage,
+  noindex = false,
+  bodyClass,
+} = Astro.props;
+
+const pageTitle = title ? `${title} | ${site.titleSuffix}` : site.titleSuffix;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const ogImageUrl = new URL(ogImage, site.url).href;
+---
+
+<!doctype html>
+<html lang={site.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    {/* OGP */}
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content={site.locale} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {/* favicon（/public 配下に配置） */}
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    {/* Google Fonts（Noto Sans JP） */}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+    />
+
+    <slot name="head" />
+  </head>
+  <body class={bodyClass}>
+    <a class="skipLink visually-hidden" href="#main">本文へスキップ</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+
+    <style>
+      /* スキップリンク：フォーカス時のみ表示 */
+      .skipLink:focus {
+        position: fixed;
+        inset-block-start: var(--space-2xs);
+        inset-inline-start: var(--space-2xs);
+        z-index: var(--z-toast);
+        width: auto;
+        height: auto;
+        padding: var(--space-2xs) var(--space-sm);
+        clip-path: none;
+        color: var(--color-text-invert);
+        background-color: var(--color-primary);
+        border-radius: var(--radius-sm);
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+---
+/**
+ * サンプル：TOP ページ
+ * KV（ヒーロー）+ サービス紹介 + 新着 + CTA の典型構成。
+ */
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Section from "@components/Section.astro";
+import Button from "@components/Button.astro";
+import Card from "@components/Card.astro";
+
+const services = [
+  {
+    title: "ウェブサイト制作",
+    desc: "コーポレート・採用・ブランドサイトの設計と実装。",
+    href: "/service/",
+  },
+  {
+    title: "UI / UX デザイン",
+    desc: "情報設計からビジュアルデザインまで一貫して対応。",
+    href: "/service/",
+  },
+  { title: "運用・改善", desc: "公開後の更新・計測・改善まで伴走します。", href: "/service/" },
+];
+
+const news = [
+  {
+    title: "コーポレートサイトをリニューアルしました",
+    href: "/news/1/",
+    date: "2026-06-01",
+    dateLabel: "2026.06.01",
+    category: "お知らせ",
+  },
+  {
+    title: "新サービスの提供を開始しました",
+    href: "/news/2/",
+    date: "2026-05-20",
+    dateLabel: "2026.05.20",
+    category: "サービス",
+  },
+  {
+    title: "夏季休業のお知らせ",
+    href: "/news/3/",
+    date: "2026-05-10",
+    dateLabel: "2026.05.10",
+    category: "お知らせ",
+  },
+];
+---
+
+<BaseLayout bodyClass="topPage">
+  {/* ヒーロー */}
+  <section class="hero">
+    <div class="hero__inner container -wide">
+      <p class="hero__eyebrow">FLAT Starter Kit</p>
+      <h1 class="hero__title">モダンな制作の<br />はじめの一歩を、ここから。</h1>
+      <p class="hero__lead">
+        Astro と最新の CSS で構築する、再利用可能なウェブサイト制作テンプレート。
+      </p>
+      <div class="hero__actions">
+        <Button href="/contact/" size="lg">お問い合わせ</Button>
+        <Button href="/service/" size="lg" variant="outline">サービスを見る</Button>
+      </div>
+    </div>
+  </section>
+
+  {/* サービス */}
+  <Section width="content">
+    <h2 class="sectionTitle">サービス</h2>
+    <ul class="serviceGrid" role="list">
+      {
+        services.map((s) => (
+          <li class="serviceItem">
+            <h3 class="serviceItem__title">{s.title}</h3>
+            <p class="serviceItem__desc">{s.desc}</p>
+            <Button href={s.href} variant="ghost" size="sm">
+              詳しく見る →
+            </Button>
+          </li>
+        ))
+      }
+    </ul>
+  </Section>
+
+  {/* 新着 */}
+  <Section width="content" bg="subtle">
+    <h2 class="sectionTitle">お知らせ</h2>
+    <ul class="cardGrid" role="list">
+      {
+        news.map((n) => (
+          <li>
+            <Card {...n} />
+          </li>
+        ))
+      }
+    </ul>
+    <div class="sectionMore">
+      <Button href="/news/" variant="outline">お知らせ一覧</Button>
+    </div>
+  </Section>
+
+  <style>
+    .hero {
+      padding-block: var(--space-section);
+      color: var(--color-text-invert);
+      background:
+        radial-gradient(circle at 20% 20%, var(--color-brand-600), transparent 60%),
+        linear-gradient(135deg, var(--color-brand-700), var(--color-gray-900));
+    }
+
+    .hero__eyebrow {
+      font-size: var(--text-sm);
+      font-weight: var(--weight-medium);
+      letter-spacing: var(--tracking-wide);
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    .hero__title {
+      margin-block-start: var(--space-sm);
+      font-size: var(--text-3xl);
+      color: inherit;
+    }
+
+    .hero__lead {
+      margin-block-start: var(--space-md);
+      max-width: 40ch;
+      opacity: 0.9;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-block-start: var(--space-xl);
+    }
+
+    .sectionTitle {
+      margin-block-end: var(--space-xl);
+      text-align: center;
+    }
+
+    .serviceGrid,
+    .cardGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      gap: var(--space-lg);
+    }
+
+    .serviceItem {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2xs);
+      align-items: start;
+      padding: var(--space-lg);
+      background-color: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+
+    .serviceItem__desc {
+      flex: 1;
+      color: var(--color-text-muted);
+    }
+
+    .sectionMore {
+      margin-block-start: var(--space-xl);
+      text-align: center;
+    }
+  </style>
+</BaseLayout>

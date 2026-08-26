@@ -1,0 +1,45 @@
+---
+/**
+ * 下層ページの見出しブロック
+ * ページタイトル（h1）＋任意のリード文・英字サブタイトル。
+ */
+interface Props {
+  title: string;
+  /** 英字などの上付きサブタイトル */
+  eyebrow?: string;
+  lead?: string;
+}
+
+const { title, eyebrow, lead } = Astro.props;
+---
+
+<div class="pageHeader">
+  <div class="pageHeader__inner container">
+    {eyebrow && <p class="pageHeader__eyebrow">{eyebrow}</p>}
+    <h1 class="pageHeader__title">{title}</h1>
+    {lead && <p class="pageHeader__lead">{lead}</p>}
+  </div>
+</div>
+
+<style>
+  .pageHeader {
+    padding-block: var(--space-block);
+    background-color: var(--color-bg-subtle);
+    border-block-end: 1px solid var(--color-border);
+  }
+
+  .pageHeader__eyebrow {
+    margin-block-end: var(--space-2xs);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-primary);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+  }
+
+  .pageHeader__lead {
+    margin-block-start: var(--space-sm);
+    max-width: var(--width-narrow);
+    color: var(--color-text-muted);
+  }
+</style>

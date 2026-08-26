@@ -1,0 +1,40 @@
+/**
+ * タイポグラフィトークン
+ * フォントサイズは clamp() の流体タイプスケール。
+ * 第1引数=SP最小値 / 第3引数=PC最大値 / 第2引数=ビューポート連動値。
+ */
+:root {
+  /* フォントファミリー */
+  --font-sans:
+    "Noto Sans JP", system-ui, -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Meiryo", sans-serif;
+  --font-mono:
+    ui-monospace, "SF Mono", "Cascadia Code", "Consolas", "Liberation Mono", "Menlo", monospace;
+
+  /* 流体フォントサイズ（375px 〜 1280px で補間） */
+  --text-xs: clamp(0.6875rem, 0.66rem + 0.12vw, 0.75rem); /* 11 → 12 */
+  --text-sm: clamp(0.8125rem, 0.79rem + 0.12vw, 0.875rem); /* 13 → 14 */
+  --text-base: clamp(0.9375rem, 0.91rem + 0.12vw, 1rem); /* 15 → 16 */
+  --text-md: clamp(1rem, 0.95rem + 0.24vw, 1.125rem); /* 16 → 18 */
+  --text-lg: clamp(1.125rem, 1.05rem + 0.36vw, 1.375rem); /* 18 → 22 */
+  --text-xl: clamp(1.375rem, 1.21rem + 0.73vw, 1.75rem); /* 22 → 28 */
+  --text-2xl: clamp(1.625rem, 1.34rem + 1.22vw, 2.25rem); /* 26 → 36 */
+  --text-3xl: clamp(2rem, 1.56rem + 1.95vw, 3rem); /* 32 → 48 */
+
+  /* 行間 */
+  --leading-none: 1;
+  --leading-tight: 1.3;
+  --leading-snug: 1.5;
+  --leading-normal: 1.75;
+  --leading-loose: 2;
+
+  /* 文字間 */
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+
+  /* ウェイト */
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+}

@@ -1,28 +1,27 @@
+# build output
+/dist/
+# generated types
+/.astro/
+
+# dependencies
+/node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS / Windows
 .DS_Store
 Thumbs.db
-yarn.lock
 
 # JetBrains IDE
 .idea/
 *.iml
 # Visual Studio Code
 .vscode/
-
-/node_modules/
-/dist/
-
-/wp/.htaccess
-/wp/*.html
-/wp/*.php
-/wp/*.txt
-/wp/wp-admin/
-/wp/wp-content/languages/
-/wp/wp-content/plugins/
-/wp/wp-content/themes/twentyfifteen/
-/wp/wp-content/themes/twentyfourteen/
-/wp/wp-content/themes/twentysixteen/
-/wp/wp-content/themes/index.php
-/wp/wp-content/upgrade/
-/wp/wp-content/uploads/
-/wp/wp-content/index.php
-/wp/wp-includes/

@@ -1,0 +1,109 @@
+---
+/**
+ * グローバルナビゲーション
+ * PC は横並び、SP はヘッダーから降りるドロワー（data-open で開閉）。
+ * 現在地は aria-current で示す。
+ */
+import { globalNav } from "@/config/site";
+
+interface Props {
+  id?: string;
+}
+
+const { id } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const isCurrent = (href: string) =>
+  href === "/" ? currentPath === "/" : currentPath.startsWith(href);
+---
+
+<nav class="gnav" id={id} aria-label="グローバルナビゲーション">
+  <ul class="gnav__list" role="list">
+    {
+      globalNav.map((item) => (
+        <li class="gnav__item">
+          <a
+            class="gnav__link"
+            href={item.href}
+            aria-current={isCurrent(item.href) ? "page" : undefined}
+            {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .gnav__list {
+    display: flex;
+    gap: clamp(var(--space-sm), 2vw, var(--space-lg));
+    align-items: center;
+  }
+
+  .gnav__link {
+    position: relative;
+    display: inline-block;
+    padding-block: var(--space-2xs);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .gnav__link::after {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+    content: "";
+  }
+
+  .gnav__link:hover::after,
+  .gnav__link[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+
+  /* SP ドロワー */
+  @media (width < 1024px) {
+    .gnav {
+      position: fixed;
+      inset-block: var(--header-height) 0;
+      inset-inline-end: 0;
+      z-index: var(--z-drawer);
+      width: min(80vw, 20rem);
+      padding: var(--space-lg) var(--gutter);
+      background-color: var(--color-bg);
+      border-inline-start: 1px solid var(--color-border);
+      box-shadow: var(--shadow-lg);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .gnav[data-open] {
+      transform: translateX(0);
+    }
+
+    .gnav__list {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .gnav__link {
+      display: block;
+      padding-block: var(--space-sm);
+      font-size: var(--text-base);
+      border-block-end: 1px solid var(--color-border);
+    }
+
+    .gnav__link::after {
+      display: none;
+    }
+  }
+</style>

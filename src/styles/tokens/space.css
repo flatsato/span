@@ -1,0 +1,29 @@
+/**
+ * スペーシングトークン
+ * 段階は t-shirt サイズ。section 周りの大きな余白は流体（clamp）。
+ */
+:root {
+  --space-3xs: 0.25rem; /* 4 */
+  --space-2xs: 0.5rem; /* 8 */
+  --space-xs: 0.75rem; /* 12 */
+  --space-sm: 1rem; /* 16 */
+  --space-md: 1.5rem; /* 24 */
+  --space-lg: 2rem; /* 32 */
+  --space-xl: 3rem; /* 48 */
+  --space-2xl: 4rem; /* 64 */
+
+  /* セクション間の流体余白 */
+  --space-section: clamp(3rem, 2rem + 5vw, 6rem); /* 48 → 96 */
+  --space-block: clamp(2rem, 1.5rem + 2.5vw, 3.5rem); /* 32 → 56 */
+
+  /* 角丸 */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  /* 影 */
+  --shadow-sm: 0 1px 2px rgb(21 25 30 / 6%);
+  --shadow-md: 0 4px 12px rgb(21 25 30 / 8%);
+  --shadow-lg: 0 12px 32px rgb(21 25 30 / 12%);
+}

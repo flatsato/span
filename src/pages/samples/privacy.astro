@@ -1,0 +1,90 @@
+---
+/**
+ * サンプル：プライバシーポリシー
+ * 規約系の長文ページ。番号付きセクションの prose レイアウト。
+ */
+import PageLayout from "@layouts/PageLayout.astro";
+
+const sections = [
+  {
+    title: "個人情報の取得",
+    body: "当社は、適法かつ公正な手段により、必要な範囲で個人情報を取得します。",
+  },
+  {
+    title: "利用目的",
+    body: "取得した個人情報は、お問い合わせ対応・サービス提供のために利用します。",
+  },
+  {
+    title: "第三者提供",
+    body: "法令に基づく場合を除き、ご本人の同意なく第三者へ提供することはありません。",
+  },
+  {
+    title: "開示・訂正・削除",
+    body: "ご本人からの求めに応じ、保有個人データの開示・訂正・削除に対応します。",
+  },
+];
+---
+
+<PageLayout
+  title="プライバシーポリシー"
+  eyebrow="Privacy Policy"
+  lead="当社における個人情報の取り扱いについて定めるものです。"
+  breadcrumb={[{ label: "プライバシーポリシー" }]}
+  bodyClass="privacyPage"
+>
+  <div class="legal flow">
+    <p>
+      当社（以下「当社」）は、個人情報保護の重要性を認識し、以下の方針に基づき適切に取り扱います。
+    </p>
+
+    <ol class="legal__sections">
+      {
+        sections.map((s) => (
+          <li class="legal__section">
+            <h2 class="legal__title">{s.title}</h2>
+            <p>{s.body}</p>
+          </li>
+        ))
+      }
+    </ol>
+
+    <p class="legal__date"><time datetime="2026-06-01">2026年6月1日</time> 制定</p>
+  </div>
+
+  <style>
+    .legal {
+      max-width: var(--width-narrow);
+      --flow-space: var(--space-lg);
+    }
+
+    .legal__sections {
+      display: grid;
+      gap: var(--space-lg);
+      padding: 0;
+      list-style: none;
+      counter-reset: legal;
+    }
+
+    .legal__section {
+      counter-increment: legal;
+    }
+
+    .legal__title {
+      display: flex;
+      gap: var(--space-2xs);
+      align-items: baseline;
+      margin-block-end: var(--space-2xs);
+      font-size: var(--text-lg);
+    }
+
+    .legal__title::before {
+      content: counter(legal) ".";
+      color: var(--color-primary);
+    }
+
+    .legal__date {
+      color: var(--color-text-muted);
+      text-align: end;
+    }
+  </style>
+</PageLayout>

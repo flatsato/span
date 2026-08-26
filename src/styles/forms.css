@@ -1,0 +1,142 @@
+/**
+ * フォーム要素スタイル（components レイヤー）
+ * 素の HTML フォーム要素を一貫した見た目にする。
+ * フォームページは native 要素を直接使うため、コンポーネント化せず
+ * グローバルクラス（.field / .formControl 等）で提供する。
+ */
+
+/* 1項目のまとまり */
+.field {
+  display: grid;
+  gap: var(--space-2xs);
+}
+
+.field + .field {
+  margin-block-start: var(--space-md);
+}
+
+/* ラベル */
+.field__label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-heading);
+}
+
+/* 必須・任意バッジ */
+.field__required,
+.field__optional {
+  margin-inline-start: var(--space-2xs);
+  padding: 0.05em 0.5em;
+  font-size: var(--text-xs);
+  border-radius: var(--radius-sm);
+}
+
+.field__required {
+  color: var(--color-danger);
+  background-color: color-mix(in srgb, var(--color-danger) 12%, transparent);
+}
+
+.field__optional {
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-muted);
+}
+
+/* テキスト系コントロール共通 */
+.formControl {
+  width: 100%;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.formControl::placeholder {
+  color: var(--color-gray-400);
+}
+
+.formControl:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+.formControl:disabled {
+  cursor: not-allowed;
+  background-color: var(--color-bg-muted);
+}
+
+.formControl[aria-invalid="true"] {
+  border-color: var(--color-danger);
+}
+
+textarea.formControl {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+/* セレクト：ネイティブ矢印を消して独自矢印 */
+select.formControl {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--color-gray-500) 50%),
+    linear-gradient(135deg, var(--color-gray-500) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 2px),
+    calc(100% - 13px) calc(50% - 2px);
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+  padding-inline-end: var(--space-xl);
+}
+
+/* チェックボックス / ラジオ */
+.choice {
+  display: inline-flex;
+  gap: var(--space-2xs);
+  align-items: center;
+  cursor: pointer;
+}
+
+.choice input[type="checkbox"],
+.choice input[type="radio"] {
+  width: 1.15em;
+  height: 1.15em;
+  accent-color: var(--color-primary);
+}
+
+/* チェック群の横並び */
+.choiceGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+}
+
+/* エラーメッセージ */
+.field__error {
+  font-size: var(--text-sm);
+  color: var(--color-danger);
+}
+
+/* 補足テキスト */
+.field__help {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* fieldset 初期化 */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+legend {
+  padding: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-heading);
+}

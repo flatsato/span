@@ -1,0 +1,37 @@
+---
+/**
+ * セクションラッパー
+ * 縦リズム（section 余白）と中央寄せコンテナをまとめて提供する。
+ * width: content（既定） / narrow / wide / full
+ * bg:    none（既定） / subtle / muted
+ */
+interface Props {
+  width?: "content" | "narrow" | "wide" | "full";
+  bg?: "none" | "subtle" | "muted";
+  as?: keyof HTMLElementTagNameMap;
+  class?: string;
+}
+
+const { width = "content", bg = "none", as = "section", class: className } = Astro.props;
+const Tag = as;
+---
+
+<Tag class:list={["section", `-bg-${bg}`, className]}>
+  <div class:list={["section__inner", width !== "full" && "container", `-${width}`]}>
+    <slot />
+  </div>
+</Tag>
+
+<style>
+  .section {
+    padding-block: var(--space-section);
+  }
+
+  .section.-bg-subtle {
+    background-color: var(--color-bg-subtle);
+  }
+
+  .section.-bg-muted {
+    background-color: var(--color-bg-muted);
+  }
+</style>

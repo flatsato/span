@@ -1,0 +1,51 @@
+/**
+ * ユーティリティ
+ * 単機能の上書きクラス。最強レイヤーなので多用は避け、補助に留める。
+ */
+
+/* スクリーンリーダー専用（視覚的に隠す） */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* コンテンツ幅で中央寄せ＋左右ガター */
+.container {
+  width: 100%;
+  max-width: var(--width-content);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container.-narrow {
+  max-width: var(--width-narrow);
+}
+
+.container.-wide {
+  max-width: var(--width-wide);
+}
+
+/* 縦方向の自動マージン（フロー） */
+.flow > * + * {
+  margin-top: var(--flow-space, var(--space-md));
+}
+
+/* 表示制御（ブレイクポイント 768px 基準） */
+.sp-only {
+  @media (width >= 768px) {
+    display: none !important;
+  }
+}
+
+.pc-only {
+  @media (width < 768px) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,62 @@
+---
+/**
+ * 下層ページ用レイアウト
+ * BaseLayout の上に「パンくず + ページ見出し + 本文」を載せる。
+ * aside スロットに内容があると 2 カラム（本文 + サイドバー）になる。
+ */
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Breadcrumb from "@components/Breadcrumb.astro";
+import PageHeader from "@components/PageHeader.astro";
+import type { Crumb } from "@components/Breadcrumb.astro";
+
+interface Props {
+  title: string;
+  eyebrow?: string;
+  lead?: string;
+  description?: string;
+  breadcrumb?: Crumb[];
+  bodyClass?: string;
+}
+
+const { title, eyebrow, lead, description, breadcrumb = [], bodyClass } = Astro.props;
+const hasAside = Astro.slots.has("aside");
+---
+
+<BaseLayout title={title} description={description} bodyClass={bodyClass}>
+  <Breadcrumb items={breadcrumb.length ? breadcrumb : [{ label: title }]} />
+  <PageHeader title={title} eyebrow={eyebrow} lead={lead} />
+
+  <div class="pageBody container">
+    <div class:list={["pageBody__grid", hasAside && "-hasAside"]}>
+      <div class="pageBody__main">
+        <slot />
+      </div>
+      {
+        hasAside && (
+          <aside class="pageBody__aside">
+            <slot name="aside" />
+          </aside>
+        )
+      }
+    </div>
+  </div>
+
+  <style>
+    .pageBody {
+      padding-block: var(--space-section);
+    }
+
+    .pageBody__grid.-hasAside {
+      display: grid;
+      gap: var(--space-section) var(--space-xl);
+      align-items: start;
+    }
+
+    /* PC で 2 カラム（本文 : サイド = 1fr : 17rem） */
+    @media (width >= 1024px) {
+      .pageBody__grid.-hasAside {
+        grid-template-columns: minmax(0, 1fr) 17rem;
+      }
+    }
+  </style>
+</BaseLayout>

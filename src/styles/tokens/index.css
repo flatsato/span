@@ -1,0 +1,8 @@
+/**
+ * デザイントークン エントリ
+ * 各案件ではこの配下の値を上書きしてテーマを作る。
+ */
+@import "./color.css";
+@import "./typography.css";
+@import "./space.css";
+@import "./layout.css";

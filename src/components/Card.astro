@@ -1,0 +1,121 @@
+---
+/**
+ * カード
+ * 画像・カテゴリ・日付・タイトル・抜粋を持つ汎用カード。
+ * 全体リンクは「擬似要素で面全体をクリック可能」にする手法。
+ * 画像は astro:assets（Image）対応：image に import 画像 or 文字列パスを渡す。
+ */
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  href: string;
+  title: string;
+  image?: ImageMetadata | string;
+  alt?: string;
+  category?: string;
+  date?: string; // ISO 文字列（datetime 用）
+  dateLabel?: string; // 表示用
+  excerpt?: string;
+  external?: boolean;
+}
+
+const { href, title, image, alt = "", category, date, dateLabel, excerpt, external } = Astro.props;
+const linkAttr = external ? { target: "_blank", rel: "noopener noreferrer" } : {};
+---
+
+<article class="card">
+  {
+    image && (
+      <div class="card__thumb">
+        {typeof image === "string" ? (
+          <img src={image} alt={alt} loading="lazy" />
+        ) : (
+          <Image src={image} alt={alt} widths={[320, 640]} loading="lazy" />
+        )}
+      </div>
+    )
+  }
+  <div class="card__body">
+    <div class="card__meta">
+      {category && <span class="card__category">{category}</span>}
+      {date && <time datetime={date}>{dateLabel ?? date}</time>}
+    </div>
+    <h3 class="card__title">
+      <a class="card__link" href={href} {...linkAttr}>{title}</a>
+    </h3>
+    {excerpt && <p class="card__excerpt">{excerpt}</p>}
+  </div>
+</article>
+
+<style>
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition:
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .card__thumb {
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-bg-muted);
+  }
+
+  .card__thumb :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-2xs);
+    padding: var(--space-md);
+  }
+
+  .card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs) var(--space-sm);
+    align-items: center;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  .card__category {
+    padding: 0.1em 0.6em;
+    color: var(--color-primary);
+    background-color: var(--color-brand-50);
+    border-radius: var(--radius-full);
+  }
+
+  .card__title {
+    font-size: var(--text-md);
+    font-weight: var(--weight-bold);
+  }
+
+  /* 面全体をクリック可能に */
+  .card__link::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+  }
+
+  .card__excerpt {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+</style>

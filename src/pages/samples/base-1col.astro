@@ -1,0 +1,48 @@
+---
+/**
+ * サンプル：ベース 1 カラム
+ * 下層ページの最小構成（パンくず + 見出し + 本文）。
+ */
+import PageLayout from "@layouts/PageLayout.astro";
+---
+
+<PageLayout
+  title="ベース 1カラム"
+  eyebrow="Sample"
+  lead="下層ページの基本となる 1 カラムレイアウトのサンプルです。"
+  breadcrumb={[{ label: "サンプル", href: "/" }, { label: "ベース 1カラム" }]}
+  bodyClass="basePage"
+>
+  <div class="prose flow">
+    <h2>見出し h2</h2>
+    <p>
+      本文のサンプルテキストです。段落は <code>.flow</code> ユーティリティで自動的に縦リズムが付きます。
+      リンクは<a href="/">このように</a>表示されます。
+    </p>
+    <h3>見出し h3</h3>
+    <p>リード文・本文・リスト・引用などの基本要素の見た目を確認できます。</p>
+    <ul>
+      <li>箇条書きの項目 1</li>
+      <li>箇条書きの項目 2</li>
+      <li>箇条書きの項目 3</li>
+    </ul>
+    <blockquote>引用文のサンプル。出典や補足に使います。</blockquote>
+  </div>
+</PageLayout>
+
+<style>
+  /* 読み物用の本文幅・縦リズム */
+  .prose {
+    max-width: var(--width-narrow);
+    --flow-space: var(--space-md);
+  }
+
+  .prose :global(h2) {
+    margin-block-start: var(--space-xl);
+  }
+
+  .prose :global(ul) {
+    padding-inline-start: 1.5em;
+    list-style: disc;
+  }
+</style>
